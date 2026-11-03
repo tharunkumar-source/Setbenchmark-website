@@ -14,93 +14,94 @@ const RAW_CONTENT = `<section class="phero"><div class="wrap"><nav class="crumbs
 <!-- Section 1: Evaluation Criteria -->
 <section class="section"><div class="wrap"><div class="head"><div class="eyebrow">What to look for</div><h2 class="h2">How to choose a coding assessment platform</h2></div><div class="grid g3"><div class="card"><h3 class="h3">Job-relevant tasks</h3><p>Can candidates work in a real repository, with real APIs and data, not just algorithm puzzles?</p></div><div class="card"><h3 class="h3">An AI policy you control</h3><p>Can you allow, ban or require AI per task, and see how candidates used it?</p></div><div class="card"><h3 class="h3">Fair integrity handling</h3><p>Are cheating signals reviewed by people with evidence, or used to reject automatically?</p></div><div class="card"><h3 class="h3">Candidate experience</h3><p>Clear instructions, reasonable length, accessibility adjustments and a camera-free option.</p></div><div class="card"><h3 class="h3">Integrations</h3><p>Does it connect to your ATS, calendar, SSO and HR systems?</p></div><div class="card"><h3 class="h3">Pricing and data location</h3><p>Is pricing available in your currency, and where is candidate data stored?</p></div></div></div></section>
 
-<!-- Section 2: Popular HackerRank Alternatives (2*2 Grid) -->
+<!-- Section 2: Where SetBenchmark is Different (Dedicated Vertical Section with Brand Cards) -->
 <section class="section alt"><div class="wrap">
-<div class="head"><div class="eyebrow">The options</div><h2 class="h2">Popular HackerRank alternatives</h2><p class="lead" style="margin-top:14px">Descriptions are summaries of each vendor's public positioning, last reviewed October 2026. Check each vendor's site for current features and pricing.</p></div>
-<div class="grid g2">
-<div class="card alt-card">
-  <h3 class="h3">Codility</h3>
-  <p>Coding tests and live interviews with a focus on structured engineering assessment. Popular with larger engineering teams.</p>
+<div class="head">
+  <div class="eyebrow">Why SetBenchmark</div>
+  <h2 class="h2">Where SetBenchmark is different</h2>
+  <p class="lead" style="margin-top:12px">Built for engineering teams that want to test real-world developer capability, evaluate AI collaboration, and protect fairness without automated rejections.</p>
 </div>
-<div class="card alt-card">
-  <h3 class="h3">CodeSignal</h3>
-  <p>Assessments, AI interviews and live interviews built around standardised skill evaluations, with a strong presence in the US.</p>
-</div>
-<div class="card alt-card">
-  <h3 class="h3">HackerEarth</h3>
-  <p>Coding assessments plus hackathons and developer community features. Widely used for campus and volume hiring in India.</p>
-</div>
-<div class="card alt-card">
-  <h3 class="h3">iMocha</h3>
-  <p>A broad skills assessment library covering technical and non-technical roles, with skills intelligence for workforce planning.</p>
-</div>
+<div class="diff-cards-grid">
+  <div class="diff-card">
+    <div class="diff-card-top">
+      <div class="diff-card-icon" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>
+      </div>
+      <h3 class="diff-card-title">Assess how engineers work with AI</h3>
+    </div>
+    <p class="diff-card-desc">Set each task to AI not allowed, allowed or required. Agentic tasks show how candidates direct a coding agent and catch its mistakes, with every prompt and decision recorded.</p>
+  </div>
+  <div class="diff-card">
+    <div class="diff-card-top">
+      <div class="diff-card-icon" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>
+      </div>
+      <h3 class="diff-card-title">People review every integrity signal</h3>
+    </div>
+    <p class="diff-card-desc">SetBenchmark never rejects or lowers a score automatically. Reviewers see evidence side by side, assigned at random and blind to the score.</p>
+  </div>
+  <div class="diff-card">
+    <div class="diff-card-top">
+      <div class="diff-card-icon" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>
+      </div>
+      <h3 class="diff-card-title">Fairness reporting built in</h3>
+    </div>
+    <p class="diff-card-desc">Optional, anonymous surveys let you check pass rates across groups and flag questions with unusual gaps.</p>
+  </div>
+  <div class="diff-card">
+    <div class="diff-card-top">
+      <div class="diff-card-icon" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>
+      </div>
+      <h3 class="diff-card-title">Local pricing and data</h3>
+    </div>
+    <p class="diff-card-desc">Pay in INR, USD, AED, SAR, AUD or NZD. Data for Indian customers is stored in India, with DPDP-ready consent and retention.</p>
+  </div>
+  <div class="diff-card">
+    <div class="diff-card-top">
+      <div class="diff-card-icon" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>
+      </div>
+      <h3 class="diff-card-title">Hiring and skills in one place</h3>
+    </div>
+    <p class="diff-card-desc">Use the same assessments to map your current team's skills, find gaps and plan internal moves.</p>
+  </div>
 </div>
 </div></section>
 
-<!-- Section 3: Where SetBenchmark is Different (Check Cards & Guidance) -->
+<!-- Section 3: Popular HackerRank Alternatives (Dedicated Vertical Section with 6 Cards) -->
 <section class="section"><div class="wrap">
-<div class="split" style="align-items:start">
-<div>
-  <div class="head" style="margin-bottom:28px"><div class="eyebrow">Why SetBenchmark</div><h2 class="h2">Where SetBenchmark is different</h2></div>
-  <div class="check-cards-stack">
-    <div class="check-card">
-      <div class="check-card-icon" aria-hidden="true">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>
-      </div>
-      <div class="check-card-body">
-        <div class="check-card-title">Assess how engineers work with AI</div>
-        <p>Set each task to AI not allowed, allowed or required. Agentic tasks show how candidates direct a coding agent and catch its mistakes, with every prompt and decision recorded.</p>
-      </div>
-    </div>
-    <div class="check-card">
-      <div class="check-card-icon" aria-hidden="true">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>
-      </div>
-      <div class="check-card-body">
-        <div class="check-card-title">People review every integrity signal</div>
-        <p>SetBenchmark never rejects or lowers a score automatically. Reviewers see evidence side by side, assigned at random and blind to the score.</p>
-      </div>
-    </div>
-    <div class="check-card">
-      <div class="check-card-icon" aria-hidden="true">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>
-      </div>
-      <div class="check-card-body">
-        <div class="check-card-title">Fairness reporting built in</div>
-        <p>Optional, anonymous surveys let you check pass rates across groups and flag questions with unusual gaps.</p>
-      </div>
-    </div>
-    <div class="check-card">
-      <div class="check-card-icon" aria-hidden="true">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>
-      </div>
-      <div class="check-card-body">
-        <div class="check-card-title">Local pricing and data</div>
-        <p>Pay in INR, USD, AED, SAR, AUD or NZD. Data for Indian customers is stored in India, with DPDP-ready consent and retention.</p>
-      </div>
-    </div>
-    <div class="check-card">
-      <div class="check-card-icon" aria-hidden="true">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>
-      </div>
-      <div class="check-card-body">
-        <div class="check-card-title">Hiring and skills in one place</div>
-        <p>Use the same assessments to map your current team's skills, find gaps and plan internal moves.</p>
-      </div>
-    </div>
-  </div>
+<div class="head">
+  <div class="eyebrow">The options</div>
+  <h2 class="h2">Popular HackerRank alternatives</h2>
+  <p class="lead" style="margin-top:12px">Public positioning summaries, reviewed October 2026. Check each vendor's site for current features and pricing.</p>
 </div>
-
-<div style="display:flex;flex-direction:column;gap:20px;padding-top:16px">
-  <div class="card" style="background:#F8FAFC;padding:28px;border-radius:14px">
-    <h3 class="h3" style="font-size:18px;margin:0 0 10px;color:var(--ink)">When HackerRank may suit you better</h3>
-    <p style="font-size:14.5px;color:var(--text-2);line-height:1.6;margin:0">If you mainly need a very large off-the-shelf library of algorithm questions, or your team and candidates already know the HackerRank format well, staying may be simpler. We'd rather you choose the right tool than switch for the wrong reasons.</p>
+<div class="grid g3" style="margin-top:28px">
+  <div class="card alt-card">
+    <h3 class="h3">Codility</h3>
+    <p>Coding tests and live interviews with a focus on structured engineering assessment. Popular with larger engineering teams.</p>
   </div>
-  <div class="card" style="background:#F8FAFC;padding:28px;border-radius:14px">
-    <h3 class="h3" style="font-size:18px;margin:0 0 10px;color:var(--ink)">Switching is simple</h3>
-    <p style="font-size:14.5px;color:var(--text-2);line-height:1.6;margin:0">Import your existing questions, recreate assessments from role templates and connect your ATS. We help with migration on Growth and Enterprise plans.</p>
+  <div class="card alt-card">
+    <h3 class="h3">CodeSignal</h3>
+    <p>Assessments, AI interviews and live interviews built around standardised skill evaluations, with a strong presence in the US.</p>
   </div>
-</div>
+  <div class="card alt-card">
+    <h3 class="h3">HackerEarth</h3>
+    <p>Coding assessments plus hackathons and developer community features. Widely used for campus and volume hiring in India.</p>
+  </div>
+  <div class="card alt-card">
+    <h3 class="h3">iMocha</h3>
+    <p>A broad skills assessment library covering technical and non-technical roles, with skills intelligence for workforce planning.</p>
+  </div>
+  <div class="card alt-card" style="background:#F8FAFC">
+    <h3 class="h3">When HackerRank suits you better</h3>
+    <p>If you mainly need a very large off-the-shelf algorithm library, or your team and candidates already know the HackerRank format well, staying may be simpler. We'd rather you choose the right tool than switch for the wrong reasons.</p>
+  </div>
+  <div class="card alt-card" style="background:#F8FAFC">
+    <h3 class="h3">Switching is simple</h3>
+    <p>Import your existing questions, recreate assessments from role templates and connect your ATS. We help with migration on Growth and Enterprise plans.</p>
+  </div>
 </div>
 </div></section>
 

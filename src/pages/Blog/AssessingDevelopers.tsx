@@ -23,7 +23,7 @@ const RAW_CONTENT = `<article>
         </div>
       </div>
       <div class="shot">
-        <img src="/images/product/C07-Agentic.webp" alt="Candidate planning and reviewing code changes with an AI assistant in SetBenchmark" width="1440" height="900" loading="eager" decoding="async"/>
+        <img src="/images/product/assessing-developers-agent.png" alt="Candidate planning and reviewing code changes with an AI assistant in SetBenchmark" width="1440" height="900" loading="eager" decoding="async"/>
       </div>
     </div>
   </div>
