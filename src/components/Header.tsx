@@ -5,6 +5,7 @@ import { Button } from './Button';
 export const Header: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [openMobileGroup, setOpenMobileGroup] = useState<string | null>('product');
   const closeTimerRef = useRef<NodeJS.Timeout | null>(null);
   const headerRef = useRef<HTMLElement | null>(null);
   const location = useLocation();
@@ -20,6 +21,18 @@ export const Header: React.FC = () => {
     }
   }, [location.pathname]);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   // Handle outside click & ESC key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -32,6 +45,7 @@ export const Header: React.FC = () => {
     const handleClickOutside = (e: MouseEvent) => {
       if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
         setActiveMenu(null);
+        setMobileMenuOpen(false);
       }
     };
 
@@ -78,6 +92,14 @@ export const Header: React.FC = () => {
   const handleNavClick = (idx: number, e: React.MouseEvent) => {
     e.preventDefault();
     setActiveMenu(activeMenu === idx ? null : idx);
+  };
+
+  const toggleMobileGroup = (group: string) => {
+    setOpenMobileGroup(prev => prev === group ? null : group);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -407,7 +429,7 @@ export const Header: React.FC = () => {
   </div>
 </nav>
 
-          {/* Header Action Buttons */}
+          {/* Header Action Buttons (Desktop) */}
           <div className="hdr-actions">
             <Button
               href="https://app.setbenchmark.com/login"
@@ -427,7 +449,419 @@ export const Header: React.FC = () => {
               Start free trial
             </Button>
           </div>
+
+          {/* Mobile Hamburger Toggle Button */}
+          <button
+            type="button"
+            className={`mobile-menu-btn ${mobileMenuOpen ? 'is-active' : ''}`}
+            onClick={() => setMobileMenuOpen(prev => !prev)}
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? (
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            ) : (
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            )}
+          </button>
         </div>
+
+        {/* Mobile Slide-down Navigation Drawer */}
+        {mobileMenuOpen && (
+          <div className="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+            <div className="mobile-drawer-content">
+              {/* 1. Platform */}
+              <div className={`mobile-nav-group ${openMobileGroup === 'product' ? 'is-open' : ''}`}>
+                <button
+                  type="button"
+                  className="mobile-group-header"
+                  onClick={() => toggleMobileGroup('product')}
+                  aria-expanded={openMobileGroup === 'product'}
+                >
+                  <span className="mobile-group-title">
+                    <span className="mobile-group-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    </span>
+                    Platform
+                  </span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-group-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                {openMobileGroup === 'product' && (
+                  <div className="mobile-group-items">
+                    <Link to="/product/coding-assessments/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Coding assessments</span>
+                        <span className="mobile-nav-item-desc">Real-world coding challenges &amp; repo tasks</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/product/ai-fluency-assessments/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">AI fluency assessments</span>
+                        <span className="mobile-nav-item-desc">Evaluate prompting, code review &amp; agentic coding</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/product/ai-interviews/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">AI interviews</span>
+                        <span className="mobile-nav-item-desc">Adaptive first-round technical screens</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/product/live-coding-interviews/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Live coding interviews</span>
+                        <span className="mobile-nav-item-desc">Shared real-time workspace with built-in scorecards</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/product/proctoring-integrity/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Proctoring and integrity</span>
+                        <span className="mobile-nav-item-desc">Multi-layered anti-cheat with human review</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/product/skills-intelligence/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Skills intelligence</span>
+                        <span className="mobile-nav-item-desc">Engineering capability mapping &amp; internal mobility</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/product/question-library/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Question library</span>
+                        <span className="mobile-nav-item-desc">Thousands of leak-checked challenges</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/integrations/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Integrations</span>
+                        <span className="mobile-nav-item-desc">Greenhouse, Lever, Ashby, Slack &amp; REST API</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* 2. Solutions */}
+              <div className={`mobile-nav-group ${openMobileGroup === 'solutions' ? 'is-open' : ''}`}>
+                <button
+                  type="button"
+                  className="mobile-group-header"
+                  onClick={() => toggleMobileGroup('solutions')}
+                  aria-expanded={openMobileGroup === 'solutions'}
+                >
+                  <span className="mobile-group-title">
+                    <span className="mobile-group-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    </span>
+                    Solutions
+                  </span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-group-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                {openMobileGroup === 'solutions' && (
+                  <div className="mobile-group-items">
+                    <Link to="/solutions/campus-hiring/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Campus hiring</span>
+                        <span className="mobile-nav-item-desc">High-volume university drives &amp; batch screening</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/solutions/enterprise-tech-hiring/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Enterprise tech hiring</span>
+                        <span className="mobile-nav-item-desc">Custom pools, enterprise security &amp; SLAs</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/solutions/it-services-staffing/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">IT services &amp; staffing</span>
+                        <span className="mobile-nav-item-desc">Client-ready verified skill reports &amp; fast screening</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/solutions/startups/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Startups</span>
+                        <span className="mobile-nav-item-desc">Zero-setup role templates to hire engineers rapidly</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/developers/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">For developers</span>
+                        <span className="mobile-nav-item-desc">Candidate preparation, sandbox &amp; feedback</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* 3. Skill Tests */}
+              <div className={`mobile-nav-group ${openMobileGroup === 'skills' ? 'is-open' : ''}`}>
+                <button
+                  type="button"
+                  className="mobile-group-header"
+                  onClick={() => toggleMobileGroup('skills')}
+                  aria-expanded={openMobileGroup === 'skills'}
+                >
+                  <span className="mobile-group-title">
+                    <span className="mobile-group-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </span>
+                    Skill Tests
+                  </span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-group-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                {openMobileGroup === 'skills' && (
+                  <div className="mobile-group-items">
+                    <Link to="/skill-tests/python/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Python coding test</span>
+                        <span className="mobile-nav-item-desc">FastAPI, Django &amp; backend data logic</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/skill-tests/java/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Java coding test</span>
+                        <span className="mobile-nav-item-desc">Spring Boot, concurrency &amp; core JVM</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/skill-tests/javascript/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">JavaScript test</span>
+                        <span className="mobile-nav-item-desc">Async/await, ES6+, DOM &amp; fullstack tasks</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/skill-tests/react/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">React developer test</span>
+                        <span className="mobile-nav-item-desc">State management, hooks &amp; component architecture</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/skill-tests/nodejs/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Node.js test</span>
+                        <span className="mobile-nav-item-desc">Express, REST APIs, event loop &amp; backend</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/skill-tests/golang/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Golang coding test</span>
+                        <span className="mobile-nav-item-desc">Goroutines, channels &amp; backend microservices</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/skill-tests/sql/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">SQL assessment</span>
+                        <span className="mobile-nav-item-desc">Complex joins, indexing &amp; query optimization</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/skill-tests/data-science/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Data science test</span>
+                        <span className="mobile-nav-item-desc">Pandas, statistical evaluation &amp; modeling</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/skill-tests/data-structures-algorithms/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Data structures &amp; algorithms</span>
+                        <span className="mobile-nav-item-desc">Algorithmic complexity, logic &amp; edge cases</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/skill-tests/system-design/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">System design</span>
+                        <span className="mobile-nav-item-desc">Distributed systems, caching &amp; high scale</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/skill-tests/devops/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">DevOps skills test</span>
+                        <span className="mobile-nav-item-desc">Docker, Kubernetes, CI/CD &amp; cloud infra</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/skill-tests/aws/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">AWS skills test</span>
+                        <span className="mobile-nav-item-desc">IAM, Lambda, VPC, ECS &amp; cloud architecture</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/skill-tests/" className="mobile-nav-item" onClick={closeMobileMenu} style={{ borderTop: '1px solid rgba(255,255,255,0.08)', marginTop: '4px', paddingTop: '10px' }}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title" style={{ color: 'var(--lime)' }}>Browse all 40+ skills &rarr;</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow" style={{ color: 'var(--lime)' }}><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* 4. Resources & Guides */}
+              <div className={`mobile-nav-group ${openMobileGroup === 'resources' ? 'is-open' : ''}`}>
+                <button
+                  type="button"
+                  className="mobile-group-header"
+                  onClick={() => toggleMobileGroup('resources')}
+                  aria-expanded={openMobileGroup === 'resources'}
+                >
+                  <span className="mobile-group-title">
+                    <span className="mobile-group-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    </span>
+                    Resources &amp; Guides
+                  </span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-group-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                {openMobileGroup === 'resources' && (
+                  <div className="mobile-group-items">
+                    <Link to="/blog/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Technical hiring blog</span>
+                        <span className="mobile-nav-item-desc">Hiring playbooks, benchmarks &amp; guides</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/compare/hackerrank-alternatives/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">HackerRank alternatives</span>
+                        <span className="mobile-nav-item-desc">Honest 2026 feature &amp; pricing comparison</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/blog/how-to-design-a-fair-coding-assessment/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Fair assessment checklist</span>
+                        <span className="mobile-nav-item-desc">12-point rubric for unbiased screening</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/security/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Security &amp; compliance</span>
+                        <span className="mobile-nav-item-desc">SOC 2, ISO readiness, DPDP &amp; encryption</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/about/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">About SetBenchmark</span>
+                        <span className="mobile-nav-item-desc">Built by Kombee Technologies for teams</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* 5. Regional Editions */}
+              <div className={`mobile-nav-group ${openMobileGroup === 'regional' ? 'is-open' : ''}`}>
+                <button
+                  type="button"
+                  className="mobile-group-header"
+                  onClick={() => toggleMobileGroup('regional')}
+                  aria-expanded={openMobileGroup === 'regional'}
+                >
+                  <span className="mobile-group-title">
+                    <span className="mobile-group-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    </span>
+                    Regional Editions
+                  </span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-group-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                {openMobileGroup === 'regional' && (
+                  <div className="mobile-group-items">
+                    <Link to="/india/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">India (₹ INR)</span>
+                        <span className="mobile-nav-item-desc">DPDP compliance, local data &amp; campus engine</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/uae/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">UAE (AED)</span>
+                        <span className="mobile-nav-item-desc">Dubai &amp; Abu Dhabi tech hiring standards</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/saudi-arabia/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Saudi Arabia (SAR)</span>
+                        <span className="mobile-nav-item-desc">Vision 2030 digital talent evaluation</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/australia/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Australia &amp; NZ (ANZ)</span>
+                        <span className="mobile-nav-item-desc">Privacy Act compliance with AUD &amp; NZD billing</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* 6. Pricing Direct Link */}
+              <Link to="/pricing/" className="mobile-nav-direct-link" onClick={closeMobileMenu}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <span style={{ color: 'var(--lime)', display: 'flex' }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                  </span>
+                  Pricing &amp; Plans
+                </span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'rgba(255,255,255,0.4)' }}><path d="M9 18l6-6-6-6"></path></svg>
+              </Link>
+
+              {/* 7. Action Buttons at the Bottom */}
+              <div className="mobile-drawer-footer">
+                <a
+                  href="https://app.setbenchmark.com/login"
+                  className="btn-mobile-signin"
+                  onClick={closeMobileMenu}
+                >
+                  Sign In
+                </a>
+                <a
+                  href="https://app.setbenchmark.com/signup"
+                  className="btn-mobile-trial"
+                  onClick={closeMobileMenu}
+                >
+                  Start free trial <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
       </header>
     </>
   );
