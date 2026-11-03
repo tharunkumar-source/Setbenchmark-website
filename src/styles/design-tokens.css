@@ -1,0 +1,65 @@
+:root {
+  /* ==========================================================================
+     SETBENCHMARK DESIGN TOKENS
+     Source: BRAND_GUIDELINES.md (Single Source of Truth)
+     ========================================================================== */
+
+  /* Hero & Primary Accent System */
+  --lime: #c8f25a;             /* Hero Lime - High energy CTAs, active tags, highlights */
+  --lime-dark: #385400;        /* Hero Lime Dark - 8.6:1 AAA text contrast on white */
+  --lime-dark-hover: #233700;  /* Deeper shade for hover on white (12.5:1 contrast) */
+  --lime-50: #f1fbd9;          /* Soft lime tint for icon tiles, badges, tick backgrounds */
+  --lime-border: #9ad628;      /* Vibrant lime border for hover cards & focus */
+
+  /* Aliased Primary System */
+  --primary: var(--lime-dark);
+  --primary-d: var(--lime-dark-hover);
+  --primary-50: var(--lime-50);
+  --primary-border: var(--lime-border);
+  --blue: var(--primary);
+  --blue-d: var(--primary-d);
+  --blue-50: var(--primary-50);
+
+  /* Secondary & Brand Base */
+  --ink: #07190F;              /* Deep Obsidian Forest / Ink */
+  --ink-2: #0B2215;            /* Secondary dark surface */
+  --violet: #7a3ff2;
+  --violet-50: #efe7fe;
+  --canvas: #f5f6fa;
+  --line: #e3e6ee;
+  --line-2: #c9cedb;
+  --white: #ffffff;
+
+  /* Typography Colors */
+  --text-1: #0f1222;           /* Primary text / Headings */
+  --text-2: #4a5168;           /* Body copy text */
+  --text-3: #788198;           /* Muted text / Captions */
+
+  /* Semantic & Status Tokens */
+  --ok-bg: #f1fbd9;
+  --ok-text: #385400;
+  --warn-bg: #fef0da;
+  --warn-text: #8a4b06;
+  --flag-bg: #fde8dc;
+  --flag-text: #a53a0c;
+  --info-bg: #e7ebfe;
+  --info-text: #2238c7;
+  --muted-bg: #eef0f5;
+  --muted-text: #4a5168;
+  --ai-bg: #efe7fe;
+  --ai-text: #5b24c9;
+  --ai-card-bg: #faf7ff;
+  --ai-card-border: #dccbfb;
+  --error-bg: #fdf2f0;
+  --error-text: #a3260e;
+  --error-border: #f0b9a6;
+
+  /* Geometry & Font Tokens */
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+  --max: 1200px;
+  --font: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+

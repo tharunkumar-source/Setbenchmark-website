@@ -1,0 +1,3177 @@
+{
+  "/404/": {
+    "route": "/404/",
+    "title": "Page not found | SetBenchmark",
+    "description": "",
+    "canonical": "https://setbenchmark.com/404/",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/about/": {
+    "route": "/about/",
+    "title": "About SetBenchmark | Built by Kombee Technologies",
+    "description": "SetBenchmark is built by Kombee Technologies to help companies hire and grow engineers on real skills, fairly, in the age of AI.",
+    "canonical": "https://www.setbenchmark.com/about",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About us",
+            "item": "https://www.setbenchmark.com/about"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/australia/": {
+    "route": "/australia/",
+    "title": "Developer Assessment Platform in Australia | SetBenchmark",
+    "description": "Hire software engineers in Sydney, Melbourne and Brisbane with practical coding tests, AI-fluency tasks and live interviews. AUD pricing and local support.",
+    "canonical": "https://www.setbenchmark.com/australia",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Australia",
+            "item": "https://www.setbenchmark.com/australia"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can we use SetBenchmark for graduate programmes in Australia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Run large graduate assessments with accessibility adjustments, fairness reports and people reviewing every decision."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/blog/assessing-developers-in-the-age-of-ai/": {
+    "route": "/blog/assessing-developers-in-the-age-of-ai/",
+    "title": "How to Assess Developers in the Age of AI (2026 Guide)",
+    "description": "AI coding assistants changed what good engineers do. Here is how to redesign technical assessments to test judgement, verification and AI fluency.",
+    "canonical": "https://www.setbenchmark.com/blog/assessing-developers-in-the-age-of-ai",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.setbenchmark.com/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How to assess developers in the age of AI",
+            "item": "https://www.setbenchmark.com/blog/assessing-developers-in-the-age-of-ai"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Assess Developers in the Age of AI (2026 Guide)",
+        "description": "AI coding assistants changed what good engineers do. Here is how to redesign technical assessments to test judgement, verification and AI fluency.",
+        "mainEntityOfPage": "https://www.setbenchmark.com/blog/assessing-developers-in-the-age-of-ai",
+        "datePublished": "2026-10-30",
+        "dateModified": "2026-10-30",
+        "author": {
+          "@type": "Organization",
+          "name": "SetBenchmark"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SetBenchmark",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png"
+          }
+        },
+        "image": "https://www.setbenchmark.com/og/setbenchmark-og.png"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/blog/campus-hiring-coding-assessment-guide/": {
+    "route": "/blog/campus-hiring-coding-assessment-guide/",
+    "title": "Campus Hiring Coding Assessment: A Practical Guide",
+    "description": "Plan a campus hiring drive with online coding tests: test structure, cut-offs, proctoring, fairness checks and moving shortlisted students to interviews.",
+    "canonical": "https://www.setbenchmark.com/blog/campus-hiring-coding-assessment-guide",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.setbenchmark.com/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Campus hiring with coding assessments: a practical guide",
+            "item": "https://www.setbenchmark.com/blog/campus-hiring-coding-assessment-guide"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Campus Hiring Coding Assessment: A Practical Guide",
+        "description": "Plan a campus hiring drive with online coding tests: test structure, cut-offs, proctoring, fairness checks and moving shortlisted students to interviews.",
+        "mainEntityOfPage": "https://www.setbenchmark.com/blog/campus-hiring-coding-assessment-guide",
+        "datePublished": "2026-10-30",
+        "dateModified": "2026-10-30",
+        "author": {
+          "@type": "Organization",
+          "name": "SetBenchmark"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SetBenchmark",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png"
+          }
+        },
+        "image": "https://www.setbenchmark.com/og/setbenchmark-og.png"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/blog/how-to-design-a-fair-coding-assessment/": {
+    "route": "/blog/how-to-design-a-fair-coding-assessment/",
+    "title": "How to Design a Fair Coding Assessment: 12-Point Checklist",
+    "description": "A 12-point checklist for fair, predictive coding assessments: job-relevant tasks, time limits, clear rubrics, accessibility, AI policy and fairness monitoring.",
+    "canonical": "https://www.setbenchmark.com/blog/how-to-design-a-fair-coding-assessment",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.setbenchmark.com/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How to design a fair coding assessment: a checklist",
+            "item": "https://www.setbenchmark.com/blog/how-to-design-a-fair-coding-assessment"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Design a Fair Coding Assessment: 12-Point Checklist",
+        "description": "A 12-point checklist for fair, predictive coding assessments: job-relevant tasks, time limits, clear rubrics, accessibility, AI policy and fairness monitoring.",
+        "mainEntityOfPage": "https://www.setbenchmark.com/blog/how-to-design-a-fair-coding-assessment",
+        "datePublished": "2026-10-30",
+        "dateModified": "2026-10-30",
+        "author": {
+          "@type": "Organization",
+          "name": "SetBenchmark"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SetBenchmark",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png"
+          }
+        },
+        "image": "https://www.setbenchmark.com/og/setbenchmark-og.png"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/blog/how-to-prevent-cheating-in-online-coding-tests/": {
+    "route": "/blog/how-to-prevent-cheating-in-online-coding-tests/",
+    "title": "How to Prevent Cheating in Online Coding Tests",
+    "description": "Practical ways to reduce cheating in remote coding assessments: test design, proctoring, plagiarism and AI-use signals, and a fair human review process.",
+    "canonical": "https://www.setbenchmark.com/blog/how-to-prevent-cheating-in-online-coding-tests",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.setbenchmark.com/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How to prevent cheating in online coding tests",
+            "item": "https://www.setbenchmark.com/blog/how-to-prevent-cheating-in-online-coding-tests"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Prevent Cheating in Online Coding Tests",
+        "description": "Practical ways to reduce cheating in remote coding assessments: test design, proctoring, plagiarism and AI-use signals, and a fair human review process.",
+        "mainEntityOfPage": "https://www.setbenchmark.com/blog/how-to-prevent-cheating-in-online-coding-tests",
+        "datePublished": "2026-10-30",
+        "dateModified": "2026-10-30",
+        "author": {
+          "@type": "Organization",
+          "name": "SetBenchmark"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SetBenchmark",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png"
+          }
+        },
+        "image": "https://www.setbenchmark.com/og/setbenchmark-og.png"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/blog/": {
+    "route": "/blog/",
+    "title": "Technical Hiring Blog and Guides | SetBenchmark",
+    "description": "Practical guides on assessing developers in the AI era, preventing cheating in coding tests, campus hiring and designing fair technical assessments.",
+    "canonical": "https://www.setbenchmark.com/blog",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.setbenchmark.com/blog"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/compare/hackerrank-alternatives/": {
+    "route": "/compare/hackerrank-alternatives/",
+    "title": "HackerRank Alternatives (2026): Honest Comparison",
+    "description": "Looking for a HackerRank alternative? Compare SetBenchmark, Codility, CodeSignal, HackerEarth, iMocha and Mercer Mettl on AI-era testing and integrity.",
+    "canonical": "https://www.setbenchmark.com/compare/hackerrank-alternatives",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Compare",
+            "item": "https://www.setbenchmark.com/compare/hackerrank-alternatives"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "HackerRank alternatives",
+            "item": "https://www.setbenchmark.com/compare/hackerrank-alternatives"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the best alternative to HackerRank?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on how you hire. For AI-era engineering roles, integrity handled by people and local pricing in India, the Middle East or ANZ, SetBenchmark is built for you. For very large algorithm libraries, other tools may fit better."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a cheaper alternative to HackerRank?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SetBenchmark plans start at US$69 a month billed annually, or ₹3,999 a month in India, with a 14-day free trial. Compare current prices on each vendor's site, as they change often."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I move my HackerRank questions to SetBenchmark?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can import your own questions and we help Growth and Enterprise customers migrate assessments."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/contact/": {
+    "route": "/contact/",
+    "title": "Book a Demo of SetBenchmark | Contact Sales",
+    "description": "Book a 30-minute demo of SetBenchmark",
+    "canonical": "https://www.setbenchmark.com/contact",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://www.setbenchmark.com/contact"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/developers/": {
+    "route": "/developers/",
+    "title": "Coding Practice and Free Certification | SetBenchmark",
+    "description": "Practise real-world coding problems, join contests, build a verified developer profile and earn free certifications employers can check. Join free.",
+    "canonical": "https://www.setbenchmark.com/developers",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "For developers",
+            "item": "https://www.setbenchmark.com/developers"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is SetBenchmark free for developers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Practice, contests, your profile and certification exams are free."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will employers see my profile?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if you opt in to job matching. You control what is shown and can switch it off at any time."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/": {
+    "route": "/",
+    "title": "Technical Assessment &amp; Coding Test Platform | SetBenchmark",
+    "description": "Hire developers on real skills with coding assessments, AI fluency tests, AI interviews and live coding interviews. Fair, proctored and reviewed by people.",
+    "canonical": "https://www.setbenchmark.com",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is SetBenchmark?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SetBenchmark is a technical assessment and interview platform. Companies use it to test developers with real-world coding tasks, assess how they work with AI, run AI and live coding interviews and map their engineering team's skills."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is SetBenchmark different from HackerRank?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SetBenchmark focuses on hiring for the AI era: tasks can allow or require AI, an agentic environment shows how candidates direct coding agents, integrity signals always go to a person and pricing is local in India, the Middle East and ANZ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can SetBenchmark detect cheating with ChatGPT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. It combines identity checks, proctoring, code similarity, paste and typing signals, and leak monitoring. Every signal is reviewed by a person before any decision."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is SetBenchmark for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Engineering and talent teams at product companies, enterprises, IT services and staffing firms, and campus recruiters, plus developers who want to practise and get certified."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a free trial?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Start a 14-day free trial with 10 assessment attempts. No credit card is needed."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SetBenchmark",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Technical assessment and interview platform",
+        "operatingSystem": "Web",
+        "url": "https://www.setbenchmark.com",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Kombee Technologies (India) Pvt. Ltd."
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Starter",
+            "price": "828",
+            "priceCurrency": "USD",
+            "url": "https://www.setbenchmark.com/pricing"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/india/": {
+    "route": "/india/",
+    "title": "Coding Assessment Platform in India | SetBenchmark",
+    "description": "India-built coding test and technical interview platform with INR pricing, GST invoices, data stored in India and DPDP-ready privacy. Start a free trial.",
+    "canonical": "https://www.setbenchmark.com/india",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "India",
+            "item": "https://www.setbenchmark.com/india"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is SetBenchmark an Indian company?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. SetBenchmark is built by Kombee Technologies (India) Pvt. Ltd., a technology company operating across India, the US, the Middle East and ANZ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does SetBenchmark comply with India's DPDP Act?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SetBenchmark is designed around the Digital Personal Data Protection Act, 2023: candidates get a clear notice and give consent, data is kept only as long as your policy says, and candidates can request access or deletion from the privacy centre."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can we pay with UPI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Indian customers can pay by UPI, cards or net banking, and receive GST invoices."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/integrations/": {
+    "route": "/integrations/",
+    "title": "Integrations: ATS, Calendar, SSO and API | SetBenchmark",
+    "description": "Connect SetBenchmark to Greenhouse, Lever, Ashby, SmartRecruiters, Google Calendar, Microsoft 365, Slack, Okta and GitHub, or use the REST API.",
+    "canonical": "https://www.setbenchmark.com/integrations",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Integrations",
+            "item": "https://www.setbenchmark.com/integrations"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which ATS does SetBenchmark integrate with?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Greenhouse, Lever, Ashby and SmartRecruiters today. Workday, SAP SuccessFactors and iCIMS are planned for 2027. You can connect other systems with the REST API and webhooks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do integrations cost extra?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ATS, calendar and Slack integrations are included in Growth and Enterprise. SSO, SCIM and the API are included in Enterprise."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/legal/privacy/": {
+    "route": "/legal/privacy/",
+    "title": "Privacy policy | SetBenchmark",
+    "description": "How SetBenchmark collects, uses and protects personal data of customers, candidates and developers.",
+    "canonical": "https://www.setbenchmark.com/legal/privacy",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Privacy policy",
+            "item": "https://www.setbenchmark.com/legal/privacy"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/legal/refund-policy/": {
+    "route": "/legal/refund-policy/",
+    "title": "Refund and cancellation policy | SetBenchmark",
+    "description": "How cancellations and refunds work for SetBenchmark subscriptions.",
+    "canonical": "https://www.setbenchmark.com/legal/refund-policy",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Refund and cancellation policy",
+            "item": "https://www.setbenchmark.com/legal/refund-policy"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/legal/terms/": {
+    "route": "/legal/terms/",
+    "title": "Terms of service | SetBenchmark",
+    "description": "Terms that apply to using the SetBenchmark website and platform.",
+    "canonical": "https://www.setbenchmark.com/legal/terms",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Terms of service",
+            "item": "https://www.setbenchmark.com/legal/terms"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/new-zealand/": {
+    "route": "/new-zealand/",
+    "title": "Coding Test Platform in New Zealand | SetBenchmark",
+    "description": "Assess developers in Auckland, Wellington and Christchurch with realistic coding tests and live interviews. NZD pricing and support from our ANZ team.",
+    "canonical": "https://www.setbenchmark.com/new-zealand",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "New Zealand",
+            "item": "https://www.setbenchmark.com/new-zealand"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you bill in New Zealand dollars?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Starter and Growth plans are available in NZD, billed monthly or annually."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/pricing/": {
+    "route": "/pricing/",
+    "title": "Pricing: Coding Test Plans from US$69/month | SetBenchmark",
+    "description": "Simple pricing for coding assessments and technical interviews. Starter, Growth and Enterprise plans in USD, INR, AED, SAR, AUD and NZD. 14-day free trial.",
+    "canonical": "https://www.setbenchmark.com/pricing",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pricing",
+            "item": "https://www.setbenchmark.com/pricing"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What counts as an assessment attempt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An attempt is used when a candidate starts an assessment. Invitations that are never opened do not use an attempt, and you can cancel unopened invitations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a free trial?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every plan starts with a 14-day free trial with 10 attempts. No credit card is needed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I pay in my local currency?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We bill in Indian rupees, US dollars, UAE dirhams, Saudi riyals, Australian dollars and New Zealand dollars. Indian customers receive GST invoices."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if I run out of attempts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can keep testing. Extra attempts are charged at your plan's per-attempt rate on your next invoice, or you can move to a bigger plan at any time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I change plans or cancel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Upgrade at any time and pay the difference for the rest of your billing period. Monthly plans can be cancelled before the next billing date; see our refund and cancellation policy for details."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the developer community free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Developers can practise, join contests and build a profile for free. Certification exams are free to take."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SetBenchmark",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Technical assessment and interview platform",
+        "operatingSystem": "Web",
+        "url": "https://www.setbenchmark.com",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Kombee Technologies (India) Pvt. Ltd."
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Starter",
+            "price": "828",
+            "priceCurrency": "USD",
+            "url": "https://www.setbenchmark.com/pricing"
+          },
+          {
+            "@type": "Offer",
+            "name": "Growth",
+            "price": "3588",
+            "priceCurrency": "USD",
+            "url": "https://www.setbenchmark.com/pricing"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/product/ai-fluency-assessments/": {
+    "route": "/product/ai-fluency-assessments/",
+    "title": "AI Skills Assessment for Developers | SetBenchmark",
+    "description": "Assess how candidates plan, prompt, review and test with AI coding assistants and agents. Rubric-scored AI fluency tests for modern engineering roles.",
+    "canonical": "https://www.setbenchmark.com/product/ai-fluency-assessments",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product",
+            "item": "https://www.setbenchmark.com/product"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI fluency assessments",
+            "item": "https://www.setbenchmark.com/product/ai-fluency-assessments"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is an AI fluency assessment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An AI fluency assessment measures how well a person works with AI tools: breaking down a problem, writing clear prompts, reviewing AI output critically, testing it and correcting mistakes. It complements traditional coding tests."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Doesn't allowing AI make the test too easy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Tasks are designed so that accepting AI suggestions blindly leads to wrong answers. Scores reflect judgement and verification, not just the final output."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which AI assistant do candidates use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A built-in assistant and coding agent inside SetBenchmark, so every candidate has the same tools and everything is recorded. Personal AI tools stay blocked unless you allow them."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who scores AI fluency tasks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your reviewers, using a published rubric. SetBenchmark summarises the session and suggests where to look, but people make the final assessment."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/product/ai-interviews/": {
+    "route": "/product/ai-interviews/",
+    "title": "AI Interviewer for Technical Screening | SetBenchmark",
+    "description": "Run consistent first-round technical interviews with an AI interviewer that adapts its follow-ups. Your team reviews every answer; nothing is auto-rejected.",
+    "canonical": "https://www.setbenchmark.com/product/ai-interviews",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product",
+            "item": "https://www.setbenchmark.com/product"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI interviews",
+            "item": "https://www.setbenchmark.com/product/ai-interviews"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is an AI interview fair to candidates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every candidate gets the same structure and rubric, which reduces interviewer-to-interviewer variation. SetBenchmark also offers text mode, captions and adjustments, and a person reviews every interview before any decision."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the AI decide who passes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The AI suggests where answers meet the rubric and highlights evidence. A person on your team makes every decision."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long is an AI interview?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usually 20 to 30 minutes for a first round. You set the topics and time limit per role."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What languages does the AI interviewer support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "English at launch, with captions and text mode. Ask us about other languages for your region."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/product/coding-assessments/": {
+    "route": "/product/coding-assessments/",
+    "title": "Coding Assessment Platform for Hiring | SetBenchmark",
+    "description": "Screen developers with real-world coding tests, repository tasks and system design questions. Auto-scored, plagiarism-checked and reviewed by people.",
+    "canonical": "https://www.setbenchmark.com/product/coding-assessments",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product",
+            "item": "https://www.setbenchmark.com/product"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Coding assessments",
+            "item": "https://www.setbenchmark.com/product/coding-assessments"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a coding assessment platform?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A coding assessment platform lets employers send candidates online programming tests, scores the answers automatically and helps the hiring team compare candidates. SetBenchmark adds real-world task types, AI-use policies and integrity review on top of automatic scoring."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which programming languages does SetBenchmark support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "More than 40 languages and frameworks, including Java, Python, JavaScript, TypeScript, Go, C#, C++, Kotlin, PHP, Ruby, SQL, React, Angular, Node.js and Spring Boot."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long should a coding test be?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For most roles, 60 to 90 minutes works well: one or two practical coding tasks plus a few short questions. Longer tests lower completion rates, especially for experienced developers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can candidates use AI tools like ChatGPT or Copilot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You decide per task. Mark a task 'AI not allowed' to test fundamentals, or 'AI allowed' to see how a candidate works with an assistant, the way they would on the job."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use my own questions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Write coding, repository, SQL or multiple-choice questions in the question editor, or import them. Your questions stay private to your organisation."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/product/": {
+    "route": "/product/",
+    "title": "SetBenchmark Platform: Assessments, AI and Live Interviews",
+    "description": "One platform for coding assessments, AI fluency tests, AI interviews, live coding interviews, proctoring, a question library and employee skills intelligence.",
+    "canonical": "https://www.setbenchmark.com/product",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product",
+            "item": "https://www.setbenchmark.com/product"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/product/live-coding-interviews/": {
+    "route": "/product/live-coding-interviews/",
+    "title": "Live Coding Interview Platform | SetBenchmark",
+    "description": "Run live coding and system design interviews with a shared editor, whiteboard, video and structured scorecards. Recordings and notes in one place.",
+    "canonical": "https://www.setbenchmark.com/product/live-coding-interviews",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product",
+            "item": "https://www.setbenchmark.com/product"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Live coding interviews",
+            "item": "https://www.setbenchmark.com/product/live-coding-interviews"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do candidates need to install anything?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Live interviews run in the browser on Chrome, Edge, Firefox and Safari."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can we record interviews?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, with the candidate's consent. Recordings follow your retention policy and are deleted automatically when it ends."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can several interviewers join?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Invite co-interviewers or silent observers for shadowing and training."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/product/proctoring-integrity/": {
+    "route": "/product/proctoring-integrity/",
+    "title": "Proctored Coding Tests &amp; Cheating Detection | SetBenchmark",
+    "description": "Stop cheating in online coding tests with camera, screen and identity checks, plagiarism and AI-use signals. People review every flag; no automatic rejections.",
+    "canonical": "https://www.setbenchmark.com/product/proctoring-integrity",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product",
+            "item": "https://www.setbenchmark.com/product"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Proctoring and integrity",
+            "item": "https://www.setbenchmark.com/product/proctoring-integrity"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does SetBenchmark detect cheating in coding tests?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It combines identity checks, optional camera and screen proctoring, code similarity analysis, paste and typing signals, tab switches and leak monitoring. Signals are sent to a person for review with the evidence attached."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can SetBenchmark detect ChatGPT or other AI tools?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It flags patterns typical of AI-assisted answers, such as large pastes and sudden bursts of complete code after switching away. For high-stakes tests, the secure desktop app (coming in 2027) can block other apps entirely."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will candidates be rejected automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Never. SetBenchmark does not reject, fail or lower a score on its own because of a signal. A person reviews and records an outcome with a reason."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is proctoring compliant with India's DPDP Act and GDPR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Candidates see exactly what is recorded and agree before starting. Recordings are deleted automatically under your retention policy, and candidates can request their data."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/product/question-library/": {
+    "route": "/product/question-library/",
+    "title": "Technical Interview Question Library | SetBenchmark",
+    "description": "Use thousands of leak-checked coding, SQL, system design and AI-task questions mapped to skills and levels, or write your own private questions.",
+    "canonical": "https://www.setbenchmark.com/product/question-library",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product",
+            "item": "https://www.setbenchmark.com/product"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Question library",
+            "item": "https://www.setbenchmark.com/product/question-library"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can candidates find SetBenchmark questions online?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We monitor for leaked questions and rotate them out. Questions with variants change between candidates, which makes sharing answers much less useful."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can we keep our own questions private?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Questions you write are visible only to your organisation."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/product/skills-intelligence/": {
+    "route": "/product/skills-intelligence/",
+    "title": "Employee Skills Assessment &amp; Gap Analysis | SetBenchmark",
+    "description": "Map your engineering team",
+    "canonical": "https://www.setbenchmark.com/product/skills-intelligence",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product",
+            "item": "https://www.setbenchmark.com/product"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Skills intelligence",
+            "item": "https://www.setbenchmark.com/product/skills-intelligence"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is skills intelligence different from a performance review?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It measures technical skills with practical assessments, separate from performance ratings. Employees see their own results and choose what to practise."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can we use it for client-facing staffing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. IT services companies use verified skill profiles to staff projects and share proof of skills with clients."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/saudi-arabia/": {
+    "route": "/saudi-arabia/",
+    "title": "Coding Assessment Platform in Saudi Arabia | SetBenchmark",
+    "description": "Assess developers in Riyadh, Jeddah and across KSA with proctored coding tests, AI interviews and fair, consistent scoring. SAR pricing and regional support.",
+    "canonical": "https://www.setbenchmark.com/saudi-arabia",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Saudi Arabia",
+            "item": "https://www.setbenchmark.com/saudi-arabia"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can we assess candidates for localisation (Saudisation) targets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Use the same assessments for every candidate and track results by programme, so local hiring stays skills-based and fair."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/security/": {
+    "route": "/security/",
+    "title": "Security, Privacy and Compliance | SetBenchmark",
+    "description": "How SetBenchmark protects candidate and customer data: encryption, access controls, retention, DPDP Act and GDPR readiness, and responsible use of AI.",
+    "canonical": "https://www.setbenchmark.com/security",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Security and privacy",
+            "item": "https://www.setbenchmark.com/security"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where is candidate data stored?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Data for Indian customers is stored in India. For other regions, talk to us about your hosting requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long is proctoring data kept?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "As long as your retention policy says, typically 30 to 180 days, after which it is deleted automatically."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/aws/": {
+    "route": "/skill-tests/aws/",
+    "title": "AWS Skills Assessment for Cloud Engineers | SetBenchmark",
+    "description": "Assess AWS skills with scenario questions and hands-on tasks: IAM, VPC, EC2, S3, Lambda, RDS, cost and security best practices.",
+    "canonical": "https://www.setbenchmark.com/skill-tests/aws",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AWS skills test",
+            "item": "https://www.setbenchmark.com/skill-tests/aws"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I test junior and senior AWS developers with the same test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose entry, mid, senior or staff level when you create the AWS assessment and SetBenchmark picks tasks of matching difficulty. You can also mix levels to see where a candidate tops out."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/data-science/": {
+    "route": "/skill-tests/data-science/",
+    "title": "Data Science Test for Hiring Data Scientists | SetBenchmark",
+    "description": "Assess data scientists with notebook tasks: pandas, statistics, feature engineering, modelling and communicating results. Online and auto-scored.",
+    "canonical": "https://www.setbenchmark.com/skill-tests/data-science",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Data science test",
+            "item": "https://www.setbenchmark.com/skill-tests/data-science"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I test junior and senior data science developers with the same test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose entry, mid, senior or staff level when you create the data science assessment and SetBenchmark picks tasks of matching difficulty. You can also mix levels to see where a candidate tops out."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/data-structures-algorithms/": {
+    "route": "/skill-tests/data-structures-algorithms/",
+    "title": "Data Structures &amp; Algorithms Test for Hiring | SetBenchmark",
+    "description": "Online DSA test for hiring engineers and graduates: arrays, hashing, trees, graphs, dynamic programming and complexity, in any of 40+ languages.",
+    "canonical": "https://www.setbenchmark.com/skill-tests/data-structures-algorithms",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Data structures and algorithms test",
+            "item": "https://www.setbenchmark.com/skill-tests/data-structures-algorithms"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I test junior and senior DSA developers with the same test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose entry, mid, senior or staff level when you create the DSA assessment and SetBenchmark picks tasks of matching difficulty. You can also mix levels to see where a candidate tops out."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is DSA still a good way to hire?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It works well for graduates and generalist roles. For experienced hires, pair it with practical repository tasks that match the job."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/devops/": {
+    "route": "/skill-tests/devops/",
+    "title": "DevOps Skills Test: Docker, Kubernetes, CI/CD | SetBenchmark",
+    "description": "Hire DevOps and cloud engineers with hands-on tasks in a live terminal: Linux, Docker, Kubernetes, CI/CD, Terraform and troubleshooting.",
+    "canonical": "https://www.setbenchmark.com/skill-tests/devops",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "DevOps and cloud test",
+            "item": "https://www.setbenchmark.com/skill-tests/devops"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I test junior and senior DevOps developers with the same test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose entry, mid, senior or staff level when you create the DevOps assessment and SetBenchmark picks tasks of matching difficulty. You can also mix levels to see where a candidate tops out."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/golang/": {
+    "route": "/skill-tests/golang/",
+    "title": "Golang Coding Test for Hiring Go Developers | SetBenchmark",
+    "description": "Assess Go developers on goroutines, channels, context cancellation, HTTP services and testing with practical online tasks. Auto-scored and proctored.",
+    "canonical": "https://www.setbenchmark.com/skill-tests/golang",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Go (Golang) coding test",
+            "item": "https://www.setbenchmark.com/skill-tests/golang"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I test junior and senior Go developers with the same test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose entry, mid, senior or staff level when you create the Go assessment and SetBenchmark picks tasks of matching difficulty. You can also mix levels to see where a candidate tops out."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/": {
+    "route": "/skill-tests/",
+    "title": "Pre-Employment Coding Tests by Skill | SetBenchmark",
+    "description": "Ready-made online skill tests for hiring developers: Java, Python, JavaScript, React, Node.js, SQL, Go, DSA, system design, DevOps, AWS and data science.",
+    "canonical": "https://www.setbenchmark.com/skill-tests",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a pre-employment coding test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A pre-employment coding test is an online assessment candidates take before interviews, so employers can check practical programming skills early and interview only candidates who can do the work."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I combine several skill tests?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Combine skills into one assessment, for example Java, SQL and system design for a backend role."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I change the questions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Swap questions from the library, add your own, change levels and set whether AI is allowed for each task."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Java coding test",
+            "url": "https://www.setbenchmark.com/skill-tests/java"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Python coding test",
+            "url": "https://www.setbenchmark.com/skill-tests/python"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "JavaScript test",
+            "url": "https://www.setbenchmark.com/skill-tests/javascript"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "React test",
+            "url": "https://www.setbenchmark.com/skill-tests/react"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Node.js test",
+            "url": "https://www.setbenchmark.com/skill-tests/nodejs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "SQL test",
+            "url": "https://www.setbenchmark.com/skill-tests/sql"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Go (Golang) coding test",
+            "url": "https://www.setbenchmark.com/skill-tests/golang"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "Data structures and algorithms test",
+            "url": "https://www.setbenchmark.com/skill-tests/data-structures-algorithms"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "System design interview test",
+            "url": "https://www.setbenchmark.com/skill-tests/system-design"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "DevOps and cloud test",
+            "url": "https://www.setbenchmark.com/skill-tests/devops"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "name": "Data science test",
+            "url": "https://www.setbenchmark.com/skill-tests/data-science"
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "name": "AWS skills test",
+            "url": "https://www.setbenchmark.com/skill-tests/aws"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/java/": {
+    "route": "/skill-tests/java/",
+    "title": "Java Coding Test for Hiring Java Developers | SetBenchmark",
+    "description": "Hire Java developers with a practical online Java test: core Java, collections, concurrency, Spring Boot APIs and debugging. Auto-scored and proctored.",
+    "canonical": "https://www.setbenchmark.com/skill-tests/java",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Java coding test",
+            "item": "https://www.setbenchmark.com/skill-tests/java"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I test junior and senior Java developers with the same test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose entry, mid, senior or staff level when you create the Java assessment and SetBenchmark picks tasks of matching difficulty. You can also mix levels to see where a candidate tops out."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which Java versions are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Modern LTS versions including Java 17 and 21, with Spring Boot 3, Maven and Gradle."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/javascript/": {
+    "route": "/skill-tests/javascript/",
+    "title": "JavaScript Test for Hiring Developers | SetBenchmark",
+    "description": "Online JavaScript and TypeScript test for hiring: async code, closures, DOM, Node.js and debugging. Real-world tasks, automatic scoring and proctoring.",
+    "canonical": "https://www.setbenchmark.com/skill-tests/javascript",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "JavaScript test",
+            "item": "https://www.setbenchmark.com/skill-tests/javascript"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I test junior and senior JavaScript developers with the same test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose entry, mid, senior or staff level when you create the JavaScript assessment and SetBenchmark picks tasks of matching difficulty. You can also mix levels to see where a candidate tops out."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the test cover TypeScript?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose JavaScript, TypeScript or both when you build the assessment."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/nodejs/": {
+    "route": "/skill-tests/nodejs/",
+    "title": "Node.js Developer Test for Backend Hiring | SetBenchmark",
+    "description": "Assess Node.js developers on REST APIs, async patterns, databases, error handling and security with practical, auto-scored online tasks.",
+    "canonical": "https://www.setbenchmark.com/skill-tests/nodejs",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Node.js test",
+            "item": "https://www.setbenchmark.com/skill-tests/nodejs"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I test junior and senior Node.js developers with the same test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose entry, mid, senior or staff level when you create the Node.js assessment and SetBenchmark picks tasks of matching difficulty. You can also mix levels to see where a candidate tops out."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/python/": {
+    "route": "/skill-tests/python/",
+    "title": "Python Coding Test for Hiring Developers | SetBenchmark",
+    "description": "Assess Python developers with real tasks: data structures, APIs with FastAPI or Django, testing with pytest and debugging. Online, proctored, auto-scored.",
+    "canonical": "https://www.setbenchmark.com/skill-tests/python",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Python coding test",
+            "item": "https://www.setbenchmark.com/skill-tests/python"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I test junior and senior Python developers with the same test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose entry, mid, senior or staff level when you create the Python assessment and SetBenchmark picks tasks of matching difficulty. You can also mix levels to see where a candidate tops out."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I test Python for data roles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Use the Data science test for pandas, NumPy and modelling tasks, or combine both."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/react/": {
+    "route": "/skill-tests/react/",
+    "title": "React Developer Test for Hiring | SetBenchmark",
+    "description": "Hire React developers with hands-on tasks in a live browser preview: components, hooks, state, accessibility and performance. Scored and proctored.",
+    "canonical": "https://www.setbenchmark.com/skill-tests/react",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "React test",
+            "item": "https://www.setbenchmark.com/skill-tests/react"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I test junior and senior React developers with the same test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose entry, mid, senior or staff level when you create the React assessment and SetBenchmark picks tasks of matching difficulty. You can also mix levels to see where a candidate tops out."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/sql/": {
+    "route": "/skill-tests/sql/",
+    "title": "SQL Test for Hiring: Online SQL Assessment | SetBenchmark",
+    "description": "Online SQL test with real databases: joins, aggregations, window functions, query tuning and schema design. For developers, analysts and data engineers.",
+    "canonical": "https://www.setbenchmark.com/skill-tests/sql",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "SQL test",
+            "item": "https://www.setbenchmark.com/skill-tests/sql"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I test junior and senior SQL developers with the same test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose entry, mid, senior or staff level when you create the SQL assessment and SetBenchmark picks tasks of matching difficulty. You can also mix levels to see where a candidate tops out."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which databases are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PostgreSQL, MySQL and SQL Server dialects."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/skill-tests/system-design/": {
+    "route": "/skill-tests/system-design/",
+    "title": "System Design Assessment for Senior Engineers | SetBenchmark",
+    "description": "Assess system design skills with an online whiteboard: scalability, data modelling, reliability and trade-offs, scored by reviewers with a rubric.",
+    "canonical": "https://www.setbenchmark.com/skill-tests/system-design",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Skill tests",
+            "item": "https://www.setbenchmark.com/skill-tests"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "System design interview test",
+            "item": "https://www.setbenchmark.com/skill-tests/system-design"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is the system design test scored automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Design answers are scored by your reviewers with a rubric. SetBenchmark summarises the session to make review quick."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/solutions/campus-hiring/": {
+    "route": "/solutions/campus-hiring/",
+    "title": "Campus Hiring Assessment Platform | SetBenchmark",
+    "description": "Assess thousands of graduates in one drive with proctored coding and aptitude tests, fair scoring and instant shortlists. Built for campus recruitment.",
+    "canonical": "https://www.setbenchmark.com/solutions/campus-hiring",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Solutions",
+            "item": "https://www.setbenchmark.com/solutions"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Campus hiring",
+            "item": "https://www.setbenchmark.com/solutions/campus-hiring"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many students can take a test at the same time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SetBenchmark is built for large drives with thousands of concurrent candidates. Tell us your expected peak and we'll plan capacity with you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can students take the test on a mobile phone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Coding tests need a laptop or desktop. Aptitude and multiple-choice sections work on mobile if you allow it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you stop students sharing answers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Questions rotate between variants, code similarity is checked across the whole drive and proctoring signals are reviewed by people."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/solutions/enterprise-tech-hiring/": {
+    "route": "/solutions/enterprise-tech-hiring/",
+    "title": "Enterprise Technical Hiring Platform | SetBenchmark",
+    "description": "Standardise technical hiring across teams and countries with role profiles, structured interviews, SSO, ATS integrations, audit logs and fairness reports.",
+    "canonical": "https://www.setbenchmark.com/solutions/enterprise-tech-hiring",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Solutions",
+            "item": "https://www.setbenchmark.com/solutions"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Enterprise tech hiring",
+            "item": "https://www.setbenchmark.com/solutions/enterprise-tech-hiring"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does SetBenchmark integrate with Workday?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Workday and SAP SuccessFactors connectors are planned for 2027. Until then, use the API and webhooks, or our Greenhouse, Lever, Ashby and SmartRecruiters integrations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can we host data in our region?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Customer data for Indian organisations is stored in India. Talk to us about hosting requirements for other regions."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/solutions/": {
+    "route": "/solutions/",
+    "title": "Technical Hiring Solutions by Use Case | SetBenchmark",
+    "description": "SetBenchmark for campus hiring, enterprise tech hiring, IT services and staffing firms, and startups. See how teams like yours assess developers.",
+    "canonical": "https://www.setbenchmark.com/solutions",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Solutions",
+            "item": "https://www.setbenchmark.com/solutions"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/solutions/it-services-staffing/": {
+    "route": "/solutions/it-services-staffing/",
+    "title": "Skills Assessment for IT Services &amp; Staffing | SetBenchmark",
+    "description": "Verify candidate and bench skills before client submissions. Share proof of skills with clients, reduce interview rejections and staff projects faster.",
+    "canonical": "https://www.setbenchmark.com/solutions/it-services-staffing",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Solutions",
+            "item": "https://www.setbenchmark.com/solutions"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "IT services and staffing",
+            "item": "https://www.setbenchmark.com/solutions/it-services-staffing"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can clients see the candidate's full assessment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You choose what to share: a summary report, the full report or code playback, through an expiring link."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer agency pricing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Talk to sales about volume pricing for staffing and IT services firms."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/solutions/startups/": {
+    "route": "/solutions/startups/",
+    "title": "Developer Hiring Tool for Startups | SetBenchmark",
+    "description": "Hire your first engineers faster with ready-made coding tests, AI interviews and simple pricing. Start a free trial in minutes, no sales call needed.",
+    "canonical": "https://www.setbenchmark.com/solutions/startups",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Solutions",
+            "item": "https://www.setbenchmark.com/solutions"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Startups",
+            "item": "https://www.setbenchmark.com/solutions/startups"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is there a free trial?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Start a 14-day free trial with no credit card and send real assessments."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I pay monthly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Starter and Growth plans can be billed monthly or annually, with a discount for annual billing."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
+  "/uae/": {
+    "route": "/uae/",
+    "title": "Technical Assessment Platform in the UAE | SetBenchmark",
+    "description": "Hire developers in Dubai and Abu Dhabi with proctored coding tests, AI interviews and live coding interviews. AED pricing and Middle East support.",
+    "canonical": "https://www.setbenchmark.com/uae",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "United Arab Emirates",
+            "item": "https://www.setbenchmark.com/uae"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can candidates outside the UAE take the assessments?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Candidates take assessments online from anywhere; you can require identity checks and proctoring for every candidate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer Arabic?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The candidate experience is in English today. Contact us if you need Arabic instructions for specific assessments."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  }
+}
