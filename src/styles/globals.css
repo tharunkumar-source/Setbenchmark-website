@@ -2797,3 +2797,147 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Skill Test Pages - Skills Covered & Sample Tasks Sections
+   (Brand Guidelines: Lime Tint #F1FBD9, Dark Lime #385400, Line #E3E6EE)
+   ========================================================================== */
+.skill-points-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.skill-point-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  min-height: 76px;
+}
+
+.skill-point-card:hover {
+  transform: translateY(-2px);
+  border-color: #9AD628;
+  box-shadow: 0 6px 20px rgba(15, 18, 34, 0.05);
+}
+
+.skill-point-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F1FBD9;
+  border: 1px solid #D6F5A0;
+  color: #385400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.skill-point-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.skill-hiring-bar {
+  margin-top: 28px;
+  padding: 16px 22px;
+  background: var(--canvas);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.skill-hiring-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.skill-hiring-bar .tag {
+  background: var(--white);
+  color: var(--ink);
+  font-weight: 500;
+  border-color: var(--line);
+}
+
+.sample-tasks-grid {
+  display: grid;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.sample-tasks-grid.g3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sample-tasks-grid.g2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sample-tasks-grid .task {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sample-tasks-grid .task:hover {
+  transform: translateY(-2px);
+  border-color: #C9CEDB;
+  box-shadow: 0 6px 20px rgba(15, 18, 34, 0.05);
+}
+
+.sample-tasks-grid .task .k {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.sample-tasks-grid .task .h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+  margin: 0 0 10px;
+}
+
+.sample-tasks-grid .task p {
+  font-size: 14.5px;
+  color: var(--text-2);
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .skill-points-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sample-tasks-grid.g3,
+  .sample-tasks-grid.g2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .skill-points-grid {
+    grid-template-columns: 1fr;
+  }
+}
