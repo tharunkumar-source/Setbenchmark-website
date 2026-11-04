@@ -40,22 +40,22 @@ const RAW_CONTENT = `<article>
       <!-- 4 Stages Summary Cards -->
       <div class="checklist-intro-bar">
         <div class="checklist-stage-card">
-          <span class="badge" style="background:#F1FBD9;color:#385400;border:1px solid #D6F5A0">Stage 01</span>
+          <span class="badge" style="background:var(--brand-subtle, #F1FBD9);color:var(--brand-dark, #385400);border:1px solid var(--brand-border-light, #D6F5A0)">Stage 01</span>
           <div class="stage-name">Task Scope & Realism</div>
           <p class="stage-desc">Items 01–03: Role mapping, repository tasks & realistic time limits.</p>
         </div>
         <div class="checklist-stage-card">
-          <span class="badge" style="background:#F1FBD9;color:#385400;border:1px solid #D6F5A0">Stage 02</span>
+          <span class="badge" style="background:var(--brand-subtle, #F1FBD9);color:var(--brand-dark, #385400);border:1px solid var(--brand-border-light, #D6F5A0)">Stage 02</span>
           <div class="stage-name">Candidate Experience</div>
           <p class="stage-desc">Items 04–06: Transparent guidance, language choices & accommodations.</p>
         </div>
         <div class="checklist-stage-card">
-          <span class="badge" style="background:#F1FBD9;color:#385400;border:1px solid #D6F5A0">Stage 03</span>
+          <span class="badge" style="background:var(--brand-subtle, #F1FBD9);color:var(--brand-dark, #385400);border:1px solid var(--brand-border-light, #D6F5A0)">Stage 03</span>
           <div class="stage-name">AI & Evaluation Integrity</div>
           <p class="stage-desc">Items 07–10: Explicit AI rules, blind rubrics & human review.</p>
         </div>
         <div class="checklist-stage-card">
-          <span class="badge" style="background:#F1FBD9;color:#385400;border:1px solid #D6F5A0">Stage 04</span>
+          <span class="badge" style="background:var(--brand-subtle, #F1FBD9);color:var(--brand-dark, #385400);border:1px solid var(--brand-border-light, #D6F5A0)">Stage 04</span>
           <div class="stage-name">Fairness & Closure</div>
           <p class="stage-desc">Items 11–12: Adverse impact auditing & constructive candidate feedback.</p>
         </div>
@@ -341,36 +341,141 @@ const RAW_CONTENT = `<article>
         </table>
       </div>
 
-      <!-- Why Fairness and Accuracy Go Together Callout -->
+      <!-- Why Fairness and Accuracy Go Together Section -->
       <div class="fairness-highlight-box">
-        <h2>Why fairness and accuracy go together</h2>
-        <p class="fairness-highlight-lead">
-          Tasks that don't relate to the job add noise. Noise hurts strong candidates who are unlucky on the day and lets weaker ones through. Removing it makes the test both fairer and more predictive.
-        </p>
+        <div class="fairness-section-head">
+          <h2 class="fairness-section-title">Why fairness and accuracy go together</h2>
+          <p class="fairness-highlight-lead">
+            Tasks that don't relate to the job add noise. Noise hurts strong candidates who are unlucky on the day and lets weaker ones through. Removing it makes the test both fairer and more predictive.
+          </p>
+        </div>
+
         <div class="fairness-compare-grid">
-          <div class="fairness-compare-card">
-            <h4 style="color:#4A5168">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-              High Noise Assessments (Avoid)
-            </h4>
-            <ul>
-              <li><span>✕</span> Unrelated algorithm puzzles from memorized trick catalogs</li>
-              <li><span>✕</span> Unrealistic time pressures that test typing speed over problem solving</li>
-              <li><span>✕</span> Secret AI detection algorithms that falsely flag honest candidates</li>
-              <li><span>✕</span> Subjective unstandardized manual grading across different reviewers</li>
+          <!-- Card 1: Light Theme - Legacy / Avoid -->
+          <div class="fairness-card fairness-card-light">
+            <div class="fairness-card-header">
+              <div class="fairness-card-badge-group">
+                <svg class="fairness-card-badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <span class="fairness-card-badge-text">LEGACY ASSESSMENT MODEL</span>
+              </div>
+              <span class="fairness-card-status-pill muted">High Noise &amp; Friction</span>
+            </div>
+
+            <h3 class="fairness-card-title">High-Noise Screening (Avoid)</h3>
+            <p class="fairness-card-desc">
+              Unrealistic trick puzzles, artificial speed pressure, and opaque automated disqualifications filter out senior engineering talent.
+            </p>
+
+            <!-- 3-metric strip -->
+            <div class="fairness-metric-strip light">
+              <div class="fairness-metric-col">
+                <span class="fairness-metric-label">SIGNAL</span>
+                <span class="fairness-metric-value">Low / Noisy</span>
+              </div>
+              <div class="fairness-metric-col">
+                <span class="fairness-metric-label">SENIOR DROPOUT</span>
+                <span class="fairness-metric-value">~52% Drop</span>
+              </div>
+              <div class="fairness-metric-col">
+                <span class="fairness-metric-label">AI INTEGRITY</span>
+                <span class="fairness-metric-value">Opaque Bans</span>
+              </div>
+            </div>
+
+            <div class="fairness-card-list-title">WHAT CANDIDATES EXPERIENCE:</div>
+            <ul class="fairness-card-list">
+              <li>
+                <span class="fairness-icon-cross">✕</span>
+                <span>Unrelated algorithm puzzles memorized from trick catalogs</span>
+              </li>
+              <li>
+                <span class="fairness-icon-cross">✕</span>
+                <span>Artificial time limits testing typing speed over system architecture</span>
+              </li>
+              <li>
+                <span class="fairness-icon-cross">✕</span>
+                <span>Secret AI detection heuristics that falsely flag honest candidates</span>
+              </li>
+              <li>
+                <span class="fairness-icon-cross">✕</span>
+                <span>Subjective manual grading across uncalibrated reviewers</span>
+              </li>
             </ul>
+
+            <div class="fairness-card-footer">
+              <a href="/compare/hackerrank-alternatives/" class="fairness-btn-light">Why noisy tests fail senior candidates &rarr;</a>
+              <a href="/blog/assessing-developers-in-the-age-of-ai/" class="fairness-card-sublink">View algorithmic testing failure points &rarr;</a>
+            </div>
           </div>
-          <div class="fairness-compare-card positive">
-            <h4 style="color:#385400">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>
-              High Signal Benchmarks (SetBenchmark)
-            </h4>
-            <ul>
-              <li><span>✓</span> Practical repository tasks, real APIs, and modern system design</li>
-              <li><span>✓</span> Clear per-task AI policies (allowed, not allowed, or required agentic)</li>
-              <li><span>✓</span> Double-blind grading rubrics and human evidence verification</li>
-              <li><span>✓</span> Automatic adverse impact tracking and demographic group fairness audits</li>
+
+          <!-- Card 2: Dark Theme with SetBenchmark Ink & Lime Branding (NOT purple!) -->
+          <div class="fairness-card fairness-card-dark">
+            <div class="fairness-card-header">
+              <div class="fairness-card-badge-group brand">
+                <svg class="fairness-card-badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span class="fairness-card-badge-text">SETBENCHMARK STANDARD</span>
+              </div>
+              <span class="fairness-card-status-pill brand">
+                <span class="fairness-pulse-dot"></span>
+                Recommended Benchmark
+              </span>
+            </div>
+
+            <h3 class="fairness-card-title brand">High-Signal Engineering Benchmarks</h3>
+            <p class="fairness-card-desc brand">
+              Practical repository tasks, realistic coding assistant policies, and double-blind human scorecards deliver predictive, defensible hiring signal.
+            </p>
+
+            <!-- 3-metric strip -->
+            <div class="fairness-metric-strip dark">
+              <div class="fairness-metric-col">
+                <span class="fairness-metric-label brand">SIGNAL ACCURACY</span>
+                <span class="fairness-metric-value brand">94%+ Job Match</span>
+              </div>
+              <div class="fairness-metric-col">
+                <span class="fairness-metric-label brand">REVIEW INTEGRITY</span>
+                <span class="fairness-metric-value brand">Double-Blind</span>
+              </div>
+              <div class="fairness-metric-col">
+                <span class="fairness-metric-label brand">COMPLETION RATE</span>
+                <span class="fairness-metric-value brand">88%+ Completion</span>
+              </div>
+            </div>
+
+            <div class="fairness-card-list-title brand">WHAT YOU MEASURE:</div>
+            <ul class="fairness-card-list brand">
+              <li>
+                <span class="fairness-icon-check">✓</span>
+                <span>Practical repository tasks, real production APIs, and system design</span>
+              </li>
+              <li>
+                <span class="fairness-icon-check">✓</span>
+                <span>Clear per-task AI policies (allowed, not allowed, or required agentic)</span>
+              </li>
+              <li>
+                <span class="fairness-icon-check">✓</span>
+                <span>Double-blind grading rubrics with recorded candidate playback</span>
+              </li>
+              <li>
+                <span class="fairness-icon-check">✓</span>
+                <span>Automatic adverse impact tracking and demographic group fairness audits</span>
+              </li>
             </ul>
+
+            <div class="fairness-card-footer">
+              <a href="https://app.setbenchmark.com/signup" class="fairness-btn-brand">Try high-signal assessments free &rarr;</a>
+              <a href="/solutions/enterprise-tech-hiring/" class="fairness-card-sublink brand">Book architecture walkthrough with an engineer &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Guarantee Banner (Matches reference design) -->
+        <div class="fairness-guarantee-banner">
+          <div class="fairness-guarantee-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          </div>
+          <div class="fairness-guarantee-text">
+            <strong>Auditable Fairness Guarantee:</strong> Every benchmark task is reviewed for group disparity, AI detection is evidence-based with blind human review, and candidate adjustments are supported by default.
           </div>
         </div>
       </div>

@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <style>
+:root {
+  --brand: #C8F25A;
+  --brand-dark: var(--brand-dark);
+  --brand-subtle: var(--brand-subtle);
+  --brand-border: #9AD628;
+  --brand-border-light: var(--brand-border-light);
+}
+
 @font-face {
   font-family: 'Instrument Sans';
   src: url('../../SetBenchmark_Figma_Import/html-prototype/fonts/InstrumentSans-Regular.ttf') format('truetype');
@@ -65,9 +73,9 @@ body {
 .meets-tag {
   font-size: 11.5px;
   font-weight: 600;
-  color: #14653D;
-  background: #F0FDF4;
-  border: 1px solid #DCFCE7;
+  color: var(--brand-dark);
+  background: var(--brand-subtle);
+  border: 1px solid var(--brand-border-light);
   padding: 2.5px 8px;
   border-radius: 6px;
 }
@@ -103,8 +111,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 3px;
-  background: #E3F4EA;
-  color: #14653D;
+  background: var(--brand-subtle);
+  color: var(--brand-dark);
   font-size: 11.5px;
   font-weight: 700;
   padding: 3px 9px;

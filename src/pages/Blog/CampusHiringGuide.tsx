@@ -155,7 +155,7 @@ const RAW_CONTENT = `<article>
 
         <div class="blog-promo-card">
           <div style="display:flex;align-items:center;gap:8px">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#C8F25A"/><path d="M6 15v3m6-7v7m6-12v12" stroke="#04120B" stroke-width="2.5" stroke-linecap="round"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="var(--brand, #C8F25A)"/><path d="M6 15v3m6-7v7m6-12v12" stroke="#04120B" stroke-width="2.5" stroke-linecap="round"/></svg>
             <span style="font-size:14px;font-weight:700;letter-spacing:-0.01em">SetBenchmark</span>
           </div>
           <h4>Planning a University Hiring Drive?</h4>

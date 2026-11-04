@@ -1,21 +1,53 @@
 :root {
   /* ==========================================================================
-     SETBENCHMARK DESIGN TOKENS
-     Source: BRAND_GUIDELINES.md (Single Source of Truth)
+     SETBENCHMARK BRAND COLOR ENGINE (Single Source of Truth)
+     Source: BRAND_GUIDELINES.md
+     
+     CHANGE THESE CORE TOKENS TO CHANGE THE ENTIRE WEBSITE IN ONE GO:
+     - Top announcement banner background & text
+     - Primary and Header CTA buttons (hover, active, focus)
+     - Light-theme accessible text accents (8.6:1 AAA on white)
+     - Icon badges, pill tints, and tick backgrounds
+     - Card active borders, focus rings, and tag highlights
      ========================================================================== */
 
-  /* Hero & Primary Accent System */
-  --lime: #c8f25a;             /* Hero Lime - High energy CTAs, active tags, highlights */
-  --lime-dark: #385400;        /* Hero Lime Dark - 8.6:1 AAA text contrast on white */
-  --lime-dark-hover: #233700;  /* Deeper shade for hover on white (12.5:1 contrast) */
-  --lime-50: #f1fbd9;          /* Soft lime tint for icon tiles, badges, tick backgrounds */
-  --lime-border: #9ad628;      /* Vibrant lime border for hover cards & focus */
+  /* --- 1. Master Brand Base Tokens --- */
+  --brand: #C8F25A;             /* Primary Brand Accent (Hero Lime - High Energy) */
+  --brand-hover: #B9E646;       /* CTA button hover state */
+  --brand-active: #AADE30;      /* CTA active / pressed state */
+  --brand-dark: #385400;        /* Deep WCAG AAA text & icon shade on light backgrounds (>= 8.6:1) */
+  --brand-dark-hover: #233700;  /* Deeper text hover on light backgrounds (>= 12.5:1) */
+  --brand-subtle: #F1FBD9;      /* Ultra-soft pastel tint for badge & pill backgrounds */
+  --brand-border: #9AD628;      /* Vibrant border for active cards, hover & focus */
+  --brand-border-light: #D6F5A0;/* Soft border for badges & pills */
 
-  /* Aliased Primary System */
-  --primary: var(--lime-dark);
-  --primary-d: var(--lime-dark-hover);
-  --primary-50: var(--lime-50);
-  --primary-border: var(--lime-border);
+  /* --- 2. Functional Application Tokens --- */
+  --brand-banner-bg: var(--brand);                         /* Announcement top banner background */
+  --brand-banner-text: #07190F;                            /* Announcement top banner text color */
+  --brand-cta-bg: var(--brand);                            /* Primary CTA button background */
+  --brand-cta-hover: var(--brand-hover);                   /* Primary CTA button hover background */
+  --brand-cta-text: #07190F;                               /* Primary CTA button text color */
+  --brand-cta-border: var(--brand-border);                 /* Border around primary CTA */
+  --brand-badge-bg: var(--brand-subtle);                   /* Badge / pill background tint */
+  --brand-badge-text: var(--brand-dark);                   /* Badge / pill text color */
+  --brand-badge-border: var(--brand-border-light);         /* Badge / pill border */
+  --brand-accent-text: var(--brand-dark);                  /* Accent text & navigation highlights */
+  --brand-accent-hover: var(--brand-dark-hover);           /* Link & nav hover color */
+  --brand-focus-ring: var(--brand-border);                 /* Accessibility focus outline */
+
+  /* --- 3. Aliased Legacy & System Tokens --- */
+  --lime: var(--brand);
+  --lime-d: var(--brand-hover);
+  --lime-dark: var(--brand-dark);
+  --lime-dark-hover: var(--brand-dark-hover);
+  --lime-50: var(--brand-subtle);
+  --lime-border: var(--brand-border);
+
+  /* Primary Theme Mapping */
+  --primary: var(--brand-dark);
+  --primary-d: var(--brand-dark-hover);
+  --primary-50: var(--brand-subtle);
+  --primary-border: var(--brand-border);
   --blue: var(--primary);
   --blue-d: var(--primary-d);
   --blue-50: var(--primary-50);
@@ -28,6 +60,7 @@
   --canvas: #f5f6fa;
   --line: #e3e6ee;
   --line-2: #c9cedb;
+  --line-strong: #c9cedb;
   --white: #ffffff;
 
   /* Typography Colors */
@@ -35,9 +68,9 @@
   --text-2: #4a5168;           /* Body copy text */
   --text-3: #788198;           /* Muted text / Captions */
 
-  /* Semantic & Status Tokens */
-  --ok-bg: #f1fbd9;
-  --ok-text: #385400;
+  /* Semantic & Status Tokens (Brand Derived) */
+  --ok-bg: var(--brand-subtle);
+  --ok-text: var(--brand-dark);
   --warn-bg: #fef0da;
   --warn-text: #8a4b06;
   --flag-bg: #fde8dc;
@@ -62,4 +95,3 @@
   --font: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "JetBrains Mono", ui-monospace, monospace;
 }
-
