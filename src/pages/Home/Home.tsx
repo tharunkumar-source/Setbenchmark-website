@@ -141,94 +141,148 @@ export const Home: React.FC = () => {
         canonical="https://www.setbenchmark.com"
         jsonLd={[{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is SetBenchmark?", "acceptedAnswer": {"@type": "Answer", "text": "SetBenchmark is a technical assessment and interview platform. Companies use it to test developers with real-world coding tasks, assess how they work with AI, run AI and live coding interviews and map their engineering team's skills."}}, {"@type": "Question", "name": "How is SetBenchmark different from HackerRank?", "acceptedAnswer": {"@type": "Answer", "text": "SetBenchmark focuses on hiring for the AI era: tasks can allow or require AI, an agentic environment shows how candidates direct coding agents, integrity signals always go to a person and pricing is local in India, the Middle East and ANZ."}}, {"@type": "Question", "name": "Can SetBenchmark detect cheating with ChatGPT?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It combines identity checks, proctoring, code similarity, paste and typing signals, and leak monitoring. Every signal is reviewed by a person before any decision."}}, {"@type": "Question", "name": "Who is SetBenchmark for?", "acceptedAnswer": {"@type": "Answer", "text": "Engineering and talent teams at product companies, enterprises, IT services and staffing firms, and campus recruiters, plus developers who want to practise and get certified."}}, {"@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Start a 14-day free trial with 10 assessment attempts. No credit card is needed."}}]}, {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SetBenchmark", "applicationCategory": "BusinessApplication", "applicationSubCategory": "Technical assessment and interview platform", "operatingSystem": "Web", "url": "https://www.setbenchmark.com", "publisher": {"@type": "Organization", "name": "Kombee Technologies (India) Pvt. Ltd."}, "offers": [{"@type": "Offer", "name": "Starter", "price": "828", "priceCurrency": "USD", "url": "https://www.setbenchmark.com/pricing"}]}, {"@context": "https://schema.org", "@type": "Organization", "name": "SetBenchmark", "legalName": "Kombee Technologies (India) Pvt. Ltd.", "url": "https://www.setbenchmark.com", "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png", "sameAs": []}, {"@context": "https://schema.org", "@type": "WebSite", "name": "SetBenchmark", "url": "https://www.setbenchmark.com"}]}
       />
-      <section className="hero-v2">
-        <div className="hero-glow-box-left" aria-hidden="true" />
-        <div className="hero-glow-box-right" aria-hidden="true" />
+      <section className="hero-modern">
+        <div className="hero-modern-ambient" aria-hidden="true" />
         <div className="wrap">
-          <div className="hero-stack">
-            <div className="hero-pill-badge">
-              <span className="hero-pill-dot" />
-              Technical Assessment Platform
+          <div className="hero-modern-stack">
+            {/* Pill / Eyebrow Badge */}
+            <div className="hero-modern-badge">
+              <span className="hero-modern-badge-dot" />
+              <span>Technical Assessment &amp; Benchmarking Platform</span>
             </div>
-            <h1 className="hero-display-h1">
-              Hire developers on real skills, in the age of <span className="hero-ai-accent">AI</span>
+
+            {/* Display Title */}
+            <h1 className="hero-modern-title">
+              Engineering Intelligence,<br />
+              Built for Modern Tech Teams
             </h1>
-            <p className="hero-lead-text">
-              Test engineers on how they actually work — from coding challenges and AI interviews to live coding, with fair scoring and real insights.
+
+            {/* Subtitle */}
+            <p className="hero-modern-lead">
+              Gain complete visibility into developer capability. Assess engineers with real-world repository tasks, AI fluency evaluations, and human-verified benchmarks that reflect actual work.
             </p>
-            <div className="hero-actions">
-              <a className="btn-hero-start" href="https://app.setbenchmark.com/signup">
-                Start free trial ↗
+
+            {/* Actions */}
+            <div className="hero-modern-actions">
+              <a className="btn-hero-primary" href="https://app.setbenchmark.com/signup">
+                Start free trial
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
               </a>
-              <a className="btn-hero-demo" href="/contact/">
-                Book a demo ↗
+              <a className="btn-hero-secondary" href="/contact/">
+                Book a demo
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
               </a>
             </div>
-            <div className="hero-proof-row">
+
+            {/* Proof Points */}
+            <div className="hero-modern-proof">
               <span className="hero-proof-item">
-                <span className="hero-proof-check">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-                </span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#385400" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
                 14-day free trial
               </span>
-              <span className="hero-proof-sep">|</span>
+              <span className="hero-proof-dot">·</span>
               <span className="hero-proof-item">
-                <span className="hero-proof-check">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-                </span>
-                No credit card
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#385400" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                No credit card required
               </span>
-              <span className="hero-proof-sep">|</span>
+              <span className="hero-proof-dot">·</span>
               <span className="hero-proof-item">
-                <span className="hero-proof-check">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-                </span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#385400" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
                 Local pricing in 6 currencies
               </span>
             </div>
           </div>
 
-          {/* Interactive Hero Showcase */}
-          <div className="hero-showcase-container">
-            {/* Tab Switcher */}
-            <div className="hero-showcase-tabs" role="tablist" aria-label="Product Showcase Previews">
-              {SHOWCASE_TABS.map((tab, idx) => (
-                <button
-                  key={tab.id}
-                  type="button"
-                  role="tab"
-                  id={'tab-' + tab.id}
-                  aria-selected={activeTab === idx}
-                  aria-controls={'panel-' + tab.id}
-                  className={'hero-showcase-tab' + (activeTab === idx ? ' is-active' : '')}
-                  onClick={() => setActiveTab(idx)}
-                >
-                  <span className="hero-tab-icon">{tab.icon}</span>
-                  <span className="hero-tab-label hero-tab-label-desktop">{tab.label}</span>
-                  <span className="hero-tab-label hero-tab-label-mobile">{tab.shortLabel}</span>
-                </button>
-              ))}
-            </div>
+          {/* Atmospheric Stage Backdrop with Ocean Texture & Floating Mockup */}
+          <div className="hero-stage-backdrop">
+            <div className="hero-modern-showcase">
+              {/* Tab Switcher */}
+              <div className="hero-showcase-tabbar" role="tablist" aria-label="Showcase Views">
+                {SHOWCASE_TABS.map((tab, idx) => (
+                  <button
+                    key={tab.id}
+                    type="button"
+                    role="tab"
+                    id={'tab-' + tab.id}
+                    aria-selected={activeTab === idx}
+                    aria-controls={'panel-' + tab.id}
+                    className={'hero-tab-pill' + (activeTab === idx ? ' is-active' : '')}
+                    onClick={() => setActiveTab(idx)}
+                  >
+                    <span className="hero-tab-icon">{tab.icon}</span>
+                    <span className="hero-tab-label-desktop">{tab.label}</span>
+                    <span className="hero-tab-label-mobile">{tab.shortLabel}</span>
+                  </button>
+                ))}
+              </div>
 
-            {/* Mockup Frame with rounded-xl, subtle border #E3E6EE, shadow-2xl */}
-            <div
-              className="hero-showcase-mockup"
-              id={'panel-' + SHOWCASE_TABS[activeTab].id}
-              role="tabpanel"
-              aria-labelledby={'tab-' + SHOWCASE_TABS[activeTab].id}
-            >
-              {SHOWCASE_TABS.map((tab, idx) => (
-                <img
-                  key={tab.id}
-                  src={tab.image}
-                  alt={tab.alt}
-                  width="1440"
-                  height="900"
-                  loading={idx === 0 ? 'eager' : 'lazy'}
-                  decoding="async"
-                  className={'hero-showcase-img' + (activeTab === idx ? ' is-active' : '')}
-                />
-              ))}
+              {/* Viewport with Current Screenshot */}
+              <div
+                className="hero-showcase-viewport"
+                id={'panel-' + SHOWCASE_TABS[activeTab].id}
+                role="tabpanel"
+                aria-labelledby={'tab-' + SHOWCASE_TABS[activeTab].id}
+              >
+                {SHOWCASE_TABS.map((tab, idx) => (
+                  <img
+                    key={tab.id}
+                    src={tab.image}
+                    alt={tab.alt}
+                    width="1440"
+                    height="900"
+                    loading={idx === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
+                    className={activeTab === idx ? 'is-active' : ''}
+                  />
+                ))}
+              </div>
+
+              {/* Floating Card Image Assets from Application */}
+              <img
+                src="/images/hero/hero-card-benchmark-score.png"
+                alt="Candidate Benchmark Score: 88/100 Top 5%"
+                className="floating-hero-img floating-hero-img-left"
+                width="322"
+                height="276"
+                loading="eager"
+                decoding="async"
+              />
+
+              <img
+                src="/images/hero/hero-bubble-verified.png"
+                alt="Human-Reviewed Verification Bubble"
+                className="floating-hero-img floating-hero-img-bubble"
+                width="48"
+                height="48"
+                loading="eager"
+                decoding="async"
+              />
+
+              <img
+                src="/images/hero/hero-card-ai-fluency.png"
+                alt="AI Fluency Assessment: 94% Prompt Judgment"
+                className="floating-hero-img floating-hero-img-right"
+                width="344"
+                height="287"
+                loading="eager"
+                decoding="async"
+              />
+
+              <img
+                src="/images/hero/hero-pill-pricing.png"
+                alt="Local pricing in INR, AED and USD with Mumbai data residency"
+                className="floating-hero-img floating-hero-img-pill"
+                width="348"
+                height="82"
+                loading="eager"
+                decoding="async"
+              />
             </div>
           </div>
         </div>

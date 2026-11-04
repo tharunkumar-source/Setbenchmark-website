@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('../../SetBenchmark_Figma_Import/html-prototype/fonts/InstrumentSans-Regular.ttf') format('truetype');
+  font-weight: 400 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('../../SetBenchmark_Figma_Import/html-prototype/fonts/InstrumentSans-Bold.ttf') format('truetype');
+  font-weight: 600 700 800;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: transparent;
+  padding: 40px;
+  display: inline-block;
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Container with stacked card background effect mirroring reference image */
+.stacked-card-wrapper {
+  position: relative;
+  width: 276px;
+  padding-top: 10px;
+}
+
+/* Background card stack layer 1 (blue accent like reference) */
+.stack-layer-back {
+  position: absolute;
+  top: 0;
+  left: 14px;
+  right: 14px;
+  height: 24px;
+  background: linear-gradient(135deg, #1E34C8 0%, #2F4BF5 100%);
+  border-radius: 16px 16px 0 0;
+  opacity: 0.55;
+}
+
+/* Background card stack layer 2 */
+.stack-layer-mid {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  right: 7px;
+  height: 24px;
+  background: linear-gradient(135deg, #2F4BF5 0%, #4665FF 100%);
+  border-radius: 16px 16px 0 0;
+  opacity: 0.85;
+}
+
+/* Foreground card */
+.aifluency-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid #E3E6EE;
+  border-radius: 18px;
+  padding: 18px 20px 16px;
+  box-shadow:
+    0 24px 48px -12px rgba(15, 18, 34, 0.16),
+    0 8px 20px -4px rgba(15, 18, 34, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+}
+
+.head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #5A6178;
+}
+
+.chip-ai {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #F7F2FF;
+  border: 1px solid #E4D6FD;
+  color: #5B24C9;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2.5px 8px;
+  border-radius: 999px;
+}
+
+.stat-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.stat-num {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0F1222;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.stat-sub {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #5B24C9;
+  background: #FCFAFF;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid #E4D6FD;
+}
+
+.checks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  border-top: 1px solid #EEF0F5;
+  padding-top: 10px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  color: #333A4E;
+  font-weight: 500;
+}
+
+.check-item svg {
+  flex-shrink: 0;
+}
+
+.reviewer-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #F5F6FA;
+  font-size: 11px;
+  color: #5A6178;
+}
+
+.reviewer-avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #E4C29A;
+  color: #0F1222;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
+</head>
+<body>
+
+<div class="stacked-card-wrapper">
+  <div class="stack-layer-back"></div>
+  <div class="stack-layer-mid"></div>
+  <div class="aifluency-card">
+    <div class="head-row">
+      <span class="card-title">AI Fluency Review</span>
+      <span class="chip-ai">✨ AI Allowed</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-num">94%</span>
+      <span class="stat-sub">Prompt Judgment</span>
+    </div>
+    <div class="checks-list">
+      <div class="check-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14653D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>3 Prompts Directed &amp; Refined</span>
+      </div>
+      <div class="check-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14653D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>0 AI Hallucinations Accepted</span>
+      </div>
+      <div class="check-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14653D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>6/6 Unit Tests Verified</span>
+      </div>
+    </div>
+    <div class="reviewer-row">
+      <div class="reviewer-avatar">MS</div>
+      <span>Scored by <b>Meera S.</b> · Rubric 18/20</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+

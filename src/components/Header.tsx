@@ -115,7 +115,7 @@ export const Header: React.FC = () => {
       </div>
 
       {/* Main Dark Header */}
-      <header className="hdr hdr-dark" ref={headerRef} onMouseLeave={closeMenuImmediately}>
+      <header className="hdr" ref={headerRef} onMouseLeave={closeMenuImmediately}>
         <a className="skip" href="#main">Skip to content</a>
         <div className="wrap hdr-in">
           {/* Brand Logo */}

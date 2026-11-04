@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('../../SetBenchmark_Figma_Import/html-prototype/fonts/InstrumentSans-Regular.ttf') format('truetype');
+  font-weight: 400 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('../../SetBenchmark_Figma_Import/html-prototype/fonts/InstrumentSans-Bold.ttf') format('truetype');
+  font-weight: 600 700 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../../SetBenchmark_Figma_Import/html-prototype/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 500;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: transparent;
+  padding: 40px;
+  display: inline-block;
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.benchmark-card {
+  width: 256px;
+  background: #FFFFFF;
+  border: 1px solid #E3E6EE;
+  border-radius: 18px;
+  padding: 18px 20px 16px;
+  box-shadow:
+    0 24px 48px -12px rgba(15, 18, 34, 0.16),
+    0 8px 20px -4px rgba(15, 18, 34, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+}
+
+.head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #5A6178;
+}
+
+.meets-tag {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #14653D;
+  background: #F0FDF4;
+  border: 1px solid #DCFCE7;
+  padding: 2.5px 8px;
+  border-radius: 6px;
+}
+
+.score-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.score-left {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.score-value {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0F1222;
+  line-height: 1;
+}
+
+.score-denom {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8C93A8;
+}
+
+.trend-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #E3F4EA;
+  color: #14653D;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+/* 5-Bar Chart mirroring the reference's 'Average Spend' card */
+.bars-track {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  height: 52px;
+  padding: 4px 4px 4px;
+  border-bottom: 1px solid #EEF0F5;
+  margin-bottom: 10px;
+}
+
+.bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+}
+
+.bar-col {
+  width: 100%;
+  max-width: 18px;
+  border-radius: 5px 5px 2px 2px;
+}
+
+.col-1 { height: 24px; background: #C9CEE0; }
+.col-2 { height: 36px; background: #2F4BF5; }
+.col-3 { height: 18px; background: #9AA1B8; }
+.col-4 { height: 44px; background: #2F4BF5; }
+.col-5 { height: 30px; background: #7C98FB; }
+
+.bar-lbl {
+  font-size: 10px;
+  font-weight: 600;
+  color: #8C93A8;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 500;
+  color: #5A6178;
+}
+
+.foot-bold {
+  font-weight: 600;
+  color: #0F1222;
+}
+</style>
+</head>
+<body>
+
+<div class="benchmark-card">
+  <div class="head-row">
+    <span class="card-title">Candidate Benchmark</span>
+    <span class="meets-tag">✓ Meets bar</span>
+  </div>
+  <div class="score-row">
+    <div class="score-left">
+      <span class="score-value">88</span>
+      <span class="score-denom">/100</span>
+    </div>
+    <span class="trend-badge">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+      Top 5%
+    </span>
+  </div>
+  <div class="bars-track">
+    <div class="bar-item">
+      <div class="bar-col col-1"></div>
+      <span class="bar-lbl">Go</span>
+    </div>
+    <div class="bar-item">
+      <div class="bar-col col-2"></div>
+      <span class="bar-lbl">Async</span>
+    </div>
+    <div class="bar-item">
+      <div class="bar-col col-3"></div>
+      <span class="bar-lbl">DB</span>
+    </div>
+    <div class="bar-item">
+      <div class="bar-col col-4"></div>
+      <span class="bar-lbl">Arch</span>
+    </div>
+    <div class="bar-item">
+      <div class="bar-col col-5"></div>
+      <span class="bar-lbl">AI</span>
+    </div>
+  </div>
+  <div class="card-foot">
+    <span>Senior Backend · Go v3</span>
+    <span class="foot-bold">P91</span>
+  </div>
+</div>
+
+</body>
+</html>

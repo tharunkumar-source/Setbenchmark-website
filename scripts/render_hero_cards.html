@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('../../SetBenchmark_Figma_Import/html-prototype/fonts/InstrumentSans-Regular.ttf') format('truetype');
+  font-weight: 400 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('../../SetBenchmark_Figma_Import/html-prototype/fonts/InstrumentSans-Bold.ttf') format('truetype');
+  font-weight: 600 700 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../../SetBenchmark_Figma_Import/html-prototype/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400 500;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../../SetBenchmark_Figma_Import/html-prototype/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: transparent;
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Card 1: Benchmark Score with Bar Chart */
+#card-benchmark {
+  width: 250px;
+  background: #FFFFFF;
+  border: 1px solid #E3E6EE;
+  border-radius: 16px;
+  padding: 18px 20px 16px;
+  box-shadow: 0 16px 36px -8px rgba(15, 18, 34, 0.12), 0 4px 12px rgba(15, 18, 34, 0.04);
+}
+
+.card-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #5A6178;
+}
+
+.trend-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #E3F4EA;
+  color: #14653D;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.score-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.score-num {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0F1222;
+  line-height: 1;
+}
+
+.score-denom {
+  font-size: 14px;
+  font-weight: 600;
+  color: #8C93A8;
+}
+
+.score-sub {
+  font-size: 12px;
+  font-weight: 600;
+  color: #14653D;
+  margin-left: auto;
+}
+
+.bars-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 58px;
+  padding: 6px 4px 0;
+  border-bottom: 1px solid #EEF0F5;
+  margin-bottom: 10px;
+}
+
+.bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.bar-pillar {
+  width: 14px;
+  border-radius: 4px 4px 2px 2px;
+  transition: height 0.2s;
+}
+
+.bar-1 { height: 32px; background: #C9CEE0; }
+.bar-2 { height: 44px; background: #2F4BF5; }
+.bar-3 { height: 26px; background: #8C93A8; }
+.bar-4 { height: 50px; background: #2F4BF5; }
+.bar-5 { height: 38px; background: #A0B3F9; }
+
+.bar-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #8C93A8;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.card-footer {
+  font-size: 11px;
+  font-weight: 500;
+  color: #5A6178;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Card 2: AI Fluency Review Card */
+#card-ai-fluency {
+  width: 270px;
+  background: #FFFFFF;
+  border: 1px solid #E3E6EE;
+  border-radius: 16px;
+  padding: 18px 20px 16px;
+  box-shadow: 0 16px 36px -8px rgba(15, 18, 34, 0.12), 0 4px 12px rgba(15, 18, 34, 0.04);
+}
+
+.chip-ai {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #F7F2FF;
+  border: 1px solid #E4D6FD;
+  color: #5B24C9;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.ai-stat-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 10px 0 12px;
+}
+
+.ai-stat-num {
+  font-size: 30px;
+  font-weight: 800;
+  color: #0F1222;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.ai-stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #5B24C9;
+  background: #FCFAFF;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid #E4D6FD;
+}
+
+.ai-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  border-top: 1px solid #EEF0F5;
+  padding-top: 10px;
+}
+
+.ai-check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  color: #333A4E;
+  font-weight: 500;
+}
+
+.ai-check-item svg {
+  flex-shrink: 0;
+}
+
+/* Card 3: Integrity Badge */
+#badge-integrity {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1px solid #E3E6EE;
+  padding: 8px 14px;
+  border-radius: 999px;
+  box-shadow: 0 12px 28px -6px rgba(15, 18, 34, 0.1), 0 2px 6px rgba(15, 18, 34, 0.04);
+  font-size: 12px;
+  font-weight: 600;
+  color: #0F1222;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #385400;
+}
+
+/* Card 4: Multi-region Pricing Pill */
+#pill-pricing {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E3E6EE;
+  padding: 8px 16px;
+  border-radius: 999px;
+  box-shadow: 0 12px 28px -6px rgba(15, 18, 34, 0.1), 0 2px 6px rgba(15, 18, 34, 0.04);
+  font-size: 12px;
+  color: #333A4E;
+}
+
+.pill-sep {
+  color: #C9CEDB;
+}
+</style>
+</head>
+<body>
+
+<!-- Card 1 -->
+<div id="card-benchmark">
+  <div class="card-label-row">
+    <span class="card-label">Benchmark Score</span>
+    <span class="trend-badge">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+      Top 5%
+    </span>
+  </div>
+  <div class="score-row">
+    <span class="score-num">88</span>
+    <span class="score-denom">/100</span>
+    <span class="score-sub">✓ Meets bar</span>
+  </div>
+  <div class="bars-container">
+    <div class="bar-col">
+      <div class="bar-pillar bar-1"></div>
+      <span class="bar-label">Go</span>
+    </div>
+    <div class="bar-col">
+      <div class="bar-pillar bar-2"></div>
+      <span class="bar-label">Async</span>
+    </div>
+    <div class="bar-col">
+      <div class="bar-pillar bar-3"></div>
+      <span class="bar-label">DB</span>
+    </div>
+    <div class="bar-col">
+      <div class="bar-pillar bar-4"></div>
+      <span class="bar-label">Arch</span>
+    </div>
+    <div class="bar-col">
+      <div class="bar-pillar bar-5"></div>
+      <span class="bar-label">AI</span>
+    </div>
+  </div>
+  <div class="card-footer">88th percentile · 410 candidates</div>
+</div>
+
+<!-- Card 2 -->
+<div id="card-ai-fluency">
+  <div class="card-label-row">
+    <span class="card-label">AI Fluency Review</span>
+    <span class="chip-ai">✨ AI Allowed</span>
+  </div>
+  <div class="ai-stat-row">
+    <span class="ai-stat-num">94%</span>
+    <span class="ai-stat-label">Prompt Judgment</span>
+  </div>
+  <div class="ai-check-list">
+    <div class="ai-check-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14653D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      <span>3 Prompts Directed &amp; Refined</span>
+    </div>
+    <div class="ai-check-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14653D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      <span>0 AI Hallucinations Accepted</span>
+    </div>
+    <div class="ai-check-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#14653D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      <span>6/6 Unit Tests Verified</span>
+    </div>
+  </div>
+</div>
+
+<!-- Card 3 -->
+<div id="badge-integrity">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#14653D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+  <span>Human-Reviewed Integrity</span>
+  <span class="badge-dot"></span>
+</div>
+
+<!-- Card 4 -->
+<div id="pill-pricing">
+  <span>🇮🇳 <b>₹3,999/mo</b> · Mumbai Data</span>
+  <span class="pill-sep">·</span>
+  <span>🇦🇪 <b>AED</b> · 🇺🇸 <b>USD</b></span>
+</div>
+
+</body>
+</html>
+
