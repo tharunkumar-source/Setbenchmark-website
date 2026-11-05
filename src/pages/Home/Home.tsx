@@ -1,75 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SEOHead } from '@/components/SEOHead';
 import { FAQ } from '@/components/FAQ';
 import { FeatureAccordionShowcase } from '@/components/FeatureAccordionShowcase';
 import { EditorialPlatformShowcase } from '@/components/EditorialPlatformShowcase';
 import { RegionalPricingSection } from '@/components/RegionalPricingSection';
-
-interface ShowcaseTab {
-  id: string;
-  label: string;
-  shortLabel: string;
-  image: string;
-  alt: string;
-  icon: React.ReactNode;
-}
-
-const SHOWCASE_TABS: ShowcaseTab[] = [
-  {
-    id: 'coding',
-    label: 'Candidate Coding Test',
-    shortLabel: 'Coding Test',
-    image: '/images/product/C05-Coding.webp',
-    alt: 'Candidate Coding Test - in-browser IDE with live task description, code editor, and test runner',
-    icon: (
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <polyline points="16 18 22 12 16 6" />
-        <polyline points="8 6 2 12 8 18" />
-      </svg>
-    ),
-  },
-  {
-    id: 'overview',
-    label: 'Analytics & Overview',
-    shortLabel: 'Overview',
-    image: '/images/product/A01-Overview.webp',
-    alt: 'Analytics and Overview Dashboard - hiring pipeline, completion rates, and benchmark percentiles',
-    icon: (
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
-  },
-  {
-    id: 'report',
-    label: 'Benchmark Score Report',
-    shortLabel: 'Score Report',
-    image: '/images/product/H11-Report.webp',
-    alt: 'Benchmark Score Report - candidate scorecard with skill breakdown, code review, and integrity signals',
-    icon: (
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <polyline points="14 2 14 8 20 8" />
-        <line x1="16" y1="13" x2="8" y2="13" />
-        <line x1="16" y1="17" x2="8" y2="17" />
-      </svg>
-    ),
-  },
-  {
-    id: 'aifluency',
-    label: 'AI Fluency Breakdown',
-    shortLabel: 'AI Fluency',
-    image: '/images/product/H14-AIFluency.webp',
-    alt: 'AI Fluency Breakdown - assessment of how candidates prompt, inspect, and verify code with AI assistants',
-    icon: (
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6l2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6l2.1-2.1" />
-      </svg>
-    ),
-  },
-];
 
 const BODY_BEFORE = `<section class="section why-section section-alt"><div class="wrap"><div class="head"><div class="eyebrow">Why SetBenchmark</div><h2 class="h2">AI changed how engineers work. Hiring should change too.</h2><p class="lead" style="margin-top:16px">Most coding tests still ban every tool and ask for puzzles from memory. SetBenchmark measures what matters now.</p></div><div class="grid g3"><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 4l-4 16"></path></svg></div><h3 class="h3">Real work, not puzzles</h3><p>Repository tasks, APIs, SQL and system design that look like the job, so strong engineers can show what they do best.</p></div><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"></path></svg></div><h3 class="h3">Built for AI-era engineering</h3><p>Decide per task whether AI is not allowed, allowed or required, and see how candidates plan, prompt and verify.</p></div><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM12 12h.01"></path></svg></div><h3 class="h3">Integrity without false rejections</h3><p>Layered cheating signals with evidence, reviewed blind by a person. Nothing is rejected automatically.</p></div></div></div></section>`;
 
@@ -192,7 +126,6 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
 const BODY_AFTER_2 = `<section class="section tight cta-band-section section-white"><div class="wrap"><div class="cta"><div><h2 class="h2">See SetBenchmark with your own roles</h2><p>Start a 14-day free trial with 10 assessment attempts, or book a 30-minute demo with our team.</p></div><div class="btns"><a class="btn btn-lime" href="https://app.setbenchmark.com/signup">Start free trial</a><a href="/contact/" class="btn btn-ghost on-dark">Book a demo</a></div></div></div></section>`;
 
 export const Home: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
 
   return (
     <>
@@ -202,15 +135,19 @@ export const Home: React.FC = () => {
         canonical="https://www.setbenchmark.com"
         jsonLd={[{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is SetBenchmark?", "acceptedAnswer": {"@type": "Answer", "text": "SetBenchmark is a technical assessment and interview platform. Companies use it to test developers with real-world coding tasks, assess how they work with AI, run AI and live coding interviews and map their engineering team's skills."}}, {"@type": "Question", "name": "How is SetBenchmark different from HackerRank?", "acceptedAnswer": {"@type": "Answer", "text": "SetBenchmark focuses on hiring for the AI era: tasks can allow or require AI, an agentic environment shows how candidates direct coding agents, integrity signals always go to a person and pricing is local in India, the Middle East and ANZ."}}, {"@type": "Question", "name": "Can SetBenchmark detect cheating with ChatGPT?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It combines identity checks, proctoring, code similarity, paste and typing signals, and leak monitoring. Every signal is reviewed by a person before any decision."}}, {"@type": "Question", "name": "Who is SetBenchmark for?", "acceptedAnswer": {"@type": "Answer", "text": "Engineering and talent teams at product companies, enterprises, IT services and staffing firms, and campus recruiters, plus developers who want to practise and get certified."}}, {"@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Start a 14-day free trial with 10 assessment attempts. No credit card is needed."}}]}, {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SetBenchmark", "applicationCategory": "BusinessApplication", "applicationSubCategory": "Technical assessment and interview platform", "operatingSystem": "Web", "url": "https://www.setbenchmark.com", "publisher": {"@type": "Organization", "name": "Kombee Technologies (India) Pvt. Ltd."}, "offers": [{"@type": "Offer", "name": "Starter", "price": "828", "priceCurrency": "USD", "url": "https://www.setbenchmark.com/pricing"}]}, {"@context": "https://schema.org", "@type": "Organization", "name": "SetBenchmark", "legalName": "Kombee Technologies (India) Pvt. Ltd.", "url": "https://www.setbenchmark.com", "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png", "sameAs": []}, {"@context": "https://schema.org", "@type": "WebSite", "name": "SetBenchmark", "url": "https://www.setbenchmark.com"}]}
       />
-      <section className="hero-modern">
+            <section className="hero-modern">
         <div className="hero-modern-grid" aria-hidden="true" />
         <div className="hero-modern-ambient" aria-hidden="true" />
         <div className="wrap">
           <div className="hero-modern-stack">
-            {/* Pill / Eyebrow Badge */}
+            {/* Pill / Eyebrow Badge (Matching Reference Template) */}
             <div className="hero-modern-badge">
-              <span className="hero-modern-badge-dot" />
-              <span>Technical Assessment &amp; Benchmarking Platform</span>
+              <span className="hero-modern-badge-icon" aria-hidden="true">✦</span>
+              <span>Now live: AI fluency &amp; agentic coding assessments</span>
+              <svg className="hero-badge-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
             </div>
 
             {/* Display Title */}
@@ -283,51 +220,45 @@ export const Home: React.FC = () => {
             </div>
           </div>
 
-          {/* Atmospheric Stage Backdrop with Ocean Texture & Floating Mockup */}
+          {/* Central Elevated Showcase Window Template (Single Screen, No Tabs, Cards Preserved) */}
           <div className="hero-stage-backdrop">
-            <div className="hero-modern-showcase">
-              {/* Tab Switcher */}
-              <div className="hero-showcase-tabbar" role="tablist" aria-label="Showcase Views">
-                {SHOWCASE_TABS.map((tab, idx) => (
-                  <button
-                    key={tab.id}
-                    type="button"
-                    role="tab"
-                    id={'tab-' + tab.id}
-                    aria-selected={activeTab === idx}
-                    aria-controls={'panel-' + tab.id}
-                    className={'hero-tab-pill' + (activeTab === idx ? ' is-active' : '')}
-                    onClick={() => setActiveTab(idx)}
-                  >
-                    <span className="hero-tab-icon">{tab.icon}</span>
-                    <span className="hero-tab-label-desktop">{tab.label}</span>
-                    <span className="hero-tab-label-mobile">{tab.shortLabel}</span>
-                  </button>
-                ))}
+            <div className="hero-template-window">
+              {/* Window Chrome Header Bar */}
+              <div className="hero-window-header">
+                <div className="hero-window-controls" aria-hidden="true">
+                  <span className="hero-window-dot dot-red" />
+                  <span className="hero-window-dot dot-yellow" />
+                  <span className="hero-window-dot dot-green" />
+                </div>
+                <div className="hero-window-url">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                  <span>app.setbenchmark.com/candidate/test-environment</span>
+                </div>
+                <div className="hero-window-meta">
+                  <span className="hero-window-status-pill">
+                    <span className="hero-window-live-pulse" />
+                    Live Sandbox
+                  </span>
+                </div>
               </div>
 
-              {/* Viewport with Current Screenshot */}
-              <div
-                className="hero-showcase-viewport"
-                id={'panel-' + SHOWCASE_TABS[activeTab].id}
-                role="tabpanel"
-                aria-labelledby={'tab-' + SHOWCASE_TABS[activeTab].id}
-              >
-                {SHOWCASE_TABS.map((tab, idx) => (
-                  <img
-                    key={tab.id}
-                    src={tab.image}
-                    alt={tab.alt}
-                    width="1440"
-                    height="900"
-                    loading={idx === 0 ? 'eager' : 'lazy'}
-                    decoding="async"
-                    className={activeTab === idx ? 'is-active' : ''}
-                  />
-                ))}
+              {/* Single Flagship Screen Mockup */}
+              <div className="hero-window-viewport">
+                <img
+                  src="/images/product/C05-Coding.webp"
+                  alt="Candidate Coding Test - in-browser IDE with live task description, code editor, and test runner"
+                  width="1440"
+                  height="900"
+                  loading="eager"
+                  decoding="async"
+                  className="hero-window-screen-img"
+                />
               </div>
 
-              {/* Floating Card Image Assets from Application */}
+              {/* Floating Card Image Assets from Application (Preserved) */}
               <img
                 src="/images/hero/hero-card-benchmark-score.png"
                 alt="Candidate Benchmark Score: 88/100 Top 5%"
