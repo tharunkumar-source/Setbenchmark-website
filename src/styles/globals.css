@@ -5575,7 +5575,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .editorial-carousel-section.section-brand,
 .editorial-carousel-section.section-white,
 .editorial-carousel-section {
-  background: var(--brand-subtle, #E8F9F1) !important;
+  background: linear-gradient(180deg, #CEF3E2 0%, #BCEFD6 100%) !important;
   border: none !important;
   border-top: none !important;
   border-bottom: none !important;
@@ -5774,5 +5774,59 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   .why-section.section-alt,
   .solutions-section.section-alt {
     padding: 48px 0 56px;
+  }
+}
+
+
+/* Full Display Width: 4 Feature Cards Across Entire Page (Start to End) */
+.editorial-carousel-viewport-full {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow: hidden !important;
+  position: relative !important;
+  padding: 0 24px !important;
+  box-sizing: border-box !important;
+}
+
+.editorial-carousel-viewport-full .editorial-carousel-track {
+  display: flex !important;
+  gap: 20px !important;
+  padding: 8px 0 16px !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform !important;
+  width: 100% !important;
+}
+
+.editorial-carousel-viewport-full .editorial-feature-card {
+  flex: 0 0 calc((100% - 60px) / 4) !important;
+  width: calc((100% - 60px) / 4) !important;
+  min-width: calc((100% - 60px) / 4) !important;
+  max-width: calc((100% - 60px) / 4) !important;
+  box-sizing: border-box !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(18, 128, 74, 0.16) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 6px 20px rgba(18, 128, 74, 0.08) !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 1024px) {
+  .editorial-carousel-viewport-full .editorial-feature-card {
+    flex: 0 0 calc((100% - 20px) / 2) !important;
+    width: calc((100% - 20px) / 2) !important;
+    min-width: calc((100% - 20px) / 2) !important;
+    max-width: calc((100% - 20px) / 2) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .editorial-carousel-viewport-full {
+    padding: 0 16px !important;
+  }
+  .editorial-carousel-viewport-full .editorial-feature-card {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
   }
 }

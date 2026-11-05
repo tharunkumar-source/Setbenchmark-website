@@ -120,7 +120,7 @@ export const EditorialPlatformShowcase: React.FC = () => {
 
   // Maximum index so cards never scroll into empty blank space on the right
   // (3 cards visible at a time on desktop)
-  const visibleCards = 3;
+  const visibleCards = 4;
   const maxIndex = Math.max(0, filteredCards.length - visibleCards);
 
   // Auto-scroll every 4 seconds ONLY if there are 4 or more cards (desktop only)
@@ -254,10 +254,10 @@ export const EditorialPlatformShowcase: React.FC = () => {
         </div>
       </div>
 
-      {/* Auto-scrolling Edge-Bleed Carousel Track */}
+      {/* 4 Cards Viewport - Full Display Page Width from Start to End */}
       <div 
         ref={bleedRef}
-        className="editorial-carousel-bleed"
+        className="editorial-carousel-viewport-full"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
@@ -265,7 +265,7 @@ export const EditorialPlatformShowcase: React.FC = () => {
           ref={trackRef}
           className="editorial-carousel-track"
           style={{
-            transform: `translateX(calc(-${currentIndex} * (var(--carousel-card-width, 360px) + 24px)))`,
+            transform: `translateX(calc(-${currentIndex} * ((100% + 20px) / 4)))`,
           }}
         >
           {filteredCards.map((card, idx) => (
@@ -301,8 +301,8 @@ export const EditorialPlatformShowcase: React.FC = () => {
               </div>
             </article>
           ))}
+          </div>
         </div>
-      </div>
     </section>
   );
 };
