@@ -172,32 +172,7 @@ export const RegionalPricingSection: React.FC = () => {
     <section className="regional-clean-section section-alt">
       <div className="wrap">
         <div className="regional-clean-layout">
-          {/* Left Column: Heading, Subtitle & Action */}
-          <div className="regional-clean-left">
-            <span className="regional-clean-eyebrow">Local Pricing &amp; Support</span>
-            <h2 className="regional-clean-title">
-              Built in India.<br />
-              Ready Globally.
-            </h2>
-            <p className="regional-clean-desc">
-              Plans from ₹3,999/mo in India and US$69/mo globally. Billed in your local currency with GST &amp; VAT tax invoices, local payment rails, and dedicated regional support across all time zones.
-            </p>
-            <div className="regional-clean-action">
-              <Link to="/pricing/" className="regional-clean-btn">
-                <span>View all pricing</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </Link>
-            </div>
-            <div className="regional-clean-footer-text">
-              <span className="regional-clean-dot">●</span>
-              <span>Mumbai, Sydney &amp; Bahrain Data Residency · DPDP &amp; GDPR</span>
-            </div>
-          </div>
-
-          {/* Right Column: 3x2 Grid of Clean White Cards (No Outer Grey Container) */}
+          {/* Left Column (50% Width): 3x2 Grid of Clean White Cards with Country Flags */}
           <div className="regional-clean-grid">
             {REGIONS.map((region) => (
               <Link
@@ -216,6 +191,31 @@ export const RegionalPricingSection: React.FC = () => {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* Right Column (50% Width): Heading, Subtitle & Action */}
+          <div className="regional-clean-content">
+            <span className="regional-clean-eyebrow">Local Pricing &amp; Support</span>
+            <h2 className="regional-clean-title">
+              Built in India.<br />
+              Ready Globally.
+            </h2>
+            <p className="regional-clean-desc">
+              Plans from ₹3,999/mo in India and US$69/mo globally. Billed in your local currency with GST &amp; VAT tax invoices, local payment rails, and dedicated regional support across all time zones.
+            </p>
+            <div className="regional-clean-action">
+              <Link to="/pricing/" className="btn btn-primary regional-clean-btn">
+                <span>View all pricing</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </Link>
+            </div>
+            <div className="regional-clean-footer-text">
+              <span className="regional-clean-dot">●</span>
+              <span>Mumbai, Sydney &amp; Bahrain Data Residency · DPDP &amp; GDPR</span>
+            </div>
           </div>
         </div>
       </div>

@@ -93,13 +93,6 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
         <div class="how-compact-step">
           <div class="how-step-header">
             <span class="how-step-num">01</span>
-            <div class="how-step-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-              </svg>
-            </div>
           </div>
           <h4 class="how-step-title">Choose or draft a test</h4>
           <p class="how-step-desc">Start from 400+ role benchmarks or paste a job description to generate repo tasks.</p>
@@ -109,12 +102,6 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
         <div class="how-compact-step">
           <div class="how-step-header">
             <span class="how-step-num">02</span>
-            <div class="how-step-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
-            </div>
           </div>
           <h4 class="how-step-title">Invite candidates</h4>
           <p class="how-step-desc">Send branded invites from Greenhouse, Lever, Ashby, or email with automated reminders.</p>
@@ -124,12 +111,6 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
         <div class="how-compact-step">
           <div class="how-step-header">
             <span class="how-step-num">03</span>
-            <div class="how-step-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
           </div>
           <h4 class="how-step-title">Candidates take it</h4>
           <p class="how-step-desc">Real cloud sandbox with terminal, test suites, practice questions, and accommodations.</p>
@@ -139,12 +120,6 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
         <div class="how-compact-step">
           <div class="how-step-header">
             <span class="how-step-num">04</span>
-            <div class="how-step-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-            </div>
           </div>
           <h4 class="how-step-title">Review and decide</h4>
           <p class="how-step-desc">Verified scorecards, code playback, and percentiles benchmarked against 400+ peer attempts.</p>
