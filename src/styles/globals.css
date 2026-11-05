@@ -3869,23 +3869,81 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 
 .hero-modern {
   position: relative;
-  background: #FFFFFF;
+  background: radial-gradient(110% 75% at 50% -10%, #E8F9F1 0%, #F5FCF8 45%, #FFFFFF 100%);
   padding: 56px 0 100px;
   overflow: hidden;
   text-align: center;
 }
 
-/* Ambient Radial Glow */
+/* Animated Subtle Green Ambient Gradient (Engaging Organic Aura) */
 .hero-modern-ambient {
   position: absolute;
-  top: 0;
+  top: -80px;
   left: 50%;
   transform: translateX(-50%);
-  width: 1200px;
-  height: 520px;
-  background: radial-gradient(ellipse 65% 45% at 50% 0%, rgba(38, 208, 124, 0.14) 0%, rgba(98, 68, 187, 0.05) 50%, transparent 80%);
+  width: 1400px;
+  height: 700px;
   pointer-events: none;
   z-index: 0;
+  overflow: hidden;
+  filter: blur(60px);
+  opacity: 0.85;
+}
+
+.hero-modern-ambient::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 15%;
+  width: 620px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(38, 208, 124, 0.28) 0%, rgba(200, 242, 90, 0.16) 45%, transparent 70%);
+  border-radius: 50%;
+  animation: heroGradientDriftLeft 14s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.hero-modern-ambient::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 15%;
+  width: 580px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(18, 128, 74, 0.18) 0%, rgba(38, 208, 124, 0.22) 50%, transparent 75%);
+  border-radius: 50%;
+  animation: heroGradientDriftRight 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes heroGradientDriftLeft {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(60px, 35px) scale(1.12) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-30px, 55px) scale(0.95) rotate(-8deg);
+    opacity: 0.82;
+  }
+}
+
+@keyframes heroGradientDriftRight {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translate(-70px, 45px) scale(1.14) rotate(-12deg);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(40px, 25px) scale(0.94) rotate(8deg);
+    opacity: 0.72;
+  }
 }
 
 .hero-modern-stack {
