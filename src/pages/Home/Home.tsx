@@ -220,45 +220,62 @@ export const Home: React.FC = () => {
             </div>
           </div>
 
-          {/* Central Elevated Showcase Window Template (Single Screen, No Tabs, Cards Preserved) */}
+          {/* Realistic Hardware Device Mockup Stage */}
           <div className="hero-stage-backdrop">
-            <div className="hero-template-window">
-              {/* Window Chrome Header Bar */}
-              <div className="hero-window-header">
-                <div className="hero-window-controls" aria-hidden="true">
-                  <span className="hero-window-dot dot-red" />
-                  <span className="hero-window-dot dot-yellow" />
-                  <span className="hero-window-dot dot-green" />
+            <div className="hero-device-wrapper">
+              {/* Hardware Device Chassis (MacBook / Display Hardware Frame) */}
+              <div className="hero-device-chassis">
+                {/* Camera / Sensor Dot */}
+                <div className="hero-device-camera" aria-hidden="true">
+                  <span className="hero-device-lens" />
                 </div>
-                <div className="hero-window-url">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                  </svg>
-                  <span>app.setbenchmark.com/candidate/test-environment</span>
+
+                {/* Inner Screen Display */}
+                <div className="hero-device-screen">
+                  {/* Browser Chrome Header */}
+                  <div className="hero-window-header">
+                    <div className="hero-window-controls" aria-hidden="true">
+                      <span className="hero-window-dot dot-red" />
+                      <span className="hero-window-dot dot-yellow" />
+                      <span className="hero-window-dot dot-green" />
+                    </div>
+                    <div className="hero-window-url">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                      </svg>
+                      <span>app.setbenchmark.com/candidate/test-environment</span>
+                    </div>
+                    <div className="hero-window-meta">
+                      <span className="hero-window-status-pill">
+                        <span className="hero-window-live-pulse" />
+                        Live Sandbox
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Half-Screen Viewport */}
+                  <div className="hero-window-viewport">
+                    <img
+                      src="/images/product/C05-Coding.webp"
+                      alt="Candidate Coding Test - in-browser IDE with live task description, code editor, and test runner"
+                      width="1440"
+                      height="900"
+                      loading="eager"
+                      decoding="async"
+                      className="hero-window-screen-img"
+                    />
+                  </div>
                 </div>
-                <div className="hero-window-meta">
-                  <span className="hero-window-status-pill">
-                    <span className="hero-window-live-pulse" />
-                    Live Sandbox
-                  </span>
+
+                {/* Laptop Base / Chin Lip */}
+                <div className="hero-device-base" aria-hidden="true">
+                  <div className="hero-device-notch" />
                 </div>
               </div>
 
-              {/* Single Flagship Screen Mockup */}
-              <div className="hero-window-viewport">
-                <img
-                  src="/images/product/C05-Coding.webp"
-                  alt="Candidate Coding Test - in-browser IDE with live task description, code editor, and test runner"
-                  width="1440"
-                  height="900"
-                  loading="eager"
-                  decoding="async"
-                  className="hero-window-screen-img"
-                />
-              </div>
-
-              {/* Floating Card Image Assets from Application (Preserved) */}
+              {/* Floating Cards Hanging AROUND the Screen */}
+              {/* Top-Left: Benchmark Score */}
               <img
                 src="/images/hero/hero-card-benchmark-score.png"
                 alt="Candidate Benchmark Score: 88/100 Top 5%"
@@ -269,6 +286,7 @@ export const Home: React.FC = () => {
                 decoding="async"
               />
 
+              {/* Top-Right: AI Fluency Review */}
               <img
                 src="/images/hero/hero-card-ai-fluency.png"
                 alt="AI Fluency Assessment: 94% Prompt Judgment"
@@ -279,6 +297,18 @@ export const Home: React.FC = () => {
                 decoding="async"
               />
 
+              {/* Bottom-Left: Integrity Verified Badge */}
+              <img
+                src="/images/hero/hero-badge-integrity.png"
+                alt="Layered Cheating Signals with Blind Human Review"
+                className="floating-hero-img floating-hero-img-integrity"
+                width="267"
+                height="84"
+                loading="eager"
+                decoding="async"
+              />
+
+              {/* Bottom-Right: Local Pricing Pill */}
               <img
                 src="/images/hero/hero-pill-pricing.png"
                 alt="Local pricing in INR, AED and USD with Mumbai data residency"
