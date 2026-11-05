@@ -3875,7 +3875,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .hero-modern {
   position: relative;
   background: #FFFFFF;
-  padding: 56px 0 100px;
+  padding: 56px 0 0;
   overflow: hidden;
   text-align: center;
 }
@@ -3904,7 +3904,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   z-index: 0;
 }
 
-/* Layer 2: Moving Emerald Spotlight Orbs (Gliding smoothly around hero with deep Gaussian blur) */
+/* Layer 2: Ethereal Aurora Ambient Lighting (Premium living atmosphere, centered behind hero title) */
 .hero-modern-ambient {
   position: absolute;
   top: 0;
@@ -3918,69 +3918,65 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   overflow: hidden;
 }
 
-/* Spotlight Orb 1: Primary Emerald Glow (Luminous, smoothly animating) */
+/* Primary Centered Emerald Aurora Corona */
 .hero-modern-ambient::before {
   content: "";
   position: absolute;
-  top: 40px;
-  left: 15%;
-  width: 860px;
-  height: 860px;
-  background: radial-gradient(circle, rgba(38, 208, 124, 0.42) 0%, rgba(38, 208, 124, 0.22) 35%, rgba(132, 230, 160, 0.10) 58%, transparent 75%);
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1080px;
+  height: 600px;
+  background: radial-gradient(ellipse 65% 50% at 50% 40%, rgba(38, 208, 124, 0.28) 0%, rgba(38, 208, 124, 0.14) 40%, rgba(132, 230, 160, 0.05) 65%, transparent 80%);
   border-radius: 50% !important;
-  filter: blur(80px);
-  animation: heroGlideSpotlight1 22s ease-in-out infinite alternate;
-  will-change: transform;
+  filter: blur(100px);
+  animation: heroAuroraBreath1 16s ease-in-out infinite alternate;
+  will-change: transform, opacity;
 }
 
-/* Spotlight Orb 2: Deep Mint & Jade Glow (Atmospheric depth) */
+/* Secondary Offset Mint / Jade Accent Corona */
 .hero-modern-ambient::after {
   content: "";
   position: absolute;
-  top: 120px;
-  right: 12%;
-  width: 780px;
-  height: 780px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.38) 0%, rgba(52, 211, 153, 0.20) 40%, rgba(200, 242, 90, 0.08) 62%, transparent 78%);
+  top: 70px;
+  left: 50%;
+  transform: translateX(-48%);
+  width: 900px;
+  height: 520px;
+  background: radial-gradient(ellipse 60% 45% at 50% 45%, rgba(16, 185, 129, 0.22) 0%, rgba(52, 211, 153, 0.10) 42%, rgba(200, 242, 90, 0.04) 65%, transparent 80%);
   border-radius: 50% !important;
-  filter: blur(85px);
-  animation: heroGlideSpotlight2 28s ease-in-out infinite alternate;
-  will-change: transform;
+  filter: blur(95px);
+  animation: heroAuroraBreath2 20s ease-in-out infinite alternate;
+  will-change: transform, opacity;
 }
 
-@keyframes heroGlideSpotlight1 {
+@keyframes heroAuroraBreath1 {
   0% {
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translateX(-50%) scale(1) translateY(0);
+    opacity: 0.78;
   }
-  30% {
-    transform: translate3d(240px, 120px, 0) scale(1.12);
-  }
-  60% {
-    transform: translate3d(140px, 320px, 0) scale(1.04);
-  }
-  85% {
-    transform: translate3d(-120px, 180px, 0) scale(1.08);
+  50% {
+    transform: translateX(-50%) scale(1.08) translateY(18px);
+    opacity: 0.98;
   }
   100% {
-    transform: translate3d(60px, 40px, 0) scale(0.96);
+    transform: translateX(-50%) scale(0.96) translateY(-8px);
+    opacity: 0.78;
   }
 }
 
-@keyframes heroGlideSpotlight2 {
+@keyframes heroAuroraBreath2 {
   0% {
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translateX(-48%) scale(1.06) translateY(0);
+    opacity: 0.92;
   }
-  35% {
-    transform: translate3d(-260px, 110px, 0) scale(1.1);
-  }
-  65% {
-    transform: translate3d(-120px, 280px, 0) scale(0.96);
-  }
-  85% {
-    transform: translate3d(160px, 160px, 0) scale(1.08);
+  50% {
+    transform: translateX(-48%) scale(0.95) translateY(-16px);
+    opacity: 0.70;
   }
   100% {
-    transform: translate3d(-60px, 50px, 0) scale(1.02);
+    transform: translateX(-48%) scale(1.04) translateY(12px);
+    opacity: 0.92;
   }
 }
 
@@ -4169,17 +4165,19 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   border: none !important;
 }
 
-/* Hero Device/Browser Window Template (Matching Reference Template) */
+/* Hero Device/Browser Window Template (Half-Screen Cut, Matching Reference) */
 .hero-template-window {
   position: relative;
   max-width: 1040px;
   margin: 0 auto;
   background: #0B0F19;
   border: 1px solid rgba(15, 23, 42, 0.18);
-  border-radius: 12px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border-bottom: none;
   box-shadow: 
-    0 28px 70px -15px rgba(15, 23, 42, 0.22),
-    0 10px 24px -6px rgba(15, 23, 42, 0.10),
+    0 24px 60px -15px rgba(15, 23, 42, 0.20),
+    0 8px 24px -6px rgba(15, 23, 42, 0.10),
     0 0 0 1px rgba(255, 255, 255, 0.06) inset;
   overflow: visible;
 }
@@ -4189,8 +4187,8 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   height: 42px;
   background: #0F172A;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  border-top-left-radius: 11px;
-  border-top-right-radius: 11px;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4288,14 +4286,26 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   50% { opacity: 0.4; transform: scale(0.85); }
 }
 
-/* Viewport for Single Screen */
+/* Viewport for Half Screen (Teaser Cut matching Reference) */
 .hero-window-viewport {
   position: relative;
-  border-bottom-left-radius: 11px;
-  border-bottom-right-radius: 11px;
+  height: 380px;
+  max-height: 380px;
   overflow: hidden;
   line-height: 0;
   background: #0E1322;
+}
+
+.hero-window-viewport::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(14, 19, 34, 0.6) 50%, rgba(14, 19, 34, 0.98) 100%);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .hero-window-screen-img {
@@ -4323,10 +4333,10 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 
 /* Left Floating Card: Candidate Benchmark Score */
 .floating-hero-img-left {
-  top: 72px;
-  left: -44px;
-  width: 254px;
-  max-width: 32%;
+  top: 40px;
+  left: -36px;
+  width: 236px;
+  max-width: 30%;
   height: auto;
   z-index: 10;
   animation: floatHeroLeft 6s ease-in-out infinite alternate;
@@ -4354,10 +4364,10 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 
 /* Right Floating Card: AI Fluency Review (Stacked Card Widget) */
 .floating-hero-img-right {
-  top: 56px;
-  right: -48px;
-  width: 276px;
-  max-width: 33%;
+  top: 26px;
+  right: -36px;
+  width: 250px;
+  max-width: 32%;
   height: auto;
   z-index: 10;
   animation: floatHeroRight 5.5s ease-in-out infinite alternate 0.8s;
@@ -4370,10 +4380,10 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 
 /* Bottom-Right Pill: Multi-Currency Local Pricing */
 .floating-hero-img-pill {
-  bottom: -18px;
+  bottom: 18px;
   right: 28px;
-  width: 310px;
-  max-width: 42%;
+  width: 280px;
+  max-width: 38%;
   height: auto;
   z-index: 12;
   animation: floatHeroPill 6.5s ease-in-out infinite alternate 1.4s;
