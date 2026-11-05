@@ -5566,7 +5566,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .why-section .card {
   background: #FFFFFF !important;
   border: 1px solid #E2E8F0 !important;
-  border-radius: 16px !important;
+  border-radius: 0 !important;
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
@@ -5705,7 +5705,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .solutions-section .card {
   background: #FFFFFF !important;
   border: 1px solid #E2E8F0 !important;
-  border-radius: 16px !important;
+  border-radius: 0 !important;
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
@@ -5732,7 +5732,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .regional-clean-section .regional-clean-card {
   background: #FFFFFF !important;
   border: 1px solid #E2E8F0 !important;
-  border-radius: 14px !important;
+  border-radius: 0 !important;
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04) !important;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
@@ -6018,12 +6018,26 @@ p.lead,
 }
 
 /* ==========================================================================
-   BORDER-RADIUS ARCHITECTURE:
-   1. All Cards, Image Containers, and Images: ZERO border radius (sharp edges).
-   2. All Tags, Pills, Badges, and Buttons: PRESERVE respective border radius.
+   BORDER-RADIUS ARCHITECTURE (Strict Universal Reset):
+   STRICT REQUIREMENT: Border-radius is ONLY permitted for tags and buttons.
+   All cards, sections, banners, containers, and images must have ZERO border-radius.
    ========================================================================== */
 
-/* 1. Remove border radius for all cards, containers, and images */
+/* 1. All sections, banners, containers, cards, frames, and images: ZERO border-radius */
+section,
+.section,
+[class*="-section"],
+.band,
+.cta,
+.cta-band-section,
+.cta-band-section .cta,
+.principles-nice-bg-container,
+.fairness-guarantee-banner,
+.hero-stage-backdrop,
+.hero-modern-showcase,
+.hero-showcase-viewport,
+.hero-showcase-mockup,
+.shot,
 .card,
 .card-link,
 .why-section .card,
@@ -6033,25 +6047,36 @@ p.lead,
 .fairness-card,
 .fairness-card-dark,
 .plan,
-.cta,
-.cta-band-section .cta,
 .faq-card,
 .checklist-table-card,
+.checklist-stage-card,
 .bcard,
 .pcard,
 .feature-card,
 .mega-feature-card,
 .mega-card,
-.shot,
-.hero-stage-backdrop,
-.hero-modern-showcase,
-.hero-showcase-viewport,
-.hero-showcase-mockup,
+.card-integration,
+.regional-clean-card,
+.featured-blog-card,
+.stacked-blog-card,
+.grid-blog-card,
+.blog-toc-card,
+.blog-promo-card,
+.check-card,
+.alt-card,
+.skill-point-card,
+.diff-card,
+.feature-accordion-item,
 .editorial-card-visual,
 .feature-accordion-visual,
 .feature-preview-img,
-.ide-mock,
+.feature-mockup-frame,
+.tablewrap,
+.task,
+.faq details,
+.faq summary,
 .browser-frame,
+.ide-mock,
 img,
 .hero-showcase-viewport img,
 .floating-hero-img,
@@ -6063,7 +6088,7 @@ img,
   border-radius: 0 !important;
 }
 
-/* 2. Explicitly PRESERVE border radius for tags, pills, and badges (fully rounded pill / 9999px) */
+/* 2. ONLY Tags, Pills, Badges, and Chips: PRESERVE rounded pill shape (9999px) */
 .tag,
 .tags a,
 .pill,
@@ -6078,6 +6103,7 @@ img,
 .dark-pill-dot,
 .checklist-tag,
 .checklist-status-badge,
+.fairness-card-status-pill,
 .hero-proof-marquee,
 .hero-proof-item,
 .tick,
@@ -6089,7 +6115,7 @@ img,
   border-radius: 9999px !important;
 }
 
-/* 3. Explicitly PRESERVE border radius for all buttons */
+/* 3. ONLY Buttons: PRESERVE rounded button shape */
 .btn,
 .btn-primary,
 .btn-secondary,
