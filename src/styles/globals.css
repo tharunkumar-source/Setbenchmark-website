@@ -5830,3 +5830,117 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
     max-width: 100% !important;
   }
 }
+
+/* ==========================================================================
+   UNIFIED TYPOGRAPHY ENGINE (Consistent Section Headings & Card Text)
+   Enforces identical font-size, font-weight, line-height, and color
+   across all sections, titles, descriptions, and cards.
+   ========================================================================== */
+
+/* 1. All Section Eyebrows */
+.eyebrow,
+.regional-clean-eyebrow,
+.editorial-carousel-head .eyebrow,
+.feature-accordion-intro .eyebrow,
+.principles-band-head .eyebrow {
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--secondary, #6244BB) !important;
+  margin-bottom: 12px !important;
+}
+
+/* 2. All Section Titles (H2 Level) */
+.h2,
+h2.h2,
+.editorial-carousel-title,
+.regional-clean-title,
+.principles-band-title,
+.feature-accordion-heading,
+.why-section .h2,
+.how-it-works-section .h2,
+.solutions-section .h2,
+.skill-tests-section .h2,
+.cta-band-section .h2,
+.faq-section .h2,
+.faq-head-col .h2 {
+  font-family: var(--font) !important;
+  font-size: clamp(28px, 3vw, 36px) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.025em !important;
+  color: var(--ink, #07190F) !important;
+  margin: 0 0 14px 0 !important;
+}
+
+/* 3. All Section Subtitles / Descriptions (Lead Level) */
+.lead,
+p.lead,
+.editorial-carousel-lead,
+.regional-clean-desc,
+.principles-band-lead,
+.why-section .lead,
+.how-it-works-section .lead,
+.skill-tests-section .lead,
+.feature-item-desc {
+  font-family: var(--font) !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+  color: var(--text-2, #475569) !important;
+}
+
+/* 4. All Card Titles (H3 Level Inside Cards) */
+.card h3,
+.card .h3,
+.why-section .card h3,
+.solutions-section .card h3,
+.editorial-card-title,
+.principle-trio-title,
+.how-step-title {
+  font-family: var(--font) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.015em !important;
+  color: var(--ink, #07190F) !important;
+  margin: 0 0 8px 0 !important;
+}
+
+/* 5. All Card Descriptions (P Level Inside Cards) */
+.card p,
+.why-section .card p,
+.solutions-section .card p,
+.editorial-card-desc,
+.principle-trio-desc,
+.how-step-desc {
+  font-family: var(--font) !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  font-weight: 400 !important;
+  color: #4A5568 !important;
+  margin: 0 !important;
+}
+
+/* Dark Card High-Contrast Text Overrides */
+.fairness-card-dark p,
+.fairness-card-dark .principle-trio-desc,
+.principle-trio-card.card-dark p,
+.principle-trio-card.card-dark .principle-trio-desc,
+.card.dark p,
+.dark .card p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.fairness-card-dark h3,
+.fairness-card-dark h4,
+.fairness-card-dark .principle-trio-title,
+.principle-trio-card.card-dark h3,
+.principle-trio-card.card-dark h4,
+.principle-trio-card.card-dark .principle-trio-title,
+.card.dark h3,
+.dark .card h3 {
+  color: #FFFFFF !important;
+}
