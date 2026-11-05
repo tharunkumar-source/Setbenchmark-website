@@ -3868,18 +3868,43 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
    ========================================================================== */
 
 /* ==========================================================================
-   Modern Professional Hero Atmosphere (Cinematic Emerald Aurora & Tech Grid)
-   No turning or rotation. Features an elegant breathing emerald spotlight
-   and precision developer grid for a sleek, high-tech aesthetic.
+   Modern Professional Hero Atmosphere:
+   Dynamic Emerald Spotlight Moving Across Precision Developer Matrix Grid.
+   Zero rotation/turning; purely smooth, organic gliding translation.
    ========================================================================== */
 .hero-modern {
   position: relative;
-  background: radial-gradient(110% 70% at 50% -10%, #E8F9F1 0%, #F5FCF8 40%, #FFFFFF 100%);
+  background: #FFFFFF;
   padding: 56px 0 100px;
   overflow: hidden;
   text-align: center;
 }
 
+.hero-modern .wrap {
+  position: relative;
+  z-index: 2;
+}
+
+/* Layer 1: Visible Technical Engineering Blueprint Grid */
+.hero-modern-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, rgba(18, 128, 74, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18, 128, 74, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, #000000 35%, transparent 85%);
+  mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, #000000 35%, transparent 85%);
+  z-index: 0;
+}
+
+/* Layer 2: Moving Emerald Spotlight Orbs (Gliding smoothly around hero, NO turning) */
 .hero-modern-ambient {
   position: absolute;
   top: 0;
@@ -3889,55 +3914,73 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
   overflow: hidden;
 }
 
-/* Layer 1: Subtle Developer Precision Dot Grid */
+/* Spotlight Orb 1: Primary Emerald Glow */
 .hero-modern-ambient::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 650px;
-  background-image: radial-gradient(rgba(18, 128, 74, 0.14) 1px, transparent 1px);
-  background-size: 32px 32px;
-  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000000 20%, transparent 75%);
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000000 20%, transparent 75%);
-  opacity: 0.85;
+  top: 50px;
+  left: 15%;
+  width: 780px;
+  height: 780px;
+  background: radial-gradient(circle, rgba(38, 208, 124, 0.35) 0%, rgba(38, 208, 124, 0.18) 42%, rgba(200, 242, 90, 0.1) 60%, transparent 75%);
+  border-radius: 50% !important;
+  filter: blur(60px);
+  animation: heroGlideSpotlight1 24s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
-/* Layer 2: Centered Luminous Emerald Aurora Beam (Breathing without turning) */
+/* Spotlight Orb 2: Deep Emerald & Mint Glow */
 .hero-modern-ambient::after {
   content: "";
   position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1100px;
-  max-width: 90vw;
-  height: 580px;
-  background: radial-gradient(ellipse 65% 55% at 50% 35%, rgba(38, 208, 124, 0.35) 0%, rgba(200, 242, 90, 0.18) 35%, rgba(18, 128, 74, 0.12) 60%, transparent 80%);
-  filter: blur(50px);
-  animation: heroAuroraBreathe 10s ease-in-out infinite alternate;
-  will-change: transform, opacity;
+  top: 140px;
+  right: 15%;
+  width: 680px;
+  height: 680px;
+  background: radial-gradient(circle, rgba(18, 128, 74, 0.26) 0%, rgba(38, 208, 124, 0.22) 40%, rgba(200, 242, 90, 0.1) 60%, transparent 75%);
+  border-radius: 50% !important;
+  filter: blur(65px);
+  animation: heroGlideSpotlight2 30s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
-@keyframes heroAuroraBreathe {
+@keyframes heroGlideSpotlight1 {
   0% {
-    transform: translateX(-50%) scale(1) translateZ(0);
-    opacity: 0.75;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  25% {
+    transform: translate3d(320px, 160px, 0) scale(1.15);
   }
   50% {
-    transform: translateX(-50%) scale(1.12, 1.06) translateZ(0);
-    opacity: 1;
-    filter: blur(55px);
+    transform: translate3d(180px, 420px, 0) scale(1.05);
+  }
+  75% {
+    transform: translate3d(-160px, 260px, 0) scale(1.12);
   }
   100% {
-    transform: translateX(-50%) scale(0.96, 0.94) translateZ(0);
-    opacity: 0.72;
-    filter: blur(48px);
+    transform: translate3d(60px, 50px, 0) scale(0.95);
+  }
+}
+
+@keyframes heroGlideSpotlight2 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  30% {
+    transform: translate3d(-340px, 150px, 0) scale(1.16);
+  }
+  60% {
+    transform: translate3d(-180px, 380px, 0) scale(0.94);
+  }
+  85% {
+    transform: translate3d(200px, 220px, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(-60px, 70px, 0) scale(1.02);
   }
 }
 
