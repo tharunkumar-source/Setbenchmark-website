@@ -108,7 +108,149 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
       </div>
     </div>
   </div>
-</div></section><section class="section solutions-section section-alt"><div class="wrap"><div class="head"><div class="eyebrow">Solutions</div><h2 class="h2">Built for the way you hire</h2></div><div class="grid g4"><a href="/solutions/campus-hiring/" class="card card-link"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 9l10-5 10 5-10 5L2 9zM6 11v5c3 2 9 2 12 0v-5M22 9v6"></path></svg></div><h3 class="h3">Campus hiring</h3><p>Invite thousands of students across colleges, run proctored coding and aptitude tests on the same day and get a ranked, fair shortlist the same evening.</p></a><a href="/solutions/enterprise-tech-hiring/" class="card card-link"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 21V5l8-3v19M12 8h8v13M8 9h.01M8 13h.01M8 17h.01M16 12h.01M16 16h.01M2 21h20"></path></svg></div><h3 class="h3">Enterprise tech hiring</h3><p>Role profiles, shared question libraries and structured scorecards give every team the same standard.</p></a><a href="/solutions/it-services-staffing/" class="card card-link"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7h18v13H3zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"></path></svg></div><h3 class="h3">IT services and staffing</h3><p>Verify skills before you submit a profile, share a trusted report with the client and staff projects from your bench with confidence.</p></a><a href="/solutions/startups/" class="card card-link"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 15c-1 1-2 5-2 5s4-1 5-2M14 4c3-1 6 0 6 0s1 3 0 6l-7 7-6-6 7-7zM15 9h.01"></path></svg></div><h3 class="h3">Startups</h3><p>Paste a job description, get a ready-to-send assessment and let SetBenchmark screen applicants while you build.</p></a></div></div></section><section class="section skill-tests-section section-white"><div class="wrap"><div class="split"><div><div class="eyebrow">Skill tests</div><h2 class="h2">Ready-made tests for every engineering role</h2><p class="lead" style="margin-top:16px">Start from a validated test for the stack you hire for, then make it your own.</p><div class="btns" style="margin-top:24px"><a href="/skill-tests/" class="btn btn-primary">Browse skill tests</a></div></div><div class="tags"><a href="/skill-tests/java/" class="tag">Java coding test</a><a href="/skill-tests/python/" class="tag">Python coding test</a><a href="/skill-tests/javascript/" class="tag">JavaScript test</a><a href="/skill-tests/react/" class="tag">React test</a><a href="/skill-tests/nodejs/" class="tag">Node.js test</a><a href="/skill-tests/sql/" class="tag">SQL test</a><a href="/skill-tests/golang/" class="tag">Go (Golang) coding test</a><a href="/skill-tests/data-structures-algorithms/" class="tag">Data structures and algorithms test</a><a href="/skill-tests/system-design/" class="tag">System design interview test</a><a href="/skill-tests/devops/" class="tag">DevOps and cloud test</a><a href="/skill-tests/data-science/" class="tag">Data science test</a><a href="/skill-tests/aws/" class="tag">AWS skills test</a></div></div></div></section>`;
+</div></section><section class="section solutions-section section-alt"><div class="wrap"><div class="head"><div class="eyebrow">Solutions</div><h2 class="h2">Built for the way you hire</h2></div><div class="grid g4"><a href="/solutions/campus-hiring/" class="card card-link"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 9l10-5 10 5-10 5L2 9zM6 11v5c3 2 9 2 12 0v-5M22 9v6"></path></svg></div><h3 class="h3">Campus hiring</h3><p>Invite thousands of students across colleges, run proctored coding and aptitude tests on the same day and get a ranked, fair shortlist the same evening.</p></a><a href="/solutions/enterprise-tech-hiring/" class="card card-link"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 21V5l8-3v19M12 8h8v13M8 9h.01M8 13h.01M8 17h.01M16 12h.01M16 16h.01M2 21h20"></path></svg></div><h3 class="h3">Enterprise tech hiring</h3><p>Role profiles, shared question libraries and structured scorecards give every team the same standard.</p></a><a href="/solutions/it-services-staffing/" class="card card-link"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7h18v13H3zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"></path></svg></div><h3 class="h3">IT services and staffing</h3><p>Verify skills before you submit a profile, share a trusted report with the client and staff projects from your bench with confidence.</p></a><a href="/solutions/startups/" class="card card-link"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 15c-1 1-2 5-2 5s4-1 5-2M14 4c3-1 6 0 6 0s1 3 0 6l-7 7-6-6 7-7zM15 9h.01"></path></svg></div><h3 class="h3">Startups</h3><p>Paste a job description, get a ready-to-send assessment and let SetBenchmark screen applicants while you build.</p></a></div></div></section><section class="section skill-tests-section skill-tests-dark">
+  <div class="wrap">
+    <div class="skill-tests-head center">
+      <div class="eyebrow" style="color:var(--brand, #26D07C)">Skill Tests &amp; Benchmarks</div>
+      <h2 class="h2 skill-tests-title">Ready-made tests for every engineering role</h2>
+      <p class="lead skill-tests-lead">Start from a validated benchmark for the stack you hire for, or customize test cases to your team's bar.</p>
+    </div>
+  </div>
+
+  <!-- Full-Width Auto-scrolling Marquee Track (pauses on hover, links to skill pages) -->
+  <div class="skill-marquee-container" aria-label="Available programming language tests">
+    <div class="skill-marquee-fade-left" aria-hidden="true"></div>
+    <div class="skill-marquee-fade-right" aria-hidden="true"></div>
+
+    <!-- Row 1: glides left -->
+    <div class="skill-marquee-row">
+      <div class="skill-marquee-track track-left">
+        <!-- Set 1 -->
+        <a href="/skill-tests/python/" class="skill-marquee-card" title="Python coding test">
+          <img src="/images/skills/python.svg" alt="Python logo" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Python</span>
+        </a>
+        <a href="/skill-tests/react/" class="skill-marquee-card" title="React test">
+          <img src="/images/skills/react.svg" alt="React logo" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">React</span>
+        </a>
+        <a href="/skill-tests/java/" class="skill-marquee-card" title="Java coding test">
+          <img src="/images/skills/java.svg" alt="Java logo" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Java</span>
+        </a>
+        <a href="/skill-tests/golang/" class="skill-marquee-card" title="Go (Golang) coding test">
+          <img src="/images/skills/golang.svg" alt="Go logo" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Go (Golang)</span>
+        </a>
+        <a href="/skill-tests/sql/" class="skill-marquee-card" title="PostgreSQL & SQL test">
+          <img src="/images/skills/sql.svg" alt="PostgreSQL logo" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">PostgreSQL &amp; SQL</span>
+        </a>
+        <a href="/skill-tests/aws/" class="skill-marquee-card" title="AWS skills test">
+          <img src="/images/skills/aws.svg" alt="AWS logo" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">AWS Cloud</span>
+        </a>
+        <a href="/skill-tests/javascript/" class="skill-marquee-card" title="TypeScript test">
+          <img src="/images/skills/typescript.svg" alt="TypeScript logo" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">TypeScript</span>
+        </a>
+
+        <!-- Set 1 Duplicate for seamless infinite loop -->
+        <a href="/skill-tests/python/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/python.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Python</span>
+        </a>
+        <a href="/skill-tests/react/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/react.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">React</span>
+        </a>
+        <a href="/skill-tests/java/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/java.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Java</span>
+        </a>
+        <a href="/skill-tests/golang/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/golang.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Go (Golang)</span>
+        </a>
+        <a href="/skill-tests/sql/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/sql.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">PostgreSQL &amp; SQL</span>
+        </a>
+        <a href="/skill-tests/aws/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/aws.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">AWS Cloud</span>
+        </a>
+        <a href="/skill-tests/javascript/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/typescript.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">TypeScript</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Row 2: glides right -->
+    <div class="skill-marquee-row">
+      <div class="skill-marquee-track track-right">
+        <!-- Set 2 -->
+        <a href="/skill-tests/javascript/" class="skill-marquee-card" title="JavaScript test">
+          <img src="/images/skills/javascript.svg" alt="JavaScript logo" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">JavaScript</span>
+        </a>
+        <a href="/skill-tests/nodejs/" class="skill-marquee-card" title="Node.js test">
+          <img src="/images/skills/nodejs.svg" alt="Node.js logo" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Node.js</span>
+        </a>
+        <a href="/skill-tests/devops/" class="skill-marquee-card" title="Docker & DevOps test">
+          <img src="/images/skills/devops.svg" alt="Docker logo" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Docker &amp; DevOps</span>
+        </a>
+        <a href="/skill-tests/system-design/" class="skill-marquee-card" title="System Design interview test">
+          <img src="/images/skills/systemdesign.svg" alt="System Design icon" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">System Design</span>
+        </a>
+        <a href="/skill-tests/data-science/" class="skill-marquee-card" title="Data Science test">
+          <img src="/images/skills/datascience.svg" alt="Data Science logo" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Data Science &amp; Python</span>
+        </a>
+        <a href="/skill-tests/data-structures-algorithms/" class="skill-marquee-card" title="Data structures and algorithms test">
+          <img src="/images/skills/dsa.svg" alt="Algorithms icon" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Algorithms &amp; DSA</span>
+        </a>
+
+        <!-- Set 2 Duplicate for seamless infinite loop -->
+        <a href="/skill-tests/javascript/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/javascript.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">JavaScript</span>
+        </a>
+        <a href="/skill-tests/nodejs/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/nodejs.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Node.js</span>
+        </a>
+        <a href="/skill-tests/devops/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/devops.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Docker &amp; DevOps</span>
+        </a>
+        <a href="/skill-tests/system-design/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/systemdesign.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">System Design</span>
+        </a>
+        <a href="/skill-tests/data-science/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/datascience.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Data Science &amp; Python</span>
+        </a>
+        <a href="/skill-tests/data-structures-algorithms/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
+          <img src="/images/skills/dsa.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="lazy" />
+          <span class="skill-marquee-name">Algorithms &amp; DSA</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap skill-tests-cta-wrap">
+    <div class="btns center">
+      <a href="/skill-tests/" class="btn btn-lime">Browse all 400+ skill tests &rarr;</a>
+    </div>
+  </div>
+</section>`;
 
 const BODY_AFTER_2 = `<section class="section tight cta-band-section section-white"><div class="wrap"><div class="cta"><div><h2 class="h2">See SetBenchmark with your own roles</h2><p>Start a 14-day free trial with 10 assessment attempts, or book a 30-minute demo with our team.</p></div><div class="btns"><a class="btn btn-lime" href="https://app.setbenchmark.com/signup">Start free trial</a><a href="/contact/" class="btn btn-ghost on-dark">Book a demo</a></div></div></div></section>`;
 

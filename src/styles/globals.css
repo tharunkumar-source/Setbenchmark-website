@@ -6436,3 +6436,182 @@ img,
 .floating-hero-img-bubble {
   display: none !important;
 }
+
+
+/* Skill Tests Dark Section with Infinite Auto-scrolling Marquee */
+.skill-tests-dark {
+  background: radial-gradient(circle at 50% 20%, rgba(38, 208, 124, 0.08) 0%, transparent 60%), #07190F !important;
+  border-top: 1px solid rgba(38, 208, 124, 0.2) !important;
+  border-bottom: 1px solid rgba(38, 208, 124, 0.2) !important;
+  padding: 96px 0 88px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.skill-tests-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 42px;
+}
+
+.skill-tests-dark .eyebrow {
+  color: var(--brand, #26D07C) !important;
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 12px !important;
+}
+
+.skill-tests-dark h2,
+.skill-tests-dark .h2,
+.skill-tests-dark .skill-tests-title {
+  color: #FFFFFF !important;
+  font-family: var(--font) !important;
+  font-size: clamp(28px, 3.2vw, 42px) !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+  margin: 10px auto 16px !important;
+  text-align: center !important;
+}
+
+.skill-tests-dark p.lead,
+.skill-tests-dark .lead,
+.skill-tests-dark .skill-tests-lead {
+  color: #94A3B8 !important;
+  font-family: var(--font) !important;
+  font-size: 16.5px !important;
+  line-height: 1.6 !important;
+  max-width: 680px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.skill-tests-cta-wrap .btns {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Marquee Container with edge gradients */
+.skill-marquee-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-marquee-fade-left,
+.skill-marquee-fade-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 180px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.skill-marquee-fade-left {
+  left: 0;
+  background: linear-gradient(90deg, #07190F 0%, rgba(7, 25, 15, 0) 100%);
+}
+
+.skill-marquee-fade-right {
+  right: 0;
+  background: linear-gradient(270deg, #07190F 0%, rgba(7, 25, 15, 0) 100%);
+}
+
+.skill-marquee-row {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.skill-marquee-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  will-change: transform;
+}
+
+.track-left {
+  animation: skillScrollLeft 36s linear infinite;
+}
+
+.track-right {
+  animation: skillScrollRight 34s linear infinite;
+}
+
+/* Hover: auto scroll stops when hovered */
+.skill-marquee-track:hover,
+.skill-marquee-row:hover .skill-marquee-track,
+.skill-marquee-card:hover {
+  animation-play-state: paused !important;
+}
+
+@keyframes skillScrollLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 8px)); }
+}
+
+@keyframes skillScrollRight {
+  from { transform: translateX(calc(-50% - 8px)); }
+  to { transform: translateX(0); }
+}
+
+/* Tactile Skill Card Pill (Matching reference image with branding colors) */
+.skill-marquee-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 22px;
+  background: #0B1E15;
+  border: 1px solid rgba(38, 208, 124, 0.22);
+  border-radius: 12px;
+  text-decoration: none !important;
+  color: #F1F5F9 !important;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.skill-marquee-card:hover {
+  background: rgba(38, 208, 124, 0.16) !important;
+  border-color: var(--brand, #26D07C) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -2px rgba(38, 208, 124, 0.35);
+}
+
+.skill-marquee-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+.skill-marquee-name {
+  color: #F8FAFC;
+  transition: color 0.2s ease;
+}
+
+.skill-marquee-card:hover .skill-marquee-name {
+  color: #FFFFFF;
+}
+
+.skill-tests-cta-wrap {
+  margin-top: 36px;
+  text-align: center;
+}
