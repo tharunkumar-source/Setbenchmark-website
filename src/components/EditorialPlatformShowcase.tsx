@@ -112,6 +112,7 @@ export const EditorialPlatformShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const trackRef = useRef<HTMLDivElement>(null);
+  const bleedRef = useRef<HTMLDivElement>(null);
 
   const filteredCards = filter === 'all' 
     ? FEATURE_CARDS 
@@ -122,11 +123,14 @@ export const EditorialPlatformShowcase: React.FC = () => {
   const visibleCards = 3;
   const maxIndex = Math.max(0, filteredCards.length - visibleCards);
 
-  // Auto-scroll every 4 seconds ONLY if there are 4 or more cards
+  // Auto-scroll every 4 seconds ONLY if there are 4 or more cards (desktop only)
   useEffect(() => {
     if (filteredCards.length < 4 || isPaused) return;
 
     const timer = setInterval(() => {
+      // Don't auto-transform on mobile touch viewports
+      if (typeof window !== 'undefined' && window.innerWidth <= 768) return;
+
       setCurrentIndex((prev) => {
         // If reached end, wrap back to the starting cards (0)
         if (prev >= maxIndex) {
@@ -139,20 +143,43 @@ export const EditorialPlatformShowcase: React.FC = () => {
     return () => clearInterval(timer);
   }, [isPaused, filteredCards.length, maxIndex]);
 
+  // Smooth scroll helper for mobile swipeable view
+  const scrollBleed = (direction: 'next' | 'prev') => {
+    if (bleedRef.current) {
+      const card = bleedRef.current.querySelector('.editorial-feature-card') as HTMLElement;
+      const cardWidth = card ? card.offsetWidth + 16 : 300;
+      bleedRef.current.scrollBy({
+        left: direction === 'next' ? cardWidth : -cardWidth,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   // Reset index if filter changes
   const handleFilterChange = (newFilter: CategoryFilter) => {
     setFilter(newFilter);
     setCurrentIndex(0);
+    if (bleedRef.current) {
+      bleedRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+    }
   };
 
   const handlePrev = () => {
     if (filteredCards.length < 4) return;
-    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+      scrollBleed('prev');
+    } else {
+      setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+    }
   };
 
   const handleNext = () => {
     if (filteredCards.length < 4) return;
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+      scrollBleed('next');
+    } else {
+      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    }
   };
 
   return (
@@ -229,6 +256,7 @@ export const EditorialPlatformShowcase: React.FC = () => {
 
       {/* Auto-scrolling Edge-Bleed Carousel Track */}
       <div 
+        ref={bleedRef}
         className="editorial-carousel-bleed"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}

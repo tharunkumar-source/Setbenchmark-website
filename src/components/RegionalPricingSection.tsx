@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 interface RegionItem {
   id: string;
   name: string;
-  currency: string;
-  priceNote: string;
+  price: string;
+  detail: string;
   path: string;
   flag: React.ReactNode;
 }
@@ -14,8 +14,8 @@ const REGIONS: RegionItem[] = [
   {
     id: 'india',
     name: 'India',
-    currency: 'Pricing in INR',
-    priceNote: 'From ₹3,999 / mo · GST ready',
+    price: 'From ₹3,999 / mo',
+    detail: 'INR · GST tax invoices',
     path: '/india/',
     flag: (
       <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="country-flag-svg">
@@ -36,8 +36,8 @@ const REGIONS: RegionItem[] = [
   {
     id: 'uae',
     name: 'United Arab Emirates',
-    currency: 'Pricing in AED',
-    priceNote: 'From د.إ299 / mo · Local VAT',
+    price: 'From AED 299 / mo',
+    detail: 'AED · Local VAT invoices',
     path: '/uae/',
     flag: (
       <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="country-flag-svg">
@@ -57,8 +57,8 @@ const REGIONS: RegionItem[] = [
   {
     id: 'saudi-arabia',
     name: 'Saudi Arabia',
-    currency: 'Pricing in SAR',
-    priceNote: 'From 299 SAR / mo · ZATCA',
+    price: 'From SAR 299 / mo',
+    detail: 'SAR · ZATCA invoices',
     path: '/saudi-arabia/',
     flag: (
       <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="country-flag-svg">
@@ -78,8 +78,8 @@ const REGIONS: RegionItem[] = [
   {
     id: 'australia',
     name: 'Australia',
-    currency: 'Pricing in AUD',
-    priceNote: 'From A$129 / mo · Sydney DC',
+    price: 'From A$129 / mo',
+    detail: 'AUD · Sydney data DC',
     path: '/australia/',
     flag: (
       <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="country-flag-svg">
@@ -107,8 +107,8 @@ const REGIONS: RegionItem[] = [
   {
     id: 'new-zealand',
     name: 'New Zealand',
-    currency: 'Pricing in NZD',
-    priceNote: 'From NZ$139 / mo · GST',
+    price: 'From NZ$139 / mo',
+    detail: 'NZD · Local GST invoices',
     path: '/new-zealand/',
     flag: (
       <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="country-flag-svg">
@@ -134,8 +134,8 @@ const REGIONS: RegionItem[] = [
   {
     id: 'global',
     name: 'Global / US',
-    currency: 'Pricing in USD',
-    priceNote: 'From US$69 / mo · Worldwide',
+    price: 'From US$69 / mo',
+    detail: 'USD · Worldwide billing',
     path: '/pricing/',
     flag: (
       <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="country-flag-svg">
@@ -169,61 +169,21 @@ const REGIONS: RegionItem[] = [
 
 export const RegionalPricingSection: React.FC = () => {
   return (
-    <section className="regional-split-section">
+    <section className="regional-clean-section">
       <div className="wrap">
-        <div className="regional-split-layout">
-          {/* Left Side: Framed Container with Flag Cards */}
-          <div className="regional-showcase-panel">
-            {/* Top Header Bar */}
-            <div className="regional-panel-topbar">
-              <div className="regional-panel-tag-left">
-                <span className="regional-panel-dot" />
-                <span>LOCAL HUBS &amp; CURRENCIES</span>
-              </div>
-              <div className="regional-panel-tag-right">
-                <span>Multi-Currency Ready</span>
-              </div>
-            </div>
-
-            {/* Grid of Cards */}
-            <div className="regional-panel-cards">
-              {REGIONS.map((region) => (
-                <Link
-                  key={region.id}
-                  to={region.path}
-                  className="regional-mini-card"
-                  title={`View ${region.name} local pricing and plans`}
-                >
-                  <div className="regional-card-flag-box">
-                    {region.flag}
-                  </div>
-                  <div className="regional-card-details">
-                    <h3 className="regional-card-title">{region.name}</h3>
-                    <span className="regional-card-currency">{region.currency}</span>
-                    <span className="regional-card-subnote">{region.priceNote}</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-
-            {/* Bottom Footer Bar */}
-            <div className="regional-panel-footer">
-              <span className="regional-footer-left">Mumbai, Sydney &amp; Bahrain Data Residency</span>
-              <span className="regional-footer-right">DPDP · GDPR · SOC 2 Ready</span>
-            </div>
-          </div>
-
-          {/* Right Side: Editorial Text & Action */}
-          <div className="regional-split-content">
-            <div className="eyebrow">Local Pricing and Support</div>
-            <h2 className="regional-split-title">
-              Built in India. Ready for the Middle East and ANZ.
+        <div className="regional-clean-layout">
+          {/* Left Column: Heading, Subtitle & Action */}
+          <div className="regional-clean-left">
+            <span className="regional-clean-eyebrow">Local Pricing &amp; Support</span>
+            <h2 className="regional-clean-title">
+              Built in India.<br />
+              Ready Globally.
             </h2>
-            <p className="regional-split-lead">
-              Plans from ₹3,999 a month in India and US$69 a month globally, billed in your currency with local GST &amp; VAT tax invoices, local payment rails, and dedicated regional support across all time zones.
+            <p className="regional-clean-desc">
+              Plans from ₹3,999/mo in India and US$69/mo globally. Billed in your local currency with GST &amp; VAT tax invoices, local payment rails, and dedicated regional support across all time zones.
             </p>
-            <div className="regional-split-action">
-              <Link to="/pricing/" className="regional-btn-cta">
+            <div className="regional-clean-action">
+              <Link to="/pricing/" className="regional-clean-btn">
                 <span>View all pricing</span>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12" />
@@ -231,6 +191,31 @@ export const RegionalPricingSection: React.FC = () => {
                 </svg>
               </Link>
             </div>
+            <div className="regional-clean-footer-text">
+              <span className="regional-clean-dot">●</span>
+              <span>Mumbai, Sydney &amp; Bahrain Data Residency · DPDP &amp; GDPR</span>
+            </div>
+          </div>
+
+          {/* Right Column: 3x2 Grid of Clean White Cards (No Outer Grey Container) */}
+          <div className="regional-clean-grid">
+            {REGIONS.map((region) => (
+              <Link
+                key={region.id}
+                to={region.path}
+                className="regional-clean-card"
+                title={`View ${region.name} local pricing and plans`}
+              >
+                <div className="regional-clean-flag">
+                  {region.flag}
+                </div>
+                <div className="regional-clean-info">
+                  <div className="regional-clean-name">{region.name}</div>
+                  <div className="regional-clean-price">{region.price}</div>
+                  <div className="regional-clean-note">{region.detail}</div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>

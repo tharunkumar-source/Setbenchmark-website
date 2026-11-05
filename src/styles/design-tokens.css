@@ -1,41 +1,43 @@
 :root {
   /* ==========================================================================
      SETBENCHMARK BRAND COLOR ENGINE (Single Source of Truth)
-     Source: BRAND_GUIDELINES.md
-     
-     CHANGE THESE CORE TOKENS TO CHANGE THE ENTIRE WEBSITE IN ONE GO:
-     - Top announcement banner background & text
-     - Primary and Header CTA buttons (hover, active, focus)
-     - Light-theme accessible text accents (8.6:1 AAA on white)
-     - Icon badges, pill tints, and tick backgrounds
-     - Card active borders, focus rings, and tag highlights
+     Primary Color:   #26D07C (Vibrant Emerald / Mint Green)
+     Secondary Color: #6244BB (Iris / Deep Violet Purple)
      ========================================================================== */
 
-  /* --- 1. Master Brand Base Tokens --- */
-  --brand: #C8F25A;             /* Primary Brand Accent (Hero Lime - High Energy) */
-  --brand-hover: #B9E646;       /* CTA button hover state */
-  --brand-active: #AADE30;      /* CTA active / pressed state */
-  --brand-dark: #385400;        /* Deep WCAG AAA text & icon shade on light backgrounds (>= 8.6:1) */
-  --brand-dark-hover: #233700;  /* Deeper text hover on light backgrounds (>= 12.5:1) */
-  --brand-subtle: #F1FBD9;      /* Ultra-soft pastel tint for badge & pill backgrounds */
-  --brand-border: #9AD628;      /* Vibrant border for active cards, hover & focus */
-  --brand-border-light: #D6F5A0;/* Soft border for badges & pills */
+  /* --- 1. Master Brand Base Tokens (Primary: #26D07C) --- */
+  --brand: #26D07C;             /* Primary Brand Accent (Vibrant Green) */
+  --brand-hover: #1FB86C;       /* CTA button hover state */
+  --brand-active: #1AA35F;      /* CTA active / pressed state */
+  --brand-dark: #12804A;        /* Deep green for accessible text & icons on light (>= 4.5:1) */
+  --brand-dark-hover: #0C6136;  /* Deeper green hover */
+  --brand-subtle: #E8F9F1;      /* Ultra-soft mint pastel tint for badges, pills, check circles */
+  --brand-border: #26D07C;      /* Border for active elements & rings */
+  --brand-border-light: rgba(38, 208, 124, 0.35); /* Soft border for badges & pills */
 
-  /* --- 2. Functional Application Tokens --- */
-  --brand-banner-bg: var(--brand);                         /* Announcement top banner background */
-  --brand-banner-text: #07190F;                            /* Announcement top banner text color */
-  --brand-cta-bg: var(--brand);                            /* Primary CTA button background */
-  --brand-cta-hover: var(--brand-hover);                   /* Primary CTA button hover background */
-  --brand-cta-text: #07190F;                               /* Primary CTA button text color */
-  --brand-cta-border: var(--brand-border);                 /* Border around primary CTA */
-  --brand-badge-bg: var(--brand-subtle);                   /* Badge / pill background tint */
-  --brand-badge-text: var(--brand-dark);                   /* Badge / pill text color */
-  --brand-badge-border: var(--brand-border-light);         /* Badge / pill border */
-  --brand-accent-text: var(--brand-dark);                  /* Accent text & navigation highlights */
-  --brand-accent-hover: var(--brand-dark-hover);           /* Link & nav hover color */
-  --brand-focus-ring: var(--brand-border);                 /* Accessibility focus outline */
+  /* --- 2. Secondary Brand Tokens (Secondary: #6244BB) --- */
+  --secondary: #6244BB;         /* Secondary Brand Accent (Iris Purple) */
+  --secondary-hover: #5035A6;   /* Secondary hover state */
+  --secondary-dark: #3F238E;    /* Deep purple for high contrast */
+  --secondary-subtle: #F2EEFC;  /* Soft lavender tint for AI pills, tags, eyebrow badges */
+  --secondary-border: rgba(98, 68, 187, 0.28); /* Border for purple badges */
 
-  /* --- 3. Aliased Legacy & System Tokens --- */
+  /* --- 3. Functional Application Tokens --- */
+  --brand-banner-bg: #FFFFFF;                              /* Top announcement banner background */
+  --brand-banner-text: #07190F;                            /* Top announcement banner text color */
+  --brand-cta-bg: var(--brand);                            /* Primary CTA button background (#26D07C) */
+  --brand-cta-hover: var(--brand-hover);                   /* Primary CTA button hover (#1FB86C) */
+  --brand-cta-text: #FFFFFF;                               /* Primary CTA button text (CRISP WHITE on #26D07C!) */
+  --brand-cta-border: var(--brand);                        /* Border around primary CTA */
+  --brand-badge-bg: var(--secondary-subtle);               /* Eyebrow badge / pill background tint */
+  --brand-badge-text: var(--secondary);                    /* Eyebrow badge text color (#6244BB) */
+  --brand-badge-border: var(--secondary-border);           /* Eyebrow badge border */
+  --brand-badge-radius: 9999px;                            /* Universal rounded corner for all tags and pills */
+  --brand-accent-text: var(--secondary);                  /* Accent text & eyebrow highlights (#6244BB) */
+  --brand-accent-hover: var(--secondary-hover);            /* Secondary hover color */
+  --brand-focus-ring: var(--brand);                        /* Accessibility focus outline */
+
+  /* --- 4. Aliased Legacy & System Tokens --- */
   --lime: var(--brand);
   --lime-d: var(--brand-hover);
   --lime-dark: var(--brand-dark);
@@ -44,48 +46,48 @@
   --lime-border: var(--brand-border);
 
   /* Primary Theme Mapping */
-  --primary: var(--brand-dark);
-  --primary-d: var(--brand-dark-hover);
-  --primary-50: var(--brand-subtle);
-  --primary-border: var(--brand-border);
-  --blue: var(--primary);
-  --blue-d: var(--primary-d);
-  --blue-50: var(--primary-50);
+  --primary: var(--secondary);                             /* Eyebrows use secondary purple #6244BB per reference! */
+  --primary-d: var(--secondary-hover);
+  --primary-50: var(--secondary-subtle);
+  --primary-border: var(--secondary-border);
+  --blue: var(--brand-dark);
+  --blue-d: var(--brand-dark-hover);
+  --blue-50: var(--brand-subtle);
 
   /* Secondary & Brand Base */
   --ink: #07190F;              /* Deep Obsidian Forest / Ink */
   --ink-2: #0B2215;            /* Secondary dark surface */
-  --violet: #7a3ff2;
-  --violet-50: #efe7fe;
-  --canvas: #f5f6fa;
-  --line: #e3e6ee;
-  --line-2: #c9cedb;
-  --line-strong: #c9cedb;
-  --white: #ffffff;
+  --violet: var(--secondary);  /* #6244BB */
+  --violet-50: var(--secondary-subtle); /* #F2EEFC */
+  --canvas: #F8F9FA;
+  --line: #E3E6EE;
+  --line-2: #C9CEDB;
+  --line-strong: #C9CEDB;
+  --white: #FFFFFF;
 
   /* Typography Colors */
-  --text-1: #0f1222;           /* Primary text / Headings */
-  --text-2: #4a5168;           /* Body copy text */
+  --text-1: #0F1222;           /* Primary text / Headings */
+  --text-2: #4A5168;           /* Body copy text */
   --text-3: #788198;           /* Muted text / Captions */
 
   /* Semantic & Status Tokens (Brand Derived) */
   --ok-bg: var(--brand-subtle);
   --ok-text: var(--brand-dark);
-  --warn-bg: #fef0da;
-  --warn-text: #8a4b06;
-  --flag-bg: #fde8dc;
-  --flag-text: #a53a0c;
-  --info-bg: #e7ebfe;
-  --info-text: #2238c7;
-  --muted-bg: #eef0f5;
-  --muted-text: #4a5168;
-  --ai-bg: #efe7fe;
-  --ai-text: #5b24c9;
-  --ai-card-bg: #faf7ff;
-  --ai-card-border: #dccbfb;
-  --error-bg: #fdf2f0;
-  --error-text: #a3260e;
-  --error-border: #f0b9a6;
+  --warn-bg: #FEF0DA;
+  --warn-text: #8A4B06;
+  --flag-bg: #FDE8DC;
+  --flag-text: #A53A0C;
+  --info-bg: var(--secondary-subtle);
+  --info-text: var(--secondary);
+  --muted-bg: #EEF0F5;
+  --muted-text: #4A5168;
+  --ai-bg: var(--secondary-subtle);
+  --ai-text: var(--secondary);
+  --ai-card-bg: #FAF7FF;
+  --ai-card-border: var(--secondary-border);
+  --error-bg: #FDF2F0;
+  --error-text: #A3260E;
+  --error-border: #F0B9A6;
 
   /* Geometry & Font Tokens */
   --radius: 14px;

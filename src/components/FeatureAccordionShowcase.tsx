@@ -116,7 +116,7 @@ export const FeatureAccordionShowcase: React.FC = () => {
                     alt={item.alt}
                     width="1440"
                     height="900"
-                    loading="lazy"
+                    loading={idx === 0 ? "eager" : "lazy"}
                     decoding="async"
                     className={`feature-mockup-img ${activeIdx === idx ? 'is-active' : ''}`}
                   />

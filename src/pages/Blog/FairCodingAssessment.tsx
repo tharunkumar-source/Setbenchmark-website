@@ -40,22 +40,22 @@ const RAW_CONTENT = `<article>
       <!-- 4 Stages Summary Cards -->
       <div class="checklist-intro-bar">
         <div class="checklist-stage-card">
-          <span class="badge" style="background:var(--brand-subtle, #F1FBD9);color:var(--brand-dark, #385400);border:1px solid var(--brand-border-light, #D6F5A0)">Stage 01</span>
+          <span class="badge" >Stage 01</span>
           <div class="stage-name">Task Scope & Realism</div>
           <p class="stage-desc">Items 01–03: Role mapping, repository tasks & realistic time limits.</p>
         </div>
         <div class="checklist-stage-card">
-          <span class="badge" style="background:var(--brand-subtle, #F1FBD9);color:var(--brand-dark, #385400);border:1px solid var(--brand-border-light, #D6F5A0)">Stage 02</span>
+          <span class="badge" >Stage 02</span>
           <div class="stage-name">Candidate Experience</div>
           <p class="stage-desc">Items 04–06: Transparent guidance, language choices & accommodations.</p>
         </div>
         <div class="checklist-stage-card">
-          <span class="badge" style="background:var(--brand-subtle, #F1FBD9);color:var(--brand-dark, #385400);border:1px solid var(--brand-border-light, #D6F5A0)">Stage 03</span>
+          <span class="badge" >Stage 03</span>
           <div class="stage-name">AI & Evaluation Integrity</div>
           <p class="stage-desc">Items 07–10: Explicit AI rules, blind rubrics & human review.</p>
         </div>
         <div class="checklist-stage-card">
-          <span class="badge" style="background:var(--brand-subtle, #F1FBD9);color:var(--brand-dark, #385400);border:1px solid var(--brand-border-light, #D6F5A0)">Stage 04</span>
+          <span class="badge" >Stage 04</span>
           <div class="stage-name">Fairness & Closure</div>
           <p class="stage-desc">Items 11–12: Adverse impact auditing & constructive candidate feedback.</p>
         </div>
