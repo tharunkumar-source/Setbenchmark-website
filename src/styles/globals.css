@@ -126,10 +126,10 @@ p { margin: 0; }
 /* Header & Full-Width Mega Menu */
 .hdr { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.98); backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--line); }
 
-/* 1. Top Announcement Bar */
+/* 1. Top Announcement Bar (Brand Color Background separating from Navigation) */
 .top-banner {
-  background: var(--brand-banner-bg, #FFFFFF);
-  color: var(--brand-dark, #12804A);
+  background: var(--brand, #26D07C) !important;
+  color: #07190F !important;
   font-family: var(--font);
   font-size: 13.5px;
   font-weight: 600;
@@ -137,15 +137,20 @@ p { margin: 0; }
   padding: 8px 16px;
   position: relative;
   z-index: 1001;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
 }
 .top-banner span {
-  color: var(--brand-dark, #12804A);
+  color: #07190F !important;
+  font-weight: 600 !important;
 }
 .top-banner a {
-  color: var(--secondary, #6244BB) !important;
+  color: #07190F !important;
   font-weight: 700 !important;
   text-decoration: underline !important;
+  transition: opacity 0.15s ease;
+}
+.top-banner a:hover {
+  opacity: 0.82;
 }
 .top-banner-in {
   display: flex;
@@ -5863,7 +5868,6 @@ h2.h2,
 .how-it-works-section .h2,
 .solutions-section .h2,
 .skill-tests-section .h2,
-.cta-band-section .h2,
 .faq-section .h2,
 .faq-head-col .h2 {
   font-family: var(--font) !important;
@@ -5943,4 +5947,175 @@ p.lead,
 .card.dark h3,
 .dark .card h3 {
   color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   HIGH-CONTRAST READABILITY FOR DARK CARDS & CTA BANNERS
+   Guarantees that headings and text inside dark sections & CTA cards are
+   pure, brilliant white and highly readable against dark backgrounds.
+   ========================================================================== */
+.cta h2,
+.cta .h2,
+.cta h1,
+.cta .h1,
+.cta-band-section .cta h2,
+.cta-band-section .cta .h2,
+.section-cta h2,
+.section-cta .h2,
+.section-cta h1,
+.section-cta .h1,
+.section.dark h2,
+.section.dark .h2,
+.dark h2,
+.dark .h2,
+.card.dark h2,
+.dark .card h2 {
+  font-family: var(--font) !important;
+  font-size: clamp(28px, 3vw, 36px) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.025em !important;
+  color: #FFFFFF !important;
+  margin: 0 0 14px 0 !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.cta p,
+.cta-band-section .cta p,
+.section-cta p,
+.section.dark p,
+.dark p,
+.card.dark p,
+.dark .card p {
+  font-family: var(--font) !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  margin: 0 !important;
+}
+
+.cta .btn-lime,
+.cta .btn-primary {
+  background: var(--brand, #26D07C) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 14px rgba(38, 208, 124, 0.28) !important;
+}
+
+.cta .btn-ghost.on-dark {
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+}
+
+.cta .btn-ghost.on-dark:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   BORDER-RADIUS ARCHITECTURE:
+   1. All Cards, Image Containers, and Images: ZERO border radius (sharp edges).
+   2. All Tags, Pills, Badges, and Buttons: PRESERVE respective border radius.
+   ========================================================================== */
+
+/* 1. Remove border radius for all cards, containers, and images */
+.card,
+.card-link,
+.why-section .card,
+.solutions-section .card,
+.editorial-feature-card,
+.principle-trio-card,
+.fairness-card,
+.fairness-card-dark,
+.plan,
+.cta,
+.cta-band-section .cta,
+.faq-card,
+.checklist-table-card,
+.bcard,
+.pcard,
+.feature-card,
+.mega-feature-card,
+.mega-card,
+.shot,
+.hero-stage-backdrop,
+.hero-modern-showcase,
+.hero-showcase-viewport,
+.hero-showcase-mockup,
+.editorial-card-visual,
+.feature-accordion-visual,
+.feature-preview-img,
+.ide-mock,
+.browser-frame,
+img,
+.hero-showcase-viewport img,
+.floating-hero-img,
+.floating-hero-img-left,
+.floating-hero-img-right,
+.floating-hero-img-pill,
+.editorial-card-visual img,
+.feature-accordion-visual img {
+  border-radius: 0 !important;
+}
+
+/* 2. Explicitly PRESERVE border radius for tags, pills, and badges (fully rounded pill / 9999px) */
+.tag,
+.tags a,
+.pill,
+.chip,
+.badge,
+.pop-badge,
+.editorial-tag-pill,
+.hero-tab-pill,
+.hero-modern-badge,
+.hero-modern-badge-dot,
+.dark-pill,
+.dark-pill-dot,
+.checklist-tag,
+.checklist-status-badge,
+.hero-proof-marquee,
+.hero-proof-item,
+.tick,
+.checks li .tick,
+.icon,
+.icon.v,
+.icon.l,
+.cur label {
+  border-radius: 9999px !important;
+}
+
+/* 3. Explicitly PRESERVE border radius for all buttons */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-ghost,
+.btn-lime,
+.btn-hero-primary,
+.btn-hero-secondary,
+.btn-sm,
+.btn-xs,
+.bp,
+.bs,
+.bd,
+.bg,
+.bx,
+.faq-card-btn,
+.regional-clean-btn {
+  border-radius: 12px !important;
+}
+
+.btn-hero-primary,
+.btn-hero-secondary,
+.regional-clean-btn {
+  border-radius: 9999px !important;
+}
+
+/* Hide hero floating bubble icon */
+.floating-hero-img-bubble {
+  display: none !important;
 }

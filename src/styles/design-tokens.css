@@ -23,7 +23,7 @@
   --secondary-border: rgba(98, 68, 187, 0.28); /* Border for purple badges */
 
   /* --- 3. Functional Application Tokens --- */
-  --brand-banner-bg: #FFFFFF;                              /* Top announcement banner background */
+  --brand-banner-bg: var(--brand, #26D07C);                /* Top announcement banner background */
   --brand-banner-text: #07190F;                            /* Top announcement banner text color */
   --brand-cta-bg: var(--brand);                            /* Primary CTA button background (#26D07C) */
   --brand-cta-hover: var(--brand-hover);                   /* Primary CTA button hover (#1FB86C) */

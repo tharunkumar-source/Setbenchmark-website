@@ -338,16 +338,6 @@ export const Home: React.FC = () => {
               />
 
               <img
-                src="/images/hero/hero-bubble-verified.png"
-                alt="Human-Reviewed Verification Bubble"
-                className="floating-hero-img floating-hero-img-bubble"
-                width="48"
-                height="48"
-                loading="eager"
-                decoding="async"
-              />
-
-              <img
                 src="/images/hero/hero-card-ai-fluency.png"
                 alt="AI Fluency Assessment: 94% Prompt Judgment"
                 className="floating-hero-img floating-hero-img-right"
