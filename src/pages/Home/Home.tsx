@@ -72,7 +72,7 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
     <!-- Principle 1: White Card with Rich Product Mockup Image -->
     <div class="principle-trio-card card-white">
       <div class="principle-trio-visual">
-        <img class="principle-trio-img" src="/images/product/I05-Scorecard.webp" alt="Structured scorecard with human reviewer rubric and hiring manager decision" width="480" height="300" loading="eager" decoding="async" />
+        <img class="principle-trio-img" src="/images/stock/people-decide.webp" alt="Engineering manager and software engineer collaboratively reviewing code" width="480" height="300" loading="eager" decoding="async" />
       </div>
       <h3 class="principle-trio-title">People decide</h3>
       <p class="principle-trio-desc">AI scores correctness, summarizes diffs, and flags anomalies. A human engineering manager makes every hiring decision and records the rationale.</p>
@@ -85,7 +85,7 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
     <!-- Principle 2: Middle Dark Card with Adverse Impact & Fairness Audit Visual -->
     <div class="principle-trio-card card-dark">
       <div class="principle-trio-visual">
-        <img class="principle-trio-img" src="/images/product/A03-Fairness.webp" alt="Continuous adverse impact and demographic fairness audit analytics" width="480" height="300" loading="eager" decoding="async" />
+        <img class="principle-trio-img" src="/images/stock/fair-by-design.webp" alt="Diverse engineering team collaborating together in modern tech workspace" width="480" height="300" loading="eager" decoding="async" />
       </div>
       <h3 class="principle-trio-title">Fair by design</h3>
       <p class="principle-trio-desc">Job-relevant repository tasks, accessible accommodations on request, and automatic fairness audits that check for demographic group disparity.</p>
@@ -98,7 +98,7 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
     <!-- Principle 3: White Card with Privacy & DPDP Compliance Visual -->
     <div class="principle-trio-card card-white">
       <div class="principle-trio-visual">
-        <img class="principle-trio-img" src="/images/product/AD09-DataPrivacy.webp" alt="Enterprise data privacy controls, DPDP compliance, and retention settings" width="480" height="300" loading="eager" decoding="async" />
+        <img class="principle-trio-img" src="/images/stock/private-by-default.webp" alt="Hardware security lock and data privacy encryption protection" width="480" height="300" loading="eager" decoding="async" />
       </div>
       <h3 class="principle-trio-title">Private by default</h3>
       <p class="principle-trio-desc">Clear candidate consent, short audit retention, and zero biometric storage. Built from the ground up for India's DPDP Act and GDPR compliance.</p>
