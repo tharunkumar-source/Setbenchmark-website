@@ -183,7 +183,7 @@ export const EditorialPlatformShowcase: React.FC = () => {
   };
 
   return (
-    <section className="editorial-carousel-section">
+    <section className="editorial-carousel-section section-white">
       {/* Header aligned with standard page padding */}
       <div className="wrap">
         <div className="editorial-carousel-head">

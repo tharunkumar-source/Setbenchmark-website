@@ -169,7 +169,7 @@ const REGIONS: RegionItem[] = [
 
 export const RegionalPricingSection: React.FC = () => {
   return (
-    <section className="regional-clean-section">
+    <section className="regional-clean-section section-alt">
       <div className="wrap">
         <div className="regional-clean-layout">
           {/* Left Column: Heading, Subtitle & Action */}

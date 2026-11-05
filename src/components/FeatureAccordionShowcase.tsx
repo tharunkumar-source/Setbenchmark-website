@@ -82,7 +82,7 @@ export const FeatureAccordionShowcase: React.FC = () => {
   const activeItem = SHOWCASE_ITEMS[activeIdx];
 
   return (
-    <section className="feature-accordion-section">
+    <section className="feature-accordion-section section-alt">
       <div className="wrap">
         <div className="feature-accordion-grid">
           {/* Left Column: Full-Data Uncropped Product Browser Mockup */}

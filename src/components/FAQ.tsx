@@ -31,7 +31,7 @@ export const FAQ: React.FC<FAQProps> = ({
   className = '',
 }) => {
   return (
-    <section className={`section ${className}`.trim()}>
+    <section className={`section faq-section ${className}`.trim()}>
       <div className="wrap">
         <div className="faq-head">
           <div className="eyebrow">{eyebrow}</div>

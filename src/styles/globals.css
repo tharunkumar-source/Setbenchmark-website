@@ -4479,7 +4479,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 
 .editorial-carousel-section {
   padding: 96px 0 104px;
-  background: var(--canvas);
+  background: #FFFFFF !important;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   position: relative;
@@ -4724,7 +4724,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 
 .feature-accordion-section {
   padding: 88px 0;
-  background: #FAF9F6;
+  background: #F4F6F9 !important;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   position: relative;
@@ -5515,4 +5515,173 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 
 .integration-logo-svg {
   color: var(--brand-dark);
+}
+
+
+/* ==========================================================================
+   Alternating Section Background Differentiation (Home Page Rhythm)
+   Cadence:
+   1. Hero Modern: Pure White (#FFFFFF)
+   2. Why SetBenchmark (.why-section.section-alt): Soft Tint (#F4F6F9)
+   3. Tailored Architecture (.editorial-carousel-section.section-white): Pure White (#FFFFFF)
+   4. Interactive Features (.feature-accordion-section.section-alt): Soft Tint (#F4F6F9)
+   5. How It Works (.how-it-works-section.section-white): Pure White (#FFFFFF)
+   6. Solutions (.solutions-section.section-alt): Soft Tint (#F4F6F9)
+   7. Skill Tests (.skill-tests-section.section-white): Pure White (#FFFFFF)
+   8. Regional Pricing (.regional-clean-section.section-alt): Soft Tint (#F4F6F9)
+   9. CTA Band (.cta-band-section.section-white): Pure White (#FFFFFF) with dark banner
+   10. FAQ (.faq-section.section-alt): Soft Tint (#F4F6F9)
+   11. Footer (.ftr): Deep Dark (#05150D)
+   ========================================================================== */
+
+/* Universal Alt Section Style */
+.section-alt {
+  background-color: #F4F6F9 !important;
+  border-top: 1px solid #E2E8F0 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  position: relative;
+}
+
+/* Universal White Section Style */
+.section-white {
+  background-color: #FFFFFF !important;
+  position: relative;
+}
+
+/* 2. Why SetBenchmark */
+.why-section.section-alt {
+  padding: 96px 0 104px;
+}
+.why-section .card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.why-section .card:hover {
+  transform: translateY(-2px) !important;
+  border-color: var(--brand, #26D07C) !important;
+  box-shadow: 0 12px 28px -4px rgba(38, 208, 124, 0.16) !important;
+}
+
+/* 3. Tailored Architecture (Editorial Feature Carousel) */
+.editorial-carousel-section.section-white,
+.editorial-carousel-section {
+  background: #FFFFFF !important;
+  border-top: 1px solid #E2E8F0 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+/* 4. Interactive Feature Accordion */
+.feature-accordion-section.section-alt,
+.feature-accordion-section {
+  background: #F4F6F9 !important;
+  border-top: 1px solid #E2E8F0 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+.feature-accordion-section .feature-mockup-frame {
+  background: #FFFFFF !important;
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.1), 0 0 0 1px rgba(15, 23, 42, 0.06) !important;
+}
+.feature-accordion-section .feature-accordion-item {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03) !important;
+  margin-bottom: 12px !important;
+  transition: all 0.2s ease !important;
+}
+.feature-accordion-section .feature-accordion-item.is-active {
+  border-color: var(--brand, #26D07C) !important;
+  box-shadow: 0 6px 18px rgba(38, 208, 124, 0.12) !important;
+}
+
+/* 5. How It Works */
+.how-it-works-section.section-white,
+.how-it-works-section {
+  background: #FFFFFF !important;
+  border-top: 1px solid #E2E8F0 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+/* 6. Solutions Section */
+.solutions-section.section-alt {
+  padding: 96px 0 104px;
+}
+.solutions-section .card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.solutions-section .card:hover {
+  transform: translateY(-2px) !important;
+  border-color: var(--brand, #26D07C) !important;
+  box-shadow: 0 12px 28px -4px rgba(38, 208, 124, 0.16) !important;
+}
+
+/* 7. Skill Tests Section */
+.skill-tests-section.section-white {
+  background: #FFFFFF !important;
+  border-top: 1px solid #E2E8F0 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+/* 8. Regional Pricing & Support */
+.regional-clean-section.section-alt,
+.regional-clean-section {
+  background: #F4F6F9 !important;
+  border-top: 1px solid #E2E8F0 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+.regional-clean-section .regional-clean-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.regional-clean-section .regional-clean-card:hover {
+  transform: translateY(-2px) !important;
+  border-color: var(--brand, #26D07C) !important;
+  box-shadow: 0 10px 24px -4px rgba(38, 208, 124, 0.16) !important;
+}
+
+/* 9. CTA Band */
+.cta-band-section.section-white {
+  background: #FFFFFF !important;
+}
+
+/* 10. FAQ Section */
+.faq-section.section-alt {
+  background: #F4F6F9 !important;
+  border-top: 1px solid #E2E8F0 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+.faq-section.section-alt .faq details {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 12px !important;
+  padding: 18px 22px !important;
+  margin-bottom: 12px !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03) !important;
+}
+.faq-section.section-alt .faq details:last-of-type {
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+@media (max-width: 900px) {
+  .why-section.section-alt,
+  .solutions-section.section-alt {
+    padding: 64px 0 72px;
+  }
+}
+
+@media (max-width: 640px) {
+  .why-section.section-alt,
+  .solutions-section.section-alt {
+    padding: 48px 0 56px;
+  }
 }
