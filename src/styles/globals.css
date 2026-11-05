@@ -6541,29 +6541,20 @@ img,
   will-change: transform;
 }
 
-.track-left {
-  animation: skillScrollLeft 36s linear infinite;
+.single-track {
+  animation: skillSingleScroll 48s linear infinite;
 }
 
-.track-right {
-  animation: skillScrollRight 34s linear infinite;
-}
-
-/* Hover: auto scroll stops when hovered */
+/* Hover: auto scroll stops when hovered on any logo or track */
 .skill-marquee-track:hover,
 .skill-marquee-row:hover .skill-marquee-track,
 .skill-marquee-card:hover {
   animation-play-state: paused !important;
 }
 
-@keyframes skillScrollLeft {
-  from { transform: translateX(0); }
-  to { transform: translateX(calc(-50% - 8px)); }
-}
-
-@keyframes skillScrollRight {
-  from { transform: translateX(calc(-50% - 8px)); }
-  to { transform: translateX(0); }
+@keyframes skillSingleScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 8px)); }
 }
 
 /* Tactile Skill Card Pill (Matching reference image with branding colors) */
