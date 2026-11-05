@@ -440,30 +440,31 @@ p { margin: 0; }
 
 /* Icon beside Menu Item (Tactile Tile) */
 .mega-item-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  background: var(--canvas);
-  border: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: var(--ink-3);
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  background: var(--brand-subtle, #E8F9F1) !important;
+  border: 1px solid var(--brand-border-light, #B7F0D3) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  color: var(--brand-dark, #12804A) !important;
+  box-sizing: border-box !important;
   transition: all .15s ease;
   margin-top: 1px;
 }
 .mega-item-icon svg {
-  width: 19px;
-  height: 19px;
-  stroke: currentColor;
-  stroke-width: 1.85;
-  fill: none;
+  width: 20px !important;
+  height: 20px !important;
+  stroke: var(--brand-dark, #12804A) !important;
+  stroke-width: 2.2px !important;
+  fill: none !important;
 }
 .mega-item:hover .mega-item-icon {
-  background: var(--blue-50);
-  border-color: var(--brand-border);
-  color: var(--blue);
+  background: #D7F5E5 !important;
+  border-color: #8CE8BA !important;
+  color: var(--brand-dark, #12804A) !important;
 }
 
 /* Item Text Stack */
@@ -1080,25 +1081,28 @@ p { margin: 0; }
   display: block;
   height: auto;
 }
-/* Standardized Card Icon Tiles across entire site (matching Brand Lime Accent) */
+/* Standardized Card Icon Tiles across entire site (matching Image 1 Squircle Tile with Subtle Mint Border) */
 .icon,
 .icon.v,
 .icon.l {
   width: 44px !important;
   height: 44px !important;
-  border-radius: 12px !important;
-  background: var(--brand-subtle) !important;
-  color: var(--brand-dark) !important;
+  border-radius: 10px !important;
+  background: var(--brand-subtle, #E8F9F1) !important;
+  border: 1px solid var(--brand-border-light, #B7F0D3) !important;
+  color: var(--brand-dark, #12804A) !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   margin-bottom: 18px !important;
+  box-sizing: border-box !important;
 }
 .icon svg,
 .icon.v svg,
 .icon.l svg {
-  color: var(--brand-dark) !important;
-  stroke: var(--brand-dark) !important;
+  color: var(--brand-dark, #12804A) !important;
+  stroke: var(--brand-dark, #12804A) !important;
+  stroke-width: 2.2px !important;
 }
 .alt .card { background: var(--white); }
 .dark .card { background: var(--ink-2); border-color: #2f3657; }
@@ -1853,13 +1857,22 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   margin: 0;
 }
 
-/* Dedicated Nice BG Container for Core Principles */
+/* Full-Width Section for Core Principles (Matching Full-Width Layout of Other Sections) */
+.principles-section,
+.section-mint {
+  background-color: var(--brand-subtle, #E8F9F1) !important;
+  border-top: 1px solid var(--brand-border-light, #B7F0D3) !important;
+  border-bottom: 1px solid var(--brand-border-light, #B7F0D3) !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
 .principles-nice-bg-container {
-  background: var(--brand-subtle, #E8F9F1);
+  background: transparent !important;
   border: none !important;
-  border-radius: 24px;
-  padding: 48px 40px;
-  box-shadow: 0 10px 30px -10px rgba(18, 128, 74, 0.06);
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
 }
 
 .principles-band-head {
@@ -1925,17 +1938,49 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   border-color: var(--brand, #26D07C);
 }
 
+/* Principle Trio Visual Mockups */
+.principle-trio-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  margin-bottom: 22px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.principle-trio-card.card-dark .principle-trio-visual {
+  background: #0B1612;
+  border-color: rgba(38, 208, 124, 0.25);
+}
+
+.principle-trio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.principle-trio-card:hover .principle-trio-img {
+  transform: scale(1.03);
+}
+
 .principle-trio-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: var(--brand-subtle, #E8F9F1);
-  border: 1px solid var(--brand-border-light, #B7F0D3);
-  color: var(--brand-dark, #12804A);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 18px;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  background: var(--brand-subtle, #E8F9F1) !important;
+  border: 1px solid var(--brand-border-light, #B7F0D3) !important;
+  color: var(--brand-dark, #12804A) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 18px !important;
+  box-sizing: border-box !important;
 }
 
 .principle-trio-icon.dark-accent {
@@ -6357,9 +6402,6 @@ img,
 .hero-proof-item,
 .tick,
 .checks li .tick,
-.icon,
-.icon.v,
-.icon.l,
 .cur label {
   border-radius: 9999px !important;
 }

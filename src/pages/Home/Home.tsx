@@ -61,63 +61,50 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
       </div>
     </div>
   </div>
+</div></section><section class="section principles-section section-mint"><div class="wrap">
+  <div class="principles-band-head">
+    <div class="eyebrow" style="color:var(--brand-dark)">Platform Governance</div>
+    <h2 class="h2 principles-band-title">Core Principles Behind Every Benchmark</h2>
+    <p class="lead principles-band-lead">Three non-negotiable standards that protect your engineering hiring from black-box automated rejections.</p>
+  </div>
 
-  <!-- Bottom: Dedicated Container with Nice BG for Core Principles (Matching Reference) -->
-  <div class="principles-nice-bg-container">
-    <div class="principles-band-head">
-      <div class="eyebrow" style="color:var(--brand-dark)">Platform Governance</div>
-      <h3 class="principles-band-title">Core Principles Behind Every Benchmark</h3>
-      <p class="principles-band-lead">Three non-negotiable standards that protect your engineering hiring from black-box automated rejections.</p>
+  <div class="principles-trio-grid">
+    <!-- Principle 1: White Card with Rich Product Mockup Image -->
+    <div class="principle-trio-card card-white">
+      <div class="principle-trio-visual">
+        <img class="principle-trio-img" src="/images/product/I05-Scorecard.webp" alt="Structured scorecard with human reviewer rubric and hiring manager decision" width="480" height="300" loading="eager" decoding="async" />
+      </div>
+      <h3 class="principle-trio-title">People decide</h3>
+      <p class="principle-trio-desc">AI scores correctness, summarizes diffs, and flags anomalies. A human engineering manager makes every hiring decision and records the rationale.</p>
+      <div class="principle-trio-pill">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Zero automated rejections</span>
+      </div>
     </div>
 
-    <div class="principles-trio-grid">
-      <!-- Principle 1: White Card -->
-      <div class="principle-trio-card card-white">
-        <div class="principle-trio-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-        </div>
-        <h4 class="principle-trio-title">People decide</h4>
-        <p class="principle-trio-desc">AI scores correctness, summarizes diffs, and flags anomalies. A human engineering manager makes every hiring decision and records the rationale.</p>
-        <div class="principle-trio-pill">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span>Zero automated rejections</span>
-        </div>
+    <!-- Principle 2: Middle Dark Card with Adverse Impact & Fairness Audit Visual -->
+    <div class="principle-trio-card card-dark">
+      <div class="principle-trio-visual">
+        <img class="principle-trio-img" src="/images/product/A03-Fairness.webp" alt="Continuous adverse impact and demographic fairness audit analytics" width="480" height="300" loading="eager" decoding="async" />
       </div>
-
-      <!-- Principle 2: Middle Dark Card (Featured Accent Card like Reference!) -->
-      <div class="principle-trio-card card-dark">
-        <div class="principle-trio-icon dark-accent">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z"></path>
-            <path d="M2 12h20"></path>
-          </svg>
-        </div>
-        <h4 class="principle-trio-title">Fair by design</h4>
-        <p class="principle-trio-desc">Job-relevant repository tasks, accessible accommodations on request, and automatic fairness audits that check for demographic group disparity.</p>
-        <div class="principle-trio-pill dark-pill">
-          <span class="dark-pill-dot">●</span>
-          <span>Continuous adverse impact audits</span>
-        </div>
+      <h3 class="principle-trio-title">Fair by design</h3>
+      <p class="principle-trio-desc">Job-relevant repository tasks, accessible accommodations on request, and automatic fairness audits that check for demographic group disparity.</p>
+      <div class="principle-trio-pill dark-pill">
+        <span class="dark-pill-dot">●</span>
+        <span>Continuous adverse impact audits</span>
       </div>
+    </div>
 
-      <!-- Principle 3: White Card -->
-      <div class="principle-trio-card card-white">
-        <div class="principle-trio-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            <path d="M9 12l2 2 4-4"></path>
-          </svg>
-        </div>
-        <h4 class="principle-trio-title">Private by default</h4>
-        <p class="principle-trio-desc">Clear candidate consent, short audit retention, and zero biometric storage. Built from the ground up for India's DPDP Act and GDPR compliance.</p>
-        <div class="principle-trio-pill">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span>India DPDP Act &amp; GDPR compliant</span>
-        </div>
+    <!-- Principle 3: White Card with Privacy & DPDP Compliance Visual -->
+    <div class="principle-trio-card card-white">
+      <div class="principle-trio-visual">
+        <img class="principle-trio-img" src="/images/product/AD09-DataPrivacy.webp" alt="Enterprise data privacy controls, DPDP compliance, and retention settings" width="480" height="300" loading="eager" decoding="async" />
+      </div>
+      <h3 class="principle-trio-title">Private by default</h3>
+      <p class="principle-trio-desc">Clear candidate consent, short audit retention, and zero biometric storage. Built from the ground up for India's DPDP Act and GDPR compliance.</p>
+      <div class="principle-trio-pill">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>India DPDP Act &amp; GDPR compliant</span>
       </div>
     </div>
   </div>
