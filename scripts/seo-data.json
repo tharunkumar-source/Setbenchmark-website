@@ -1865,6 +1865,47 @@
       }
     ]
   },
+  "/sitemap/": {
+    "route": "/sitemap/",
+    "title": "HTML Sitemap & Complete Site Directory | SetBenchmark",
+    "description": "Explore the complete directory of SetBenchmark pages: coding assessment tools, AI fluency tests, regional editions, skill benchmarks, and engineering guides.",
+    "canonical": "https://www.setbenchmark.com/sitemap/",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.setbenchmark.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "HTML Sitemap",
+            "item": "https://www.setbenchmark.com/sitemap/"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SetBenchmark",
+        "legalName": "Kombee Technologies (India) Pvt. Ltd.",
+        "url": "https://www.setbenchmark.com",
+        "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png",
+        "sameAs": []
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SetBenchmark",
+        "url": "https://www.setbenchmark.com"
+      }
+    ]
+  },
   "/skill-tests/aws/": {
     "route": "/skill-tests/aws/",
     "title": "AWS Skills Assessment for Cloud Engineers | SetBenchmark",

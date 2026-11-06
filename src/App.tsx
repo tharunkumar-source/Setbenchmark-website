@@ -32,6 +32,7 @@ import QuestionLibrary from '@/pages/Product/QuestionLibrary';
 import SkillsIntelligence from '@/pages/Product/SkillsIntelligence';
 import SaudiArabia from '@/pages/Regions/SaudiArabia';
 import Security from '@/pages/Security/Security';
+import Sitemap from '@/pages/Sitemap/Sitemap';
 import SkillTestsIndex from '@/pages/SkillTests/SkillTestsIndex';
 import AWSTest from '@/pages/SkillTests/AWSTest';
 import DataScienceTest from '@/pages/SkillTests/DataScienceTest';
@@ -114,6 +115,8 @@ export const App: React.FC = () => {
         <Route path="/saudi-arabia/" element={<SaudiArabia />} />
         <Route path="/security" element={<Security />} />
         <Route path="/security/" element={<Security />} />
+        <Route path="/sitemap" element={<Sitemap />} />
+        <Route path="/sitemap/" element={<Sitemap />} />
         <Route path="/skill-tests" element={<SkillTestsIndex />} />
         <Route path="/skill-tests/" element={<SkillTestsIndex />} />
         <Route path="/skill-tests/aws" element={<AWSTest />} />

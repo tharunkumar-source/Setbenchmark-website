@@ -7,83 +7,124 @@ export const Footer: React.FC = () => {
     <footer className="ftr">
       <div className="wrap">
         <div className="ftr-grid">
-          {/* Brand Info */}
-          <div>
+          {/* Column 1: Brand Info & Quick Directory */}
+          <div className="ftr-brand-col">
             <Link to="/" className="brand" aria-label="SetBenchmark home">
               <BrandLogo variant="dark" size={28} />
             </Link>
-            <p style={{ marginTop: '16px', maxWidth: '280px' }}>
+            <p style={{ marginTop: '16px', maxWidth: '280px', lineHeight: '1.5', color: '#94A3B8' }}>
               Technical assessments, AI interviews and skills intelligence for teams hiring engineers in the AI era.
             </p>
-            <p style={{ marginTop: '16px' }}>
-              <a href="mailto:sales@setbenchmark.com">sales@setbenchmark.com</a>
+            <p style={{ marginTop: '14px', fontSize: '14px' }}>
+              <a href="mailto:sales@setbenchmark.com" style={{ color: 'var(--brand, #26D07C)' }}>
+                sales@setbenchmark.com
+              </a>
             </p>
+            <div style={{ marginTop: '20px' }}>
+              <Link
+                to="/sitemap/"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  fontSize: '13.5px',
+                  fontWeight: 600,
+                  color: 'var(--brand, #26D07C)',
+                  background: 'rgba(38, 208, 124, 0.1)',
+                  padding: '6px 12px',
+                  borderRadius: '6px',
+                  border: '1px solid rgba(38, 208, 124, 0.25)'
+                }}
+              >
+                <span>HTML Sitemap &amp; Directory</span>
+                <span>&rarr;</span>
+              </Link>
+            </div>
           </div>
 
-          {/* Product */}
+          {/* Column 2: Product & Platform (11 pages) */}
           <div>
             <h2>Product</h2>
             <ul>
+              <li><Link to="/product/">Product overview</Link></li>
               <li><Link to="/product/coding-assessments/">Coding assessments</Link></li>
               <li><Link to="/product/ai-fluency-assessments/">AI fluency assessments</Link></li>
-              <li><Link to="/product/ai-interviews/">AI interviews</Link></li>
+              <li><Link to="/product/ai-interviews/">AI automated interviews</Link></li>
               <li><Link to="/product/live-coding-interviews/">Live coding interviews</Link></li>
-              <li><Link to="/product/proctoring-integrity/">Proctoring and integrity</Link></li>
+              <li><Link to="/product/proctoring-integrity/">Proctoring &amp; integrity</Link></li>
               <li><Link to="/product/skills-intelligence/">Skills intelligence</Link></li>
               <li><Link to="/product/question-library/">Question library</Link></li>
-              <li><Link to="/integrations/">Integrations</Link></li>
-              <li><Link to="/pricing/">Pricing</Link></li>
+              <li><Link to="/integrations/">ATS integrations</Link></li>
+              <li><Link to="/pricing/">Pricing &amp; plans</Link></li>
+              <li><Link to="/compare/hackerrank-alternatives/">HackerRank alternatives</Link></li>
             </ul>
           </div>
 
-          {/* Solutions */}
+          {/* Column 3: Solutions & Regions (11 pages) */}
           <div>
             <h2>Solutions</h2>
             <ul>
+              <li><Link to="/solutions/">Solutions overview</Link></li>
               <li><Link to="/solutions/campus-hiring/">Campus hiring</Link></li>
               <li><Link to="/solutions/enterprise-tech-hiring/">Enterprise tech hiring</Link></li>
-              <li><Link to="/solutions/it-services-staffing/">IT services and staffing</Link></li>
+              <li><Link to="/solutions/it-services-staffing/">IT services &amp; staffing</Link></li>
               <li><Link to="/solutions/startups/">Startups</Link></li>
               <li><Link to="/developers/">For developers</Link></li>
             </ul>
+
+            <h2 style={{ marginTop: '24px' }}>Regions</h2>
+            <ul>
+              <li><Link to="/india/">India (₹ INR)</Link></li>
+              <li><Link to="/uae/">United Arab Emirates (AED)</Link></li>
+              <li><Link to="/saudi-arabia/">Saudi Arabia (SAR)</Link></li>
+              <li><Link to="/australia/">Australia (AUD)</Link></li>
+              <li><Link to="/new-zealand/">New Zealand (NZD)</Link></li>
+            </ul>
           </div>
 
-          {/* Skill Tests */}
+          {/* Column 4: Skill Tests (13 pages) */}
           <div>
             <h2>Skill tests</h2>
             <ul>
-              <li><Link to="/skill-tests/java/">Java coding test</Link></li>
+              <li><Link to="/skill-tests/">All skill tests (Hub)</Link></li>
               <li><Link to="/skill-tests/python/">Python coding test</Link></li>
               <li><Link to="/skill-tests/javascript/">JavaScript test</Link></li>
               <li><Link to="/skill-tests/react/">React test</Link></li>
-              <li><Link to="/skill-tests/sql/">SQL test</Link></li>
-              <li><Link to="/skill-tests/">All skill tests</Link></li>
+              <li><Link to="/skill-tests/java/">Java coding test</Link></li>
+              <li><Link to="/skill-tests/nodejs/">Node.js test</Link></li>
+              <li><Link to="/skill-tests/golang/">Go (Golang) test</Link></li>
+              <li><Link to="/skill-tests/sql/">PostgreSQL &amp; SQL test</Link></li>
+              <li><Link to="/skill-tests/aws/">AWS cloud test</Link></li>
+              <li><Link to="/skill-tests/devops/">Docker &amp; DevOps test</Link></li>
+              <li><Link to="/skill-tests/system-design/">System design test</Link></li>
+              <li><Link to="/skill-tests/data-science/">Data science test</Link></li>
+              <li><Link to="/skill-tests/data-structures-algorithms/">Algorithms &amp; DSA test</Link></li>
             </ul>
           </div>
 
-          {/* Regions */}
+          {/* Column 5: Blog & Research (5 pages) */}
           <div>
-            <h2>Regions</h2>
+            <h2>Blog &amp; Research</h2>
             <ul>
-              <li><Link to="/india/">India</Link></li>
-              <li><Link to="/uae/">United Arab Emirates</Link></li>
-              <li><Link to="/saudi-arabia/">Saudi Arabia</Link></li>
-              <li><Link to="/australia/">Australia</Link></li>
-              <li><Link to="/new-zealand/">New Zealand</Link></li>
+              <li><Link to="/blog/">Engineering blog</Link></li>
+              <li><Link to="/blog/assessing-developers-in-the-age-of-ai/">Assessing developers in AI era</Link></li>
+              <li><Link to="/blog/campus-hiring-coding-assessment-guide/">Campus assessment guide</Link></li>
+              <li><Link to="/blog/how-to-design-a-fair-coding-assessment/">Fair assessment checklist</Link></li>
+              <li><Link to="/blog/how-to-prevent-cheating-in-online-coding-tests/">Preventing test cheating</Link></li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Column 6: Company & Legal (7 pages) */}
           <div>
-            <h2>Company</h2>
+            <h2>Company &amp; Legal</h2>
             <ul>
               <li><Link to="/about/">About us</Link></li>
-              <li><Link to="/blog/">Blog</Link></li>
-              <li><Link to="/security/">Security and privacy</Link></li>
-              <li><Link to="/contact/">Contact</Link></li>
+              <li><Link to="/security/">Security &amp; compliance</Link></li>
+              <li><Link to="/contact/">Contact &amp; sales</Link></li>
+              <li><Link to="/sitemap/">HTML Sitemap</Link></li>
               <li><Link to="/legal/privacy/">Privacy policy</Link></li>
               <li><Link to="/legal/terms/">Terms of service</Link></li>
-              <li><Link to="/legal/refund-policy/">Refund and cancellation</Link></li>
+              <li><Link to="/legal/refund-policy/">Refund &amp; cancellation</Link></li>
             </ul>
           </div>
         </div>
@@ -98,4 +139,3 @@ export const Footer: React.FC = () => {
 };
 
 export default Footer;
-

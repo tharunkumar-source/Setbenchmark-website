@@ -414,7 +414,32 @@ export const Header: React.FC = () => {
             </Link>
             <Link to="/australia/" className="mega-item" onClick={closeMenuImmediately}>
               <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
-              <div className="mega-item-text"><b>Australia &amp; NZ (ANZ)</b><span>Privacy Act compliance with AUD &amp; NZD billing</span></div>
+              <div className="mega-item-text"><b>Australia (AUD)</b><span>Privacy Act compliance with Sydney residency</span></div>
+            </Link>
+            <Link to="/new-zealand/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
+              <div className="mega-item-text"><b>New Zealand (NZD)</b><span>Privacy Act 2020 &amp; Trans-Tasman billing</span></div>
+            </Link>
+          </div>
+
+          {/*  Column 4: LEGAL & DIRECTORY  */}
+          <div className="mega-col">
+            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> LEGAL &amp; DIRECTORY</div>
+            <Link to="/sitemap/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span>
+              <div className="mega-item-text"><b>HTML Sitemap</b><span>Complete directory of all 48 platform pages</span></div>
+            </Link>
+            <Link to="/legal/privacy/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span>
+              <div className="mega-item-text"><b>Privacy Policy</b><span>Candidate data consent &amp; GDPR / DPDP terms</span></div>
+            </Link>
+            <Link to="/legal/terms/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span>
+              <div className="mega-item-text"><b>Terms of Service</b><span>Platform acceptable use, SLAs &amp; subscriptions</span></div>
+            </Link>
+            <Link to="/legal/refund-policy/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></span>
+              <div className="mega-item-text"><b>Refund &amp; Cancellation</b><span>14-day trial policies &amp; enterprise guarantees</span></div>
             </Link>
           </div>
         </div>
@@ -816,8 +841,65 @@ export const Header: React.FC = () => {
                     </Link>
                     <Link to="/australia/" className="mobile-nav-item" onClick={closeMobileMenu}>
                       <div className="mobile-nav-item-content">
-                        <span className="mobile-nav-item-title">Australia &amp; NZ (ANZ)</span>
-                        <span className="mobile-nav-item-desc">Privacy Act compliance with AUD &amp; NZD billing</span>
+                        <span className="mobile-nav-item-title">Australia (AUD)</span>
+                        <span className="mobile-nav-item-desc">Privacy Act compliance with Sydney residency</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/new-zealand/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">New Zealand (NZD)</span>
+                        <span className="mobile-nav-item-desc">Privacy Act 2020 &amp; Trans-Tasman billing</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* 5.5 Legal & Site Directory */}
+              <div className={`mobile-nav-group ${openMobileGroup === 'legal' ? 'is-open' : ''}`}>
+                <button
+                  type="button"
+                  className="mobile-group-header"
+                  onClick={() => toggleMobileGroup('legal')}
+                  aria-expanded={openMobileGroup === 'legal'}
+                >
+                  <span className="mobile-group-title">
+                    <span className="mobile-group-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </span>
+                    Legal &amp; Site Directory
+                  </span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-group-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                {openMobileGroup === 'legal' && (
+                  <div className="mobile-group-items">
+                    <Link to="/sitemap/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">HTML Sitemap &amp; Directory</span>
+                        <span className="mobile-nav-item-desc">Complete index of all 48 platform pages</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/legal/privacy/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Privacy Policy</span>
+                        <span className="mobile-nav-item-desc">Candidate data consent &amp; GDPR / DPDP terms</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/legal/terms/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Terms of Service</span>
+                        <span className="mobile-nav-item-desc">Platform acceptable use &amp; uptime SLAs</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/legal/refund-policy/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Refund &amp; Cancellation</span>
+                        <span className="mobile-nav-item-desc">Trial terms &amp; enterprise guarantees</span>
                       </div>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
                     </Link>
