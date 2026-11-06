@@ -1425,11 +1425,125 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .task p { color: var(--text-2); font-size: 16px; margin-top: 8px; }
 
 /* Forms */
-.form { display: grid; gap: 16px; }
-.form label { display: grid; gap: 6px; font-weight: 600; font-size: 15px; }
-.form input, .form select, .form textarea { font: inherit; font-weight: 400; font-size: 16px; padding: 12px 14px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--white); color: var(--text); }
-.form textarea { min-height: 110px; resize: vertical; }
-.form .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form {
+  display: grid !important;
+  gap: 20px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.form label {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  font-weight: 600 !important;
+  font-size: 14.5px !important;
+  color: var(--ink, #07190F) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  line-height: 1.35 !important;
+}
+
+.form input,
+.form select,
+.form textarea {
+  font: inherit !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  padding: 12px 16px !important;
+  border: 1px solid var(--line-2, #D1D5DB) !important;
+  border-radius: 8px !important;
+  background: var(--white, #FFFFFF) !important;
+  color: var(--text, #0F1222) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: none !important;
+  border-color: var(--brand, #26D07C) !important;
+  box-shadow: 0 0 0 3px rgba(38, 208, 124, 0.2) !important;
+}
+
+.form select {
+  min-height: 48px !important;
+  height: 48px !important;
+  padding: 12px 16px !important;
+  cursor: pointer !important;
+  appearance: auto !important;
+  -webkit-appearance: menulist !important;
+}
+
+.form select option {
+  padding: 12px 16px !important;
+  font-size: 15px !important;
+  background: #FFFFFF !important;
+  color: #0F1222 !important;
+}
+
+.form textarea {
+  min-height: 110px !important;
+  resize: vertical !important;
+}
+
+.form .row2,
+.row2 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 16px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.contact-form-card {
+  padding: 36px 36px 48px;
+  margin-bottom: 48px;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  .phero-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 28px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .phero-grid > * {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .contact-form-card {
+    padding: 24px 18px 32px !important;
+    margin-bottom: 32px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .form .row2,
+  .row2 {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
 .small { font-size: 14px; color: var(--text-3); }
 
 /* Footer */
@@ -1790,8 +1904,8 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
    How It Works — Side-by-Side Steps & Nice BG Principles Container
    ========================================================================== */
 .how-it-works-section {
-  padding: 96px 0 104px;
-  background: #F8FAFC;
+  padding: 80px 0;
+  background: #FFFFFF;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -1802,7 +1916,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   grid-template-columns: 1fr 1.25fr;
   gap: 48px;
   align-items: center;
-  margin-bottom: 64px;
+  margin-bottom: 0 !important;
 }
 
 .how-split-left {
@@ -6201,16 +6315,36 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 }
 
 @media (max-width: 900px) {
+  .section,
   .why-section.section-alt,
-  .solutions-section.section-alt {
-    padding: 64px 0 72px;
+  .how-it-works-section,
+  .principles-section,
+  .solutions-section.section-alt,
+  .regional-clean-section,
+  .skill-tests-section {
+    padding: 60px 0 !important;
   }
 }
 
 @media (max-width: 640px) {
+  .section,
   .why-section.section-alt,
-  .solutions-section.section-alt {
-    padding: 48px 0 56px;
+  .editorial-carousel-section,
+  .feature-accordion-section,
+  .how-it-works-section,
+  .principles-section,
+  .solutions-section.section-alt,
+  .skill-tests-section,
+  .regional-clean-section,
+  .faq-section {
+    padding: 44px 0 !important;
+  }
+  .how-split-layout {
+    margin-bottom: 0 !important;
+    gap: 24px !important;
+  }
+  .principles-band-head {
+    margin-bottom: 24px !important;
   }
 }
 
@@ -6911,5 +7045,134 @@ h1, h2, h3, h4, h5, h6,
   display: inline-flex;
   align-items: center;
   gap: 5px;
+}
+
+/* ==========================================================================
+   Comprehensive Form & Dropdown Mobile Responsiveness (Zero Overflow)
+   Ensures Demo & Free Trial forms fit perfectly within 360px+ screens
+   with comfortable padding on labels, inputs, selects, and dropdown options.
+   ========================================================================== */
+.contact-form-card,
+.form.card {
+  width: 100% !important;
+  max-width: 520px;
+  box-sizing: border-box !important;
+  border-radius: 0 !important;
+}
+
+.form {
+  display: grid !important;
+  gap: 20px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.form label {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  font-weight: 600 !important;
+  font-size: 14.5px !important;
+  color: var(--ink, #07190F) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  line-height: 1.35 !important;
+}
+
+.form input,
+.form select,
+.form textarea {
+  font: inherit !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  padding: 12px 16px !important;
+  border: 1px solid var(--line-2, #D1D5DB) !important;
+  border-radius: 8px !important;
+  background: var(--white, #FFFFFF) !important;
+  color: var(--text, #0F1222) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.form select {
+  min-height: 48px !important;
+  height: 48px !important;
+  padding: 12px 16px !important;
+  cursor: pointer !important;
+  appearance: auto !important;
+  -webkit-appearance: menulist !important;
+}
+
+.form select option {
+  padding: 12px 16px !important;
+  font-size: 15px !important;
+  background: #FFFFFF !important;
+  color: #0F1222 !important;
+  min-height: 36px !important;
+}
+
+.form textarea {
+  min-height: 110px !important;
+  resize: vertical !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.form .row2,
+.row2 {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 900px) {
+  .phero-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 32px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .phero-grid > * {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .phero {
+    padding: 36px 0 60px !important;
+    overflow-x: hidden !important;
+  }
+  .contact-form-card,
+  .form.card {
+    padding: 24px 18px 28px !important;
+    margin: 0 auto 32px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .form .row2,
+  .row2 {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
 

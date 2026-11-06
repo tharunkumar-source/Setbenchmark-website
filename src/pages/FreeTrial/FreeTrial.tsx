@@ -111,9 +111,9 @@ export const FreeTrial: React.FC = () => {
             </div>
 
             {/* Right Form Card Column */}
-            <div className="form card contact-form-card" style={{ padding: '36px 36px 48px', marginBottom: '48px', borderRadius: 0 }}>
+            <div className="form card contact-form-card" style={{ borderRadius: 0 }}>
               {!submitted ? (
-                <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '16px' }}>
+                <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '20px' }}>
                   <div className="row2">
                     <label>
                       Full name *
@@ -124,7 +124,6 @@ export const FreeTrial: React.FC = () => {
                         placeholder="Jane Doe"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        style={{ borderRadius: 0 }}
                       />
                     </label>
                     <label>
@@ -137,7 +136,6 @@ export const FreeTrial: React.FC = () => {
                         placeholder="jane@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        style={{ borderRadius: 0 }}
                       />
                     </label>
                   </div>
@@ -152,7 +150,6 @@ export const FreeTrial: React.FC = () => {
                         placeholder="Acme Corp"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        style={{ borderRadius: 0 }}
                       />
                     </label>
                     <label>
@@ -161,7 +158,6 @@ export const FreeTrial: React.FC = () => {
                         name="country"
                         value={formData.country}
                         onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                        style={{ borderRadius: 0 }}
                       >
                         <option value="Select" disabled>Select</option>
                         <option>India</option>
@@ -181,7 +177,6 @@ export const FreeTrial: React.FC = () => {
                       name="volume"
                       value={formData.volume}
                       onChange={(e) => setFormData({ ...formData, volume: e.target.value })}
-                      style={{ borderRadius: 0 }}
                     >
                       <option value="Select" disabled>Select</option>
                       <option>1–10</option>
@@ -197,7 +192,6 @@ export const FreeTrial: React.FC = () => {
                       name="focus"
                       value={formData.focus}
                       onChange={(e) => setFormData({ ...formData, focus: e.target.value })}
-                      style={{ borderRadius: 0 }}
                     >
                       <option value="Select" disabled>Select</option>
                       <option>Full-Stack & Backend (Go, Python, Java, Node)</option>

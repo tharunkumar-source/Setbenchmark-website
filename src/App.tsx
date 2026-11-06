@@ -79,6 +79,8 @@ export const App: React.FC = () => {
         <Route path="/compare/hackerrank-alternatives/" element={<HackerRankAlternatives />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/contact/" element={<Contact />} />
+        <Route path="/demo" element={<Contact />} />
+        <Route path="/demo/" element={<Contact />} />
         <Route path="/developers" element={<Developers />} />
         <Route path="/developers/" element={<Developers />} />
         <Route path="/india" element={<India />} />
