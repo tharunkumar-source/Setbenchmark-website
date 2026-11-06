@@ -353,8 +353,8 @@ export const Header: React.FC = () => {
   <div className={`nav-item ${activeMenu === 5 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(5)} onMouseLeave={handleMouseLeave}>
     <button className={`nav-link ${activeMenu === 5 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(5, e)} aria-haspopup="true" aria-expanded={activeMenu === 5}>Resources <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
     <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately}>
-      <div className="mega-card">
-        <div className="mega-menu-grid mega-grid-4">
+      <div className="mega-card" style={{ maxWidth: '1280px', width: '100%' }}>
+        <div className="mega-menu-grid mega-grid-4-cols">
           {/*  Column 1: GUIDES & INSIGHTS  */}
           <div className="mega-col">
             <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> GUIDES &amp; INSIGHTS</div>
@@ -374,6 +374,10 @@ export const Header: React.FC = () => {
               <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></span>
               <div className="mega-item-text"><b>Campus assessment guide</b><span>Practical playbook for university drives</span></div>
             </Link>
+            <Link to="/blog/how-to-design-a-fair-coding-assessment/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span>
+              <div className="mega-item-text"><b>Fair assessment checklist</b><span>12-point rubric for unbiased screening</span></div>
+            </Link>
           </div>
 
           {/*  Column 2: COMPARISONS & TRUST  */}
@@ -383,10 +387,6 @@ export const Header: React.FC = () => {
               <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg></span>
               <div className="mega-item-text"><b>HackerRank alternatives</b><span>Honest 2026 feature &amp; pricing comparison</span></div>
             </Link>
-            <Link to="/blog/how-to-design-a-fair-coding-assessment/" className="mega-item" onClick={closeMenuImmediately}>
-              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span>
-              <div className="mega-item-text"><b>Fair assessment checklist</b><span>12-point rubric for unbiased screening</span></div>
-            </Link>
             <Link to="/security/" className="mega-item" onClick={closeMenuImmediately}>
               <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
               <div className="mega-item-text"><b>Security &amp; compliance</b><span>SOC 2, ISO readiness, DPDP &amp; encryption</span></div>
@@ -394,6 +394,10 @@ export const Header: React.FC = () => {
             <Link to="/about/" className="mega-item" onClick={closeMenuImmediately}>
               <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
               <div className="mega-item-text"><b>About SetBenchmark</b><span>Built by Kombee Technologies for teams</span></div>
+            </Link>
+            <Link to="/contact/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+              <div className="mega-item-text"><b>Contact &amp; sales</b><span>Book a demo or talk to our solutions team</span></div>
             </Link>
           </div>
 
@@ -422,13 +426,9 @@ export const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/*  Column 4: LEGAL & DIRECTORY  */}
+          {/*  Column 4: LEGAL & COMPLIANCE  */}
           <div className="mega-col">
-            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> LEGAL &amp; DIRECTORY</div>
-            <Link to="/sitemap/" className="mega-item" onClick={closeMenuImmediately}>
-              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span>
-              <div className="mega-item-text"><b>HTML Sitemap</b><span>Complete directory of all 48 platform pages</span></div>
-            </Link>
+            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> LEGAL &amp; COMPLIANCE</div>
             <Link to="/legal/privacy/" className="mega-item" onClick={closeMenuImmediately}>
               <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span>
               <div className="mega-item-text"><b>Privacy Policy</b><span>Candidate data consent &amp; GDPR / DPDP terms</span></div>
@@ -857,7 +857,7 @@ export const Header: React.FC = () => {
                 )}
               </div>
 
-              {/* 5.5 Legal & Site Directory */}
+              {/* 5.5 Legal & Compliance */}
               <div className={`mobile-nav-group ${openMobileGroup === 'legal' ? 'is-open' : ''}`}>
                 <button
                   type="button"
@@ -869,19 +869,12 @@ export const Header: React.FC = () => {
                     <span className="mobile-group-icon">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                     </span>
-                    Legal &amp; Site Directory
+                    Legal &amp; Compliance
                   </span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-group-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </button>
                 {openMobileGroup === 'legal' && (
                   <div className="mobile-group-items">
-                    <Link to="/sitemap/" className="mobile-nav-item" onClick={closeMobileMenu}>
-                      <div className="mobile-nav-item-content">
-                        <span className="mobile-nav-item-title">HTML Sitemap &amp; Directory</span>
-                        <span className="mobile-nav-item-desc">Complete index of all 48 platform pages</span>
-                      </div>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
-                    </Link>
                     <Link to="/legal/privacy/" className="mobile-nav-item" onClick={closeMobileMenu}>
                       <div className="mobile-nav-item-content">
                         <span className="mobile-nav-item-title">Privacy Policy</span>

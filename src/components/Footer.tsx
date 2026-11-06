@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
     <footer className="ftr">
       <div className="wrap">
         <div className="ftr-grid">
-          {/* Column 1: Brand Info & Quick Directory */}
+          {/* Column 1: Brand Info */}
           <div className="ftr-brand-col">
             <Link to="/" className="brand" aria-label="SetBenchmark home">
               <BrandLogo variant="dark" size={28} />
@@ -20,26 +20,6 @@ export const Footer: React.FC = () => {
                 sales@setbenchmark.com
               </a>
             </p>
-            <div style={{ marginTop: '20px' }}>
-              <Link
-                to="/sitemap/"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  fontSize: '13.5px',
-                  fontWeight: 600,
-                  color: 'var(--brand, #26D07C)',
-                  background: 'rgba(38, 208, 124, 0.1)',
-                  padding: '6px 12px',
-                  borderRadius: '6px',
-                  border: '1px solid rgba(38, 208, 124, 0.25)'
-                }}
-              >
-                <span>HTML Sitemap &amp; Directory</span>
-                <span>&rarr;</span>
-              </Link>
-            </div>
           </div>
 
           {/* Column 2: Product & Platform (11 pages) */}
@@ -114,14 +94,13 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 6: Company & Legal (7 pages) */}
+          {/* Column 6: Company & Legal (6 pages) */}
           <div>
             <h2>Company &amp; Legal</h2>
             <ul>
               <li><Link to="/about/">About us</Link></li>
               <li><Link to="/security/">Security &amp; compliance</Link></li>
               <li><Link to="/contact/">Contact &amp; sales</Link></li>
-              <li><Link to="/sitemap/">HTML Sitemap</Link></li>
               <li><Link to="/legal/privacy/">Privacy policy</Link></li>
               <li><Link to="/legal/terms/">Terms of service</Link></li>
               <li><Link to="/legal/refund-policy/">Refund &amp; cancellation</Link></li>
