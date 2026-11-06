@@ -1767,6 +1767,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   .g2, .g4, .steps, .form .row2 { grid-template-columns: 1fr; }
   .ftr { padding: 48px 0 28px; }
   .ftr-grid { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+  .ftr-brand-col { grid-column: 1 / -1; margin-bottom: 8px; }
   .ftr-bot { margin-top: 40px; flex-direction: column; gap: 10px; font-size: 13px; }
   .card { padding: 20px; }
   .plan { padding: 22px 18px; }

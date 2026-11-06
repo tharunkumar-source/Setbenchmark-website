@@ -544,7 +544,7 @@ export const Header: React.FC = () => {
         {mobileMenuOpen && (
           <div className="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
             <div className="mobile-drawer-content">
-              {/* 1. Platform */}
+              {/* 1. Product (9) */}
               <div className={`mobile-nav-group ${openMobileGroup === 'product' ? 'is-open' : ''}`}>
                 <button
                   type="button"
@@ -556,7 +556,7 @@ export const Header: React.FC = () => {
                     <span className="mobile-group-icon">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                     </span>
-                    Platform
+                    Product (9)
                   </span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-group-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </button>
@@ -618,11 +618,18 @@ export const Header: React.FC = () => {
                       </div>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
                     </Link>
+                    <Link to="/product/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Platform overview</span>
+                        <span className="mobile-nav-item-desc">Unified assessment engine for engineering teams</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
                   </div>
                 )}
               </div>
 
-              {/* 2. Solutions */}
+              {/* 2. Solutions (6) */}
               <div className={`mobile-nav-group ${openMobileGroup === 'solutions' ? 'is-open' : ''}`}>
                 <button
                   type="button"
@@ -634,7 +641,7 @@ export const Header: React.FC = () => {
                     <span className="mobile-group-icon">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                     </span>
-                    Solutions
+                    Solutions (6)
                   </span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-group-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </button>
@@ -675,6 +682,13 @@ export const Header: React.FC = () => {
                       </div>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
                     </Link>
+                    <Link to="/solutions/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Solutions overview</span>
+                        <span className="mobile-nav-item-desc">Tailored hiring workflows for every team size</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
                   </div>
                 )}
               </div>
@@ -699,7 +713,7 @@ export const Header: React.FC = () => {
                   <div className="mobile-group-items">
                     <Link to="/skill-tests/" className="mobile-nav-item" onClick={closeMobileMenu}>
                       <div className="mobile-nav-item-content">
-                        <span className="mobile-nav-item-title" style={{ color: 'var(--brand, #26D07C)', fontWeight: 700 }}>All skill tests (Hub)</span>
+                        <span className="mobile-nav-item-title">All skill tests (Hub)</span>
                         <span className="mobile-nav-item-desc">Browse 40+ role-tailored pre-employment tests</span>
                       </div>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
@@ -938,13 +952,13 @@ export const Header: React.FC = () => {
                 >
                   Sign In
                 </a>
-                <a
-                  href="https://app.setbenchmark.com/signup"
+                <Link
+                  to="/free-trial/"
                   className="btn-mobile-trial"
                   onClick={closeMobileMenu}
                 >
                   Start free trial <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
