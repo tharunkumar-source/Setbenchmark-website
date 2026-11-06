@@ -1003,7 +1003,7 @@ p { margin: 0; }
 }
 
 /* Page hero (inner pages) */
-.phero { background: var(--canvas); padding: 56px 0 72px; border-bottom: 1px solid var(--line); }
+.phero { background: var(--canvas); padding: 56px 0 64px; border-bottom: 1px solid var(--line); margin-bottom: 0 !important; }
 .phero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .phero .h1 {
   font-size: clamp(30px, 3.0vw, 40px);
@@ -1507,7 +1507,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 
 .contact-form-card {
   padding: 36px 36px 48px;
-  margin-bottom: 48px;
+  margin-bottom: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
   min-width: 0 !important;
@@ -1529,7 +1529,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   }
   .contact-form-card {
     padding: 24px 18px 32px !important;
-    margin-bottom: 32px !important;
+    margin-bottom: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
@@ -7056,6 +7056,7 @@ h1, h2, h3, h4, h5, h6,
   max-width: 520px;
   box-sizing: border-box !important;
   border-radius: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .form {
@@ -7153,13 +7154,14 @@ h1, h2, h3, h4, h5, h6,
 
 @media (max-width: 640px) {
   .phero {
-    padding: 36px 0 60px !important;
+    padding: 36px 0 44px !important;
+    margin-bottom: 0 !important;
     overflow-x: hidden !important;
   }
   .contact-form-card,
   .form.card {
     padding: 24px 18px 28px !important;
-    margin: 0 auto 32px !important;
+    margin: 0 auto !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;

@@ -48,7 +48,7 @@ export const FreeTrial: React.FC = () => {
         ]}
       />
 
-      <section className="phero" style={{ paddingBottom: '140px', marginBottom: '60px' }}>
+      <section className="phero">
         <div className="wrap">
           <nav className="crumbs" aria-label="Breadcrumb">
             <ol>
