@@ -2071,7 +2071,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 @media (max-width: 768px) {
   /* Horizontal scroll track for Platform Governance Principles */
   .principles-section .wrap {
-    overflow: visible;
+    overflow: hidden;
   }
   .principles-trio-grid {
     display: flex !important;
@@ -2080,25 +2080,34 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
     overflow-y: hidden !important;
     -webkit-overflow-scrolling: touch !important;
     scroll-snap-type: x mandatory !important;
-    gap: 14px !important;
-    padding: 6px 16px 16px !important;
-    margin: 0 -16px !important;
+    gap: 16px !important;
+    padding: 6px 0 18px 0 !important;
+    margin: 0 !important;
     scrollbar-width: none !important;
   }
   .principles-trio-grid::-webkit-scrollbar {
     display: none !important;
   }
+  .principle-trio-card,
   .principles-trio-card {
-    flex: 0 0 290px !important;
-    width: 290px !important;
-    max-width: 82vw !important;
+    flex: 0 0 85% !important;
+    width: 85% !important;
+    max-width: 330px !important;
+    min-width: 275px !important;
     scroll-snap-align: start !important;
     border-radius: 0 !important;
+    padding: 24px 20px !important;
+    box-sizing: border-box !important;
+  }
+  .principle-trio-img {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: cover !important;
   }
 
   /* Horizontal scroll track for Solutions Cards */
   .solutions-section .wrap {
-    overflow: visible;
+    overflow: hidden;
   }
   .solutions-section .grid.g4 {
     display: flex !important;
@@ -2107,21 +2116,24 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
     overflow-y: hidden !important;
     -webkit-overflow-scrolling: touch !important;
     scroll-snap-type: x mandatory !important;
-    gap: 14px !important;
-    padding: 6px 16px 16px !important;
-    margin: 0 -16px !important;
+    gap: 16px !important;
+    padding: 6px 0 18px 0 !important;
+    margin: 0 !important;
     scrollbar-width: none !important;
   }
   .solutions-section .grid.g4::-webkit-scrollbar {
     display: none !important;
   }
   .solutions-section .grid.g4 .card {
-    flex: 0 0 270px !important;
-    width: 270px !important;
-    max-width: 80vw !important;
+    flex: 0 0 85% !important;
+    width: 85% !important;
+    max-width: 320px !important;
+    min-width: 270px !important;
     scroll-snap-align: start !important;
     height: auto !important;
     border-radius: 0 !important;
+    padding: 24px 22px !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -5148,6 +5160,11 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   max-width: 100%;
 }
 
+/* Mobile-only inline mockup inside accordion details: hidden on web/desktop */
+.feature-accordion-mobile-mockup {
+  display: none !important;
+}
+
 /* Mockup Frame (Left) */
 .feature-mockup-frame {
   background: #0E1322;
@@ -5483,12 +5500,21 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
     width: 100% !important;
     max-width: 100% !important;
   }
-  .feature-mockup-col,
+  .feature-mockup-col {
+    display: none !important;
+  }
   .feature-accordion-col {
     min-width: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
-    overflow: hidden;
+  }
+  .feature-accordion-mobile-mockup {
+    display: block !important;
+    margin: 24px 0 26px 0 !important;
+    width: 100% !important;
+  }
+  .feature-checks-list {
+    margin-top: 24px !important;
   }
   .feature-mockup-frame {
     order: -1;
@@ -5843,20 +5869,33 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
     margin-bottom: 18px;
   }
   .regional-clean-grid {
-    grid-template-columns: 1fr !important;
-    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
   }
   .regional-clean-card {
-    padding: 12px 14px;
+    padding: 10px 10px !important;
+    gap: 8px !important;
+    border-radius: 0 !important;
+  }
+  .regional-clean-flag {
+    width: 24px !important;
+    height: 18px !important;
+  }
+  .regional-clean-flag .country-flag-svg {
+    width: 24px !important;
+    height: 17px !important;
   }
   .regional-clean-name {
-    font-size: 13px;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
   }
   .regional-clean-price {
-    font-size: 12px;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
   }
   .regional-clean-note {
-    font-size: 11px;
+    font-size: 9.5px !important;
+    line-height: 1.25 !important;
   }
 }
 
