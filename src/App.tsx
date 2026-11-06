@@ -52,10 +52,12 @@ import ITServicesStaffing from '@/pages/Solutions/ITServicesStaffing';
 import Startups from '@/pages/Solutions/Startups';
 import UAE from '@/pages/Regions/UAE';
 import FreeTrial from '@/pages/FreeTrial/FreeTrial';
+import { ScrollToTop } from '@/components/ScrollToTop';
 
 export const App: React.FC = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <MainLayout>
         <Routes>
         <Route path="/" element={<Home />} />

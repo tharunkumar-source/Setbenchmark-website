@@ -3,8 +3,31 @@ import { Link } from 'react-router-dom';
 import { BrandLogo } from './BrandLogo';
 
 export const Footer: React.FC = () => {
+  const handleFooterLinkClick = (e: React.MouseEvent<HTMLElement>) => {
+    const target = e.target as HTMLElement;
+    const link = target.closest('a');
+    if (link) {
+      const resetScroll = () => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'instant'
+        });
+        if (document.documentElement) {
+          document.documentElement.scrollTop = 0;
+        }
+        if (document.body) {
+          document.body.scrollTop = 0;
+        }
+      };
+      resetScroll();
+      requestAnimationFrame(resetScroll);
+      setTimeout(resetScroll, 50);
+    }
+  };
+
   return (
-    <footer className="ftr">
+    <footer className="ftr" onClick={handleFooterLinkClick}>
       <div className="wrap">
         <div className="ftr-grid">
           {/* Column 1: Brand Info */}
