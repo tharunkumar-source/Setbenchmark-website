@@ -374,7 +374,8 @@ p { margin: 0; }
   background: var(--white);
 }
 
-/* 4-Column Layout (Resources & Trust) - Always a single line, never wraps down */
+/* 4-Column Layout (Skill Tests & Multi-column) - Clean horizontal distribution */
+.mega-grid-4,
 .mega-grid-4-cols {
   display: grid !important;
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
@@ -384,7 +385,7 @@ p { margin: 0; }
   padding: 30px 24px 28px !important;
 }
 
-/* 2-Column Layout (Pricing & Regions, Legal & System) */
+/* 2-Column Layout (Legal & Compliance) */
 .mega-grid-2-cols {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -428,9 +429,8 @@ p { margin: 0; }
   align-items: flex-start;
   gap: 14px;
   padding: 8px 12px;
-  min-height: 66px;
-  height: 66px;
-  max-height: 66px;
+  min-height: 56px;
+  height: auto;
   border-radius: 12px;
   border: 1px solid transparent;
   text-decoration: none !important;
@@ -6646,5 +6646,128 @@ h1, h2, h3, h4, h5, h6,
 .blog-promo-card h4,
 .blog-promo-card span {
   font-family: var(--font) !important;
+}
+
+/* ==========================================================================
+   Regional Local Pricing Box & Centered Actions
+   ========================================================================== */
+.btns.center,
+.head.center .btns,
+.regional-pricing-cta {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.regional-pricing-box {
+  background: var(--surface, #FFFFFF);
+  border: 1px solid var(--line, #E2E8F0);
+  border-radius: 20px;
+  padding: 44px 36px 40px;
+  max-width: 840px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.regional-pricing-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand, #26D07C), var(--blue, #2F68F3));
+}
+
+.regional-pricing-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: var(--brand-subtle, #E8F9F1);
+  color: var(--brand-dark, #12804A);
+  border: 1px solid var(--brand-border-light, #B7F0D3);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.regional-pricing-box .h2 {
+  font-size: clamp(26px, 3.2vw, 36px);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.regional-pricing-box .lead {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.55;
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+
+.regional-pricing-features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 680px;
+  margin: 0 auto 32px;
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  .regional-pricing-features {
+    grid-template-columns: 1fr;
+  }
+  .regional-pricing-box {
+    padding: 32px 20px;
+  }
+}
+
+.regional-pricing-feat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--canvas, #F8FAFC);
+  border: 1px solid var(--line, #E2E8F0);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.regional-pricing-feat svg {
+  color: var(--brand-dark, #12804A);
+  flex-shrink: 0;
+}
+
+.regional-pricing-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  font-size: 12.5px;
+  color: var(--text-3);
+}
+
+.regional-pricing-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 

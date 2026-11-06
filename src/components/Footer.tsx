@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 6: Resources (8 pages) */}
+          {/* Column 6: Resources (9 pages) */}
           <div>
             <h2>Resources</h2>
             <ul>
@@ -94,19 +94,19 @@ export const Footer: React.FC = () => {
               <li><Link to="/blog/campus-hiring-coding-assessment-guide/">Campus assessment guide</Link></li>
               <li><Link to="/blog/how-to-design-a-fair-coding-assessment/">Fair assessment checklist</Link></li>
               <li><Link to="/compare/hackerrank-alternatives/">HackerRank alternatives</Link></li>
+              <li><Link to="/security/">Security &amp; compliance</Link></li>
               <li><Link to="/about/">About SetBenchmark</Link></li>
               <li><Link to="/contact/">Contact &amp; sales</Link></li>
             </ul>
           </div>
 
-          {/* Column 7: Legal & System (4 pages) */}
+          {/* Column 7: Legal (3 pages, excluding 404) */}
           <div>
-            <h2>Legal &amp; System</h2>
+            <h2>Legal</h2>
             <ul>
               <li><Link to="/legal/privacy/">Privacy policy</Link></li>
               <li><Link to="/legal/terms/">Terms of service</Link></li>
               <li><Link to="/legal/refund-policy/">Refund &amp; cancellation</Link></li>
-              <li><Link to="/security/">Security &amp; compliance</Link></li>
             </ul>
           </div>
         </div>

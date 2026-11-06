@@ -147,9 +147,15 @@ const RAW_CONTENT = `<article>
         </div>
 
         <div class="blog-promo-card">
-          <div style="display:flex;align-items:center;gap:8px">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="var(--brand, #26D07C)"/><path d="M6 15v3m6-7v7m6-12v12" stroke="#04120B" stroke-width="2.5" stroke-linecap="round"/></svg>
-            <span style="font-size:14px;font-weight:700;letter-spacing:-0.01em">SetBenchmark</span>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+            <svg width="26" height="26" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path d="M55.2805 67.2288L58.8315 70.7797L43.8969 85.7143H85.7143V83.2031C85.7143 67.3429 76.4955 50.9533 58.8511 43.6033C48.8556 39.639 37.723 39.2929 26.8239 43.6205C9.72405 50.7402 0 66.8246 0 83.2031V85.7143H36.795L55.2805 67.2288ZM16.8087 73.9947L12.0708 72.3222C16.6714 59.3054 29.0409 50.558 42.8571 50.558C56.6734 50.558 69.0429 59.3054 73.6433 72.3222L68.9054 73.9947C65.0161 62.9814 54.5498 55.5803 42.8571 55.5803C31.1645 55.5803 20.6982 62.9814 16.8087 73.9947Z" fill="#26D07C"/>
+              <path d="M5.18945 53.9958C9.73181 48.0645 14.2969 44.4941 20.2564 41.2862V30.4688H5.18945V53.9958Z" fill="#FFFFFF"/>
+              <path d="M25.2793 38.8558C31.5518 36.4245 35.8201 35.8727 40.3463 35.6449V20.4241H25.2793V38.8558Z" fill="#FFFFFF"/>
+              <path d="M60.4351 38.8461V10.3794H45.3682V35.643C49.6025 35.8556 53.9833 36.3304 60.4351 38.8461Z" fill="#FFFFFF"/>
+              <path d="M65.458 41.2917C71.5062 44.5483 75.984 48.0641 80.525 54.0032V0H65.458V41.2917Z" fill="#FFFFFF"/>
+            </svg>
+            <span style="font-size:15px;font-weight:700;letter-spacing:-0.015em;color:#FFFFFF">Set<span style="color:#26D07C">Benchmark</span></span>
           </div>
           <h4>Need Proctoring That Protects Honest Candidates?</h4>
           <p>Layered camera snapshots, screen playback, code similarity, and human review queues built right in.</p>
