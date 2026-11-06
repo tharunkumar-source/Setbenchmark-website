@@ -78,8 +78,8 @@ assert sitemap_urls == OFFICIAL_47, f"Sitemap diff: {sitemap_urls.symmetric_diff
 with open('src/App.tsx', 'r', encoding='utf-8') as f:
     app_content = f.read()
 routes = set(re.findall(r'path="([^"*]+)"', app_content))
-# normalize with trailing slash
-normalized_routes = {r if r.endswith('/') else r + '/' for r in routes if r not in ['/404', '404']}
+# normalize with trailing slash (excluding 404 and functional action pages like free-trial/signup)
+normalized_routes = {r if r.endswith('/') else r + '/' for r in routes if r not in ['/404', '404', '/free-trial', '/free-trial/', '/signup', '/signup/']}
 print(f"App.tsx normalized routes (excl 404): {len(normalized_routes)}")
 assert normalized_routes == OFFICIAL_47, f"App.tsx diff: {normalized_routes.symmetric_difference(OFFICIAL_47)}"
 
@@ -119,3 +119,4 @@ for rf in regional_files:
 print("Verified: All 5 regional landing pages have centered regional-pricing-box and cta.")
 
 print("\n--- ALL VERIFICATION CHECKS PASSED WITH 100% PARITY! ---")
+

@@ -177,6 +177,41 @@ export const FeatureAccordionShowcase: React.FC = () => {
                     >
                       <div className="feature-accordion-body">
                         <p className="feature-item-desc">{item.description}</p>
+
+                        {/* Mobile-Only Mockup Display: Shown right inside expanded details */}
+                        <div className="feature-accordion-mobile-mockup">
+                          <div className="feature-mockup-frame">
+                            <div className="feature-mockup-topbar">
+                              <div className="feature-mockup-dots" aria-hidden="true">
+                                <span className="dot dot-red" />
+                                <span className="dot dot-yellow" />
+                                <span className="dot dot-green" />
+                              </div>
+                              <div className="feature-mockup-url" title={item.urlBar}>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                </svg>
+                                <span>{item.urlBar}</span>
+                              </div>
+                              <div className="feature-mockup-badge">
+                                {item.badge}
+                              </div>
+                            </div>
+                            <div className="feature-mockup-viewport">
+                              <img
+                                src={item.image}
+                                alt={item.alt}
+                                width="1440"
+                                height="900"
+                                loading="lazy"
+                                decoding="async"
+                                className="feature-mockup-img is-active"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
                         <ul className="feature-checks-list">
                           {item.bullets.map((bullet, bIdx) => (
                             <li key={bIdx} className="feature-check-item">

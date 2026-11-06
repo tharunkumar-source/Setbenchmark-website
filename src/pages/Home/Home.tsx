@@ -17,7 +17,7 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
         Everything you need to configure assessments, invite candidates, evaluate real coding depth with AI policies, and export defensible scorecards to your ATS.
       </p>
       <div class="how-split-actions" style="margin-top:28px">
-        <a class="btn btn-primary" href="https://app.setbenchmark.com/signup">Start free trial &rarr;</a>
+        <a class="btn btn-primary" href="/free-trial/">Start free trial &rarr;</a>
       </div>
     </div>
 
@@ -76,10 +76,6 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
       </div>
       <h3 class="principle-trio-title">People decide</h3>
       <p class="principle-trio-desc">AI scores correctness, summarizes diffs, and flags anomalies. A human engineering manager makes every hiring decision and records the rationale.</p>
-      <div class="principle-trio-pill">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        <span>Zero automated rejections</span>
-      </div>
     </div>
 
     <!-- Principle 2: Middle Dark Card with Adverse Impact & Fairness Audit Visual -->
@@ -89,10 +85,6 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
       </div>
       <h3 class="principle-trio-title">Fair by design</h3>
       <p class="principle-trio-desc">Job-relevant repository tasks, accessible accommodations on request, and automatic fairness audits that check for demographic group disparity.</p>
-      <div class="principle-trio-pill dark-pill">
-        <span class="dark-pill-dot">●</span>
-        <span>Continuous adverse impact audits</span>
-      </div>
     </div>
 
     <!-- Principle 3: White Card with Privacy & DPDP Compliance Visual -->
@@ -102,10 +94,6 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
       </div>
       <h3 class="principle-trio-title">Private by default</h3>
       <p class="principle-trio-desc">Clear candidate consent, short audit retention, and zero biometric storage. Built from the ground up for India's DPDP Act and GDPR compliance.</p>
-      <div class="principle-trio-pill">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        <span>India DPDP Act &amp; GDPR compliant</span>
-      </div>
     </div>
   </div>
 </div></section><section class="section solutions-section section-alt"><div class="wrap"><div class="head"><div class="eyebrow">Solutions</div><h2 class="h2">Built for the way you hire</h2></div><div class="grid g4"><a href="/solutions/campus-hiring/" class="card card-link"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 9l10-5 10 5-10 5L2 9zM6 11v5c3 2 9 2 12 0v-5M22 9v6"></path></svg></div><h3 class="h3">Campus hiring</h3><p>Invite thousands of students across colleges, run proctored coding and aptitude tests on the same day and get a ranked, fair shortlist the same evening.</p></a><a href="/solutions/enterprise-tech-hiring/" class="card card-link"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 21V5l8-3v19M12 8h8v13M8 9h.01M8 13h.01M8 17h.01M16 12h.01M16 16h.01M2 21h20"></path></svg></div><h3 class="h3">Enterprise tech hiring</h3><p>Role profiles, shared question libraries and structured scorecards give every team the same standard.</p></a><a href="/solutions/it-services-staffing/" class="card card-link"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7h18v13H3zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"></path></svg></div><h3 class="h3">IT services and staffing</h3><p>Verify skills before you submit a profile, share a trusted report with the client and staff projects from your bench with confidence.</p></a><a href="/solutions/startups/" class="card card-link"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 15c-1 1-2 5-2 5s4-1 5-2M14 4c3-1 6 0 6 0s1 3 0 6l-7 7-6-6 7-7zM15 9h.01"></path></svg></div><h3 class="h3">Startups</h3><p>Paste a job description, get a ready-to-send assessment and let SetBenchmark screen applicants while you build.</p></a></div></div></section><section class="section skill-tests-section skill-tests-dark">
@@ -391,7 +379,7 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
   </div>
 </section>`;
 
-const BODY_AFTER_2 = `<section class="section tight cta-band-section section-white"><div class="wrap"><div class="cta"><div><h2 class="h2">See SetBenchmark with your own roles</h2><p>Start a 14-day free trial with 10 assessment attempts, or book a 30-minute demo with our team.</p></div><div class="btns"><a class="btn btn-lime" href="https://app.setbenchmark.com/signup">Start free trial</a><a href="/contact/" class="btn btn-ghost on-dark">Book a demo</a></div></div></div></section>`;
+const BODY_AFTER_2 = `<section class="section tight cta-band-section section-white"><div class="wrap"><div class="cta"><div><h2 class="h2">See SetBenchmark with your own roles</h2><p>Start a 14-day free trial with 10 assessment attempts, or book a 30-minute demo with our team.</p></div><div class="btns"><a class="btn btn-lime" href="/free-trial/">Start free trial</a><a href="/contact/" class="btn btn-ghost on-dark">Book a demo</a></div></div></div></section>`;
 
 export const Home: React.FC = () => {
 
@@ -408,16 +396,6 @@ export const Home: React.FC = () => {
         <div className="hero-modern-ambient" aria-hidden="true" />
         <div className="wrap">
           <div className="hero-modern-stack">
-            {/* Pill / Eyebrow Badge (Matching Reference Template) */}
-            <div className="hero-modern-badge">
-              <span className="hero-modern-badge-icon" aria-hidden="true">✦</span>
-              <span>Now live: AI fluency &amp; agentic coding assessments</span>
-              <svg className="hero-badge-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </div>
-
             {/* Display Title */}
             <h1 className="hero-modern-title">
               Engineering Intelligence,<br />
@@ -431,7 +409,7 @@ export const Home: React.FC = () => {
 
             {/* Actions */}
             <div className="hero-modern-actions">
-              <a className="btn-hero-primary" href="https://app.setbenchmark.com/signup">
+              <a className="btn-hero-primary" href="/free-trial/">
                 Start free trial
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <line x1="7" y1="17" x2="17" y2="7" />

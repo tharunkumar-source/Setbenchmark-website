@@ -51,6 +51,7 @@ import EnterpriseTechHiring from '@/pages/Solutions/EnterpriseTechHiring';
 import ITServicesStaffing from '@/pages/Solutions/ITServicesStaffing';
 import Startups from '@/pages/Solutions/Startups';
 import UAE from '@/pages/Regions/UAE';
+import FreeTrial from '@/pages/FreeTrial/FreeTrial';
 
 export const App: React.FC = () => {
   return (
@@ -152,6 +153,10 @@ export const App: React.FC = () => {
         <Route path="/solutions/startups/" element={<Startups />} />
         <Route path="/uae" element={<UAE />} />
         <Route path="/uae/" element={<UAE />} />
+        <Route path="/free-trial" element={<FreeTrial />} />
+        <Route path="/free-trial/" element={<FreeTrial />} />
+        <Route path="/signup" element={<FreeTrial />} />
+        <Route path="/signup/" element={<FreeTrial />} />
         </Routes>
       </MainLayout>
     </BrowserRouter>

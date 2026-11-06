@@ -1403,9 +1403,20 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .prose { max-width: 740px; margin: 0 auto; font-size: 18px; line-height: 1.7; }
 .prose h2 { font-size: 28px; margin: 44px 0 14px; }
 .prose p + p { margin-top: 16px; }
-.prose ul, .prose ol { padding-left: 24px; margin: 16px 0; }
-.prose li + li { margin-top: 8px; }
-.prose .note { background: var(--warn-bg); border: 1px solid var(--warn-text); border-radius: 12px; padding: 14px 18px; font-size: 15.5px; margin-bottom: 28px; color: var(--ink); }
+.prose ul, .prose ol {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  list-style: none !important;
+  margin: 16px 0 !important;
+}
+.prose li {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  margin-bottom: 12px !important;
+  line-height: 1.65;
+}
+.prose li + li { margin-top: 12px; }
+.prose .note { background: var(--warn-bg); border: 1px solid var(--warn-text); border-radius: 0 !important; padding: 14px 18px; font-size: 15.5px; margin-bottom: 28px; color: var(--ink); }
 .meta-row { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--text-3); font-size: 15px; margin-top: 18px; }
 
 /* Test pages */
@@ -1808,7 +1819,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .how-compact-step {
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
-  border-radius: 14px;
+  border-radius: 0 !important;
   padding: 22px 20px;
   box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
@@ -2055,16 +2066,63 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
     grid-template-columns: 1fr;
     gap: 36px;
   }
-  .principles-trio-grid {
-    grid-template-columns: 1fr;
-  }
-  .principles-nice-bg-container {
-  background: var(--brand-subtle, #E8F9F1);
-  border: none !important;
-  border-radius: 24px;
-  padding: 48px 40px;
-  box-shadow: 0 10px 30px -10px rgba(18, 128, 74, 0.06);
 }
+
+@media (max-width: 768px) {
+  /* Horizontal scroll track for Platform Governance Principles */
+  .principles-section .wrap {
+    overflow: visible;
+  }
+  .principles-trio-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 14px !important;
+    padding: 6px 16px 16px !important;
+    margin: 0 -16px !important;
+    scrollbar-width: none !important;
+  }
+  .principles-trio-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+  .principles-trio-card {
+    flex: 0 0 290px !important;
+    width: 290px !important;
+    max-width: 82vw !important;
+    scroll-snap-align: start !important;
+    border-radius: 0 !important;
+  }
+
+  /* Horizontal scroll track for Solutions Cards */
+  .solutions-section .wrap {
+    overflow: visible;
+  }
+  .solutions-section .grid.g4 {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 14px !important;
+    padding: 6px 16px 16px !important;
+    margin: 0 -16px !important;
+    scrollbar-width: none !important;
+  }
+  .solutions-section .grid.g4::-webkit-scrollbar {
+    display: none !important;
+  }
+  .solutions-section .grid.g4 .card {
+    flex: 0 0 270px !important;
+    width: 270px !important;
+    max-width: 80vw !important;
+    scroll-snap-align: start !important;
+    height: auto !important;
+    border-radius: 0 !important;
+  }
 }
 
 @media (max-width: 640px) {
@@ -2718,7 +2776,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .guide-step-card {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 0 !important;
   padding: 26px 30px;
   box-shadow: 0 4px 16px rgba(15, 18, 34, 0.04);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -3213,7 +3271,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .blog-toc-card {
   background: #F8FAFC;
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 0 !important;
   padding: 22px;
 }
 
@@ -3261,7 +3319,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .blog-promo-card {
   background: linear-gradient(155deg, #05160E 0%, #072618 55%, #020C07 100%);
   border: 1px solid rgba(38, 208, 124, 0.2);
-  border-radius: 16px;
+  border-radius: 0 !important;
   padding: 26px;
   color: #FFFFFF;
   position: relative;
@@ -3330,7 +3388,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .check-card {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 0 !important;
   padding: 16px 20px;
   display: flex;
   align-items: flex-start;
@@ -3387,7 +3445,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .alt-card {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 0 !important;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -4633,6 +4691,19 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
     width: 100%;
     overflow: hidden;
   }
+  .hero-window-viewport {
+    height: auto !important;
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+  .hero-window-viewport::after {
+    display: none !important;
+  }
+  .hero-window-screen-img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
   .hero-showcase-tabbar {
     max-width: 100%;
     width: 100%;
@@ -4733,6 +4804,28 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
     background-image: none !important;
     border: none !important;
     box-shadow: none !important;
+  }
+  .hero-device-chassis {
+    padding: 8px 8px 0 8px !important;
+    border-width: 2px !important;
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+  }
+  .hero-device-base {
+    margin: 0 -8px !important;
+    height: 10px !important;
+  }
+  .hero-device-notch {
+    width: 48px !important;
+    height: 3px !important;
+  }
+  .hero-window-viewport {
+    height: auto !important;
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+  .hero-window-viewport::after {
+    display: none !important;
   }
 }
 
@@ -6350,6 +6443,16 @@ section,
 .faq-card,
 .checklist-table-card,
 .checklist-stage-card,
+.checklist-item-card,
+.guide-step-card,
+.guide-step-card:hover,
+.fairness-highlight-box,
+.how-compact-step,
+.skill-marquee-card,
+.regional-pricing-box,
+.regional-pricing-feat,
+.contact-form-card,
+.form.card,
 .bcard,
 .pcard,
 .feature-card,
@@ -6666,7 +6769,7 @@ h1, h2, h3, h4, h5, h6,
 .regional-pricing-box {
   background: var(--surface, #FFFFFF);
   border: 1px solid var(--line, #E2E8F0);
-  border-radius: 20px;
+  border-radius: 0 !important;
   padding: 44px 36px 40px;
   max-width: 840px;
   margin: 0 auto;
@@ -6742,7 +6845,7 @@ h1, h2, h3, h4, h5, h6,
   gap: 10px;
   background: var(--canvas, #F8FAFC);
   border: 1px solid var(--line, #E2E8F0);
-  border-radius: 10px;
+  border-radius: 0 !important;
   padding: 10px 14px;
   font-size: 13px;
   color: var(--ink);

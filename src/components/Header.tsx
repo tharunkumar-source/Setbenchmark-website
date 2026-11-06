@@ -185,7 +185,7 @@ export const Header: React.FC = () => {
           </div>
         </div>
         <div className="mega-bottom">
-          <div className="mega-bottom-cta">Ready to test candidates on real skills? <a href="https://app.setbenchmark.com/signup">Start free trial →</a></div>
+          <div className="mega-bottom-cta">Ready to test candidates on real skills? <Link to="/free-trial/" onClick={closeMenuImmediately}>Start free trial →</Link></div>
           <div className="mega-bottom-trust">
             <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> 14-day free trial</span>
             <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> No credit card required</span>
@@ -352,7 +352,7 @@ export const Header: React.FC = () => {
           <div className="mega-bottom-cta">Need a custom stack assessment? <Link to="/skill-tests/" onClick={closeMenuImmediately}>Browse all 13 verified skill tests →</Link></div>
           <div className="mega-bottom-trust">
             <span>&gt;_ Interactive Test IDE</span>
-            <a href="https://app.setbenchmark.com/signup" onClick={closeMenuImmediately}>Start free trial →</a>
+            <Link to="/free-trial/" onClick={closeMenuImmediately}>Start free trial →</Link>
           </div>
         </div>
       </div>
