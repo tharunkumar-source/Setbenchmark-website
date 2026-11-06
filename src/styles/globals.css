@@ -2326,13 +2326,15 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 16px;
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   box-shadow: 0 10px 30px rgba(15, 18, 34, 0.05);
   margin-bottom: 48px;
 }
 
 .checklist-table {
   width: 100%;
+  min-width: 820px;
   border-collapse: collapse;
   text-align: left;
 }
@@ -2870,25 +2872,6 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   }
   .checklist-table-card {
     border-radius: 12px;
-  }
-  .checklist-table thead {
-    display: none;
-  }
-  .checklist-table, .checklist-table tbody, .checklist-table tr, .checklist-table td {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .checklist-table tr {
-    padding: 18px 16px;
-    border-bottom: 1px solid var(--line);
-  }
-  .checklist-table td {
-    padding: 6px 0;
-    border: none;
-  }
-  .checklist-table td:last-child {
-    margin-top: 8px;
   }
   .fairness-highlight-box {
     padding: 24px 16px;
