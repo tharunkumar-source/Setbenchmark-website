@@ -340,8 +340,6 @@ p { margin: 0; }
   right: 0;
   height: 12px;
 }
-.nav-item:hover > .menu,
-.nav-item.is-open > .menu,
 .nav-item.is-open > .menu {
   display: block !important;
   pointer-events: auto !important;

@@ -11,16 +11,11 @@ export const Header: React.FC = () => {
   const headerRef = useRef<HTMLElement | null>(null);
   const location = useLocation();
 
-  const prevPathRef = useRef(location.pathname);
-
   // Close menus on route change
   useEffect(() => {
-    if (prevPathRef.current !== location.pathname) {
-      prevPathRef.current = location.pathname;
-      setActiveMenu(null);
-      setMobileMenuOpen(false);
-    }
-  }, [location.pathname]);
+    setActiveMenu(null);
+    setMobileMenuOpen(false);
+  }, [location.pathname, location.search, location.hash]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -90,6 +85,13 @@ export const Header: React.FC = () => {
     }
   };
 
+  const handleMenuClick = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement;
+    if (target.closest('a') || target.closest('button')) {
+      closeMenuImmediately();
+    }
+  };
+
   const handleNavClick = (idx: number, e: React.MouseEvent) => {
     e.preventDefault();
     setActiveMenu(activeMenu === idx ? null : idx);
@@ -130,7 +132,7 @@ export const Header: React.FC = () => {
   
   <div className={`nav-item ${activeMenu === 1 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={handleMouseLeave}>
     <button className={`nav-link ${activeMenu === 1 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(1, e)} aria-haspopup="true" aria-expanded={activeMenu === 1}>Product <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
-    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately}>
+    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
       <div className="mega-card">
         <div className="mega-menu-grid mega-grid-3">
           {/*  Column 1: Assessments & Testing  */}
@@ -189,7 +191,7 @@ export const Header: React.FC = () => {
           <div className="mega-bottom-trust">
             <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> 14-day free trial</span>
             <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> No credit card required</span>
-            <Link to="/contact/">Book a demo →</Link>
+            <Link to="/contact/" onClick={closeMenuImmediately}>Book a demo →</Link>
           </div>
         </div>
       </div>
@@ -200,7 +202,7 @@ export const Header: React.FC = () => {
   
   <div className={`nav-item ${activeMenu === 2 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(2)} onMouseLeave={handleMouseLeave}>
     <button className={`nav-link ${activeMenu === 2 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(2, e)} aria-haspopup="true" aria-expanded={activeMenu === 2}>Solutions <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
-    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately}>
+    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
       <div className="mega-card">
         <div className="mega-menu-grid mega-grid-3">
           {/*  Column 1: By Use Case  */}
@@ -245,7 +247,7 @@ export const Header: React.FC = () => {
                 <div className="mega-feature-title">Scaling 10,000+ campus candidates in a single weekend</div>
                 <p className="mega-feature-desc">Learn how engineering teams evaluate mass university candidate pools with automated integrity and structured grading.</p>
               </div>
-              <Link to="/solutions/campus-hiring/" className="mega-feature-link">Read campus hiring playbook →</Link>
+              <Link to="/solutions/campus-hiring/" className="mega-feature-link" onClick={closeMenuImmediately}>Read campus hiring playbook →</Link>
             </div>
           </div>
         </div>
@@ -254,7 +256,7 @@ export const Header: React.FC = () => {
           <div className="mega-bottom-trust">
             <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> ATS integrations ready</span>
             <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> Custom scoring rubrics</span>
-            <Link to="/pricing/">View transparent pricing →</Link>
+            <Link to="/pricing/" onClick={closeMenuImmediately}>View transparent pricing →</Link>
           </div>
         </div>
       </div>
@@ -264,7 +266,7 @@ export const Header: React.FC = () => {
   {/*  3. SKILL TESTS MEGA MENU (13 items from official sitemap)  */}
   <div className={`nav-item ${activeMenu === 3 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(3)} onMouseLeave={handleMouseLeave}>
     <button className={`nav-link ${activeMenu === 3 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(3, e)} aria-haspopup="true" aria-expanded={activeMenu === 3}>Skill tests <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
-    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately}>
+    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
       <div className="mega-card" style={{ maxWidth: '1240px', width: '100%' }}>
         <div className="mega-menu-grid mega-grid-4">
           {/*  Column 1: Languages (4)  */}
@@ -369,7 +371,7 @@ export const Header: React.FC = () => {
   {/*  5. RESOURCES MEGA MENU (9 items from official sitemap)  */}
   <div className={`nav-item ${activeMenu === 4 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(4)} onMouseLeave={handleMouseLeave}>
     <button className={`nav-link ${activeMenu === 4 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(4, e)} aria-haspopup="true" aria-expanded={activeMenu === 4}>Resources <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
-    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately}>
+    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
       <div className="mega-card" style={{ maxWidth: '1180px', width: '100%' }}>
         <div className="mega-menu-grid mega-grid-3">
           {/*  Column 1: GUIDES & INSIGHTS (5)  */}
@@ -435,7 +437,7 @@ export const Header: React.FC = () => {
           <div className="mega-bottom-trust">
             <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> Human-reviewed</span>
             <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> Research-backed</span>
-            <Link to="/about/">Learn our story →</Link>
+            <Link to="/about/" onClick={closeMenuImmediately}>Learn our story →</Link>
           </div>
         </div>
       </div>
@@ -447,7 +449,7 @@ export const Header: React.FC = () => {
     <button className={`nav-link ${activeMenu === 5 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(5, e)} aria-haspopup="true" aria-expanded={activeMenu === 5}>
       Legal <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg>
     </button>
-    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately}>
+    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
       <div className="mega-card" style={{ maxWidth: '820px', width: '100%' }}>
         <div className="mega-menu-grid mega-grid-2-cols">
           {/*  Column 1: LEGAL & COMPLIANCE (3)  */}
@@ -486,7 +488,7 @@ export const Header: React.FC = () => {
           <div className="mega-bottom-trust">
             <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> GDPR &amp; DPDP Compliant</span>
             <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> SOC 2 Type II Ready</span>
-            <Link to="/legal/terms/">Terms of service →</Link>
+            <Link to="/legal/terms/" onClick={closeMenuImmediately}>Terms of service →</Link>
           </div>
         </div>
       </div>
