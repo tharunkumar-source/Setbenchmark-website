@@ -2062,16 +2062,16 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 }
 
 .principle-trio-card.card-dark {
-  background: #07190F;
-  border: 1px solid rgba(38, 208, 124, 0.35);
+  background: var(--secondary, #6244BB);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   color: #FFFFFF;
-  box-shadow: 0 16px 36px -8px rgba(7, 25, 15, 0.35);
+  box-shadow: 0 16px 36px -8px rgba(98, 68, 187, 0.4);
 }
 
 .principle-trio-card.card-dark:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 44px -8px rgba(7, 25, 15, 0.45);
-  border-color: var(--brand, #26D07C);
+  box-shadow: 0 20px 44px -8px rgba(98, 68, 187, 0.55);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Principle Trio Visual Mockups */
@@ -2088,8 +2088,8 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 }
 
 .principle-trio-card.card-dark .principle-trio-visual {
-  background: #0B1612;
-  border-color: rgba(38, 208, 124, 0.25);
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .principle-trio-img {
@@ -6770,7 +6770,7 @@ img,
 .btn-hero-primary,
 .btn-hero-secondary,
 .regional-clean-btn {
-  border-radius: 9999px !important;
+  border-radius: 12px !important;
 }
 
 /* Hide hero floating bubble icon */
@@ -6842,7 +6842,7 @@ img,
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 10px 0 20px;
+  padding: 18px 0 30px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -6877,13 +6877,13 @@ img,
 
 .skill-marquee-track {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   width: max-content;
   will-change: transform;
 }
 
 .single-track {
-  animation: skillSingleScroll 48s linear infinite;
+  animation: skillSingleScroll 85s linear infinite;
 }
 
 /* Hover: auto scroll stops when hovered on any logo or track */
@@ -6895,22 +6895,22 @@ img,
 
 @keyframes skillSingleScroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-50% - 8px)); }
+  100% { transform: translateX(calc(-50% - 10px)); }
 }
 
 /* Tactile Skill Card Pill (Matching reference image with branding colors) */
 .skill-marquee-card {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 22px;
+  gap: 16px;
+  padding: 16px 28px;
   background: #0B1E15;
   border: 1px solid rgba(38, 208, 124, 0.22);
-  border-radius: 12px;
+  border-radius: 14px;
   text-decoration: none !important;
   color: #F1F5F9 !important;
   font-family: var(--font);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   white-space: nowrap;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -6927,8 +6927,8 @@ img,
 }
 
 .skill-marquee-logo {
-  width: 24px;
-  height: 24px;
+  width: 32px !important;
+  height: 32px !important;
   object-fit: contain;
   flex-shrink: 0;
   display: block;

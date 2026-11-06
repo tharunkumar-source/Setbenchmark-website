@@ -113,259 +113,259 @@ const BODY_AFTER_1 = `<section class="section how-it-works-section section-white
     <div class="skill-marquee-row">
       <div class="skill-marquee-track single-track">
         <a href="/skill-tests/python/" class="skill-marquee-card" title="Python coding test">
-          <img src="/images/skills/python.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/python.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Python</span>
         </a>
         <a href="/skill-tests/javascript/" class="skill-marquee-card" title="JavaScript coding test">
-          <img src="/images/skills/javascript.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/javascript.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">JavaScript</span>
         </a>
         <a href="/skill-tests/react/" class="skill-marquee-card" title="React coding test">
-          <img src="/images/skills/react.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/react.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">React</span>
         </a>
         <a href="/skill-tests/javascript/" class="skill-marquee-card" title="TypeScript coding test">
-          <img src="/images/skills/typescript.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/typescript.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">TypeScript</span>
         </a>
         <a href="/skill-tests/java/" class="skill-marquee-card" title="Java coding test">
-          <img src="/images/skills/java.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/java.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Java</span>
         </a>
         <a href="/skill-tests/nodejs/" class="skill-marquee-card" title="Node.js coding test">
-          <img src="/images/skills/nodejs.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/nodejs.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Node.js</span>
         </a>
         <a href="/skill-tests/golang/" class="skill-marquee-card" title="Go (Golang) coding test">
-          <img src="/images/skills/golang.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/golang.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Go (Golang)</span>
         </a>
         <a href="/skill-tests/sql/" class="skill-marquee-card" title="PostgreSQL & SQL coding test">
-          <img src="/images/skills/sql.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/sql.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">PostgreSQL & SQL</span>
         </a>
         <a href="/skill-tests/aws/" class="skill-marquee-card" title="AWS Cloud coding test">
-          <img src="/images/skills/aws.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/aws.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">AWS Cloud</span>
         </a>
         <a href="/skill-tests/devops/" class="skill-marquee-card" title="Docker & DevOps coding test">
-          <img src="/images/skills/devops.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/devops.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Docker & DevOps</span>
         </a>
         <a href="/skill-tests/devops/" class="skill-marquee-card" title="Kubernetes coding test">
-          <img src="/images/skills/kubernetes.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/kubernetes.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Kubernetes</span>
         </a>
         <a href="/skill-tests/system-design/" class="skill-marquee-card" title="System Design coding test">
-          <img src="/images/skills/systemdesign.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/systemdesign.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">System Design</span>
         </a>
         <a href="/skill-tests/data-science/" class="skill-marquee-card" title="Data Science & Python coding test">
-          <img src="/images/skills/datascience.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/datascience.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Data Science & Python</span>
         </a>
         <a href="/skill-tests/data-structures-algorithms/" class="skill-marquee-card" title="Algorithms & DSA coding test">
-          <img src="/images/skills/dsa.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/dsa.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Algorithms & DSA</span>
         </a>
         <a href="/skill-tests/" class="skill-marquee-card" title="C++ coding test">
-          <img src="/images/skills/cplusplus.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/cplusplus.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">C++</span>
         </a>
         <a href="/skill-tests/" class="skill-marquee-card" title="C# coding test">
-          <img src="/images/skills/csharp.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/csharp.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">C#</span>
         </a>
         <a href="/skill-tests/python/" class="skill-marquee-card" title="Python coding test">
-          <img src="/images/skills/python.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/python.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Python</span>
         </a>
         <a href="/skill-tests/javascript/" class="skill-marquee-card" title="JavaScript coding test">
-          <img src="/images/skills/javascript.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/javascript.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">JavaScript</span>
         </a>
         <a href="/skill-tests/react/" class="skill-marquee-card" title="React coding test">
-          <img src="/images/skills/react.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/react.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">React</span>
         </a>
         <a href="/skill-tests/javascript/" class="skill-marquee-card" title="TypeScript coding test">
-          <img src="/images/skills/typescript.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/typescript.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">TypeScript</span>
         </a>
         <a href="/skill-tests/java/" class="skill-marquee-card" title="Java coding test">
-          <img src="/images/skills/java.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/java.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Java</span>
         </a>
         <a href="/skill-tests/nodejs/" class="skill-marquee-card" title="Node.js coding test">
-          <img src="/images/skills/nodejs.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/nodejs.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Node.js</span>
         </a>
         <a href="/skill-tests/golang/" class="skill-marquee-card" title="Go (Golang) coding test">
-          <img src="/images/skills/golang.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/golang.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Go (Golang)</span>
         </a>
         <a href="/skill-tests/sql/" class="skill-marquee-card" title="PostgreSQL & SQL coding test">
-          <img src="/images/skills/sql.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/sql.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">PostgreSQL & SQL</span>
         </a>
         <a href="/skill-tests/aws/" class="skill-marquee-card" title="AWS Cloud coding test">
-          <img src="/images/skills/aws.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/aws.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">AWS Cloud</span>
         </a>
         <a href="/skill-tests/devops/" class="skill-marquee-card" title="Docker & DevOps coding test">
-          <img src="/images/skills/devops.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/devops.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Docker & DevOps</span>
         </a>
         <a href="/skill-tests/devops/" class="skill-marquee-card" title="Kubernetes coding test">
-          <img src="/images/skills/kubernetes.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/kubernetes.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Kubernetes</span>
         </a>
         <a href="/skill-tests/system-design/" class="skill-marquee-card" title="System Design coding test">
-          <img src="/images/skills/systemdesign.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/systemdesign.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">System Design</span>
         </a>
         <a href="/skill-tests/data-science/" class="skill-marquee-card" title="Data Science & Python coding test">
-          <img src="/images/skills/datascience.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/datascience.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Data Science & Python</span>
         </a>
         <a href="/skill-tests/data-structures-algorithms/" class="skill-marquee-card" title="Algorithms & DSA coding test">
-          <img src="/images/skills/dsa.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/dsa.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Algorithms & DSA</span>
         </a>
         <a href="/skill-tests/" class="skill-marquee-card" title="C++ coding test">
-          <img src="/images/skills/cplusplus.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/cplusplus.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">C++</span>
         </a>
         <a href="/skill-tests/" class="skill-marquee-card" title="C# coding test">
-          <img src="/images/skills/csharp.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/csharp.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">C#</span>
         </a>
         <a href="/skill-tests/python/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/python.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/python.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Python</span>
         </a>
         <a href="/skill-tests/javascript/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/javascript.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/javascript.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">JavaScript</span>
         </a>
         <a href="/skill-tests/react/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/react.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/react.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">React</span>
         </a>
         <a href="/skill-tests/javascript/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/typescript.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/typescript.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">TypeScript</span>
         </a>
         <a href="/skill-tests/java/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/java.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/java.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Java</span>
         </a>
         <a href="/skill-tests/nodejs/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/nodejs.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/nodejs.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Node.js</span>
         </a>
         <a href="/skill-tests/golang/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/golang.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/golang.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Go (Golang)</span>
         </a>
         <a href="/skill-tests/sql/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/sql.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/sql.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">PostgreSQL & SQL</span>
         </a>
         <a href="/skill-tests/aws/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/aws.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/aws.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">AWS Cloud</span>
         </a>
         <a href="/skill-tests/devops/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/devops.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/devops.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Docker & DevOps</span>
         </a>
         <a href="/skill-tests/devops/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/kubernetes.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/kubernetes.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Kubernetes</span>
         </a>
         <a href="/skill-tests/system-design/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/systemdesign.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/systemdesign.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">System Design</span>
         </a>
         <a href="/skill-tests/data-science/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/datascience.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/datascience.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Data Science & Python</span>
         </a>
         <a href="/skill-tests/data-structures-algorithms/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/dsa.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/dsa.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Algorithms & DSA</span>
         </a>
         <a href="/skill-tests/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/cplusplus.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/cplusplus.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">C++</span>
         </a>
         <a href="/skill-tests/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/csharp.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/csharp.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">C#</span>
         </a>
         <a href="/skill-tests/python/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/python.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/python.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Python</span>
         </a>
         <a href="/skill-tests/javascript/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/javascript.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/javascript.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">JavaScript</span>
         </a>
         <a href="/skill-tests/react/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/react.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/react.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">React</span>
         </a>
         <a href="/skill-tests/javascript/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/typescript.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/typescript.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">TypeScript</span>
         </a>
         <a href="/skill-tests/java/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/java.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/java.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Java</span>
         </a>
         <a href="/skill-tests/nodejs/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/nodejs.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/nodejs.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Node.js</span>
         </a>
         <a href="/skill-tests/golang/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/golang.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/golang.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Go (Golang)</span>
         </a>
         <a href="/skill-tests/sql/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/sql.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/sql.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">PostgreSQL & SQL</span>
         </a>
         <a href="/skill-tests/aws/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/aws.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/aws.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">AWS Cloud</span>
         </a>
         <a href="/skill-tests/devops/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/devops.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/devops.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Docker & DevOps</span>
         </a>
         <a href="/skill-tests/devops/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/kubernetes.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/kubernetes.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Kubernetes</span>
         </a>
         <a href="/skill-tests/system-design/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/systemdesign.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/systemdesign.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">System Design</span>
         </a>
         <a href="/skill-tests/data-science/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/datascience.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/datascience.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Data Science & Python</span>
         </a>
         <a href="/skill-tests/data-structures-algorithms/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/dsa.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/dsa.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">Algorithms & DSA</span>
         </a>
         <a href="/skill-tests/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/cplusplus.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/cplusplus.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">C++</span>
         </a>
         <a href="/skill-tests/" class="skill-marquee-card" aria-hidden="true" tabindex="-1">
-          <img src="/images/skills/csharp.svg" alt="" width="24" height="24" class="skill-marquee-logo" loading="eager" />
+          <img src="/images/skills/csharp.svg" alt="" width="32" height="32" class="skill-marquee-logo" loading="eager" />
           <span class="skill-marquee-name">C#</span>
         </a>
       </div>
