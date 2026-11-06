@@ -342,19 +342,75 @@ export const Header: React.FC = () => {
     </div>
   </div>
 
-  {/*  4. PRICING DIRECT LINK  */}
-  <div className="nav-item">
-    <Link to="/pricing/" className="nav-link" onClick={closeMenuImmediately}>
-      Pricing
-    </Link>
+  {/*  4. PRICING & REGIONS MEGA MENU  */}
+  <div className={`nav-item ${activeMenu === 4 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(4)} onMouseLeave={handleMouseLeave}>
+    <button className={`nav-link ${activeMenu === 4 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(4, e)} aria-haspopup="true" aria-expanded={activeMenu === 4}>
+      Pricing &amp; Regions <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg>
+    </button>
+    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately}>
+      <div className="mega-card" style={{ maxWidth: '880px', width: '100%' }}>
+        <div className="mega-menu-grid mega-grid-2-cols">
+          {/*  Column 1: PRICING PLANS  */}
+          <div className="mega-col">
+            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg> PLANS &amp; TIERS</div>
+            <Link to="/pricing/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></span>
+              <div className="mega-item-text"><b>Pricing overview &amp; plans</b><span>Transparent tiers starting from US$69/mo</span></div>
+            </Link>
+            <div style={{ marginTop: '14px', padding: '16px', background: 'var(--canvas)', borderRadius: '12px', border: '1px solid var(--line)' }}>
+              <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--ink)', marginBottom: '4px' }}>Transparent, Predictable Pricing</div>
+              <p style={{ fontSize: '12.5px', color: 'var(--text-2)', lineHeight: '1.5', margin: 0 }}>
+                All plans include automated grading, anti-cheat signals, and ATS integrations with zero per-invite markups.
+              </p>
+              <Link to="/pricing/" className="btn btn-primary" onClick={closeMenuImmediately} style={{ marginTop: '12px', width: '100%', justifyContent: 'center', fontSize: '13px', padding: '8px 14px' }}>
+                View full plan breakdown →
+              </Link>
+            </div>
+          </div>
+
+          {/*  Column 2: REGIONAL EDITIONS  */}
+          <div className="mega-col">
+            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> REGIONAL EDITIONS</div>
+            <Link to="/india/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="2" x2="12" y2="22"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span>
+              <div className="mega-item-text"><b>India (₹ INR)</b><span>DPDP compliance, local data &amp; campus engine</span></div>
+            </Link>
+            <Link to="/uae/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></span>
+              <div className="mega-item-text"><b>UAE (AED)</b><span>Dubai &amp; Abu Dhabi tech hiring standards</span></div>
+            </Link>
+            <Link to="/saudi-arabia/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
+              <div className="mega-item-text"><b>Saudi Arabia (SAR)</b><span>Vision 2030 digital talent evaluation</span></div>
+            </Link>
+            <Link to="/australia/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+              <div className="mega-item-text"><b>Australia (AUD)</b><span>Privacy Act compliance with Sydney residency</span></div>
+            </Link>
+            <Link to="/new-zealand/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
+              <div className="mega-item-text"><b>New Zealand (NZD)</b><span>Privacy Act 2020 &amp; Trans-Tasman billing</span></div>
+            </Link>
+          </div>
+        </div>
+        <div className="mega-bottom">
+          <div className="mega-bottom-cta">Need custom enterprise multi-region billing? <Link to="/contact/" onClick={closeMenuImmediately}>Talk to our solutions team →</Link></div>
+          <div className="mega-bottom-trust">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> 14-day free trial</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> Cancel anytime</span>
+            <Link to="/pricing/">Compare currencies →</Link>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   {/*  5. RESOURCES MEGA MENU  */}
   <div className={`nav-item ${activeMenu === 5 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(5)} onMouseLeave={handleMouseLeave}>
     <button className={`nav-link ${activeMenu === 5 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(5, e)} aria-haspopup="true" aria-expanded={activeMenu === 5}>Resources <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
     <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately}>
-      <div className="mega-card" style={{ maxWidth: '1280px', width: '100%' }}>
-        <div className="mega-menu-grid mega-grid-4-cols">
+      <div className="mega-card" style={{ maxWidth: '1180px', width: '100%' }}>
+        <div className="mega-menu-grid mega-grid-3">
           {/*  Column 1: GUIDES & INSIGHTS  */}
           <div className="mega-col">
             <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> GUIDES &amp; INSIGHTS</div>
@@ -380,16 +436,12 @@ export const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/*  Column 2: COMPARISONS & TRUST  */}
+          {/*  Column 2: COMPARISONS & COMPANY  */}
           <div className="mega-col">
-            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> COMPARISONS &amp; TRUST</div>
+            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> COMPARISONS &amp; COMPANY</div>
             <Link to="/compare/hackerrank-alternatives/" className="mega-item" onClick={closeMenuImmediately}>
               <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg></span>
               <div className="mega-item-text"><b>HackerRank alternatives</b><span>Honest 2026 feature &amp; pricing comparison</span></div>
-            </Link>
-            <Link to="/security/" className="mega-item" onClick={closeMenuImmediately}>
-              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
-              <div className="mega-item-text"><b>Security &amp; compliance</b><span>SOC 2, ISO readiness, DPDP &amp; encryption</span></div>
             </Link>
             <Link to="/about/" className="mega-item" onClick={closeMenuImmediately}>
               <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
@@ -401,32 +453,39 @@ export const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/*  Column 3: REGIONAL EDITIONS  */}
+          {/*  Column 3: FEATURED GUIDE CALLOUT CARD  */}
           <div className="mega-col">
-            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> REGIONAL EDITIONS</div>
-            <Link to="/india/" className="mega-item" onClick={closeMenuImmediately}>
-              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="2" x2="12" y2="22"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span>
-              <div className="mega-item-text"><b>India (₹ INR)</b><span>DPDP compliance, local data &amp; campus engine</span></div>
-            </Link>
-            <Link to="/uae/" className="mega-item" onClick={closeMenuImmediately}>
-              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></span>
-              <div className="mega-item-text"><b>UAE (AED)</b><span>Dubai &amp; Abu Dhabi tech hiring standards</span></div>
-            </Link>
-            <Link to="/saudi-arabia/" className="mega-item" onClick={closeMenuImmediately}>
-              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
-              <div className="mega-item-text"><b>Saudi Arabia (SAR)</b><span>Vision 2030 digital talent evaluation</span></div>
-            </Link>
-            <Link to="/australia/" className="mega-item" onClick={closeMenuImmediately}>
-              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
-              <div className="mega-item-text"><b>Australia (AUD)</b><span>Privacy Act compliance with Sydney residency</span></div>
-            </Link>
-            <Link to="/new-zealand/" className="mega-item" onClick={closeMenuImmediately}>
-              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
-              <div className="mega-item-text"><b>New Zealand (NZD)</b><span>Privacy Act 2020 &amp; Trans-Tasman billing</span></div>
-            </Link>
+            <div className="mega-feature-card">
+              <div>
+                <span className="mega-feature-badge">FEATURED GUIDE</span>
+                <div className="mega-feature-title">Assessing developers in the age of AI</div>
+                <p className="mega-feature-desc">AI assistants write code now. Explore how modern engineering benchmarks evaluate planning, critical code review, and prompt delegation.</p>
+              </div>
+              <Link to="/blog/assessing-developers-in-the-age-of-ai/" className="mega-feature-link" onClick={closeMenuImmediately}>Read the full guide →</Link>
+            </div>
           </div>
+        </div>
+        <div className="mega-bottom">
+          <div className="mega-bottom-cta">Explore our engineering playbooks &amp; benchmarks: <Link to="/blog/" onClick={closeMenuImmediately}>Browse all blog articles →</Link></div>
+          <div className="mega-bottom-trust">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> Human-reviewed</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> Research-backed</span>
+            <Link to="/about/">Learn our story →</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-          {/*  Column 4: LEGAL & COMPLIANCE  */}
+  {/*  6. LEGAL & SYSTEM MEGA MENU  */}
+  <div className={`nav-item ${activeMenu === 6 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(6)} onMouseLeave={handleMouseLeave}>
+    <button className={`nav-link ${activeMenu === 6 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(6, e)} aria-haspopup="true" aria-expanded={activeMenu === 6}>
+      Legal &amp; System <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg>
+    </button>
+    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately}>
+      <div className="mega-card" style={{ maxWidth: '880px', width: '100%' }}>
+        <div className="mega-menu-grid mega-grid-2-cols">
+          {/*  Column 1: LEGAL & COMPLIANCE  */}
           <div className="mega-col">
             <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> LEGAL &amp; COMPLIANCE</div>
             <Link to="/legal/privacy/" className="mega-item" onClick={closeMenuImmediately}>
@@ -441,6 +500,32 @@ export const Header: React.FC = () => {
               <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></span>
               <div className="mega-item-text"><b>Refund &amp; Cancellation</b><span>14-day trial policies &amp; enterprise guarantees</span></div>
             </Link>
+          </div>
+
+          {/*  Column 2: SECURITY & SYSTEM TRUST  */}
+          <div className="mega-col">
+            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> SECURITY &amp; SYSTEM</div>
+            <Link to="/security/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
+              <div className="mega-item-text"><b>Security &amp; compliance</b><span>SOC 2, ISO readiness, DPDP &amp; encryption</span></div>
+            </Link>
+            <div style={{ marginTop: '14px', padding: '16px', background: 'var(--canvas)', borderRadius: '12px', border: '1px solid var(--line)' }}>
+              <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--ink)', marginBottom: '4px' }}>Candidate Privacy &amp; System Integrity</div>
+              <p style={{ fontSize: '12.5px', color: 'var(--text-2)', lineHeight: '1.5', margin: 0 }}>
+                End-to-end TLS 1.3 encryption, regional data isolation in AWS Sydney/Mumbai/Frankfurt, and transparent candidate consent.
+              </p>
+              <Link to="/security/" className="btn btn-ghost" onClick={closeMenuImmediately} style={{ marginTop: '12px', width: '100%', justifyContent: 'center', fontSize: '13px', padding: '8px 14px', borderColor: 'var(--brand-border-light)', color: 'var(--brand-dark)' }}>
+                Read security whitepaper →
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="mega-bottom">
+          <div className="mega-bottom-cta">Questions regarding compliance, DPA or security questionnaires? <Link to="/contact/" onClick={closeMenuImmediately}>Contact compliance officer →</Link></div>
+          <div className="mega-bottom-trust">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> GDPR &amp; DPDP Compliant</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> SOC 2 Type II Ready</span>
+            <Link to="/security/">Security portal →</Link>
           </div>
         </div>
       </div>
@@ -857,7 +942,7 @@ export const Header: React.FC = () => {
                 )}
               </div>
 
-              {/* 5.5 Legal & Compliance */}
+              {/* 5.5 Legal & System */}
               <div className={`mobile-nav-group ${openMobileGroup === 'legal' ? 'is-open' : ''}`}>
                 <button
                   type="button"
@@ -869,7 +954,7 @@ export const Header: React.FC = () => {
                     <span className="mobile-group-icon">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                     </span>
-                    Legal &amp; Compliance
+                    Legal &amp; System
                   </span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-group-chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </button>
@@ -893,6 +978,13 @@ export const Header: React.FC = () => {
                       <div className="mobile-nav-item-content">
                         <span className="mobile-nav-item-title">Refund &amp; Cancellation</span>
                         <span className="mobile-nav-item-desc">Trial terms &amp; enterprise guarantees</span>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
+                    </Link>
+                    <Link to="/security/" className="mobile-nav-item" onClick={closeMobileMenu}>
+                      <div className="mobile-nav-item-content">
+                        <span className="mobile-nav-item-title">Security &amp; compliance</span>
+                        <span className="mobile-nav-item-desc">SOC 2, ISO readiness, DPDP &amp; encryption</span>
                       </div>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mobile-nav-item-arrow"><path d="M9 18l6-6-6-6"></path></svg>
                     </Link>

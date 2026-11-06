@@ -22,11 +22,11 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Column 2: Product & Platform (11 pages) */}
+          {/* Column 2: Product (9 pages) */}
           <div>
             <h2>Product</h2>
             <ul>
-              <li><Link to="/product/">Product overview</Link></li>
+              <li><Link to="/product/">Platform overview</Link></li>
               <li><Link to="/product/coding-assessments/">Coding assessments</Link></li>
               <li><Link to="/product/ai-fluency-assessments/">AI fluency assessments</Link></li>
               <li><Link to="/product/ai-interviews/">AI automated interviews</Link></li>
@@ -35,12 +35,10 @@ export const Footer: React.FC = () => {
               <li><Link to="/product/skills-intelligence/">Skills intelligence</Link></li>
               <li><Link to="/product/question-library/">Question library</Link></li>
               <li><Link to="/integrations/">ATS integrations</Link></li>
-              <li><Link to="/pricing/">Pricing &amp; plans</Link></li>
-              <li><Link to="/compare/hackerrank-alternatives/">HackerRank alternatives</Link></li>
             </ul>
           </div>
 
-          {/* Column 3: Solutions & Regions (11 pages) */}
+          {/* Column 3: Solutions (6 pages) */}
           <div>
             <h2>Solutions</h2>
             <ul>
@@ -50,15 +48,6 @@ export const Footer: React.FC = () => {
               <li><Link to="/solutions/it-services-staffing/">IT services &amp; staffing</Link></li>
               <li><Link to="/solutions/startups/">Startups</Link></li>
               <li><Link to="/developers/">For developers</Link></li>
-            </ul>
-
-            <h2 style={{ marginTop: '24px' }}>Regions</h2>
-            <ul>
-              <li><Link to="/india/">India (₹ INR)</Link></li>
-              <li><Link to="/uae/">United Arab Emirates (AED)</Link></li>
-              <li><Link to="/saudi-arabia/">Saudi Arabia (SAR)</Link></li>
-              <li><Link to="/australia/">Australia (AUD)</Link></li>
-              <li><Link to="/new-zealand/">New Zealand (NZD)</Link></li>
             </ul>
           </div>
 
@@ -82,28 +71,42 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 5: Blog & Research (5 pages) */}
+          {/* Column 5: Pricing & Regions (6 pages) */}
           <div>
-            <h2>Blog &amp; Research</h2>
+            <h2>Pricing &amp; Regions</h2>
             <ul>
-              <li><Link to="/blog/">Engineering blog</Link></li>
-              <li><Link to="/blog/assessing-developers-in-the-age-of-ai/">Assessing developers in AI era</Link></li>
-              <li><Link to="/blog/campus-hiring-coding-assessment-guide/">Campus assessment guide</Link></li>
-              <li><Link to="/blog/how-to-design-a-fair-coding-assessment/">Fair assessment checklist</Link></li>
-              <li><Link to="/blog/how-to-prevent-cheating-in-online-coding-tests/">Preventing test cheating</Link></li>
+              <li><Link to="/pricing/">Pricing &amp; plans</Link></li>
+              <li><Link to="/india/">India (₹ INR)</Link></li>
+              <li><Link to="/uae/">United Arab Emirates (AED)</Link></li>
+              <li><Link to="/saudi-arabia/">Saudi Arabia (SAR)</Link></li>
+              <li><Link to="/australia/">Australia (AUD)</Link></li>
+              <li><Link to="/new-zealand/">New Zealand (NZD)</Link></li>
             </ul>
           </div>
 
-          {/* Column 6: Company & Legal (6 pages) */}
+          {/* Column 6: Resources (8 pages) */}
           <div>
-            <h2>Company &amp; Legal</h2>
+            <h2>Resources</h2>
             <ul>
-              <li><Link to="/about/">About us</Link></li>
-              <li><Link to="/security/">Security &amp; compliance</Link></li>
+              <li><Link to="/blog/">Technical hiring blog</Link></li>
+              <li><Link to="/blog/assessing-developers-in-the-age-of-ai/">Assessing developers in AI era</Link></li>
+              <li><Link to="/blog/how-to-prevent-cheating-in-online-coding-tests/">Preventing test cheating</Link></li>
+              <li><Link to="/blog/campus-hiring-coding-assessment-guide/">Campus assessment guide</Link></li>
+              <li><Link to="/blog/how-to-design-a-fair-coding-assessment/">Fair assessment checklist</Link></li>
+              <li><Link to="/compare/hackerrank-alternatives/">HackerRank alternatives</Link></li>
+              <li><Link to="/about/">About SetBenchmark</Link></li>
               <li><Link to="/contact/">Contact &amp; sales</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 7: Legal & System (4 pages) */}
+          <div>
+            <h2>Legal &amp; System</h2>
+            <ul>
               <li><Link to="/legal/privacy/">Privacy policy</Link></li>
               <li><Link to="/legal/terms/">Terms of service</Link></li>
               <li><Link to="/legal/refund-policy/">Refund &amp; cancellation</Link></li>
+              <li><Link to="/security/">Security &amp; compliance</Link></li>
             </ul>
           </div>
         </div>
