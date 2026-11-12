@@ -22,7 +22,7 @@ const RAW_CONTENT = `<article>
         </div>
       </div>
       <div class="shot">
-        <img src="/images/product/A03-Fairness.webp" alt="Fairness reporting and adverse impact analytics in SetBenchmark" width="1440" height="900" loading="eager" decoding="async"/>
+        <img src="/images/mockups/laptop/A03-Fairness.webp" alt="Fairness reporting and adverse impact analytics in SetBenchmark" width="1812" height="1070" loading="eager" decoding="async"/>
       </div>
     </div>
   </div>

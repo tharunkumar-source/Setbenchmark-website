@@ -7,7 +7,7 @@ const RAW_CONTENT = `<section class="phero"><div class="wrap"><nav class="crumbs
 <div class="eyebrow">Compare</div><h1 class="h1">HackerRank alternatives: an honest guide for 2026</h1><p class="lead">HackerRank is one of the best-known coding assessment platforms. Depending on how you hire, another tool may suit you better. Here is how the main options differ, and where SetBenchmark fits.</p><div class="btns"><a class="btn btn-primary" href="https://app.setbenchmark.com/signup">Start free trial</a><a href="/contact/" class="btn btn-ghost">Book a demo</a></div>
 </div>
 <div class="shot">
-<img src="/images/product/H16-Compare.webp" alt="Side-by-side candidate scoring and benchmark comparison matrix in SetBenchmark" width="1440" height="900" loading="eager" decoding="async"/>
+<img src="/images/mockups/laptop/H16-Compare.webp" alt="Side-by-side candidate scoring and benchmark comparison matrix in SetBenchmark" width="1812" height="1070" loading="eager" decoding="async"/>
 </div>
 </div></div></section>
 

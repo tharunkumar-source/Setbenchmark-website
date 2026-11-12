@@ -9,8 +9,6 @@ interface ShowcaseItem {
   bullets: string[];
   image: string;
   alt: string;
-  urlBar: string;
-  badge: string;
   linkUrl: string;
   linkText: string;
 }
@@ -27,10 +25,8 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
       'Configurable AI policy: not allowed, allowed, or required',
       'Scored rubrics evaluating engineer judgment and code verification',
     ],
-    image: '/images/product/C06-AIAllowed.webp',
+    image: '/images/mockups/tablet/C06-AIAllowed.webp',
     alt: 'AI-allowed coding task with interactive assistant panel and code diffs',
-    urlBar: 'app.setbenchmark.com · candidate ai fluency session',
-    badge: 'AI ALLOWED',
     linkUrl: '/product/ai-fluency-assessments/',
     linkText: 'Explore AI fluency assessments',
   },
@@ -45,10 +41,8 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
       'Keystroke playback & side-by-side code diff audit timeline',
       'Continuous leak monitoring with rotating question variants',
     ],
-    image: '/images/product/H13-Integrity.webp',
+    image: '/images/mockups/tablet/H13-Integrity.webp',
     alt: 'Integrity review interface with signals, similarity checks, and evidence timeline',
-    urlBar: 'app.setbenchmark.com · proctoring & integrity evidence audit',
-    badge: 'HUMAN REVIEWED',
     linkUrl: '/product/proctoring-integrity/',
     linkText: 'Explore proctoring & integrity',
   },
@@ -63,10 +57,8 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
       'Clear separation between core engineering and AI fluency',
       'One-click ATS sync with Greenhouse, Lever, and Ashby',
     ],
-    image: '/images/product/H11-Report.webp',
+    image: '/images/mockups/tablet/H11-Report.webp',
     alt: 'Candidate score report with skill breakdown and hiring decision workflow',
-    urlBar: 'app.setbenchmark.com · candidate scorecard & skill percentiles',
-    badge: 'ATS READY',
     linkUrl: '/product/coding-assessments/',
     linkText: 'Explore scored reports',
   },
@@ -79,49 +71,25 @@ export const FeatureAccordionShowcase: React.FC = () => {
     setActiveIdx(idx);
   };
 
-  const activeItem = SHOWCASE_ITEMS[activeIdx];
-
   return (
     <section className="feature-accordion-section section-alt">
       <div className="wrap">
         <div className="feature-accordion-grid">
-          {/* Left Column: Full-Data Uncropped Product Browser Mockup */}
+          {/* Left Column: Pre-Composited Tablet Mockup Images */}
           <div className="feature-mockup-col">
-            <div className="feature-mockup-frame" aria-label="Interactive Product Preview">
-              {/* Browser Window Header */}
-              <div className="feature-mockup-topbar">
-                <div className="feature-mockup-dots" aria-hidden="true">
-                  <span className="dot dot-red" />
-                  <span className="dot dot-yellow" />
-                  <span className="dot dot-green" />
-                </div>
-                <div className="feature-mockup-url" title={activeItem.urlBar}>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                  </svg>
-                  <span>{activeItem.urlBar}</span>
-                </div>
-                <div className="feature-mockup-badge">
-                  {activeItem.badge}
-                </div>
-              </div>
-
-              {/* Viewport: Full 16:10 Aspect Ratio with Contain so No Data Is Cropped */}
-              <div className="feature-mockup-viewport">
-                {SHOWCASE_ITEMS.map((item, idx) => (
-                  <img
-                    key={item.id}
-                    src={item.image}
-                    alt={item.alt}
-                    width="1440"
-                    height="900"
-                    loading={idx === 0 ? "eager" : "lazy"}
-                    decoding="async"
-                    className={`feature-mockup-img ${activeIdx === idx ? 'is-active' : ''}`}
-                  />
-                ))}
-              </div>
+            <div className="feature-mockup-viewport" aria-label="Interactive Product Preview">
+              {SHOWCASE_ITEMS.map((item, idx) => (
+                <img
+                  key={item.id}
+                  src={item.image}
+                  alt={item.alt}
+                  width="1528"
+                  height="996"
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  className={`feature-mockup-img ${activeIdx === idx ? 'is-active' : ''}`}
+                />
+              ))}
             </div>
           </div>
 
@@ -178,38 +146,17 @@ export const FeatureAccordionShowcase: React.FC = () => {
                       <div className="feature-accordion-body">
                         <p className="feature-item-desc">{item.description}</p>
 
-                        {/* Mobile-Only Mockup Display: Shown right inside expanded details */}
+                        {/* Mobile-Only Mockup Display: Pre-composited tablet image */}
                         <div className="feature-accordion-mobile-mockup">
-                          <div className="feature-mockup-frame">
-                            <div className="feature-mockup-topbar">
-                              <div className="feature-mockup-dots" aria-hidden="true">
-                                <span className="dot dot-red" />
-                                <span className="dot dot-yellow" />
-                                <span className="dot dot-green" />
-                              </div>
-                              <div className="feature-mockup-url" title={item.urlBar}>
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                                </svg>
-                                <span>{item.urlBar}</span>
-                              </div>
-                              <div className="feature-mockup-badge">
-                                {item.badge}
-                              </div>
-                            </div>
-                            <div className="feature-mockup-viewport">
-                              <img
-                                src={item.image}
-                                alt={item.alt}
-                                width="1440"
-                                height="900"
-                                loading="lazy"
-                                decoding="async"
-                                className="feature-mockup-img is-active"
-                              />
-                            </div>
-                          </div>
+                          <img
+                            src={item.image}
+                            alt={item.alt}
+                            width="1528"
+                            height="996"
+                            loading="lazy"
+                            decoding="async"
+                            className="feature-accordion-mobile-img"
+                          />
                         </div>
 
                         <ul className="feature-checks-list">

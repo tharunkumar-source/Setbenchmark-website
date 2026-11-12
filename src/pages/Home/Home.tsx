@@ -466,103 +466,55 @@ export const Home: React.FC = () => {
             </div>
           </div>
 
-          {/* Realistic Hardware Device Mockup Stage */}
+          {/* Pre-Composited Silver MacBook Pro Hero Mockup Stage */}
           <div className="hero-stage-backdrop">
             <div className="hero-device-wrapper">
-              {/* Hardware Device Chassis (MacBook / Display Hardware Frame) */}
-              <div className="hero-device-chassis">
-                {/* Camera / Sensor Dot */}
-                <div className="hero-device-camera" aria-hidden="true">
-                  <span className="hero-device-lens" />
-                </div>
+              <img
+                src="/images/mockups/laptop/C05-Coding.webp"
+                alt="Candidate Coding Test - in-browser IDE with live task description, code editor, and test runner"
+                width="1812"
+                height="1070"
+                loading="eager"
+                decoding="async"
+                className="hero-laptop-mockup-img"
+              />
 
-                {/* Inner Screen Display */}
-                <div className="hero-device-screen">
-                  {/* Browser Chrome Header */}
-                  <div className="hero-window-header">
-                    <div className="hero-window-controls" aria-hidden="true">
-                      <span className="hero-window-dot dot-red" />
-                      <span className="hero-window-dot dot-yellow" />
-                      <span className="hero-window-dot dot-green" />
-                    </div>
-                    <div className="hero-window-url">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                      </svg>
-                      <span>app.setbenchmark.com/candidate/test-environment</span>
-                    </div>
-                    <div className="hero-window-meta">
-                      <span className="hero-window-status-pill">
-                        <span className="hero-window-live-pulse" />
-                        Live Sandbox
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Half-Screen Viewport */}
-                  <div className="hero-window-viewport">
-                    <img
-                      src="/images/product/C05-Coding.webp"
-                      alt="Candidate Coding Test - in-browser IDE with live task description, code editor, and test runner"
-                      width="1440"
-                      height="900"
-                      loading="eager"
-                      decoding="async"
-                      className="hero-window-screen-img"
-                    />
-                  </div>
-                </div>
-
-                {/* Laptop Base / Chin Lip */}
-                <div className="hero-device-base" aria-hidden="true">
-                  <div className="hero-device-notch" />
-                </div>
-              </div>
-
-              {/* Floating Cards Hanging AROUND the Screen */}
-              {/* Top-Left: Benchmark Score */}
+              {/* Pre-Rendered Executive Hero Signal Cards Overlapping Laptop Perimeter */}
               <img
                 src="/images/hero/hero-card-benchmark-score.png"
                 alt="Candidate Benchmark Score: 88/100 Top 5%"
-                className="floating-hero-img floating-hero-img-left"
-                width="322"
-                height="276"
+                width="304"
+                height="295"
                 loading="eager"
                 decoding="async"
+                className="hero-float-img hero-float-img--benchmark"
               />
-
-              {/* Top-Right: AI Fluency Review */}
               <img
                 src="/images/hero/hero-card-ai-fluency.png"
-                alt="AI Fluency Assessment: 94% Prompt Judgment"
-                className="floating-hero-img floating-hero-img-right"
-                width="344"
-                height="287"
+                alt="AI Fluency Review: 94% Prompt Judgment"
+                width="318"
+                height="321"
                 loading="eager"
                 decoding="async"
+                className="hero-float-img hero-float-img--fluency"
               />
-
-              {/* Bottom-Left: Integrity Verified Badge */}
               <img
                 src="/images/hero/hero-badge-integrity.png"
-                alt="Layered Cheating Signals with Blind Human Review"
-                className="floating-hero-img floating-hero-img-integrity"
-                width="267"
-                height="84"
+                alt="Human-Reviewed Integrity: Zero automatic rejections"
+                width="288"
+                height="106"
                 loading="eager"
                 decoding="async"
+                className="hero-float-img hero-float-img--integrity"
               />
-
-              {/* Bottom-Right: Local Pricing Pill */}
               <img
                 src="/images/hero/hero-pill-pricing.png"
-                alt="Local pricing in INR, AED and USD with Mumbai data residency"
-                className="floating-hero-img floating-hero-img-pill"
-                width="348"
-                height="82"
+                alt="Local pricing from INR 3,999/mo with Mumbai Data residency"
+                width="262"
+                height="115"
                 loading="eager"
                 decoding="async"
+                className="hero-float-img hero-float-img--pricing"
               />
             </div>
           </div>

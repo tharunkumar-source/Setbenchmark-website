@@ -1035,8 +1035,8 @@ p { margin: 0; }
 .crumbs a { color: var(--text-3); }
 
 /* Screenshot frame */
-.shot { border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: var(--white); box-shadow: 0 24px 60px rgba(15,18,34,.12); }
-.shot img { width: 100%; }
+.shot { position: relative; width: 100%; border: none; background: transparent; box-shadow: none; overflow: visible; }
+.shot img { width: 100%; height: auto; display: block; }
 
 /* Grids and cards */
 .grid { display: grid; gap: 20px; }
@@ -4527,284 +4527,62 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   overflow: visible;
 }
 
-/* Realistic Hardware Device Mockup Chassis */
+/* Pre-Composited Silver MacBook Pro Hero Mockup Wrapper */
 .hero-device-wrapper {
   position: relative;
-  max-width: 920px;
+  max-width: 820px;
   margin: 0 auto;
   overflow: visible;
 }
 
-.hero-device-chassis {
-  position: relative;
-  background: #0B0E17;
-  border: 3px solid #1E2436;
-  border-top-left-radius: 28px;
-  border-top-right-radius: 28px;
-  border-bottom: none;
-  padding: 10px 14px 0 14px;
-  box-shadow: 
-    inset 0 1px 1px rgba(255, 255, 255, 0.22),
-    0 0 0 1px #0A0D14,
-    0 35px 85px -15px rgba(0, 0, 0, 0.45),
-    0 15px 35px -8px rgba(0, 0, 0, 0.30);
-}
-
-/* Hardware Camera / Sensor Dot */
-.hero-device-camera {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-}
-
-.hero-device-lens {
-  width: 7px;
-  height: 7px;
-  border-radius: 9999px !important;
-  background: #07090F;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.9), inset 0 0 2px rgba(38, 208, 124, 0.7);
-}
-
-/* Inner Display Screen */
-.hero-device-screen {
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: none;
-  background: #0E1322;
-}
-
-/* Window Chrome Top Header Bar */
-.hero-window-header {
-  height: 38px;
-  background: #0F172A;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  border-top-left-radius: 11px;
-  border-top-right-radius: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 14px;
-  user-select: none;
-}
-
-.hero-window-controls {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  width: 100px;
-}
-
-.hero-window-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 9999px !important;
-  display: inline-block;
-}
-
-.hero-window-dot.dot-red {
-  background: #FF5F56;
-  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.15);
-}
-
-.hero-window-dot.dot-yellow {
-  background: #FFBD2E;
-  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.15);
-}
-
-.hero-window-dot.dot-green {
-  background: #27C93F;
-  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.15);
-}
-
-/* Centered Address / URL Search Bar */
-.hero-window-url {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 9999px !important;
-  padding: 3px 14px;
-  font-family: var(--mono, monospace);
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.72);
-  letter-spacing: 0.01em;
-  max-width: 400px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.hero-window-url svg {
-  color: var(--brand, #26D07C);
-  flex-shrink: 0;
-}
-
-.hero-window-meta {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100px;
-}
-
-.hero-window-status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(38, 208, 124, 0.12);
-  border: 1px solid rgba(38, 208, 124, 0.3);
-  border-radius: 9999px !important;
-  padding: 3px 10px;
-  font-family: var(--font);
-  font-size: 11px;
-  font-weight: 600;
-  color: #26D07C;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.hero-window-live-pulse {
-  width: 6px;
-  height: 6px;
-  border-radius: 9999px !important;
-  background: #26D07C;
-  box-shadow: 0 0 8px #26D07C;
-  animation: pulseLiveDot 2s ease-in-out infinite;
-}
-
-@keyframes pulseLiveDot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
-}
-
-/* Viewport for Half Screen (Teaser Cut matching Reference) */
-.hero-window-viewport {
-  position: relative;
-  height: 380px;
-  max-height: 380px;
-  overflow: hidden;
-  line-height: 0;
-  background: #0E1322;
-}
-
-.hero-window-viewport::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: linear-gradient(to bottom, transparent 0%, rgba(14, 19, 34, 0.6) 50%, rgba(14, 19, 34, 0.98) 100%);
-  pointer-events: none;
-  z-index: 2;
-}
-
-.hero-window-screen-img {
+.hero-laptop-mockup-img {
   width: 100%;
   height: auto;
   display: block;
-}
-
-/* Laptop Base / Chin Lip */
-.hero-device-base {
-  height: 14px;
-  background: linear-gradient(180deg, #1A1F2E 0%, #0D111A 100%);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  position: relative;
-  margin: 0 -14px;
-}
-
-.hero-device-notch {
-  width: 80px;
-  height: 4px;
-  background: #07090F;
-  border-radius: 0 0 4px 4px;
-  margin: 0 auto;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-top: none;
+  border-radius: 0 !important;
 }
 
 /* ==========================================================================
-   Floating Cards Hanging AROUND the Screen Perimeter
+   Pre-Rendered Executive Hero Card Images Overlapping Laptop Perimeter
    ========================================================================== */
-
-.floating-hero-img {
+.hero-float-img {
   position: absolute;
+  z-index: 15;
+  height: auto;
   user-select: none;
   pointer-events: auto;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
-  will-change: transform;
+  border-radius: 0 !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.floating-hero-img:hover {
-  transform: translateY(-4px) scale(1.03);
-  filter: drop-shadow(0 24px 40px rgba(15, 18, 34, 0.22));
+.hero-float-img:hover {
+  transform: translateY(-3px);
 }
 
-/* Top-Left: Candidate Benchmark Score (Hanging fully OUTSIDE around left flank) */
-.floating-hero-img-left {
-  top: 50px;
-  left: -115px;
-  width: 220px;
-  height: auto;
-  z-index: 15;
-  animation: floatHeroLeft 6s ease-in-out infinite alternate;
+.hero-float-img--benchmark {
+  top: 22px;
+  left: -154px;
+  width: 292px;
 }
 
-@keyframes floatHeroLeft {
-  0% { transform: translateY(0px) rotate(-1deg); }
-  100% { transform: translateY(-8px) rotate(-0.5deg); }
+.hero-float-img--fluency {
+  top: 14px;
+  right: -156px;
+  width: 306px;
 }
 
-/* Top-Right: AI Fluency Review (Hanging fully OUTSIDE around right flank) */
-.floating-hero-img-right {
-  top: 35px;
-  right: -115px;
-  width: 235px;
-  height: auto;
-  z-index: 15;
-  animation: floatHeroRight 5.5s ease-in-out infinite alternate 0.8s;
-}
-
-@keyframes floatHeroRight {
-  0% { transform: translateY(0px) rotate(1deg); }
-  100% { transform: translateY(-8px) rotate(0.5deg); }
-}
-
-/* Bottom-Left: Integrity Verified Badge (Hanging OUTSIDE around bottom-left) */
-.floating-hero-img-integrity {
-  bottom: 35px;
-  left: -70px;
-  width: 200px;
-  height: auto;
+.hero-float-img--integrity {
+  bottom: 24px;
+  left: -108px;
+  width: 280px;
   z-index: 16;
-  animation: floatHeroIntegrity 6.2s ease-in-out infinite alternate 0.4s;
 }
 
-@keyframes floatHeroIntegrity {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-6px); }
-}
-
-/* Bottom-Right: Multi-Currency Local Pricing (Hanging OUTSIDE around bottom-right) */
-.floating-hero-img-pill {
-  bottom: 35px;
-  right: -70px;
-  width: 250px;
-  height: auto;
+.hero-float-img--pricing {
+  bottom: 20px;
+  right: -108px;
+  width: 256px;
   z-index: 16;
-  animation: floatHeroPill 6.5s ease-in-out infinite alternate 1.2s;
-}
-
-@keyframes floatHeroPill {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-6px); }
 }
 
 /* Clean Header Action Buttons for light .hdr */
@@ -4832,29 +4610,30 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   box-shadow: 0 4px 14px rgba(38, 208, 124, 0.4) !important;
 }
 
-/* Responsive adjustments */
-/* Responsive adjustments for Floating Images */
-@media (max-width: 1200px) {
-  .floating-hero-img-left {
-    left: -12px;
-    top: 64px;
+/* Responsive adjustments for Hero Signal Cards */
+@media (max-width: 1240px) {
+  .hero-device-wrapper {
+    max-width: 660px;
+  }
+  .hero-float-img--benchmark {
+    left: -124px;
+    top: 16px;
+    width: 244px;
+  }
+  .hero-float-img--fluency {
+    right: -126px;
+    top: 10px;
+    width: 254px;
+  }
+  .hero-float-img--integrity {
+    left: -88px;
+    bottom: 20px;
+    width: 238px;
+  }
+  .hero-float-img--pricing {
+    right: -88px;
+    bottom: 18px;
     width: 220px;
-  }
-  .floating-hero-img-right {
-    right: -12px;
-    top: 64px;
-    width: 236px;
-  }
-  .floating-hero-img-bubble {
-    left: 14px;
-    top: -14px;
-    width: 38px;
-    height: 38px;
-  }
-  .floating-hero-img-pill {
-    right: 14px;
-    bottom: -14px;
-    width: 260px;
   }
 }
 
@@ -4888,13 +4667,11 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   .hero-tab-label-mobile {
     display: inline;
   }
-  /* Never stack floating badges vertically on mobile/tablet — keep showcase clean */
-  .floating-hero-img,
-  .floating-hero-img-left,
-  .floating-hero-img-right,
-  .floating-hero-img-bubble,
-  .floating-hero-img-pill,
-  .floating-hero-img-integrity {
+  .hero-device-wrapper {
+    max-width: 100%;
+  }
+  /* Hide perimeter signal cards on mobile/tablet so the laptop stays wide and readable */
+  .hero-float-img {
     display: none !important;
   }
   .hero-stage-backdrop {
@@ -5051,28 +4828,6 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
     background-image: none !important;
     border: none !important;
     box-shadow: none !important;
-  }
-  .hero-device-chassis {
-    padding: 8px 8px 0 8px !important;
-    border-width: 2px !important;
-    border-top-left-radius: 16px !important;
-    border-top-right-radius: 16px !important;
-  }
-  .hero-device-base {
-    margin: 0 -8px !important;
-    height: 10px !important;
-  }
-  .hero-device-notch {
-    width: 48px !important;
-    height: 3px !important;
-  }
-  .hero-window-viewport {
-    height: auto !important;
-    max-height: none !important;
-    overflow: hidden !important;
-  }
-  .hero-window-viewport::after {
-    display: none !important;
   }
 }
 
@@ -5411,7 +5166,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 
 .feature-accordion-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.32fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   gap: 48px;
   align-items: center;
   min-width: 0;
@@ -5429,86 +5184,21 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   display: none !important;
 }
 
-/* Mockup Frame (Left) */
-.feature-mockup-frame {
-  background: #0E1322;
-  border: 1px solid rgba(227, 230, 238, 0.9);
-  border-radius: 20px;
-  box-shadow: 
-    0 28px 72px -14px rgba(15, 18, 34, 0.22),
-    0 8px 24px -4px rgba(15, 18, 34, 0.08);
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+.feature-accordion-mobile-img {
   width: 100%;
-  max-width: 100%;
-}
-
-.feature-mockup-topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 13px 18px;
-  background: #141A2D;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  min-width: 0;
-  width: 100%;
-}
-
-.feature-mockup-dots {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.feature-mockup-dots .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-.dot-red { background: #FF5F56; }
-.dot-yellow { background: #FFBD2E; }
-.dot-green { background: #27C93F; }
-
-.feature-mockup-url {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--mono);
-  font-size: 11.5px;
-  color: #9AA1B8;
-  background: rgba(255, 255, 255, 0.06);
-  padding: 4px 12px;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  max-width: 320px;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.feature-mockup-badge {
-  font-family: var(--font);
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  padding: 3px 10px;
-  border-radius: 9999px;
-  background: var(--secondary-subtle, #F2EEFC);
-  color: var(--secondary, #6244BB);
-  border: 1px solid var(--secondary-border, rgba(98, 68, 187, 0.28));
-  white-space: nowrap;
+  height: auto;
+  display: block;
+  border-radius: 0 !important;
 }
 
 .feature-mockup-viewport {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  background: #0E1322;
-  overflow: hidden;
+  max-width: 590px;
+  margin: 0 auto;
+  aspect-ratio: 1528 / 996;
+  background: transparent;
+  overflow: visible;
 }
 
 .feature-mockup-img {
@@ -5519,14 +5209,15 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   object-fit: contain;
   object-position: center;
   opacity: 0;
-  transform: scale(0.99);
-  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: none;
+  transition: opacity 0.25s ease;
   pointer-events: none;
+  border-radius: 0 !important;
 }
 
 .feature-mockup-img.is-active {
   opacity: 1;
-  transform: scale(1);
+  transform: none;
   pointer-events: auto;
 }
 
@@ -5785,33 +5476,6 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   }
   .feature-checks-list {
     margin-top: 24px !important;
-  }
-  .feature-mockup-frame {
-    order: -1;
-    width: 100% !important;
-    max-width: 100% !important;
-    border-radius: 14px;
-  }
-  .feature-mockup-topbar {
-    padding: 10px 12px;
-    gap: 8px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .feature-mockup-url {
-    max-width: none;
-    flex: 1 1 auto;
-    min-width: 0;
-    font-size: 11px;
-    padding: 3px 8px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .feature-mockup-badge {
-    font-size: 9.5px;
-    padding: 2px 7px;
-    flex-shrink: 0;
   }
   .feature-accordion-heading {
     font-size: clamp(22px, 5.5vw, 28px);
@@ -6777,7 +6441,6 @@ section,
 .hero-modern-showcase,
 .hero-showcase-viewport,
 .hero-showcase-mockup,
-.shot,
 .card,
 .card-link,
 .why-section .card,
@@ -7351,4 +7014,70 @@ h1, h2, h3, h4, h5, h6,
     max-width: 100% !important;
   }
 }
+
+/* ==========================================================================
+   Pre-Composited Product Mockup Layout (.pmock & .shot)
+   All device hardware framing + UI screen + shadows are baked directly into
+   lossless mockup images under /images/mockups/{laptop,tablet}/ so rendering is
+   just a clean responsive <img> with zero HTML/CSS bezel layers.
+   ========================================================================== */
+@media (min-width: 901px) {
+  .phero-grid:has(.shot, .pmock),
+  .phero-grid--mockup {
+    grid-template-columns: minmax(0, 0.74fr) minmax(0, 1.26fr);
+    gap: 28px;
+    align-items: center;
+  }
+  .phero-grid:has(.shot, .pmock) .h1,
+  .phero-grid--mockup .h1 {
+    font-size: clamp(28px, 2.75vw, 37px);
+  }
+  .phero-grid:has(.shot, .pmock) .lead,
+  .phero-grid--mockup .lead {
+    max-width: 490px;
+  }
+  .split:has(.shot, .pmock) {
+    grid-template-columns: minmax(0, 0.90fr) minmax(0, 1.10fr);
+    gap: 48px;
+    align-items: center;
+  }
+  .split.rev:has(.shot, .pmock) {
+    grid-template-columns: minmax(0, 1.10fr) minmax(0, 0.90fr);
+    gap: 48px;
+    align-items: center;
+  }
+  section:not(.phero) .pmock,
+  section:not(.phero) .shot {
+    max-width: 576px;
+  }
+  section:not(.phero) .split:not(.rev) .pmock,
+  section:not(.phero) .split:not(.rev) .shot {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  section:not(.phero) .split.rev .pmock,
+  section:not(.phero) .split.rev .shot {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.pmock,
+.shot {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.pmock-img,
+.shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0 !important;
+}
+
 

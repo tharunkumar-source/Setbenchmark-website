@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/SEOHead';
 import { FAQ } from '@/components/FAQ';
+import { ProductScreenMockup } from '@/components/ProductScreenMockup';
 
-const RAW_CONTENT = `<section class="phero"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/product/">Product</a></li><li><span aria-current="page">Question library</span></li></ol></nav><div class="phero-grid"><div><div class="eyebrow">Question library</div><h1 class="h1">Questions that stay fresh and fair</h1><p class="lead">A growing library of coding, repository, SQL, design and AI tasks, each mapped to skills and levels, with quality and leak-risk ratings. Add your own questions and keep them private.</p><div class="btns"><a class="btn btn-primary" href="https://app.setbenchmark.com/signup">Start free trial</a><a href="/contact/" class="btn btn-ghost">Book a demo</a></div></div><div class="shot"><img src="/images/product/L01-Library.webp" alt="Question library with filters for type, AI mode, level and leak risk" width="1440" height="900" loading="eager" decoding="async"/></div></div></div></section><section class="section"><div class="wrap"><div class="head"><div class="eyebrow">Features</div><h2 class="h2">What you get with question library</h2></div><div class="grid g3"><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 4l-4 16"></path></svg></div><h3 class="h3">Mapped to a skills taxonomy</h3><p>Every question is tagged to skills and levels, so assessments match the role profile.</p></div><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"></path></svg></div><h3 class="h3">Quality ratings</h3><p>See how well each question separates strong and weak candidates, based on real results.</p></div><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM12 12h.01"></path></svg></div><h3 class="h3">Leak monitoring</h3><p>Questions found on the internet are flagged and rotated, with variants ready to swap in.</p></div><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 20v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 20v-1a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg></div><h3 class="h3">Fairness checks</h3><p>Questions are checked for unusual gaps between groups of candidates and reviewed if found.</p></div><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3zM9 12l2 2 4-4"></path></svg></div><h3 class="h3">Your private questions</h3><p>Write and review your own questions with an editor, test cases and review workflow.</p></div><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg></div><h3 class="h3">Every question type</h3><p>Coding, multiple choice, repository, whiteboard, SQL, essay and agentic tasks.</p></div></div></div></section><section class="section alt"><div class="wrap"><div class="split"><div><div class="eyebrow">Quality</div><h2 class="h2">Safety and leak review before anything goes live</h2><p class="lead" style="margin-top:16px">New and edited questions pass a review for clarity, bias and leak risk before candidates see them.</p></div><div class="shot"><img src="/images/product/L04-ContentReview.webp" alt="Question safety and leak review queue" width="1440" height="900" loading="lazy" decoding="async"/></div></div></div></section><section class="section tight"><div class="wrap"><div class="cta"><div><h2 class="h2">See SetBenchmark with your own roles</h2><p>Start a 14-day free trial with 10 assessment attempts, or book a 30-minute demo with our team.</p></div><div class="btns"><a class="btn btn-lime" href="https://app.setbenchmark.com/signup">Start free trial</a><a href="/contact/" class="btn btn-ghost on-dark">Book a demo</a></div></div></div></section>`;
+const FEATURES_TOP = `<section class="section"><div class="wrap"><div class="head"><div class="eyebrow">Features</div><h2 class="h2">What you get with question library</h2></div><div class="grid g3"><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 4l-4 16"></path></svg></div><h3 class="h3">Mapped to a skills taxonomy</h3><p>Every question is tagged to skills and levels, so assessments match the role profile.</p></div><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"></path></svg></div><h3 class="h3">Quality ratings</h3><p>See how well each question separates strong and weak candidates, based on real results.</p></div><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM12 12h.01"></path></svg></div><h3 class="h3">Leak monitoring</h3><p>Questions found on the internet are flagged and rotated, with variants ready to swap in.</p></div><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 20v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 20v-1a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg></div><h3 class="h3">Fairness checks</h3><p>Questions are checked for unusual gaps between groups of candidates and reviewed if found.</p></div><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3zM9 12l2 2 4-4"></path></svg></div><h3 class="h3">Your private questions</h3><p>Write and review your own questions with an editor, test cases and review workflow.</p></div><div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg></div><h3 class="h3">Every question type</h3><p>Coding, multiple choice, repository, whiteboard, SQL, essay and agentic tasks.</p></div></div></div></section>`;
+const CTA_BOTTOM = `<section class="section tight"><div class="wrap"><div class="cta"><div><h2 class="h2">See SetBenchmark with your own roles</h2><p>Start a 14-day free trial with 10 assessment attempts, or book a 30-minute demo with our team.</p></div><div class="btns"><a class="btn btn-lime" href="https://app.setbenchmark.com/signup">Start free trial</a><a href="/contact/" class="btn btn-ghost on-dark">Book a demo</a></div></div></div></section>`;
 
 export const QuestionLibrary: React.FC = () => {
   return (
@@ -13,7 +16,63 @@ export const QuestionLibrary: React.FC = () => {
         canonical="https://www.setbenchmark.com/product/question-library"
         jsonLd={[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.setbenchmark.com"}, {"@type": "ListItem", "position": 2, "name": "Product", "item": "https://www.setbenchmark.com/product"}, {"@type": "ListItem", "position": 3, "name": "Question library", "item": "https://www.setbenchmark.com/product/question-library"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can candidates find SetBenchmark questions online?", "acceptedAnswer": {"@type": "Answer", "text": "We monitor for leaked questions and rotate them out. Questions with variants change between candidates, which makes sharing answers much less useful."}}, {"@type": "Question", "name": "Can we keep our own questions private?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Questions you write are visible only to your organisation."}}]}, {"@context": "https://schema.org", "@type": "Organization", "name": "SetBenchmark", "legalName": "Kombee Technologies (India) Pvt. Ltd.", "url": "https://www.setbenchmark.com", "logo": "https://www.setbenchmark.com/brand/setbenchmark-mark-512.png", "sameAs": []}, {"@context": "https://schema.org", "@type": "WebSite", "name": "SetBenchmark", "url": "https://www.setbenchmark.com"}]}
       />
-      <div dangerouslySetInnerHTML={{ __html: RAW_CONTENT }} />
+
+      <section className="phero">
+        <div className="wrap">
+          <nav className="crumbs" aria-label="Breadcrumb">
+            <ol>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/product/">Product</Link></li>
+              <li><span aria-current="page">Question library</span></li>
+            </ol>
+          </nav>
+          <div className="phero-grid phero-grid--mockup">
+            <div>
+              <div className="eyebrow">Question library</div>
+              <h1 className="h1">Questions that stay fresh and fair</h1>
+              <p className="lead">
+                A growing library of coding, repository, SQL, design and AI tasks, each mapped to skills and levels, with quality and leak-risk ratings. Add your own questions and keep them private.
+              </p>
+              <div className="btns">
+                <a className="btn btn-primary" href="https://app.setbenchmark.com/signup">Start free trial</a>
+                <Link to="/contact/" className="btn btn-ghost">Book a demo</Link>
+              </div>
+            </div>
+            <ProductScreenMockup
+              src="/images/mockups/laptop/L01-Library.webp"
+              alt="Question library with filters for type, AI mode, level and leak risk"
+              width={1812}
+              height={1070}
+              loading="eager"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div dangerouslySetInnerHTML={{ __html: FEATURES_TOP }} />
+
+      <section className="section alt">
+        <div className="wrap">
+          <div className="split">
+            <div>
+              <div className="eyebrow">Quality</div>
+              <h2 className="h2">Safety and leak review before anything goes live</h2>
+              <p className="lead" style={{ marginTop: 16 }}>
+                New and edited questions pass a review for clarity, bias and leak risk before candidates see them.
+              </p>
+            </div>
+            <ProductScreenMockup
+              src="/images/mockups/tablet/L04-ContentReview.webp"
+              alt="Question safety and leak review queue"
+              width={1528}
+              height={996}
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div dangerouslySetInnerHTML={{ __html: CTA_BOTTOM }} />
       <FAQ
         topic="Question Library"
         items={[

@@ -23,7 +23,7 @@ const RAW_CONTENT = `<article>
         </div>
       </div>
       <div class="shot">
-        <img src="/images/product/prevent-cheating-evidence.png" alt="Proctoring, code similarity evidence and integrity review in SetBenchmark" width="1440" height="900" loading="eager" decoding="async"/>
+        <img src="/images/mockups/laptop/prevent-cheating-evidence.webp" alt="Proctoring, code similarity evidence and integrity review in SetBenchmark" width="1812" height="1070" loading="eager" decoding="async"/>
       </div>
     </div>
   </div>
