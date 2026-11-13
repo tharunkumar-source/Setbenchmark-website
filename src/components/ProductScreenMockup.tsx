@@ -11,9 +11,9 @@ export interface ProductScreenMockupProps {
   src: string;
   /** Accessible alternative text describing the UI inside the screen. */
   alt: string;
-  /** Intrinsic mockup image width (1812 for hero laptop, 1528 for internal tablet). */
+  /** Intrinsic mockup image width (3624 for 2x hero laptop, 3056 for 2x internal tablet). */
   width?: number;
-  /** Intrinsic mockup image height (1070 for hero laptop, 996 for internal tablet). */
+  /** Intrinsic mockup image height (2140 for 2x hero laptop, 1992 for 2x internal tablet). */
   height?: number;
   /** Image loading strategy ('eager' for hero above-the-fold, 'lazy' for lower split sections). */
   loading?: 'eager' | 'lazy';
@@ -26,8 +26,8 @@ export interface ProductScreenMockupProps {
 export const ProductScreenMockup: React.FC<ProductScreenMockupProps> = ({
   src,
   alt,
-  width = 1812,
-  height = 1070,
+  width = 3624,
+  height = 2140,
   loading = 'eager',
 }) => {
   return (

@@ -1,7 +1,7 @@
 """
-Generates complete, alpha-transparent Silver MacBook Pro (hero) and Straight Silver Tablet
-(internal sections) device mockup images by compositing unmodified 1440x900 product UI
-screenshots inside 4x-supersampled anti-aliased device hardware frames.
+Generates complete, ultra-high-definition 2x Retina (3624x2140 laptop, 3056x1992 tablet)
+device mockup images by compositing pristine 2880x1800 product UI screenshots inside
+anti-aliased aluminum hardware frames.
 
 Usage:
   python scripts/generate_mockup_images.py              # Build active hero/internal mockups used in src/
@@ -23,8 +23,9 @@ MOCKUPS_DIR = ROOT / "public" / "images" / "mockups"
 LAPTOP_DIR = MOCKUPS_DIR / "laptop"
 TABLET_DIR = MOCKUPS_DIR / "tablet"
 
-SCREEN_W = 1440
-SCREEN_H = 900
+SCALE = 2
+SCREEN_W = 1440 * SCALE  # 2880
+SCREEN_H = 900 * SCALE   # 1800
 
 
 def make_vertical_gradient(w: int, h: int, stops: list[tuple[float, tuple[int, int, int, int]]]) -> Image.Image:
@@ -59,12 +60,11 @@ def make_horizontal_gradient(w: int, h: int, stops: list[tuple[float, tuple[int,
     return strip.resize((w, h), Image.Resampling.BILINEAR)
 
 
-def rounded_rect_mask(size: tuple[int, int], radii: tuple[int, int, int, int], scale: int = 4) -> Image.Image:
+def rounded_rect_mask(size: tuple[int, int], radii: tuple[int, int, int, int], scale: int = 2) -> Image.Image:
     """Render an anti-aliased L-mode mask for a rectangle with per-corner radii (tl, tr, br, bl)."""
     w, h = size
     sw, sh = w * scale, h * scale
     tl, tr, br, bl = (r * scale for r in radii)
-    # Clamp radii safely so opposite corners never exceed box dimensions
     tl = min(tl, sw // 2, sh // 2)
     tr = min(tr, sw // 2, sh // 2)
     br = min(br, sw // 2, sh - tr)
@@ -125,30 +125,30 @@ def rounded_rect_mask(size: tuple[int, int], radii: tuple[int, int, int, int], s
 
 
 def build_laptop_template() -> tuple[Image.Image, tuple[int, int]]:
-    """Build the 1812x1076 Silver Aluminum Unibody MacBook Pro template RGBA + screen (x, y)."""
-    margin_x = 18
-    margin_top = 12
-    bezel_side = 28
-    bezel_top = 36
-    bezel_bottom = 28
-    rim = 5
-    base_h = 46
-    shadow_pad_bottom = 44
+    """Build the 3624x2140 2x Retina Silver Aluminum Unibody MacBook Pro template RGBA + screen (x, y)."""
+    margin_x = 18 * SCALE        # 36
+    margin_top = 12 * SCALE      # 24
+    bezel_side = 28 * SCALE      # 56
+    bezel_top = 36 * SCALE       # 72
+    bezel_bottom = 28 * SCALE    # 56
+    rim = 5 * SCALE              # 10
+    base_h = 46 * SCALE          # 92
+    shadow_pad_bottom = 44 * SCALE # 88
 
-    lid_inner_w = SCREEN_W + 2 * bezel_side
-    lid_inner_h = SCREEN_H + bezel_top + bezel_bottom
-    lid_w = lid_inner_w + 2 * rim          # 1506
-    lid_h = lid_inner_h + rim              # 969 (bottom meets base directly)
-    base_w = 1776                          # ~84.8% lid/base ratio -> 135px wings each side
+    lid_inner_w = SCREEN_W + 2 * bezel_side # 2992
+    lid_inner_h = SCREEN_H + bezel_top + bezel_bottom # 1928
+    lid_w = lid_inner_w + 2 * rim          # 3012
+    lid_h = lid_inner_h + rim              # 1938
+    base_w = 1776 * SCALE                  # 3552
 
-    canvas_w = base_w + 2 * margin_x       # 1812
+    canvas_w = base_w + 2 * margin_x       # 3624
     lid_x = (canvas_w - lid_w) // 2
     lid_y = margin_top
     screen_x = lid_x + rim + bezel_side
     screen_y = lid_y + rim + bezel_top
     base_x = margin_x
-    base_y = lid_y + lid_h - 1
-    canvas_h = base_y + base_h + shadow_pad_bottom  # 1070
+    base_y = lid_y + lid_h - 1 * SCALE
+    canvas_h = base_y + base_h + shadow_pad_bottom  # 2140
 
     canvas = Image.new("RGBA", (canvas_w, canvas_h), (0, 0, 0, 0))
 
@@ -156,28 +156,32 @@ def build_laptop_template() -> tuple[Image.Image, tuple[int, int]]:
     shadow_layer = Image.new("RGBA", (canvas_w, canvas_h), (0, 0, 0, 0))
     sd = ImageDraw.Draw(shadow_layer)
     sd.rounded_rectangle(
-        [base_x + 20, base_y + base_h - 8, base_x + base_w - 20, base_y + base_h + 10],
-        radius=12,
+        [base_x + 20 * SCALE, base_y + base_h - 8 * SCALE, base_x + base_w - 20 * SCALE, base_y + base_h + 10 * SCALE],
+        radius=12 * SCALE,
         fill=(15, 23, 42, 76),
     )
-    shadow_tight = shadow_layer.filter(ImageFilter.GaussianBlur(radius=7))
+    shadow_tight = shadow_layer.filter(ImageFilter.GaussianBlur(radius=7 * SCALE))
     canvas.alpha_composite(shadow_tight)
 
     shadow_wide_layer = Image.new("RGBA", (canvas_w, canvas_h), (0, 0, 0, 0))
     swd = ImageDraw.Draw(shadow_wide_layer)
     swd.rounded_rectangle(
-        [base_x + 12, base_y + base_h - 4, base_x + base_w - 12, base_y + base_h + 22],
-        radius=18,
+        [base_x + 12 * SCALE, base_y + base_h - 4 * SCALE, base_x + base_w - 12 * SCALE, base_y + base_h + 22 * SCALE],
+        radius=18 * SCALE,
         fill=(15, 23, 42, 46),
     )
-    shadow_wide = shadow_wide_layer.filter(ImageFilter.GaussianBlur(radius=18))
+    shadow_wide = shadow_wide_layer.filter(ImageFilter.GaussianBlur(radius=18 * SCALE))
     canvas.alpha_composite(shadow_wide)
 
     # 2. Display lid subtle cast drop shadow
     lid_shadow_layer = Image.new("RGBA", (canvas_w, canvas_h), (0, 0, 0, 0))
     lsd = ImageDraw.Draw(lid_shadow_layer)
-    lsd.rounded_rectangle([lid_x, lid_y + 2, lid_x + lid_w, lid_y + lid_h + 2], radius=38, fill=(15, 23, 42, 34))
-    canvas.alpha_composite(lid_shadow_layer.filter(ImageFilter.GaussianBlur(radius=6)))
+    lsd.rounded_rectangle(
+        [lid_x, lid_y + 2 * SCALE, lid_x + lid_w, lid_y + lid_h + 2 * SCALE],
+        radius=38 * SCALE,
+        fill=(15, 23, 42, 34),
+    )
+    canvas.alpha_composite(lid_shadow_layer.filter(ImageFilter.GaussianBlur(radius=6 * SCALE)))
 
     # 3. Display lid outer silver aluminum rim
     rim_grad = make_vertical_gradient(
@@ -190,7 +194,7 @@ def build_laptop_template() -> tuple[Image.Image, tuple[int, int]]:
             (1.0, (164, 173, 189, 255)),
         ],
     )
-    rim_mask = rounded_rect_mask((lid_w, lid_h), (38, 38, 0, 0))
+    rim_mask = rounded_rect_mask((lid_w, lid_h), (38 * SCALE, 38 * SCALE, 0, 0))
     lid_rim = Image.new("RGBA", (lid_w, lid_h), (0, 0, 0, 0))
     lid_rim.paste(rim_grad, (0, 0), rim_mask)
     canvas.alpha_composite(lid_rim, (lid_x, lid_y))
@@ -198,15 +202,14 @@ def build_laptop_template() -> tuple[Image.Image, tuple[int, int]]:
     # Crisp dark hairline around outer lid perimeter + inner white top highlight
     hairline_layer = Image.new("RGBA", (lid_w, lid_h), (0, 0, 0, 0))
     hd = ImageDraw.Draw(hairline_layer)
-    hd.rounded_rectangle([0, 0, lid_w - 1, lid_h + 20], radius=38, outline=(100, 110, 128, 120), width=1)
-    hd.rounded_rectangle([1, 1, lid_w - 2, lid_h + 20], radius=37, outline=(255, 255, 255, 110), width=1)
+    hd.rounded_rectangle([0, 0, lid_w - 1, lid_h + 20 * SCALE], radius=38 * SCALE, outline=(100, 110, 128, 120), width=SCALE)
+    hd.rounded_rectangle([1 * SCALE, 1 * SCALE, lid_w - 1 - 1 * SCALE, lid_h + 20 * SCALE], radius=37 * SCALE, outline=(255, 255, 255, 110), width=SCALE)
     canvas.alpha_composite(hairline_layer, (lid_x, lid_y))
 
     # 4. Glossy black glass display bezel
     glass_layer = Image.new("RGBA", (lid_inner_w, lid_inner_h), (9, 11, 14, 255))
-    glass_mask = rounded_rect_mask((lid_inner_w, lid_inner_h), (33, 33, 0, 0))
+    glass_mask = rounded_rect_mask((lid_inner_w, lid_inner_h), (33 * SCALE, 33 * SCALE, 0, 0))
 
-    # Subtle diagonal bezel reflection strictly outside the inner screen rectangle
     sheen = Image.new("RGBA", (lid_inner_w, lid_inner_h), (0, 0, 0, 0))
     shd = ImageDraw.Draw(sheen)
     shd.polygon(
@@ -218,29 +221,28 @@ def build_laptop_template() -> tuple[Image.Image, tuple[int, int]]:
         ],
         fill=(255, 255, 255, 24),
     )
-    # Punch out exact screen interior so zero gloss falls on the UI
     shd.rectangle(
         [bezel_side, bezel_top, bezel_side + SCREEN_W - 1, bezel_top + SCREEN_H - 1],
         fill=(0, 0, 0, 0),
     )
     glass_layer = Image.alpha_composite(glass_layer, sheen)
 
-    # Top-center discreet webcam lens (4x supersampled)
-    cam_w, cam_h = 24 * 4, 24 * 4
-    cam_hi = Image.new("RGBA", (cam_w, cam_h), (0, 0, 0, 0))
+    # Top-center discreet webcam lens
+    cam_diam = 24 * SCALE
+    cam_hi = Image.new("RGBA", (cam_diam * 4, cam_diam * 4), (0, 0, 0, 0))
     cd = ImageDraw.Draw(cam_hi)
-    cd.ellipse([20, 20, cam_w - 20, cam_h - 20], fill=(28, 36, 52, 255), outline=(255, 255, 255, 55), width=4)
-    cd.ellipse([34, 34, cam_w - 34, cam_h - 34], fill=(5, 8, 14, 255))
-    cd.ellipse([40, 38, 50, 48], fill=(95, 138, 196, 175))
-    cam_aa = cam_hi.resize((24, 24), Image.Resampling.LANCZOS)
-    glass_layer.alpha_composite(cam_aa, ((lid_inner_w - 24) // 2, bezel_top // 2 - 12))
+    cd.ellipse([20 * SCALE, 20 * SCALE, (cam_diam - 5) * 4, (cam_diam - 5) * 4], fill=(28, 36, 52, 255), outline=(255, 255, 255, 55), width=4 * SCALE)
+    cd.ellipse([34 * SCALE, 34 * SCALE, (cam_diam - 8) * 4, (cam_diam - 8) * 4], fill=(5, 8, 14, 255))
+    cd.ellipse([40 * SCALE, 38 * SCALE, 50 * SCALE, 48 * SCALE], fill=(95, 138, 196, 175))
+    cam_aa = cam_hi.resize((cam_diam, cam_diam), Image.Resampling.LANCZOS)
+    glass_layer.alpha_composite(cam_aa, ((lid_inner_w - cam_diam) // 2, bezel_top // 2 - 12 * SCALE))
 
-    # Subtle 1px screen edge recess border
+    # Subtle screen edge recess border
     gd = ImageDraw.Draw(glass_layer)
     gd.rectangle(
-        [bezel_side - 1, bezel_top - 1, bezel_side + SCREEN_W, bezel_top + SCREEN_H],
+        [bezel_side - 1 * SCALE, bezel_top - 1 * SCALE, bezel_side + SCREEN_W, bezel_top + SCREEN_H],
         outline=(255, 255, 255, 18),
-        width=1,
+        width=SCALE,
     )
 
     lid_glass = Image.new("RGBA", (lid_inner_w, lid_inner_h), (0, 0, 0, 0))
@@ -252,12 +254,12 @@ def build_laptop_template() -> tuple[Image.Image, tuple[int, int]]:
         base_w,
         base_h,
         [
-            (0.0, (148, 157, 173, 255)),     # Hinge shadow hairline
-            (0.05, (248, 250, 253, 255)),    # Top deck specular edge
+            (0.0, (148, 157, 173, 255)),
+            (0.05, (248, 250, 253, 255)),
             (0.24, (234, 238, 244, 255)),
             (0.58, (214, 220, 230, 255)),
             (0.82, (181, 190, 203, 255)),
-            (1.0, (124, 134, 150, 255)),     # Curved dark bottom bevel
+            (1.0, (124, 134, 150, 255)),
         ],
     )
     base_hshad = make_horizontal_gradient(
@@ -278,8 +280,9 @@ def build_laptop_template() -> tuple[Image.Image, tuple[int, int]]:
     )
     base_comp = Image.alpha_composite(base_vgrad, base_hshad)
 
-    # Centered pill-shaped recessed thumb scoop notch (4x supersampled onto base)
-    notch_w, notch_h = 250, 16
+    # Centered notch
+    notch_w = 250 * SCALE
+    notch_h = 16 * SCALE
     nx = (base_w - notch_w) // 2
     notch_vgrad = make_vertical_gradient(
         notch_w,
@@ -301,19 +304,17 @@ def build_laptop_template() -> tuple[Image.Image, tuple[int, int]]:
         ],
     )
     notch_fill = Image.alpha_composite(notch_vgrad, notch_side)
-    notch_mask = rounded_rect_mask((notch_w, notch_h), (0, 0, 13, 13))
+    notch_mask = rounded_rect_mask((notch_w, notch_h), (0, 0, 13 * SCALE, 13 * SCALE))
     base_comp.paste(notch_fill, (nx, 0), notch_mask)
 
-    # Subtle bottom highlight rim directly below the thumb scoop notch
-    lip = Image.new("RGBA", (notch_w + 4, 3), (255, 255, 255, 210))
-    lip_mask = rounded_rect_mask((notch_w + 4, 3), (0, 0, 2, 2))
-    lip_masked = Image.new("RGBA", (notch_w + 4, 3), (0, 0, 0, 0))
+    lip = Image.new("RGBA", (notch_w + 4 * SCALE, 3 * SCALE), (255, 255, 255, 210))
+    lip_mask = rounded_rect_mask((notch_w + 4 * SCALE, 3 * SCALE), (0, 0, 2 * SCALE, 2 * SCALE))
+    lip_masked = Image.new("RGBA", (notch_w + 4 * SCALE, 3 * SCALE), (0, 0, 0, 0))
     lip_masked.paste(lip, (0, 0), lip_mask)
-    base_comp.alpha_composite(lip_masked, (nx - 2, notch_h - 1))
+    base_comp.alpha_composite(lip_masked, (nx - 2 * SCALE, notch_h - 1 * SCALE))
 
-    # Crisp thin outer perimeter border matching exact top + curved bottom mask
-    base_mask = rounded_rect_mask((base_w, base_h), (4, 4, 40, 40))
-    inner_eroded = base_mask.filter(ImageFilter.MinFilter(3))
+    base_mask = rounded_rect_mask((base_w, base_h), (4 * SCALE, 4 * SCALE, 40 * SCALE, 40 * SCALE))
+    inner_eroded = base_mask.filter(ImageFilter.MinFilter(5))
     edge_alpha = ImageChops.subtract(base_mask, inner_eroded)
     border_img = Image.new("RGBA", (base_w, base_h), (120, 130, 146, 130))
     border_layer = Image.new("RGBA", (base_w, base_h), (0, 0, 0, 0))
@@ -328,19 +329,19 @@ def build_laptop_template() -> tuple[Image.Image, tuple[int, int]]:
 
 
 def build_tablet_template() -> tuple[Image.Image, Image.Image, tuple[int, int]]:
-    """Build the 1532x996 Straight Silver & Glass Tablet template + rounded inner screen mask."""
-    margin_x = 18
-    margin_top = 10
-    shadow_pad_bottom = 34
-    bezel = 22
-    rim = 4
-    inner_radius = 20
-    outer_radius = inner_radius + bezel + rim  # concentric 46px
+    """Build the 3056x1992 2x Retina Straight Silver & Glass Tablet template + rounded inner screen mask."""
+    margin_x = 18 * SCALE          # 36
+    margin_top = 10 * SCALE        # 20
+    shadow_pad_bottom = 34 * SCALE # 68
+    bezel = 22 * SCALE             # 44
+    rim = 4 * SCALE                # 8
+    inner_radius = 20 * SCALE      # 40
+    outer_radius = inner_radius + bezel + rim  # 92
 
-    tablet_w = SCREEN_W + 2 * bezel + 2 * rim   # 1492
-    tablet_h = SCREEN_H + 2 * bezel + 2 * rim   # 952
-    canvas_w = tablet_w + 2 * margin_x          # 1528
-    canvas_h = tablet_h + margin_top + shadow_pad_bottom  # 996
+    tablet_w = SCREEN_W + 2 * bezel + 2 * rim   # 2984
+    tablet_h = SCREEN_H + 2 * bezel + 2 * rim   # 1904
+    canvas_w = tablet_w + 2 * margin_x          # 3056
+    canvas_h = tablet_h + margin_top + shadow_pad_bottom  # 1992
 
     tx, ty = margin_x, margin_top
     sx, sy = tx + rim + bezel, ty + rim + bezel
@@ -350,15 +351,15 @@ def build_tablet_template() -> tuple[Image.Image, Image.Image, tuple[int, int]]:
     # 1. Soft transparent drop shadow below tablet
     sh1 = Image.new("RGBA", (canvas_w, canvas_h), (0, 0, 0, 0))
     sd1 = ImageDraw.Draw(sh1)
-    sd1.rounded_rectangle([tx + 10, ty + 14, tx + tablet_w - 10, ty + tablet_h + 12], radius=outer_radius, fill=(15, 23, 42, 62))
-    canvas.alpha_composite(sh1.filter(ImageFilter.GaussianBlur(radius=14)))
+    sd1.rounded_rectangle([tx + 10 * SCALE, ty + 14 * SCALE, tx + tablet_w - 10 * SCALE, ty + tablet_h + 12 * SCALE], radius=outer_radius, fill=(15, 23, 42, 62))
+    canvas.alpha_composite(sh1.filter(ImageFilter.GaussianBlur(radius=14 * SCALE)))
 
     sh2 = Image.new("RGBA", (canvas_w, canvas_h), (0, 0, 0, 0))
     sd2 = ImageDraw.Draw(sh2)
-    sd2.rounded_rectangle([tx + 4, ty + 6, tx + tablet_w - 4, ty + tablet_h + 5], radius=outer_radius, fill=(15, 23, 42, 34))
-    canvas.alpha_composite(sh2.filter(ImageFilter.GaussianBlur(radius=4)))
+    sd2.rounded_rectangle([tx + 4 * SCALE, ty + 6 * SCALE, tx + tablet_w - 4 * SCALE, ty + tablet_h + 5 * SCALE], radius=outer_radius, fill=(15, 23, 42, 34))
+    canvas.alpha_composite(sh2.filter(ImageFilter.GaussianBlur(radius=4 * SCALE)))
 
-    # 2. Subtle extruded brushed aluminum bottom thickness lip (3px) for tactile slab depth
+    # 2. Tactile depth lip
     lip_grad = make_horizontal_gradient(
         tablet_w,
         tablet_h,
@@ -373,9 +374,9 @@ def build_tablet_template() -> tuple[Image.Image, Image.Image, tuple[int, int]]:
     lip_mask = rounded_rect_mask((tablet_w, tablet_h), (outer_radius,) * 4)
     lip_layer = Image.new("RGBA", (tablet_w, tablet_h), (0, 0, 0, 0))
     lip_layer.paste(lip_grad, (0, 0), lip_mask)
-    canvas.alpha_composite(lip_layer, (tx, ty + 4))
+    canvas.alpha_composite(lip_layer, (tx, ty + 4 * SCALE))
 
-    # 3. Machined brushed-silver outer aluminum rim
+    # 3. Outer aluminum rim
     rim_grad = make_vertical_gradient(
         tablet_w,
         tablet_h,
@@ -390,12 +391,11 @@ def build_tablet_template() -> tuple[Image.Image, Image.Image, tuple[int, int]]:
     rim_layer.paste(rim_grad, (0, 0), rim_mask)
     canvas.alpha_composite(rim_layer, (tx, ty))
 
-    # 4. Uniform glossy black glass bezel all 4 sides
+    # 4. Glass bezel
     inner_w, inner_h = tablet_w - 2 * rim, tablet_h - 2 * rim
     glass_layer = Image.new("RGBA", (inner_w, inner_h), (9, 11, 14, 255))
     glass_mask = rounded_rect_mask((inner_w, inner_h), (inner_radius + bezel,) * 4)
 
-    # Whisper-subtle bezel corner sheen strictly outside the 1440x900 display area
     sheen = Image.new("RGBA", (inner_w, inner_h), (0, 0, 0, 0))
     shd = ImageDraw.Draw(sheen)
     shd.polygon(
@@ -410,21 +410,20 @@ def build_tablet_template() -> tuple[Image.Image, Image.Image, tuple[int, int]]:
     shd.rounded_rectangle([bezel, bezel, bezel + SCREEN_W - 1, bezel + SCREEN_H - 1], radius=inner_radius, fill=(0, 0, 0, 0))
     glass_layer = Image.alpha_composite(glass_layer, sheen)
 
-    # Centered discreet top front camera lens dot
-    cam_hi = Image.new("RGBA", (64, 64), (0, 0, 0, 0))
+    cam_diam = 16 * SCALE
+    cam_hi = Image.new("RGBA", (cam_diam * 4, cam_diam * 4), (0, 0, 0, 0))
     cd = ImageDraw.Draw(cam_hi)
-    cd.ellipse([14, 14, 50, 50], fill=(24, 32, 46, 255), outline=(255, 255, 255, 48), width=3)
-    cd.ellipse([24, 24, 40, 40], fill=(5, 7, 12, 255))
-    cam_aa = cam_hi.resize((16, 16), Image.Resampling.LANCZOS)
-    glass_layer.alpha_composite(cam_aa, ((inner_w - 16) // 2, bezel // 2 - 8))
+    cd.ellipse([14 * SCALE, 14 * SCALE, (cam_diam - 2) * 4, (cam_diam - 2) * 4], fill=(24, 32, 46, 255), outline=(255, 255, 255, 48), width=3 * SCALE)
+    cd.ellipse([24 * SCALE, 24 * SCALE, (cam_diam - 5) * 4, (cam_diam - 5) * 4], fill=(5, 7, 12, 255))
+    cam_aa = cam_hi.resize((cam_diam, cam_diam), Image.Resampling.LANCZOS)
+    glass_layer.alpha_composite(cam_aa, ((inner_w - cam_diam) // 2, bezel // 2 - 8 * SCALE))
 
-    # Crisp 1px inner screen border highlight
     gd = ImageDraw.Draw(glass_layer)
     gd.rounded_rectangle(
-        [bezel - 1, bezel - 1, bezel + SCREEN_W, bezel + SCREEN_H],
-        radius=inner_radius + 1,
+        [bezel - 1 * SCALE, bezel - 1 * SCALE, bezel + SCREEN_W, bezel + SCREEN_H],
+        radius=inner_radius + 1 * SCALE,
         outline=(255, 255, 255, 22),
-        width=1,
+        width=SCALE,
     )
 
     glass_final = Image.new("RGBA", (inner_w, inner_h), (0, 0, 0, 0))
@@ -472,6 +471,7 @@ def load_ui(filename: str) -> Image.Image:
     src = Image.open(PRODUCT_DIR / filename).convert("RGBA")
     if src.size != (SCREEN_W, SCREEN_H):
         src = src.resize((SCREEN_W, SCREEN_H), Image.Resampling.LANCZOS)
+        src = src.filter(ImageFilter.UnsharpMask(radius=1.2, percent=120, threshold=1))
     return src
 
 
@@ -502,11 +502,13 @@ def main() -> None:
     LAPTOP_DIR.mkdir(parents=True, exist_ok=True)
     TABLET_DIR.mkdir(parents=True, exist_ok=True)
 
+    print(f"Building 2x Retina hardware templates (Screen: {SCREEN_W}x{SCREEN_H})...")
     laptop_tpl, laptop_xy = build_laptop_template()
     tablet_tpl, tablet_mask, tablet_xy = build_tablet_template()
+    print(f"Laptop template: {laptop_tpl.size}, Tablet template: {tablet_tpl.size}")
 
     if args.sample:
-        lp = render_laptop(laptop_tpl, laptop_xy, "coding-assessments-repo.png", LAPTOP_DIR)
+        lp = render_laptop(laptop_tpl, laptop_xy, "C05-Coding.webp", LAPTOP_DIR)
         tp = render_tablet(tablet_tpl, tablet_mask, tablet_xy, "C06-AIAllowed.webp", TABLET_DIR)
         print(f"Sample laptop ({laptop_tpl.size}): {lp} -> {lp.stat().st_size // 1024} KB")
         print(f"Sample tablet ({tablet_tpl.size}): {tp} -> {tp.stat().st_size // 1024} KB")
@@ -521,16 +523,22 @@ def main() -> None:
         hero_files = sorted(hero_set)
         internal_files = sorted(internal_set)
 
+    print(f"Rendering {len(hero_files)} laptop mockups and {len(internal_files)} tablet mockups at 2x Retina...")
     total_kb = 0
-    for f in hero_files:
+    for i, f in enumerate(hero_files, 1):
         p = render_laptop(laptop_tpl, laptop_xy, f, LAPTOP_DIR)
-        total_kb += p.stat().st_size // 1024
-    for f in internal_files:
+        kb = p.stat().st_size // 1024
+        total_kb += kb
+        print(f"[{i}/{len(hero_files)}] Laptop: {p.name} ({kb} KB)")
+
+    for j, f in enumerate(internal_files, 1):
         p = render_tablet(tablet_tpl, tablet_mask, tablet_xy, f, TABLET_DIR)
-        total_kb += p.stat().st_size // 1024
+        kb = p.stat().st_size // 1024
+        total_kb += kb
+        print(f"[{j}/{len(internal_files)}] Tablet: {p.name} ({kb} KB)")
 
     print(
-        f"Generated {len(hero_files)} laptop mockups ({laptop_tpl.size[0]}x{laptop_tpl.size[1]}) "
+        f"\nSUCCESS! Generated {len(hero_files)} laptop mockups ({laptop_tpl.size[0]}x{laptop_tpl.size[1]}) "
         f"and {len(internal_files)} tablet mockups ({tablet_tpl.size[0]}x{tablet_tpl.size[1]}), total {total_kb} KB"
     )
 

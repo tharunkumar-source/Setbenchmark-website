@@ -25,7 +25,7 @@ const RAW_CONTENT = `<div>
   </div>
 </section>
 
-<!-- Recent Blog Posts Section (Featured + Stacked) -->
+<!-- Recent Blog Posts Section (Featured Hero + 2 Stacked Side Cards) -->
 <section class="section" style="padding:72px 0 56px">
   <div class="wrap">
     <div class="head" style="margin-bottom:32px">
@@ -34,10 +34,10 @@ const RAW_CONTENT = `<div>
     </div>
 
     <div class="recent-blogs-grid">
-      <!-- Large Featured Card -->
+      <!-- Large Featured Card (Left) -->
       <a href="/blog/assessing-developers-in-the-age-of-ai/" class="featured-blog-card">
-        <div class="thumb-wrap">
-          <img src="/images/product/C07-Agentic.webp" alt="Assessing engineers on planning and supervising AI coding agents" width="720" height="420" loading="eager" decoding="async"/>
+        <div class="featured-card-thumb">
+          <img src="/images/blog/cards/card-ai-assessment.webp" alt="Assessing engineers on planning, prompt judgment, and supervising AI coding agents" width="1200" height="675" loading="eager" decoding="async"/>
         </div>
         <div class="card-body">
           <div class="blog-meta-row">
@@ -58,50 +58,69 @@ const RAW_CONTENT = `<div>
               </div>
             </div>
             <span class="blog-read-btn">
-              Read Guide
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              Read Article →
             </span>
           </div>
         </div>
       </a>
 
-      <!-- Stacked Right Column Cards -->
+      <!-- Stacked Right Column Cards (Text-First on Desktop, Image on Mobile) -->
       <div class="recent-stacked-col">
+        <!-- Side Card 1 -->
         <a href="/blog/how-to-prevent-cheating-in-online-coding-tests/" class="stacked-blog-card">
-          <div class="thumb-wrap">
-            <img src="/images/product/H13-Integrity.webp" alt="Integrity review and evidence in SetBenchmark" width="360" height="240" loading="eager" decoding="async"/>
+          <div class="stacked-card-thumb">
+            <img src="/images/blog/cards/card-prevent-cheating.webp" alt="Integrity review and evidence in SetBenchmark" width="1200" height="675" loading="eager" decoding="async"/>
           </div>
           <div class="card-body">
             <div class="blog-meta-row">
               <span class="blog-tag-badge">Integrity</span>
               <span>·</span>
               <span>30 Oct 2026</span>
+              <span>·</span>
+              <span>9 min read</span>
             </div>
             <h3>How to prevent cheating in online coding tests</h3>
             <p>Practical ways to reduce cheating: test design, structural similarity, and a human review process that protects honest candidates.</p>
-            <div class="blog-card-footer" style="padding-top:12px">
-              <span class="blog-read-btn" style="padding:4px 10px;font-size:12.5px">
-                Read Guide →
+            <div class="blog-card-footer">
+              <div class="blog-author-row">
+                <div class="blog-author-avatar">DK</div>
+                <div class="blog-author-info">
+                  <span class="blog-author-name">Daniel Kim</span>
+                  <span class="blog-author-role">Integrity Lead</span>
+                </div>
+              </div>
+              <span class="blog-read-btn">
+                Read →
               </span>
             </div>
           </div>
         </a>
 
+        <!-- Side Card 2 -->
         <a href="/blog/campus-hiring-coding-assessment-guide/" class="stacked-blog-card">
-          <div class="thumb-wrap">
-            <img src="/images/product/H08-Pipeline.webp" alt="Campus recruitment pipeline and drive ranking" width="360" height="240" loading="eager" decoding="async"/>
+          <div class="stacked-card-thumb">
+            <img src="/images/blog/cards/card-campus-hiring.webp" alt="Campus recruitment pipeline and drive ranking" width="1200" height="675" loading="eager" decoding="async"/>
           </div>
           <div class="card-body">
             <div class="blog-meta-row">
               <span class="blog-tag-badge">Campus Hiring</span>
               <span>·</span>
               <span>30 Oct 2026</span>
+              <span>·</span>
+              <span>8 min read</span>
             </div>
             <h3>Campus hiring with coding assessments</h3>
             <p>A step-by-step plan for running fair, high-throughput campus drives across universities, from test design to shortlist.</p>
-            <div class="blog-card-footer" style="padding-top:12px">
-              <span class="blog-read-btn" style="padding:4px 10px;font-size:12.5px">
-                Read Guide →
+            <div class="blog-card-footer">
+              <div class="blog-author-row">
+                <div class="blog-author-avatar">AR</div>
+                <div class="blog-author-info">
+                  <span class="blog-author-name">Ananya Roy</span>
+                  <span class="blog-author-role">Campus Talent</span>
+                </div>
+              </div>
+              <span class="blog-read-btn">
+                Read →
               </span>
             </div>
           </div>
@@ -122,8 +141,8 @@ const RAW_CONTENT = `<div>
     <div class="grid g3">
       <!-- Card 1 -->
       <a href="/blog/assessing-developers-in-the-age-of-ai/" class="grid-blog-card">
-        <div class="thumb-wrap">
-          <img src="/images/product/C07-Agentic.webp" alt="Assessing engineers on planning and AI agents" width="480" height="270" loading="lazy" decoding="async"/>
+        <div class="grid-card-thumb">
+          <img src="/images/blog/cards/card-ai-assessment.webp" alt="Assessing engineers on planning, prompt judgment, and supervising AI coding agents" width="1200" height="675" loading="lazy" decoding="async"/>
         </div>
         <div class="card-body">
           <div class="blog-meta-row">
@@ -142,8 +161,8 @@ const RAW_CONTENT = `<div>
 
       <!-- Card 2 -->
       <a href="/blog/how-to-prevent-cheating-in-online-coding-tests/" class="grid-blog-card">
-        <div class="thumb-wrap">
-          <img src="/images/product/H13-Integrity.webp" alt="Integrity review and evidence queue" width="480" height="270" loading="lazy" decoding="async"/>
+        <div class="grid-card-thumb">
+          <img src="/images/blog/cards/card-prevent-cheating.webp" alt="Integrity review and AST matching evidence queue" width="1200" height="675" loading="lazy" decoding="async"/>
         </div>
         <div class="card-body">
           <div class="blog-meta-row">
@@ -162,8 +181,8 @@ const RAW_CONTENT = `<div>
 
       <!-- Card 3 -->
       <a href="/blog/campus-hiring-coding-assessment-guide/" class="grid-blog-card">
-        <div class="thumb-wrap">
-          <img src="/images/product/H08-Pipeline.webp" alt="Campus hiring drive pipeline and ranking" width="480" height="270" loading="lazy" decoding="async"/>
+        <div class="grid-card-thumb">
+          <img src="/images/blog/cards/card-campus-hiring.webp" alt="Campus hiring drive pipeline and cohort ranking" width="1200" height="675" loading="lazy" decoding="async"/>
         </div>
         <div class="card-body">
           <div class="blog-meta-row">
@@ -182,12 +201,12 @@ const RAW_CONTENT = `<div>
 
       <!-- Card 4 -->
       <a href="/blog/how-to-design-a-fair-coding-assessment/" class="grid-blog-card">
-        <div class="thumb-wrap">
-          <img src="/images/product/A03-Fairness.webp" alt="Fair assessment rubric and group pass rate analytics" width="480" height="270" loading="lazy" decoding="async"/>
+        <div class="grid-card-thumb">
+          <img src="/images/blog/cards/card-fairness-rubric.webp" alt="12-point rubric for fair coding assessments: objective criteria, blind evaluation, and demographic parity" width="1200" height="675" loading="lazy" decoding="async"/>
         </div>
         <div class="card-body">
           <div class="blog-meta-row">
-            <span class="blog-tag-badge">Fairness & Rubrics</span>
+            <span class="blog-tag-badge">Fairness &amp; Rubrics</span>
             <span>·</span>
             <span>30 Oct 2026</span>
           </div>
@@ -202,8 +221,8 @@ const RAW_CONTENT = `<div>
 
       <!-- Card 5 -->
       <a href="/product/coding-assessments/" class="grid-blog-card">
-        <div class="thumb-wrap">
-          <img src="/images/product/C05-Coding.webp" alt="Real-world online code editor with tests and timer" width="480" height="270" loading="lazy" decoding="async"/>
+        <div class="grid-card-thumb">
+          <img src="/images/blog/cards/card-real-work-vs-puzzles.webp" alt="Real-world online code editor with tests and timer" width="1200" height="675" loading="lazy" decoding="async"/>
         </div>
         <div class="card-body">
           <div class="blog-meta-row">
@@ -222,12 +241,12 @@ const RAW_CONTENT = `<div>
 
       <!-- Card 6 -->
       <a href="/security/" class="grid-blog-card">
-        <div class="thumb-wrap">
-          <img src="/images/product/AD09-DataPrivacy.webp" alt="Security, encryption and DPDP compliance in SetBenchmark" width="480" height="270" loading="lazy" decoding="async"/>
+        <div class="grid-card-thumb">
+          <img src="/images/blog/cards/card-candidate-privacy.webp" alt="Security, encryption and DPDP compliance in SetBenchmark" width="1200" height="675" loading="lazy" decoding="async"/>
         </div>
         <div class="card-body">
           <div class="blog-meta-row">
-            <span class="blog-tag-badge">Privacy & DPDP</span>
+            <span class="blog-tag-badge">Privacy &amp; DPDP</span>
             <span>·</span>
             <span>Compliance</span>
           </div>
