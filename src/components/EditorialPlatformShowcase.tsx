@@ -273,7 +273,7 @@ export const EditorialPlatformShowcase: React.FC = () => {
               key={card.id} 
               className={`editorial-feature-card ${idx === currentIndex ? 'is-active' : ''}`}
             >
-              {/* Card Image Banner with Badge */}
+              {/* Card Image Banner */}
               <div className="editorial-card-img-wrap">
                 <img 
                   src={card.image} 
@@ -284,7 +284,6 @@ export const EditorialPlatformShowcase: React.FC = () => {
                   decoding="sync"
                   className="editorial-card-img"
                 />
-                <span className="editorial-card-badge">{card.badge}</span>
               </div>
 
               {/* Card Body in Sleek Dark Theme */}
