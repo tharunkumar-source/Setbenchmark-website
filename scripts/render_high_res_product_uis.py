@@ -38,22 +38,56 @@ html, body {
 }
 body {
   font-size: 15px !important;
+  color: #0F172A !important;
 }
-.mono, pre, code {
-  font-family: 'JetBrains Mono', monospace !important;
+h1, .h1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  color: #0F172A !important;
+}
+h2, h3, .h2, .h3 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #0F172A !important;
+}
+p, li, td, th {
   font-size: 14.5px !important;
-  font-weight: 500 !important;
-  color: #FFFFFF !important;
+  color: #1E293B !important;
+  line-height: 1.6 !important;
 }
-.kw { font-weight: 600 !important; }
-.fn { font-weight: 600 !important; }
-.st { font-weight: 500 !important; }
-.ty { font-weight: 600 !important; }
-.ln { font-size: 12.5px !important; opacity: 0.8 !important; }
-h1 { font-size: 20px !important; font-weight: 700 !important; color: #0B0F19 !important; }
-h2, h3 { font-size: 15px !important; font-weight: 700 !important; color: #0B0F19 !important; }
-p, li, td, th { font-size: 14px !important; color: #1E2337 !important; }
-.chip { font-weight: 600 !important; font-size: 12.5px !important; }
+.mono, code, pre {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+/* Code and spans inside problem descriptions or light surfaces */
+p .mono, li .mono, p code, li code {
+  color: #0F172A !important;
+  font-weight: 600 !important;
+}
+pre[style*='background:#F5'], pre[style*='background:#f5'],
+pre[style*='background: #F5'], pre[style*='background: #f5'],
+pre[style*='background:#fff'], pre[style*='background:#FFF'],
+div[style*='background:#F5'] .mono, div[style*='background:#f5'] .mono,
+div[style*='background:#fff'] .mono, div[style*='background:#FFF'] .mono {
+  color: #0F172A !important;
+  font-weight: 500 !important;
+}
+/* Dark panels (editor, test runner, terminal, dark sidebars) */
+[style*='background:#252B45'] .mono, [style*='background:#121626'] .mono,
+[style*='background:#161B2E'] .mono, [style*='background:#1E2337'] .mono,
+[style*='background:#0F1222'] .mono, [style*='background:#1A2035'] .mono,
+[style*='background:#141824'] .mono, [style*='background:#0B0F19'] .mono,
+[style*='background:#121626'] span, [style*='background:#141824'] span,
+[style*='background:#0F1222'] div, [style*='background:#0F1222'] span,
+pre[style*='color:#E6E9F5'] .mono, pre[style*='color:#E6E9F5'] {
+  color: #E6E9F5 !important;
+}
+.kw { color: #D2A8FF !important; font-weight: 600 !important; }
+.fn { color: #79C0FF !important; font-weight: 600 !important; }
+.st { color: #7EE787 !important; font-weight: 500 !important; }
+.cm { color: #8B949E !important; font-style: italic !important; }
+.ty { color: #FFA657 !important; font-weight: 600 !important; }
+.ln { font-size: 13px !important; color: #6E7681 !important; opacity: 1 !important; }
+.chip { font-weight: 600 !important; font-size: 13px !important; }
 </style>
 """
 

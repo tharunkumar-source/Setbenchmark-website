@@ -19,7 +19,7 @@ const FEATURE_CARDS: FeatureCard[] = [
     badge: 'REAL-WORLD REPO',
     title: 'Coding Assessments',
     description: 'Screen developers with full repository tasks, API implementations, and system design challenges that mirror production.',
-    image: '/images/product/C05-Coding.webp',
+    image: '/images/mockups/tablet/C05-Coding.webp',
     alt: 'Candidate coding environment with in-browser IDE and test runner',
     url: '/product/coding-assessments/',
   },
@@ -29,7 +29,7 @@ const FEATURE_CARDS: FeatureCard[] = [
     badge: 'AI AGENTS & PROMPTS',
     title: 'AI Fluency Assessments',
     description: 'Evaluate how engineers prompt, review diffs, direct coding agents, and verify subtle hallucinations with AI tools.',
-    image: '/images/product/C06-AIAllowed.webp',
+    image: '/images/mockups/tablet/C06-AIAllowed.webp',
     alt: 'AI-allowed task with assistant chat panel and code diffs',
     url: '/product/ai-fluency-assessments/',
   },
@@ -39,7 +39,7 @@ const FEATURE_CARDS: FeatureCard[] = [
     badge: 'LIVE PAIRING & AI',
     title: 'AI & Live Coding Interviews',
     description: 'Conduct 24/7 adaptive technical first rounds or collaborative pair-programming with shared video, editor, and drawing canvas.',
-    image: '/images/product/I03-LiveInterviewer.webp',
+    image: '/images/mockups/tablet/I03-LiveInterviewer.webp',
     alt: 'Live coding interview panel with video feed and shared code editor',
     url: '/product/live-coding-interviews/',
   },
@@ -49,7 +49,7 @@ const FEATURE_CARDS: FeatureCard[] = [
     badge: 'BLIND HUMAN REVIEW',
     title: 'Proctoring & Anti-Cheat',
     description: 'Identity checks, screen tracking, and keystroke replay reviewed blind by humans—ensuring zero automatic disqualifications.',
-    image: '/images/product/H13-Integrity.webp',
+    image: '/images/mockups/tablet/H13-Integrity.webp',
     alt: 'Proctoring evidence timeline and keystroke playback audit',
     url: '/product/proctoring-integrity/',
   },
@@ -59,7 +59,7 @@ const FEATURE_CARDS: FeatureCard[] = [
     badge: 'LEAK-CHECKED',
     title: 'Question Library',
     description: 'Thousands of continuously rotating coding, SQL, and system design challenges actively monitored against web leaks.',
-    image: '/images/product/L01-Library.webp',
+    image: '/images/mockups/tablet/L01-Library.webp',
     alt: 'Curated technical question library categorized by skill and level',
     url: '/product/question-library/',
   },
@@ -69,7 +69,7 @@ const FEATURE_CARDS: FeatureCard[] = [
     badge: 'BENCHMARKS',
     title: 'Skills Intelligence',
     description: 'Map engineering competencies against 400+ peer attempts, identify team skill gaps, and benchmark candidates for your ATS.',
-    image: '/images/product/H11-Report.webp',
+    image: '/images/mockups/tablet/H11-Report.webp',
     alt: 'Candidate score report with skill percentiles and hiring workflow',
     url: '/product/skills-intelligence/',
   },
@@ -79,7 +79,7 @@ const FEATURE_CARDS: FeatureCard[] = [
     badge: '10+ ATS CONNECTORS',
     title: 'ATS & Workflow Integrations',
     description: 'Two-way synchronization with Greenhouse, Lever, Ashby, SmartRecruiters, Slack, and an extensible REST API.',
-    image: '/images/product/AD06-Integrations.webp',
+    image: '/images/mockups/tablet/AD06-Integrations.webp',
     alt: 'ATS and integration catalog connecting applicant tracking tools',
     url: '/integrations/',
   },
@@ -89,7 +89,7 @@ const FEATURE_CARDS: FeatureCard[] = [
     badge: 'VERIFIED CREDENTIALS',
     title: 'Developer Community',
     description: 'A global developer community featuring free practice sandboxes, coding contests, and employer-verifiable skill certifications.',
-    image: '/images/product/D01-PracticeCatalog.webp',
+    image: '/images/mockups/tablet/D01-PracticeCatalog.webp',
     alt: 'Developer practice catalog with verified assessment challenges',
     url: '/developers/',
   },
@@ -99,7 +99,7 @@ const FEATURE_CARDS: FeatureCard[] = [
     badge: 'SOC2 & RESIDENCY',
     title: 'Enterprise Security & Residency',
     description: 'Built for enterprise scale with SOC2 Type II compliance, local Mumbai & global data residency, and SAML 2.0 SSO.',
-    image: '/images/product/AD09-DataPrivacy.webp',
+    image: '/images/mockups/tablet/AD09-DataPrivacy.webp',
     alt: 'Security settings with SAML SSO, audit logs, and data residency controls',
     url: '/security/',
   },
@@ -280,8 +280,8 @@ export const EditorialPlatformShowcase: React.FC = () => {
                   alt={card.alt} 
                   width="720"
                   height="450"
-                  loading="lazy"
-                  decoding="async"
+                  loading="eager"
+                  decoding="sync"
                   className="editorial-card-img"
                 />
                 <span className="editorial-card-badge">{card.badge}</span>
