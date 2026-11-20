@@ -12,15 +12,27 @@ const RAW_CONTENT = `<article>
         <li><span aria-current="page">Privacy policy</span></li>
       </ol>
     </nav>
-    <div style="max-width:840px">
-      <div class="eyebrow" style="margin-bottom:12px;color:var(--brand-dark);font-weight:700">DATA PRIVACY &amp; COMPLIANCE</div>
-      <h1 class="h1" style="font-size:clamp(34px, 4.4vw, 52px);margin-bottom:16px">Privacy policy</h1>
-      <p class="lead" style="font-size:18px;line-height:1.65;color:var(--text-2);margin-bottom:20px">
-        This policy explains how Kombee Technologies (India) Pvt. Ltd. (&quot;SetBenchmark&quot;, &quot;we&quot;, &quot;us&quot;) handles personal data when you visit setbenchmark.com, use our technical evaluation platform, take an assessment as a candidate, or participate in our developer community.
-      </p>
-      <div class="meta-row" style="margin-top:0">
-        <span>Effective date: <b>30 October 2026</b></span>
-        <span>Version: <b>2.4 (Enterprise &amp; DPDP 2023 Ready)</b></span>
+    <div class="phero-grid">
+      <div>
+        <div class="eyebrow" style="margin-bottom:12px;color:var(--brand-dark);font-weight:700">DATA PRIVACY &amp; COMPLIANCE</div>
+        <h1 class="h1" style="font-size:clamp(30px, 3.2vw, 44px);margin-bottom:16px">Privacy policy</h1>
+        <p class="lead" style="font-size:17px;line-height:1.65;color:var(--text-2);margin-bottom:20px">
+          This policy explains how Kombee Technologies (India) Pvt. Ltd. (&quot;SetBenchmark&quot;, &quot;we&quot;, &quot;us&quot;) handles personal data when you visit setbenchmark.com, use our technical evaluation platform, take an assessment as a candidate, or participate in our developer community.
+        </p>
+        <div class="meta-row" style="margin-top:0">
+          <span>Effective date: <b>30 October 2026</b></span>
+          <span>Version: <b>2.4 (Enterprise &amp; DPDP Ready)</b></span>
+        </div>
+      </div>
+      <div class="shot">
+        <img 
+          src="/images/mockups/laptop/AD09-DataPrivacy.webp" 
+          alt="SetBenchmark enterprise data privacy console with regional data isolation, retention policies, and GDPR / DPDP compliance controls" 
+          width="1812" 
+          height="1070" 
+          loading="eager" 
+          decoding="async"
+        />
       </div>
     </div>
   </div>

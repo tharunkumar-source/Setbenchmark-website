@@ -12,15 +12,27 @@ const RAW_CONTENT = `<article>
         <li><span aria-current="page">Refund and cancellation policy</span></li>
       </ol>
     </nav>
-    <div style="max-width:840px">
-      <div class="eyebrow" style="margin-bottom:12px;color:var(--brand-dark);font-weight:700">BILLING &amp; SUBSCRIPTION GUARANTEES</div>
-      <h1 class="h1" style="font-size:clamp(34px, 4.4vw, 52px);margin-bottom:16px">Refund &amp; cancellation policy</h1>
-      <p class="lead" style="font-size:18px;line-height:1.65;color:var(--text-2);margin-bottom:20px">
-        Clear, transparent policies on subscription trials, monthly cancellations, annual satisfaction guarantees, and rapid billing error resolutions.
-      </p>
-      <div class="meta-row" style="margin-top:0">
-        <span>Effective date: <b>30 October 2026</b></span>
-        <span>Version: <b>2.4 (Self-Serve &amp; Enterprise Billing)</b></span>
+    <div class="phero-grid">
+      <div>
+        <div class="eyebrow" style="margin-bottom:12px;color:var(--brand-dark);font-weight:700">BILLING &amp; SUBSCRIPTION GUARANTEES</div>
+        <h1 class="h1" style="font-size:clamp(30px, 3.2vw, 44px);margin-bottom:16px">Refund &amp; cancellation policy</h1>
+        <p class="lead" style="font-size:17px;line-height:1.65;color:var(--text-2);margin-bottom:20px">
+          Clear, transparent policies on subscription trials, monthly cancellations, annual satisfaction guarantees, and rapid billing error resolutions.
+        </p>
+        <div class="meta-row" style="margin-top:0">
+          <span>Effective date: <b>30 October 2026</b></span>
+          <span>Version: <b>2.4 (Self-Serve &amp; Enterprise Billing)</b></span>
+        </div>
+      </div>
+      <div class="shot">
+        <img 
+          src="/images/mockups/laptop/uae-aed-pricing.webp" 
+          alt="SetBenchmark usage and billing dashboard with assessment attempts tracking, allowance caps, and automated trial telemetry" 
+          width="1812" 
+          height="1070" 
+          loading="eager" 
+          decoding="async"
+        />
       </div>
     </div>
   </div>
