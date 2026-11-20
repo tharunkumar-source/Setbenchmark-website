@@ -444,17 +444,17 @@ export const Header: React.FC = () => {
     </div>
   </div>
 
-  {/*  6. LEGAL MEGA MENU (3 items from official sitemap, excluding 404)  */}
+  {/*  6. LEGAL MEGA MENU (Full 1240px 3-Column Standard Layout)  */}
   <div className={`nav-item ${activeMenu === 5 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(5)} onMouseLeave={handleMouseLeave}>
     <button className={`nav-link ${activeMenu === 5 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(5, e)} aria-haspopup="true" aria-expanded={activeMenu === 5}>
       Legal <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg>
     </button>
     <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
-      <div className="mega-card" style={{ maxWidth: '820px', width: '100%' }}>
-        <div className="mega-menu-grid mega-grid-2-cols">
-          {/*  Column 1: LEGAL & COMPLIANCE (3)  */}
+      <div className="mega-card" style={{ maxWidth: '1240px', width: '100%' }}>
+        <div className="mega-menu-grid">
+          {/*  Column 1: POLICIES & TERMS  */}
           <div className="mega-col">
-            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> LEGAL &amp; COMPLIANCE</div>
+            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> POLICIES &amp; TERMS</div>
             <Link to="/legal/privacy/" className="mega-item" onClick={closeMenuImmediately}>
               <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span>
               <div className="mega-item-text"><b>Privacy Policy</b><span>Candidate data consent &amp; GDPR / DPDP terms</span></div>
@@ -469,17 +469,32 @@ export const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/*  Column 2: COMPLIANCE & TRUST HIGHLIGHT  */}
+          {/*  Column 2: SECURITY & ENTERPRISE COMPLIANCE  */}
           <div className="mega-col">
-            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> COMPLIANCE &amp; PRIVACY</div>
-            <div style={{ padding: '20px', background: 'var(--canvas)', borderRadius: '14px', border: '1px solid var(--line)' }}>
-              <div style={{ fontSize: '14px', fontWeight: 700, color: 'var(--ink)', marginBottom: '6px' }}>Candidate Privacy &amp; Data Protection</div>
-              <p style={{ fontSize: '13px', color: 'var(--text-2)', lineHeight: '1.55', margin: 0 }}>
-                End-to-end TLS 1.3 encryption, regional data isolation in AWS Sydney/Mumbai/Frankfurt, and strict GDPR &amp; DPDP compliance.
-              </p>
-              <Link to="/legal/privacy/" className="btn btn-ghost" onClick={closeMenuImmediately} style={{ marginTop: '16px', width: '100%', justifyContent: 'center', fontSize: '13px', padding: '8px 14px', borderColor: 'var(--brand-border-light)', color: 'var(--brand-dark)' }}>
-                Read privacy policy →
-              </Link>
+            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> SECURITY &amp; COMPLIANCE</div>
+            <Link to="/security/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg></span>
+              <div className="mega-item-text"><b>Security Architecture</b><span>SOC 2 Type II ready, TLS 1.3 &amp; ISO 27001 alignment</span></div>
+            </Link>
+            <Link to="/legal/privacy/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></span>
+              <div className="mega-item-text"><b>Data Governance</b><span>EU GDPR DPA, Indian DPDP Act &amp; regional data isolation</span></div>
+            </Link>
+            <Link to="/contact/" className="mega-item" onClick={closeMenuImmediately}>
+              <span className="mega-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
+              <div className="mega-item-text"><b>Compliance Inquiries</b><span>Request security whitepapers, questionnaires &amp; SLAs</span></div>
+            </Link>
+          </div>
+
+          {/*  Column 3: FEATURED COMPLIANCE SPOTLIGHT  */}
+          <div className="mega-col">
+            <div className="mega-feature-card">
+              <div>
+                <span className="mega-feature-badge">TRUST &amp; SAFETY</span>
+                <div className="mega-feature-title">Candidate Privacy &amp; Data Protection</div>
+                <p className="mega-feature-desc">End-to-end TLS 1.3 encryption, regional data isolation in AWS Sydney, Mumbai &amp; Frankfurt, and strict GDPR &amp; DPDP compliance.</p>
+              </div>
+              <Link to="/legal/privacy/" className="mega-feature-link" onClick={closeMenuImmediately}>Read privacy policy →</Link>
             </div>
           </div>
         </div>

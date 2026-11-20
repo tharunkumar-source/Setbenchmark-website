@@ -38,30 +38,20 @@ p { margin: 0; }
 
 /* Responsive container scaling for wide viewports to eliminate excess empty margins */
 :root {
-  --max: 1200px;
-}
-@media (min-width: 1280px) {
-  :root {
-    --max: max(1200px, min(95vw, 1480px));
-  }
+  --max: 1240px;
 }
 @media (min-width: 1440px) {
   :root {
-    --max: max(1360px, min(95vw, 1720px));
+    --max: 1320px;
   }
 }
-@media (min-width: 1680px) {
+@media (min-width: 1720px) {
   :root {
-    --max: max(1560px, min(96vw, 1960px));
-  }
-}
-@media (min-width: 1920px) {
-  :root {
-    --max: min(96vw, 2200px);
+    --max: 1380px;
   }
 }
 
-.wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(16px, 1.8vw, 36px); }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(20px, 2.5vw, 40px); }
 .section { padding: 96px 0; }
 .section.tight { padding: 64px 0; }
 .section.alt { background: var(--canvas); }
@@ -183,7 +173,7 @@ p { margin: 0; }
   position: relative;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0 clamp(16px, 1.8vw, 36px);
+  padding: 0 clamp(20px, 2.5vw, 40px);
 }
 .top-banner-link {
   color: #07190F;
@@ -284,7 +274,7 @@ p { margin: 0; }
   height: 72px;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0 clamp(16px, 1.8vw, 36px);
+  padding: 0 clamp(20px, 2.5vw, 40px);
   position: static;
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; font-size: 20px; letter-spacing: -0.02em; text-decoration: none !important; flex-shrink: 0; }
@@ -7148,35 +7138,36 @@ h1, h2, h3, h4, h5, h6,
   .phero-grid,
   .phero-grid:has(.shot, .pmock),
   .phero-grid--mockup {
-    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-    gap: clamp(28px, 3vw, 56px);
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    gap: clamp(28px, 3.5vw, 48px);
     align-items: center;
   }
   .phero-grid .h1,
   .phero-grid:has(.shot, .pmock) .h1,
   .phero-grid--mockup .h1 {
-    font-size: clamp(28px, 2.6vw, 44px);
-    max-width: 660px;
+    font-size: clamp(28px, 2.75vw, 38px);
+    max-width: 580px;
   }
   .phero-grid .lead,
   .phero-grid:has(.shot, .pmock) .lead,
   .phero-grid--mockup .lead {
-    max-width: 620px;
-    font-size: clamp(16px, 1.15vw, 18.5px);
+    max-width: 520px;
+    font-size: 17px;
+    line-height: 1.6;
   }
   .split:has(.shot, .pmock) {
-    grid-template-columns: minmax(0, 0.90fr) minmax(0, 1.10fr);
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
     gap: 48px;
     align-items: center;
   }
   .split.rev:has(.shot, .pmock) {
-    grid-template-columns: minmax(0, 1.10fr) minmax(0, 0.90fr);
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     gap: 48px;
     align-items: center;
   }
   section:not(.phero) .pmock,
   section:not(.phero) .shot {
-    max-width: min(880px, 100%);
+    max-width: 680px;
     width: 100%;
   }
   section:not(.phero) .split:not(.rev) .pmock,
