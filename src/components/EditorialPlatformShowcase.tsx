@@ -254,54 +254,94 @@ export const EditorialPlatformShowcase: React.FC = () => {
         </div>
       </div>
 
-      {/* 4 Cards Viewport - Full Display Page Width from Start to End */}
-      <div 
-        ref={bleedRef}
-        className="editorial-carousel-viewport-full"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-      >
-        <div 
-          ref={trackRef}
-          className="editorial-carousel-track"
-          style={{
-            transform: `translateX(calc(-${currentIndex} * ((100% + 20px) / 4)))`,
-          }}
-        >
-          {filteredCards.map((card, idx) => (
-            <article 
-              key={card.id} 
-              className={`editorial-feature-card ${idx === currentIndex ? 'is-active' : ''}`}
-            >
-              {/* Card Image Banner */}
-              <div className="editorial-card-img-wrap">
-                <img 
-                  src={card.image} 
-                  alt={card.alt} 
-                  width="720"
-                  height="450"
-                  loading="eager"
-                  decoding="sync"
-                  className="editorial-card-img"
-                />
-              </div>
+      {/* Viewport: If fewer than 4 cards, follow normal page padding (.wrap) like all other sections;
+          If 4 or more cards, allow full-width edge-bleed carousel overflow */}
+      {filteredCards.length < 4 ? (
+        <div className="wrap">
+          <div className="editorial-cards-contained-grid">
+            {filteredCards.map((card) => (
+              <article 
+                key={card.id} 
+                className="editorial-feature-card"
+              >
+                {/* Card Image Banner */}
+                <div className="editorial-card-img-wrap">
+                  <img 
+                    src={card.image} 
+                    alt={card.alt} 
+                    width="720"
+                    height="450"
+                    loading="eager"
+                    decoding="sync"
+                    className="editorial-card-img"
+                  />
+                </div>
 
-              {/* Card Body in Sleek Dark Theme */}
-              <div className="editorial-card-content">
-                <h3 className="editorial-card-title">{card.title}</h3>
-                <p className="editorial-card-desc">{card.description}</p>
-                <Link to={card.url} className="editorial-card-action">
-                  <span>Explore module</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </Link>
-              </div>
-            </article>
-          ))}
+                {/* Card Body */}
+                <div className="editorial-card-content">
+                  <h3 className="editorial-card-title">{card.title}</h3>
+                  <p className="editorial-card-desc">{card.description}</p>
+                  <Link to={card.url} className="editorial-card-action">
+                    <span>Explore module</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
+      ) : (
+        <div 
+          ref={bleedRef}
+          className="editorial-carousel-viewport-full"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div 
+            ref={trackRef}
+            className="editorial-carousel-track"
+            style={{
+              transform: `translateX(calc(-${currentIndex} * ((100% + 20px) / 4)))`,
+            }}
+          >
+            {filteredCards.map((card, idx) => (
+              <article 
+                key={card.id} 
+                className={`editorial-feature-card ${idx === currentIndex ? 'is-active' : ''}`}
+              >
+                {/* Card Image Banner */}
+                <div className="editorial-card-img-wrap">
+                  <img 
+                    src={card.image} 
+                    alt={card.alt} 
+                    width="720"
+                    height="450"
+                    loading="eager"
+                    decoding="sync"
+                    className="editorial-card-img"
+                  />
+                </div>
+
+                {/* Card Body in Sleek Dark Theme */}
+                <div className="editorial-card-content">
+                  <h3 className="editorial-card-title">{card.title}</h3>
+                  <p className="editorial-card-desc">{card.description}</p>
+                  <Link to={card.url} className="editorial-card-action">
+                    <span>Explore module</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 };
