@@ -2,7 +2,7 @@ import React from 'react';
 import { SEOHead } from '@/components/SEOHead';
 
 
-const RAW_CONTENT = `<section class="phero"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Product</span></li></ol></nav><div class="phero-grid">
+const RAW_CONTENT = `<section class="phero"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Product</span></li></ol></nav><div class="phero-grid phero-grid--mockup">
 <div>
 <div class="eyebrow">The platform</div><h1 class="h1">One platform to assess, interview and grow engineers</h1><p class="lead">Pick the modules you need today and add more as you grow. Everything shares one question library, one skills taxonomy and one candidate record.</p><div class="btns"><a class="btn btn-primary" href="https://app.setbenchmark.com/signup">Start free trial</a><a href="/contact/" class="btn btn-ghost">Book a demo</a></div>
 </div>

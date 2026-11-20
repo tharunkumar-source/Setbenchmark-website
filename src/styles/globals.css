@@ -37,28 +37,31 @@ p { margin: 0; }
 .skip:focus { left: 16px; }
 
 /* Responsive container scaling for wide viewports to eliminate excess empty margins */
-@media (min-width: 1360px) {
+:root {
+  --max: 1200px;
+}
+@media (min-width: 1280px) {
   :root {
-    --max: 1320px;
+    --max: max(1200px, min(95vw, 1480px));
   }
 }
-@media (min-width: 1536px) {
+@media (min-width: 1440px) {
   :root {
-    --max: 1480px;
+    --max: max(1360px, min(95vw, 1720px));
   }
 }
-@media (min-width: 1720px) {
+@media (min-width: 1680px) {
   :root {
-    --max: 1620px;
+    --max: max(1560px, min(96vw, 1960px));
   }
 }
 @media (min-width: 1920px) {
   :root {
-    --max: 1740px;
+    --max: min(96vw, 2200px);
   }
 }
 
-.wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(24px, 2.5vw, 48px); }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(16px, 1.8vw, 36px); }
 .section { padding: 96px 0; }
 .section.tight { padding: 64px 0; }
 .section.alt { background: var(--canvas); }
@@ -180,7 +183,7 @@ p { margin: 0; }
   position: relative;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0 clamp(24px, 2.5vw, 48px);
+  padding: 0 clamp(16px, 1.8vw, 36px);
 }
 .top-banner-link {
   color: #07190F;
@@ -281,7 +284,7 @@ p { margin: 0; }
   height: 72px;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0 clamp(24px, 2.5vw, 48px);
+  padding: 0 clamp(16px, 1.8vw, 36px);
   position: static;
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; font-size: 20px; letter-spacing: -0.02em; text-decoration: none !important; flex-shrink: 0; }
@@ -633,6 +636,22 @@ p { margin: 0; }
   color: var(--text-3);
   font-size: 13px;
   font-weight: 500;
+  flex-wrap: wrap;
+}
+.mega-bottom-trust span,
+.mega-bottom-trust .mega-trust-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+}
+.mega-bottom-trust span svg,
+.mega-bottom-trust .mega-trust-item svg {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
 }
 .mega-bottom-trust a {
   color: var(--ink);
@@ -7126,20 +7145,23 @@ h1, h2, h3, h4, h5, h6,
    just a clean responsive <img> with zero HTML/CSS bezel layers.
    ========================================================================== */
 @media (min-width: 901px) {
+  .phero-grid,
   .phero-grid:has(.shot, .pmock),
   .phero-grid--mockup {
-    grid-template-columns: minmax(0, 0.84fr) minmax(0, 1.16fr);
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
     gap: clamp(28px, 3vw, 56px);
     align-items: center;
   }
+  .phero-grid .h1,
   .phero-grid:has(.shot, .pmock) .h1,
   .phero-grid--mockup .h1 {
     font-size: clamp(28px, 2.6vw, 44px);
     max-width: 660px;
   }
+  .phero-grid .lead,
   .phero-grid:has(.shot, .pmock) .lead,
   .phero-grid--mockup .lead {
-    max-width: 600px;
+    max-width: 620px;
     font-size: clamp(16px, 1.15vw, 18.5px);
   }
   .split:has(.shot, .pmock) {
@@ -7154,7 +7176,7 @@ h1, h2, h3, h4, h5, h6,
   }
   section:not(.phero) .pmock,
   section:not(.phero) .shot {
-    max-width: min(840px, 100%);
+    max-width: min(880px, 100%);
     width: 100%;
   }
   section:not(.phero) .split:not(.rev) .pmock,

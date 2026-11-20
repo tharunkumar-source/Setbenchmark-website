@@ -189,8 +189,8 @@ export const Header: React.FC = () => {
         <div className="mega-bottom">
           <div className="mega-bottom-cta">Ready to test candidates on real skills? <Link to="/free-trial/" onClick={closeMenuImmediately}>Start free trial →</Link></div>
           <div className="mega-bottom-trust">
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> 14-day free trial</span>
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> No credit card required</span>
+            <span className="mega-trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> 14-day free trial</span>
+            <span className="mega-trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> No credit card required</span>
             <Link to="/contact/" onClick={closeMenuImmediately}>Book a demo →</Link>
           </div>
         </div>
@@ -254,8 +254,8 @@ export const Header: React.FC = () => {
         <div className="mega-bottom">
           <div className="mega-bottom-cta">Need a custom evaluation workflow? <Link to="/contact/" onClick={closeMenuImmediately}>Talk to our hiring architects →</Link></div>
           <div className="mega-bottom-trust">
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> ATS integrations ready</span>
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> Custom scoring rubrics</span>
+            <span className="mega-trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> ATS integrations ready</span>
+            <span className="mega-trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> Custom scoring rubrics</span>
             <Link to="/pricing/" onClick={closeMenuImmediately}>View transparent pricing →</Link>
           </div>
         </div>
@@ -435,8 +435,8 @@ export const Header: React.FC = () => {
         <div className="mega-bottom">
           <div className="mega-bottom-cta">Explore our engineering playbooks &amp; benchmarks: <Link to="/blog/" onClick={closeMenuImmediately}>Browse all blog articles →</Link></div>
           <div className="mega-bottom-trust">
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> Human-reviewed</span>
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> Research-backed</span>
+            <span className="mega-trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> Human-reviewed</span>
+            <span className="mega-trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> Research-backed</span>
             <Link to="/about/" onClick={closeMenuImmediately}>Learn our story →</Link>
           </div>
         </div>
@@ -486,8 +486,8 @@ export const Header: React.FC = () => {
         <div className="mega-bottom">
           <div className="mega-bottom-cta">Questions regarding compliance, DPA or security questionnaires? <Link to="/contact/" onClick={closeMenuImmediately}>Contact compliance officer →</Link></div>
           <div className="mega-bottom-trust">
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> GDPR &amp; DPDP Compliant</span>
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> SOC 2 Type II Ready</span>
+            <span className="mega-trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> GDPR &amp; DPDP Compliant</span>
+            <span className="mega-trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"></path></svg> SOC 2 Type II Ready</span>
             <Link to="/legal/terms/" onClick={closeMenuImmediately}>Terms of service →</Link>
           </div>
         </div>
