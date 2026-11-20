@@ -450,7 +450,7 @@ export const Header: React.FC = () => {
       Legal <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg>
     </button>
     <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
-      <div className="mega-card" style={{ maxWidth: '1020px', width: '100%' }}>
+      <div className="mega-card" style={{ maxWidth: '1180px', width: '100%' }}>
         <div className="mega-menu-grid mega-grid-2-cols">
           {/*  Column 1: LEGAL & COMPLIANCE (3)  */}
           <div className="mega-col">
@@ -469,17 +469,15 @@ export const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/*  Column 2: COMPLIANCE & TRUST HIGHLIGHT  */}
+          {/*  Column 2: COMPLIANCE & PRIVACY CALLOUT CARD  */}
           <div className="mega-col">
-            <div className="mega-col-head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> COMPLIANCE &amp; PRIVACY</div>
-            <div style={{ padding: '24px 28px', background: 'var(--canvas)', borderRadius: '14px', border: '1px solid var(--line)' }}>
-              <div style={{ fontSize: '15px', fontWeight: 700, color: 'var(--ink)', marginBottom: '8px' }}>Candidate Privacy &amp; Data Protection</div>
-              <p style={{ fontSize: '13.5px', color: 'var(--text-2)', lineHeight: '1.6', margin: 0 }}>
-                End-to-end TLS 1.3 encryption, regional data isolation in AWS Sydney/Mumbai/Frankfurt, and strict GDPR &amp; DPDP compliance.
-              </p>
-              <Link to="/legal/privacy/" className="btn btn-ghost" onClick={closeMenuImmediately} style={{ marginTop: '20px', width: '100%', justifyContent: 'center', fontSize: '13.5px', padding: '10px 18px', borderColor: 'var(--brand-border-light)', color: 'var(--brand-dark)' }}>
-                Read privacy policy →
-              </Link>
+            <div className="mega-feature-card">
+              <div>
+                <span className="mega-feature-badge">DATA PRIVACY</span>
+                <div className="mega-feature-title">Candidate Privacy &amp; Data Protection</div>
+                <p className="mega-feature-desc">End-to-end TLS 1.3 encryption, regional data isolation in AWS Sydney/Mumbai/Frankfurt, and strict GDPR &amp; DPDP compliance.</p>
+              </div>
+              <Link to="/legal/privacy/" className="mega-feature-link" onClick={closeMenuImmediately}>Read privacy policy →</Link>
             </div>
           </div>
         </div>
