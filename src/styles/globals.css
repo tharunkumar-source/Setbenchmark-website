@@ -36,7 +36,29 @@ p { margin: 0; }
 .skip { position: absolute; left: -9999px; top: 8px; background: var(--white); padding: 8px 14px; z-index: 100; border-radius: 8px; }
 .skip:focus { left: 16px; }
 
-.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+/* Responsive container scaling for wide viewports to eliminate excess empty margins */
+@media (min-width: 1360px) {
+  :root {
+    --max: 1320px;
+  }
+}
+@media (min-width: 1536px) {
+  :root {
+    --max: 1480px;
+  }
+}
+@media (min-width: 1720px) {
+  :root {
+    --max: 1620px;
+  }
+}
+@media (min-width: 1920px) {
+  :root {
+    --max: 1740px;
+  }
+}
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(24px, 2.5vw, 48px); }
 .section { padding: 96px 0; }
 .section.tight { padding: 64px 0; }
 .section.alt { background: var(--canvas); }
@@ -156,8 +178,9 @@ p { margin: 0; }
   align-items: center;
   justify-content: center;
   position: relative;
-  max-width: 1200px;
+  max-width: var(--max);
   margin: 0 auto;
+  padding: 0 clamp(24px, 2.5vw, 48px);
 }
 .top-banner-link {
   color: #07190F;
@@ -256,9 +279,9 @@ p { margin: 0; }
   align-items: center;
   gap: 20px;
   height: 72px;
-  max-width: 1440px;
+  max-width: var(--max);
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 clamp(24px, 2.5vw, 48px);
   position: static;
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; font-size: 20px; letter-spacing: -0.02em; text-decoration: none !important; flex-shrink: 0; }
@@ -4313,7 +4336,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .hero-modern .wrap {
   position: relative;
   z-index: 2;
-  max-width: 1260px;
+  max-width: var(--max);
 }
 
 /* Layer 1: Visible Technical Engineering Blueprint Grid */
@@ -7105,17 +7128,19 @@ h1, h2, h3, h4, h5, h6,
 @media (min-width: 901px) {
   .phero-grid:has(.shot, .pmock),
   .phero-grid--mockup {
-    grid-template-columns: minmax(0, 0.74fr) minmax(0, 1.26fr);
-    gap: 28px;
+    grid-template-columns: minmax(0, 0.84fr) minmax(0, 1.16fr);
+    gap: clamp(28px, 3vw, 56px);
     align-items: center;
   }
   .phero-grid:has(.shot, .pmock) .h1,
   .phero-grid--mockup .h1 {
-    font-size: clamp(28px, 2.75vw, 37px);
+    font-size: clamp(28px, 2.6vw, 44px);
+    max-width: 660px;
   }
   .phero-grid:has(.shot, .pmock) .lead,
   .phero-grid--mockup .lead {
-    max-width: 490px;
+    max-width: 600px;
+    font-size: clamp(16px, 1.15vw, 18.5px);
   }
   .split:has(.shot, .pmock) {
     grid-template-columns: minmax(0, 0.90fr) minmax(0, 1.10fr);
@@ -7129,7 +7154,7 @@ h1, h2, h3, h4, h5, h6,
   }
   section:not(.phero) .pmock,
   section:not(.phero) .shot {
-    max-width: 640px;
+    max-width: min(840px, 100%);
     width: 100%;
   }
   section:not(.phero) .split:not(.rev) .pmock,
