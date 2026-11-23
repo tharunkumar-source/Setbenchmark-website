@@ -5,15 +5,41 @@ import { BrandLogo } from './BrandLogo';
 
 export const Header: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState<number | null>(null);
+  const [isLocked, setIsLocked] = useState<boolean>(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const [openMobileGroup, setOpenMobileGroup] = useState<string | null>('product');
   const closeTimerRef = useRef<NodeJS.Timeout | null>(null);
   const headerRef = useRef<HTMLElement | null>(null);
   const location = useLocation();
 
-  // Close menus on route change
+  // URL query parameter support (e.g. ?menu=legal or ?menu=product) to keep menu open for Figma export
   useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const menuParam = params.get('menu');
+    if (menuParam) {
+      const map: Record<string, number> = {
+        product: 1,
+        solutions: 2,
+        skilltests: 3,
+        skills: 3,
+        resources: 4,
+        legal: 5,
+        '1': 1,
+        '2': 2,
+        '3': 3,
+        '4': 4,
+        '5': 5,
+      };
+      const target = map[menuParam.toLowerCase()];
+      if (target) {
+        setActiveMenu(target);
+        setIsLocked(true);
+        return;
+      }
+    }
+    // Close menus on route change if no ?menu param
     setActiveMenu(null);
+    setIsLocked(false);
     setMobileMenuOpen(false);
   }, [location.pathname, location.search, location.hash]);
 
@@ -33,6 +59,7 @@ export const Header: React.FC = () => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
+        setIsLocked(false);
         setActiveMenu(null);
         setMobileMenuOpen(false);
       }
@@ -40,6 +67,7 @@ export const Header: React.FC = () => {
 
     const handleClickOutside = (e: MouseEvent) => {
       if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setIsLocked(false);
         setActiveMenu(null);
         setMobileMenuOpen(false);
       }
@@ -54,6 +82,7 @@ export const Header: React.FC = () => {
   }, []);
 
   const handleMouseEnter = (idx: number) => {
+    if (isLocked) return;
     if (closeTimerRef.current) {
       clearTimeout(closeTimerRef.current);
       closeTimerRef.current = null;
@@ -62,6 +91,7 @@ export const Header: React.FC = () => {
   };
 
   const handleMouseLeave = () => {
+    if (isLocked) return;
     closeTimerRef.current = setTimeout(() => {
       setActiveMenu(null);
     }, 150);
@@ -74,12 +104,14 @@ export const Header: React.FC = () => {
     }
   };
 
-  const closeMenuImmediately = () => {
+  const closeMenuImmediately = (force = false) => {
+    if (isLocked && !force) return;
     if (closeTimerRef.current) {
       clearTimeout(closeTimerRef.current);
       closeTimerRef.current = null;
     }
     setActiveMenu(null);
+    setIsLocked(false);
     if (typeof document !== 'undefined' && document.activeElement instanceof HTMLElement) {
       document.activeElement.blur();
     }
@@ -88,13 +120,21 @@ export const Header: React.FC = () => {
   const handleMenuClick = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
     if (target.closest('a') || target.closest('button')) {
-      closeMenuImmediately();
+      closeMenuImmediately(true);
     }
   };
 
   const handleNavClick = (idx: number, e: React.MouseEvent) => {
     e.preventDefault();
-    setActiveMenu(activeMenu === idx ? null : idx);
+    if (activeMenu === idx && isLocked) {
+      // Toggle unlock and close
+      setIsLocked(false);
+      setActiveMenu(null);
+    } else {
+      // Pin/lock this menu open so cursor can leave freely to extensions
+      setActiveMenu(idx);
+      setIsLocked(true);
+    }
   };
 
   const toggleMobileGroup = (group: string) => {
