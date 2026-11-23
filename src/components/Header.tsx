@@ -66,9 +66,14 @@ export const Header: React.FC = () => {
     };
 
     const handleClickOutside = (e: MouseEvent) => {
-      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+      const target = e.target as HTMLElement | null;
+      if (target && target.classList.contains('mega-popup-backdrop')) {
         setIsLocked(false);
         setActiveMenu(null);
+        return;
+      }
+      // When mega menu popup is open, do not auto-close on extension toolbar clicks
+      if (headerRef.current && !headerRef.current.contains(target as Node)) {
         setMobileMenuOpen(false);
       }
     };
@@ -81,60 +86,48 @@ export const Header: React.FC = () => {
     };
   }, []);
 
-  const handleMouseEnter = (idx: number) => {
-    if (isLocked) return;
-    if (closeTimerRef.current) {
-      clearTimeout(closeTimerRef.current);
-      closeTimerRef.current = null;
-    }
-    setActiveMenu(idx);
-  };
-
-  const handleMouseLeave = () => {
-    if (isLocked) return;
-    closeTimerRef.current = setTimeout(() => {
-      setActiveMenu(null);
-    }, 150);
-  };
-
-  const handleMenuEnter = () => {
-    if (closeTimerRef.current) {
-      clearTimeout(closeTimerRef.current);
-      closeTimerRef.current = null;
-    }
-  };
-
-  const closeMenuImmediately = (force = false) => {
-    if (isLocked && !force) return;
-    if (closeTimerRef.current) {
-      clearTimeout(closeTimerRef.current);
-      closeTimerRef.current = null;
-    }
+  const closeMenuImmediately = () => {
     setActiveMenu(null);
     setIsLocked(false);
-    if (typeof document !== 'undefined' && document.activeElement instanceof HTMLElement) {
-      document.activeElement.blur();
-    }
   };
+
+  const renderPopupTopbar = (title: string) => (
+    <div className="mega-popup-topbar">
+      <div className="mega-popup-title">
+        <span className="mega-popup-badge">POPUP PREVIEW</span>
+        <span>{title}</span>
+      </div>
+      <div className="mega-popup-tabs">
+        <button type="button" className={`mega-popup-tab-btn ${activeMenu === 1 ? 'is-active' : ''}`} onClick={() => setActiveMenu(1)}>Product</button>
+        <button type="button" className={`mega-popup-tab-btn ${activeMenu === 2 ? 'is-active' : ''}`} onClick={() => setActiveMenu(2)}>Solutions</button>
+        <button type="button" className={`mega-popup-tab-btn ${activeMenu === 3 ? 'is-active' : ''}`} onClick={() => setActiveMenu(3)}>Skill tests</button>
+        <button type="button" className={`mega-popup-tab-btn ${activeMenu === 4 ? 'is-active' : ''}`} onClick={() => setActiveMenu(4)}>Resources</button>
+        <button type="button" className={`mega-popup-tab-btn ${activeMenu === 5 ? 'is-active' : ''}`} onClick={() => setActiveMenu(5)}>Legal</button>
+      </div>
+      <button 
+        type="button" 
+        className="mega-popup-close-btn" 
+        onClick={(e) => {
+          e.stopPropagation();
+          setActiveMenu(null);
+        }}
+        aria-label="Close popup"
+      >
+        ✕ Close (Esc)
+      </button>
+    </div>
+  );
 
   const handleMenuClick = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
-    if (target.closest('a') || target.closest('button')) {
-      closeMenuImmediately(true);
+    if (target.closest('a')) {
+      setActiveMenu(null);
     }
   };
 
   const handleNavClick = (idx: number, e: React.MouseEvent) => {
     e.preventDefault();
-    if (activeMenu === idx && isLocked) {
-      // Toggle unlock and close
-      setIsLocked(false);
-      setActiveMenu(null);
-    } else {
-      // Pin/lock this menu open so cursor can leave freely to extensions
-      setActiveMenu(idx);
-      setIsLocked(true);
-    }
+    setActiveMenu(activeMenu === idx ? null : idx);
   };
 
   const toggleMobileGroup = (group: string) => {
@@ -147,6 +140,15 @@ export const Header: React.FC = () => {
 
   return (
     <>
+      {/* Mega Menu Popup Backdrop */}
+      {activeMenu !== null && (
+        <div 
+          className="mega-popup-backdrop" 
+          onClick={() => setActiveMenu(null)}
+          aria-label="Close menu popup"
+        />
+      )}
+
       {/* Top Announcement Banner */}
       <div className="top-banner">
         <div className="wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', textAlign: 'center' }}>
@@ -158,7 +160,7 @@ export const Header: React.FC = () => {
       </div>
 
       {/* Main Dark Header */}
-      <header className="hdr" ref={headerRef} onMouseLeave={closeMenuImmediately}>
+      <header className={`hdr ${activeMenu !== null ? "has-active-popup" : ""}`} ref={headerRef}>
         <a className="skip" href="#main">Skip to content</a>
         <div className="wrap hdr-in">
           {/* Brand Logo */}
@@ -170,9 +172,10 @@ export const Header: React.FC = () => {
           <nav className="nav" aria-label="Main">
   {/*  1. PRODUCT MEGA MENU  */}
   
-  <div className={`nav-item ${activeMenu === 1 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={handleMouseLeave}>
+  <div className={`nav-item ${activeMenu === 1 ? "is-open" : ""}`}>
     <button className={`nav-link ${activeMenu === 1 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(1, e)} aria-haspopup="true" aria-expanded={activeMenu === 1}>Product <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
-    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
+    <div className={`menu ${activeMenu === 1 ? "mega-popup-mode" : ""}`} onClick={handleMenuClick}>
+      {activeMenu === 1 && renderPopupTopbar("Product Mega Menu")}
       <div className="mega-card">
         <div className="mega-menu-grid mega-grid-3">
           {/*  Column 1: Assessments & Testing  */}
@@ -240,9 +243,10 @@ export const Header: React.FC = () => {
 
   {/*  2. SOLUTIONS MEGA MENU  */}
   
-  <div className={`nav-item ${activeMenu === 2 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(2)} onMouseLeave={handleMouseLeave}>
+  <div className={`nav-item ${activeMenu === 2 ? "is-open" : ""}`}>
     <button className={`nav-link ${activeMenu === 2 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(2, e)} aria-haspopup="true" aria-expanded={activeMenu === 2}>Solutions <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
-    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
+    <div className={`menu ${activeMenu === 2 ? "mega-popup-mode" : ""}`} onClick={handleMenuClick}>
+      {activeMenu === 2 && renderPopupTopbar("Solutions Mega Menu")}
       <div className="mega-card">
         <div className="mega-menu-grid mega-grid-3">
           {/*  Column 1: By Use Case  */}
@@ -304,9 +308,10 @@ export const Header: React.FC = () => {
   </div>
 
   {/*  3. SKILL TESTS MEGA MENU (13 items from official sitemap)  */}
-  <div className={`nav-item ${activeMenu === 3 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(3)} onMouseLeave={handleMouseLeave}>
+  <div className={`nav-item ${activeMenu === 3 ? "is-open" : ""}`}>
     <button className={`nav-link ${activeMenu === 3 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(3, e)} aria-haspopup="true" aria-expanded={activeMenu === 3}>Skill tests <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
-    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
+    <div className={`menu ${activeMenu === 3 ? "mega-popup-mode" : ""}`} onClick={handleMenuClick}>
+      {activeMenu === 3 && renderPopupTopbar("Skill Tests Mega Menu")}
       <div className="mega-card" style={{ maxWidth: '1240px', width: '100%' }}>
         <div className="mega-menu-grid mega-grid-4">
           {/*  Column 1: Languages (4)  */}
@@ -409,9 +414,10 @@ export const Header: React.FC = () => {
   </div>
 
   {/*  5. RESOURCES MEGA MENU (9 items from official sitemap)  */}
-  <div className={`nav-item ${activeMenu === 4 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(4)} onMouseLeave={handleMouseLeave}>
+  <div className={`nav-item ${activeMenu === 4 ? "is-open" : ""}`}>
     <button className={`nav-link ${activeMenu === 4 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(4, e)} aria-haspopup="true" aria-expanded={activeMenu === 4}>Resources <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
-    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
+    <div className={`menu ${activeMenu === 4 ? "mega-popup-mode" : ""}`} onClick={handleMenuClick}>
+      {activeMenu === 4 && renderPopupTopbar("Resources Mega Menu")}
       <div className="mega-card" style={{ maxWidth: '1180px', width: '100%' }}>
         <div className="mega-menu-grid mega-grid-3">
           {/*  Column 1: GUIDES & INSIGHTS (5)  */}
@@ -485,11 +491,12 @@ export const Header: React.FC = () => {
   </div>
 
   {/*  6. LEGAL MEGA MENU (3 items from official sitemap, excluding 404)  */}
-  <div className={`nav-item ${activeMenu === 5 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(5)} onMouseLeave={handleMouseLeave}>
+  <div className={`nav-item ${activeMenu === 5 ? "is-open" : ""}`}>
     <button className={`nav-link ${activeMenu === 5 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(5, e)} aria-haspopup="true" aria-expanded={activeMenu === 5}>
       Legal <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg>
     </button>
-    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
+    <div className={`menu ${activeMenu === 5 ? "mega-popup-mode" : ""}`} onClick={handleMenuClick}>
+      {activeMenu === 5 && renderPopupTopbar("Legal & Compliance Mega Menu")}
       <div className="mega-card" style={{ maxWidth: '1180px', width: '100%' }}>
         <div className="mega-menu-grid mega-grid-2-cols">
           {/*  Column 1: LEGAL & COMPLIANCE (3)  */}

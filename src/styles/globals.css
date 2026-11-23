@@ -367,6 +367,135 @@ p { margin: 0; }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ==========================================================================
+   MEGA MENU POPUP MODAL MODE (Temporary for Figma Capture & Inspection)
+   ========================================================================== */
+.mega-popup-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(15, 23, 42, 0.55) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  z-index: 9990 !important;
+  animation: megaDropdownFade 0.15s ease-out;
+}
+
+.hdr.has-active-popup {
+  z-index: 9999 !important;
+}
+
+.menu.mega-popup-mode {
+  position: fixed !important;
+  top: 76px !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: min(1200px, 96vw) !important;
+  max-height: calc(100vh - 96px) !important;
+  overflow-y: auto !important;
+  background: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.35), 0 0 0 1px rgba(15, 23, 42, 0.08) !important;
+  z-index: 9999 !important;
+  display: block !important;
+  pointer-events: auto !important;
+  padding: 0 !important;
+  animation: popupSlideDown 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@keyframes popupSlideDown {
+  from { opacity: 0; transform: translate(-50%, -8px) scale(0.99); }
+  to { opacity: 1; transform: translate(-50%, 0) scale(1); }
+}
+
+.mega-popup-topbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  padding: 10px 18px !important;
+  background: #0B1E13 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-sizing: border-box !important;
+  border-top-left-radius: 11px !important;
+  border-top-right-radius: 11px !important;
+}
+
+.mega-popup-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  color: #FFFFFF !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+}
+
+.mega-popup-badge {
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  padding: 3px 8px !important;
+  background: rgba(38, 208, 124, 0.2) !important;
+  color: #26D07C !important;
+  border: 1px solid rgba(38, 208, 124, 0.4) !important;
+  border-radius: 9999px !important;
+  text-transform: uppercase !important;
+}
+
+.mega-popup-tabs {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+}
+
+.mega-popup-tab-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 6px !important;
+  padding: 5px 12px !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  white-space: nowrap !important;
+}
+
+.mega-popup-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #FFFFFF !important;
+}
+
+.mega-popup-tab-btn.is-active {
+  background: #26D07C !important;
+  color: #07190F !important;
+  border-color: #26D07C !important;
+  font-weight: 700 !important;
+}
+
+.mega-popup-close-btn {
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: #FCA5A5 !important;
+  border: 1px solid rgba(239, 68, 68, 0.35) !important;
+  border-radius: 6px !important;
+  padding: 5px 12px !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  transition: all 0.15s ease !important;
+}
+
+.mega-popup-close-btn:hover {
+  background: rgba(239, 68, 68, 0.3) !important;
+  color: #FFFFFF !important;
+  border-color: #EF4444 !important;
+}
+
 /* External Mega Card Container (NO external border-radius, flush full-width) */
 .mega-card {
   background: var(--white) !important;
