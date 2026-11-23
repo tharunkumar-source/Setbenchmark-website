@@ -4223,9 +4223,9 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  color: #FFFFFF;
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  color: var(--ink);
   cursor: pointer;
   margin-left: auto;
   transition: all 0.15s ease;
@@ -4235,15 +4235,15 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 }
 
 .mobile-menu-btn:hover {
-  background: rgba(38, 208, 124, 0.12);
-  border-color: var(--lime);
-  color: var(--lime);
+  background: rgba(38, 208, 124, 0.1);
+  border-color: var(--brand, #26D07C);
+  color: var(--brand-dark, #167a48);
 }
 
 .mobile-menu-btn.is-active {
-  background: var(--lime);
+  background: var(--brand, #26D07C);
   color: #07190F;
-  border-color: var(--brand-cta-border);
+  border-color: var(--brand-dark, #167a48);
 }
 
 .mobile-drawer {
@@ -4254,9 +4254,9 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   width: 100%;
   max-height: calc(100vh - 100%);
   max-height: calc(100dvh - 100%);
-  background: #07190F;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6);
+  background: #FFFFFF;
+  border-top: 1px solid var(--line);
+  box-shadow: 0 20px 48px -10px rgba(15, 18, 34, 0.15), 0 2px 6px rgba(15, 18, 34, 0.04);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   padding: 16px 18px 48px;
@@ -4280,16 +4280,17 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 
 /* Mobile Nav Accordion Group */
 .mobile-nav-group {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: #F8FAFC;
+  border: 1px solid var(--line);
   border-radius: 12px;
   overflow: hidden;
-  transition: border-color 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .mobile-nav-group.is-open {
-  border-color: rgba(38, 208, 124, 0.25);
-  background: rgba(255, 255, 255, 0.045);
+  border-color: rgba(38, 208, 124, 0.45);
+  background: #FFFFFF;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06);
 }
 
 .mobile-group-header {
@@ -4300,9 +4301,9 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   padding: 14px 16px;
   background: transparent;
   border: none;
-  color: #FFFFFF;
+  color: var(--ink);
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   text-align: left;
   transition: color 0.15s ease;
@@ -4310,7 +4311,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 }
 
 .mobile-group-header:hover {
-  color: var(--lime);
+  color: var(--brand-dark, #167a48);
 }
 
 .mobile-group-title {
@@ -4320,20 +4321,20 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 }
 
 .mobile-group-icon {
-  color: var(--lime);
+  color: var(--brand-dark, #167a48);
   display: flex;
   align-items: center;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .mobile-group-chevron {
   transition: transform 0.2s ease;
-  color: rgba(255, 255, 255, 0.5);
+  color: #94A3B8;
 }
 
 .mobile-nav-group.is-open .mobile-group-chevron {
   transform: rotate(180deg);
-  color: var(--lime);
+  color: var(--brand-dark, #167a48);
 }
 
 .mobile-group-items {
@@ -4341,7 +4342,7 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   display: flex;
   flex-direction: column;
   gap: 4px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--line);
 }
 
 .mobile-nav-item {
@@ -4351,14 +4352,14 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   padding: 10px 12px;
   border-radius: 8px;
   text-decoration: none !important;
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: var(--ink) !important;
   transition: background 0.12s ease, color 0.12s ease;
 }
 
 .mobile-nav-item:hover,
 .mobile-nav-item:active {
   background: rgba(38, 208, 124, 0.08);
-  color: var(--lime) !important;
+  color: var(--brand-dark, #167a48) !important;
 }
 
 .mobile-nav-item-content {
@@ -4370,23 +4371,28 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 .mobile-nav-item-title {
   font-size: 14.5px;
   font-weight: 600;
-  color: inherit;
+  color: var(--ink);
+}
+
+.mobile-nav-item:hover .mobile-nav-item-title,
+.mobile-nav-item:active .mobile-nav-item-title {
+  color: var(--brand-dark, #167a48);
 }
 
 .mobile-nav-item-desc {
   font-size: 12.5px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-2, #64748B);
 }
 
 .mobile-nav-item-arrow {
-  color: rgba(255, 255, 255, 0.3);
+  color: #94A3B8;
   flex-shrink: 0;
   margin-left: 8px;
   transition: transform 0.12s ease, color 0.12s ease;
 }
 
 .mobile-nav-item:hover .mobile-nav-item-arrow {
-  color: var(--lime);
+  color: var(--brand-dark, #167a48);
   transform: translateX(2px);
 }
 
@@ -4396,10 +4402,10 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   align-items: center;
   justify-content: space-between;
   padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: #F8FAFC;
+  border: 1px solid var(--line);
   border-radius: 12px;
-  color: #FFFFFF !important;
+  color: var(--ink) !important;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none !important;
@@ -4407,16 +4413,16 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 }
 
 .mobile-nav-direct-link:hover {
-  border-color: rgba(38, 208, 124, 0.25);
+  border-color: rgba(38, 208, 124, 0.45);
   background: rgba(38, 208, 124, 0.08);
-  color: var(--lime) !important;
+  color: var(--brand-dark, #167a48) !important;
 }
 
 /* Actions in Drawer Footer */
 .mobile-drawer-footer {
   margin-top: 18px;
   padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--line);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -4426,9 +4432,9 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
   height: 44px;
   width: 100%;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  color: #FFFFFF !important;
+  background: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
+  color: var(--ink) !important;
   font-size: 15px;
   font-weight: 600;
   display: flex;
@@ -4439,15 +4445,15 @@ input[name="cur"]:focus-visible + input, input[name="cur"]:focus-visible ~ .cur 
 }
 
 .btn-mobile-signin:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: #F8FAFC;
+  border-color: #94A3B8;
 }
 
 .btn-mobile-trial {
   height: 48px;
   width: 100%;
   border-radius: 10px;
-  background: var(--lime) !important;
+  background: var(--brand, #26D07C) !important;
   border: 1px solid var(--brand-cta-border);
   color: #07190F !important;
   font-size: 15.5px;
