@@ -66,8 +66,8 @@ export const Header: React.FC = () => {
     };
 
     const handleClickOutside = (e: MouseEvent) => {
-      const target = e.target as HTMLElement | null;
-      if (headerRef.current && !headerRef.current.contains(target as Node)) {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setActiveMenu(null);
         setMobileMenuOpen(false);
       }
     };
@@ -80,15 +80,43 @@ export const Header: React.FC = () => {
     };
   }, []);
 
+  const handleMouseEnter = (idx: number) => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+    setActiveMenu(idx);
+  };
+
+  const handleMouseLeave = () => {
+    closeTimerRef.current = setTimeout(() => {
+      setActiveMenu(null);
+    }, 150);
+  };
+
+  const handleMenuEnter = () => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  };
+
   const closeMenuImmediately = () => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
     setActiveMenu(null);
     setIsLocked(false);
+    if (typeof document !== 'undefined' && document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
   };
 
   const handleMenuClick = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
-    if (target.closest('a')) {
-      setActiveMenu(null);
+    if (target.closest('a') || target.closest('button')) {
+      closeMenuImmediately();
     }
   };
 
@@ -118,7 +146,7 @@ export const Header: React.FC = () => {
       </div>
 
       {/* Main Dark Header */}
-      <header className="hdr" ref={headerRef}>
+      <header className="hdr" ref={headerRef} onMouseLeave={closeMenuImmediately}>
         <a className="skip" href="#main">Skip to content</a>
         <div className="wrap hdr-in">
           {/* Brand Logo */}
@@ -130,9 +158,9 @@ export const Header: React.FC = () => {
           <nav className="nav" aria-label="Main">
   {/*  1. PRODUCT MEGA MENU  */}
   
-  <div className={`nav-item ${activeMenu === 1 ? "is-open" : ""}`}>
+  <div className={`nav-item ${activeMenu === 1 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={handleMouseLeave}>
     <button className={`nav-link ${activeMenu === 1 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(1, e)} aria-haspopup="true" aria-expanded={activeMenu === 1}>Product <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
-    <div className="menu" onClick={handleMenuClick}>
+    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
       <div className="mega-card">
         <div className="mega-menu-grid mega-grid-3">
           {/*  Column 1: Assessments & Testing  */}
@@ -200,9 +228,9 @@ export const Header: React.FC = () => {
 
   {/*  2. SOLUTIONS MEGA MENU  */}
   
-  <div className={`nav-item ${activeMenu === 2 ? "is-open" : ""}`}>
+  <div className={`nav-item ${activeMenu === 2 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(2)} onMouseLeave={handleMouseLeave}>
     <button className={`nav-link ${activeMenu === 2 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(2, e)} aria-haspopup="true" aria-expanded={activeMenu === 2}>Solutions <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
-    <div className="menu" onClick={handleMenuClick}>
+    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
       <div className="mega-card">
         <div className="mega-menu-grid mega-grid-3">
           {/*  Column 1: By Use Case  */}
@@ -264,9 +292,9 @@ export const Header: React.FC = () => {
   </div>
 
   {/*  3. SKILL TESTS MEGA MENU (13 items from official sitemap)  */}
-  <div className={`nav-item ${activeMenu === 3 ? "is-open" : ""}`}>
+  <div className={`nav-item ${activeMenu === 3 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(3)} onMouseLeave={handleMouseLeave}>
     <button className={`nav-link ${activeMenu === 3 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(3, e)} aria-haspopup="true" aria-expanded={activeMenu === 3}>Skill tests <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
-    <div className="menu" onClick={handleMenuClick}>
+    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
       <div className="mega-card" style={{ maxWidth: '1240px', width: '100%' }}>
         <div className="mega-menu-grid mega-grid-4">
           {/*  Column 1: Languages (4)  */}
@@ -369,9 +397,9 @@ export const Header: React.FC = () => {
   </div>
 
   {/*  5. RESOURCES MEGA MENU (9 items from official sitemap)  */}
-  <div className={`nav-item ${activeMenu === 4 ? "is-open" : ""}`}>
+  <div className={`nav-item ${activeMenu === 4 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(4)} onMouseLeave={handleMouseLeave}>
     <button className={`nav-link ${activeMenu === 4 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(4, e)} aria-haspopup="true" aria-expanded={activeMenu === 4}>Resources <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg></button>
-    <div className="menu" onClick={handleMenuClick}>
+    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
       <div className="mega-card" style={{ maxWidth: '1180px', width: '100%' }}>
         <div className="mega-menu-grid mega-grid-3">
           {/*  Column 1: GUIDES & INSIGHTS (5)  */}
@@ -445,11 +473,11 @@ export const Header: React.FC = () => {
   </div>
 
   {/*  6. LEGAL MEGA MENU (3 items from official sitemap, excluding 404)  */}
-  <div className={`nav-item ${activeMenu === 5 ? "is-open" : ""}`}>
+  <div className={`nav-item ${activeMenu === 5 ? "is-open" : ""}`} onMouseEnter={() => handleMouseEnter(5)} onMouseLeave={handleMouseLeave}>
     <button className={`nav-link ${activeMenu === 5 ? "active" : ""}`} type="button" onClick={(e) => handleNavClick(5, e)} aria-haspopup="true" aria-expanded={activeMenu === 5}>
       Legal <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"></path></svg>
     </button>
-    <div className="menu" onClick={handleMenuClick}>
+    <div className="menu" onMouseEnter={handleMenuEnter} onMouseLeave={closeMenuImmediately} onClick={handleMenuClick}>
       <div className="mega-card" style={{ maxWidth: '1180px', width: '100%' }}>
         <div className="mega-menu-grid mega-grid-2-cols">
           {/*  Column 1: LEGAL & COMPLIANCE (3)  */}
